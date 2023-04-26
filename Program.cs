@@ -1,9 +1,11 @@
-﻿var squad = new List<Model>();
+﻿var roster = new Roster();
+
+var squad = new List<Model>();
 for(var i = 0; i < 5; i++)
 {
     squad.Add(new Model(ref squad));    
 }
-
+Console.WriteLine($"{roster.subfraction} {roster.compulsoryType}");
 foreach(var model in squad)
 {
     switch(model.Role)
