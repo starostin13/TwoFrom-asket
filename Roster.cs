@@ -6,6 +6,7 @@ public class Roster
 {
     public Subfraction subfraction;
     public CompulsoryType compulsoryType;
+    public List<Unit> armyList;
 
     public Roster(int size = 2000)
     {
