@@ -1,4 +1,10 @@
-﻿var roster = new Roster();
+﻿using System.Reflection.Metadata;
+using UglyToad.PdfPig;
+using UglyToad.PdfPig.Content;
+
+var roster = new Roster();
+
+var mainFaction = new Faction();
 
 var squad = new List<Model>();
 for(var i = 0; i < 5; i++)

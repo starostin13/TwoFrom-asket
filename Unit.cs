@@ -1,4 +1,8 @@
 public class Unit
 {
-    public List<Model>? models;
+    public Unit()
+    {
+    }
+
+    public static string? Name { get; internal set; }
 }
