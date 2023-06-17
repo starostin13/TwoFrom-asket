@@ -8,12 +8,15 @@ internal class Faction
 
         using (PdfDocument pdfDocument = PdfDocument.Open("C:/Users/al-gerasimov/YandexDisk/WH40K/Grey Knights/Grey_knights.pdf"))
         {
-            foreach (Page page in pdfDocument.GetPages().Skip(6))
-            {
-                string pageText = page.Text;
-                var sentences = new List<Sentence>();
+            var pages = pdfDocument.GetPages();
+            var skipPages = 6;
 
-                var lines = page.Letters.GroupBy(line => line.StartBaseLine.Y).ToList();
+            for (var sheet = pages.Skip(skipPages).Take(2); sheet is not null; sheet = pages.Take(2))
+            {
+                var sentences = new List<Sentence>();
+                var sheetLetters = sheet.SelectMany(l => l.Letters);
+
+                var lines = sheetLetters.GroupBy(line => line.StartBaseLine.Y).ToList();
                 var currentFontName = lines.FirstOrDefault()?.FirstOrDefault()?.FontName;
                 foreach (var letters in lines)
                 {
