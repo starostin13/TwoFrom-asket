@@ -6,16 +6,42 @@ public class Roster
 {
     public Subfraction subfraction;
     public CompulsoryType compulsoryType;
-    public List<Unit> armyList;
+
+    public int MaxSize { get; }
+
+    private List<ExemplarUnit> armyList;
 
     public Roster(int size = 2000)
     {
-        Array values = Enum.GetValues(typeof(Subfraction));
-        var random = new Random();
-        this.subfraction = (Subfraction)random.Next(Enum.GetValues(typeof(Subfraction)).Length);
-        this.compulsoryType = (CompulsoryType)random.Next(Enum.GetValues(typeof(CompulsoryType)).Length);
-        var currentSize = 0;
-        
+        MaxSize = size;
+        armyList = new List<ExemplarUnit>();
+    }
+
+    public int Price
+    {
+        get
+        {
+            var cost = 0;
+            if (armyList is null) return 0;
+            foreach (var unit in armyList)
+            {
+                cost += unit.Price;
+            }
+            return cost;
+        }
+    }
+
+    public List<ExemplarUnit> ArmyList { get => armyList; private set => armyList = value; }
+
+    internal bool AddExemplarIfAcceptable(ExemplarUnit exemplar)
+    {
+        if (this.Price + exemplar.Price > MaxSize)
+            return false;
+        else
+        {
+            armyList.Add(exemplar);
+            return true;
+        }
     }
 }
 

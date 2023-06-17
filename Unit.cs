@@ -1,12 +1,18 @@
-public class Unit
+public class Unit : ICloneable
 {
-    public Unit()
-    {
-    }
-
     public string? Name { get; internal set; }
     public List<string>? LeadedUnits { get; internal set; }
     public int Price { get; internal set; }
+
+    public object Clone()
+    {
+        var unit = (Unit)MemberwiseClone();
+        unit.Name = Name;
+        unit.Price = Price;
+        unit.LeadedUnits = LeadedUnits;
+
+        return unit;
+    }
 
     internal void AddLeadedUnit(string value)
     {

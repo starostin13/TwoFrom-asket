@@ -1,17 +1,25 @@
 ﻿using UglyToad.PdfPig;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 internal class Faction
 {
+    public List<Unit> units = new List<Unit>();
+    public Stack<(string, int)> enchasments = new Stack<(string, int)>();
     public Faction()
     {
+
         /*string path = "C:/Users/al-gerasimov/YandexDisk/WH40K/Tau/10ed.pdf";
         var skipPages = 8;*/
         string path = "C:/Users/al-gerasimov/YandexDisk/WH40K/Grey Knights/Grey_knights.pdf";
         var skipPages = 6;
 
-        Dictionary<string, int> prices = getPrices("GREY KNIGHTS");
-        var units = new List<Unit>();
+        var pricesResult = getPrices("GREY KNIGHTS");
+        Dictionary<string, int> prices = pricesResult.Item1;
+        foreach (var ench in pricesResult.Item2)
+        {
+            enchasments.Push((ench.Key, ench.Value));
+        }
 
         using (PdfDocument pdfDocument = PdfDocument.Open(path))
         {
@@ -73,24 +81,13 @@ internal class Faction
                     }
                 }
 
-                var namepatter = @"\b" + unit.Name + @"\d+\smodel\b";
+                var namepatter = @"\b" + unit.Name + @"\d+\smodel[s]*\b";
 
                 foreach (var price in prices.Where(p => Regex.IsMatch(p.Key, namepatter, RegexOptions.IgnoreCase))) // p.Key.Contains(unit.Name, StringComparison.InvariantCultureIgnoreCase)))
                 {
-                    var newUnit = unit;
+                    var newUnit = (Unit)unit.Clone();
                     newUnit.Price = price.Value;
-                    units.Add(unit);
-
-                    Console.Write($"{unit.Name} cost is {unit.Price}");
-                    if (unit.LeadedUnits is not null)
-                    {
-                        Console.WriteLine(" can lead:");
-                        foreach (var lu in unit.LeadedUnits)
-                        {
-                            Console.WriteLine(" " + lu);
-                        }
-                    }
-                    else { Console.Write(Environment.NewLine); }
+                    units.Add(newUnit);
                 }
 
             }
@@ -98,32 +95,48 @@ internal class Faction
 
     }
 
-    private Dictionary<string, int> getPrices(string factionName)
+    private (Dictionary<string, int>, Dictionary<string, int>) getPrices(string factionName)
     {
         var factionPrices = new Dictionary<string, int>();
+        var enchasmentPrices = new Dictionary<string, int>();
         using (PdfDocument pdfDocument = PdfDocument.Open("C:/Users/al-gerasimov/YandexDisk/WH40K/MUNITORUM.pdf"))
         {
             var pages = pdfDocument.GetPages();
             var page = pages.Skip(1).SkipWhile(p => !p.Text.Contains(factionName)).Take(1).FirstOrDefault();
             var reg = @"[\w\s()-]+ \.*\d+\s*pts";
-            MatchCollection matches = Regex.Matches(page.Text, reg);
+            var units = page.Text;
+            const string DETACHMENTENHANCEMENTS = "DETACHMENT ENHANCEMENTS";
+            MatchCollection matches = Regex.Matches(units, reg);
 
-            foreach (Match match in matches)
+            factionPrices = getMatches(matches);
+
+            var enchasments = page.Text.Substring(page.Text.IndexOf(DETACHMENTENHANCEMENTS) + DETACHMENTENHANCEMENTS.Length + "Teleport Strike Force".Length);
+            MatchCollection matchesEnch = Regex.Matches(enchasments, @"[\w\s()-]+\.*\d+\s*pts");
+
+            enchasmentPrices = getMatches(matchesEnch);
+        }
+
+        return (factionPrices,enchasmentPrices);
+    }
+
+    private Dictionary<string, int> getMatches(MatchCollection matches)
+    {
+        var factionPrices = new Dictionary<string, int>();
+        foreach (Match match in matches)
+        {
+            var note = match.Groups[0].Value.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var key = note.FirstOrDefault();
+            //case with different number of models
+            if (Regex.IsMatch(key.Trim(' '), @"^\d+\s+models$"))
             {
-                var note = match.Groups[0].Value.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
-
-                var key = note.FirstOrDefault();
-                //case with different number of models
-                if (Regex.IsMatch(key.Trim(' '), @"^\d+\s+models$"))
-                {
-                    factionPrices.Add(
-                        factionPrices.LastOrDefault().Key.Substring(0, factionPrices.LastOrDefault().Key.Length - "5 models".Length) + key,
-                        Convert.ToInt32(note.LastOrDefault().Substring(0, note.LastOrDefault().Length - 4)));
-                }
-                else
-                {
-                    factionPrices.Add(note.FirstOrDefault().Trim(' '), Convert.ToInt32(note.LastOrDefault().Substring(0, note.LastOrDefault().Length - 4)));
-                }
+                factionPrices.Add(
+                    factionPrices.LastOrDefault().Key.Substring(0, factionPrices.LastOrDefault().Key.Length - "5 models".Length) + key,
+                    Convert.ToInt32(note.LastOrDefault().Substring(0, note.LastOrDefault().Length - 4)));
+            }
+            else
+            {
+                factionPrices.Add(note.FirstOrDefault().Trim(' '), Convert.ToInt32(note.LastOrDefault().Substring(0, note.LastOrDefault().Length - 4)));
             }
         }
 
