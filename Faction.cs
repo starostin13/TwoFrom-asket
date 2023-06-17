@@ -10,9 +10,11 @@ internal class Faction
         {
             var pages = pdfDocument.GetPages();
             var skipPages = 6;
+            var sheet = pages.Skip(skipPages).Take(2);
 
-            for (var sheet = pages.Skip(skipPages).Take(2); sheet is not null; sheet = pages.Take(2))
+            for (var i = skipPages; i < pages.Count() ; i += 2)
             {
+                sheet = pages.Skip(i).Take(2);
                 var sentences = new List<Sentence>();
                 var sheetLetters = sheet.SelectMany(l => l.Letters);
 
@@ -23,7 +25,7 @@ internal class Faction
                     var sentence = new Sentence(string.Empty);
                     foreach (var letters2 in letters)
                     {
-                        if(letters2.FontName != currentFontName) 
+                        if(letters2.FontName != currentFontName && letters != lines.FirstOrDefault())
                         {
                             sentences.Add(sentence);
                             sentence = new Sentence(string.Empty);
@@ -35,8 +37,7 @@ internal class Faction
                         sentence.FontName = currentFontName;
                         sentence.TextSequence = letters2.TextSequence;
                     }
-                    if(sentences?.LastOrDefault()?.FontName == sentence.FontName && sentences?.LastOrDefault()?.TextSequence - sentence.TextSequence < 1)
-                    //■
+                    if(sentences?.LastOrDefault()?.FontName == sentence.FontName && sentences?.LastOrDefault()?.TextSequence - sentence.TextSequence < -1)
                     {
                         var lastSentense = sentences.LastOrDefault();
                         var tempSentense = sentence;
@@ -47,17 +48,23 @@ internal class Faction
                 }
 
                 var unit = new Unit();
-                foreach (var s in sentences.OrderBy(q => q.TextSequence))
+                unit.SetName(sentences.FirstOrDefault()?.Value);
+
+                var leadingList = sentences.SkipWhile(s => !s.Value.Contains("This model can be attached to the following units:"));
+                if (leadingList is not null)
                 {
-                    /*if (string.IsNullOrEmpty(Unit.Name))
-                        Unit.Name = s.ToString();
-
-                    if (s == "This model can be attached to the following units:")
+                    var shouldBeNextLineBeAdded = false;
+                    foreach ( var line in leadingList)
                     {
+                        if(shouldBeNextLineBeAdded)
+                        {
+                            unit.AddLeadedUnit(line.Value);
+                            shouldBeNextLineBeAdded = false;
+                        }
 
+                        if (line.Value == "■")
+                            shouldBeNextLineBeAdded = true;
                     }
-                    */
-                    Console.WriteLine(s);
                 }
             }
         };
