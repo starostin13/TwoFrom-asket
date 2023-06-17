@@ -6,6 +6,7 @@ public class Unit
 
     public string? Name { get; internal set; }
     public List<string>? LeadedUnits { get; internal set; }
+    public int Price { get; internal set; }
 
     internal void AddLeadedUnit(string value)
     {
