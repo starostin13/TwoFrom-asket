@@ -1,6 +1,5 @@
 ﻿using UglyToad.PdfPig;
 using System.Text.RegularExpressions;
-using System.Net.Mail;
 
 internal class Faction
 {
