@@ -3,32 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArmyGeneratorMaui.Views.FactionView">
     <VerticalStackLayout>
-        <Label Text="Units in Faction"/>
-        <ListView ItemsSource="{Binding Units}" BackgroundColor="Grey">
-            <ListView.ItemTemplate>
+        <CollectionView ItemsSource="{Binding Units}">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>                            
-                            <Label Grid.Column="1"
-                           Text="{Binding Name}"
-                           FontAttributes="Bold" />
-                            <Label Grid.Row="1"
-                           Grid.Column="1"
-                           Text="{Binding Price}"
-                           FontAttributes="Italic"
-                           VerticalOptions="End" />
-                        </Grid>
-                    </ViewCell>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItem Text="To Roster" BackgroundColor="LightGreen" IconImageSource="dotnet_bot"/>
+                        </SwipeView.LeftItems>
+                        <SwipeView.RightItems>
+                            <SwipeItem Text="Block" BackgroundColor="DarkRed" IconImageSource="dotnet_bot"/>
+                        </SwipeView.RightItems>
+                        <Frame>
+                            <VerticalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Price}"/>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <SwipeGestureRecognizer Direction="Left" Swiped="WantThisInRoster" />
+                                <SwipeGestureRecognizer Direction="Right" Swiped="BlockThisInRoster" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </SwipeView>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </ContentView>
