@@ -129,3 +129,10 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/.vs
+
+TwoFromCasket/.vs/Army Generator/DesignTimeBuild/
+TwoFromCasket/.vs/Army Generator/FileContentIndex/*
+.vsidx
+TwoFromCasket/.vs/Army Generator/v17/
+TwoFromCasket/.vs/ProjectEvaluation/
