@@ -34,6 +34,10 @@ public partial class FactionView : ContentView
         else
         {
             g.BackgroundColor = Color.Parse("Red");
+            VerticalStackLayout child = g.Children[0] as VerticalStackLayout;
+            HorizontalStackLayout childhor = child.Children[0] as HorizontalStackLayout;
+            Label label = childhor.Children[0] as Label;
+            Core.AddToBlockForRoster(label.Text);
         }
     }
 }

@@ -23,5 +23,11 @@ namespace ArmyGeneratorMaui
             });
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void OnGenerateClick(object sender, EventArgs e)
+        {
+            Core.GenerateRoster();
+            RosterView.BindingContext = new RosterViewModel();
+        }
     }
 }
