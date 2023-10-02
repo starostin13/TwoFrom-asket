@@ -68,5 +68,15 @@ namespace ArmyGeneratorMaui
         {
             MainFaction = faction;
         }
+
+        internal static void SaveAllFactions()
+        {
+            File.WriteAllTextAsync(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"), Serialize(Core.mainFaction));
+        }
+
+        private static string Serialize(Faction mainFaction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

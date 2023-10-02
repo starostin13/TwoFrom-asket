@@ -1,6 +1,6 @@
 ﻿namespace ArmyGeneratorMaui
 {
-    internal class fileManagerHelper
+    internal class FileManagerHelper
     {
         internal static async Task PickTheFileAsync()
         {

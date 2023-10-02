@@ -13,11 +13,13 @@ namespace ArmyGeneratorMaui
         {
             CounterBtn.IsEnabled = false;
             BusyIndicator.IsRunning = true;
-            var r = fileManagerHelper.PickTheFileAsync();
+            var r = FileManagerHelper.PickTheFileAsync();
 
             r.GetAwaiter().OnCompleted(() =>
             {
-                FW.BindingContext = new FactionViewModel();
+                var unitsViewModel = new UnitsViewModel();
+                unitsViewModel.UploadIndexFileCommand.Execute(Core.MainFaction);
+                FW.BindingContext = unitsViewModel;
                 CounterBtn.IsEnabled = true;
                 BusyIndicator.IsRunning = false;
             });

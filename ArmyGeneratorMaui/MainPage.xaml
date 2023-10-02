@@ -22,7 +22,7 @@
             <Button
                 x:Name="CounterBtn"
                 Text="Upload the file"
-                SemanticProperties.Hint="Counts the number of times you click"
+                SemanticProperties.Hint="Show the Open File Dialog"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
