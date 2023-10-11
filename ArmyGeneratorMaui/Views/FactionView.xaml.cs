@@ -1,3 +1,5 @@
+using ArmyGeneratorMaui.ViewModels;
+
 namespace ArmyGeneratorMaui.Views;
 
 public partial class FactionView : ContentView
@@ -5,7 +7,10 @@ public partial class FactionView : ContentView
 	public FactionView()
 	{
 		InitializeComponent();
-	}
+
+        /*var unitsViewModel = new UnitsViewModel();
+        BindingContext = unitsViewModel;*/
+    }
 
     private void WantThisInRoster(object sender, SwipedEventArgs e)
     {

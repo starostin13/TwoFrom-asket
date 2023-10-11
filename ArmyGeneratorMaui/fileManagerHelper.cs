@@ -2,6 +2,19 @@
 {
     internal class FileManagerHelper
     {
+        internal static async Task<Faction> GetFactionFromPdfAsync()
+        {
+            var result = await FilePicker.Default.PickAsync();
+            if (result != null)
+            {
+                if (result.FileName.EndsWith("pdf", StringComparison.OrdinalIgnoreCase))
+                {
+                    using var stream = await result.OpenReadAsync();
+                }
+            }
+
+            return new Faction(result.FullPath);
+        }
         internal static async Task PickTheFileAsync()
         {
             try

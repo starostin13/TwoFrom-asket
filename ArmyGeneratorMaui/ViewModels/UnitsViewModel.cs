@@ -7,30 +7,62 @@ namespace ArmyGeneratorMaui.ViewModels
 {
     partial class UnitsViewModel : ObservableObject
     {
+        private readonly string PathToFile;
+
         [ObservableProperty]
         private ObservableCollection<Unit> units;
+        [ObservableProperty]
+        private ObservableCollection<Enchasment> enchasments;
+        [ObservableProperty]
+        private int maxSizeOfRoster;
+
+        /*public IAsyncRelayCommand UploadIndexFileCommand { get; }*/
 
         public UnitsViewModel()
         {
-            ReadAlreadyParsedFiles();
-        }
+            maxSizeOfRoster = 2000;
+            Units = new ObservableCollection<Unit>();
+            Enchasments = new ObservableCollection<Enchasment>();
+            PathToFile = Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt");
+            uploadIndexFileCommand = new AsyncRelayCommand(UploadIndexFile);
 
-        private static void ReadAlreadyParsedFiles()
-        {
-            //File.WriteAllTextAsync(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"), Serialize(Core.mainFaction));
-            using StreamReader r = new(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"));
-            string json = r.ReadToEnd();
-            List<Unit> items = JsonConvert.DeserializeObject<List<Unit>>(json);
-            foreach (Unit item in items)
+            foreach (var un in ReadAlreadyParsedFiles())
             {
-                Units.Add(item);
+                units.Add(un);
             }
         }
 
-        [RelayCommand]
-        private void UploadIndexFile(Faction faction)
+        private async void GenerateRoster()
         { 
             
+        }
+
+        private List<Unit> ReadAlreadyParsedFiles()
+        {
+            if (!File.Exists(PathToFile))
+                return new List<Unit>();
+            //File.WriteAllTextAsync(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"), Serialize(Core.mainFaction));
+            using StreamReader r = new(PathToFile);
+            string json = r.ReadToEnd();
+            List<Unit> items = JsonConvert.DeserializeObject<List<Unit>>(json);
+            
+            return items;
+        }
+
+        [RelayCommand]
+        private async Task<Faction> UploadIndexFile()
+        {
+            var result = await FileManagerHelper.GetFactionFromPdfAsync();
+            
+            if (result != null)
+            {
+                foreach(var unit in result.units)
+                {
+                    Units.Add(unit);
+                }
+            }
+
+            return result;
         }
     }
 }

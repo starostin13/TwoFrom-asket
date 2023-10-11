@@ -7,22 +7,22 @@ namespace ArmyGeneratorMaui
         public MainPage()
         {
             InitializeComponent();
+
+            BindingContext = new UnitsViewModel();
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
             CounterBtn.IsEnabled = false;
             BusyIndicator.IsRunning = true;
-            var r = FileManagerHelper.PickTheFileAsync();
+            //var r = FileManagerHelper.PickTheFileAsync();
 
-            r.GetAwaiter().OnCompleted(() =>
-            {
-                var unitsViewModel = new UnitsViewModel();
-                unitsViewModel.UploadIndexFileCommand.Execute(Core.MainFaction);
-                FW.BindingContext = unitsViewModel;
+            /*r.GetAwaiter().OnCompleted(() =>
+            {                
+                //unitsViewModel.UploadIndexFileCommand.Execute(Core.MainFaction);
                 CounterBtn.IsEnabled = true;
                 BusyIndicator.IsRunning = false;
-            });
+            });*/
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 

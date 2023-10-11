@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:customViews="clr-namespace:ArmyGeneratorMaui.Views"
-             x:Class="ArmyGeneratorMaui.MainPage">
+             x:Class="ArmyGeneratorMaui.MainPage"
+             xmlns:viewModel="clr-namespace:ArmyGeneratorMaui.ViewModels"
+             x:DataType="viewModel:UnitsViewModel">
 
     <ScrollView>
         <VerticalStackLayout
@@ -24,7 +26,10 @@
                 Text="Upload the file"
                 SemanticProperties.Hint="Show the Open File Dialog"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                Command="{Binding UploadIndexFileCommand}"/>
+
+            <Entry Placeholder="2000 pts" Text="{Binding MaxSizeOfRoster}"/>
 
             <Button
                 x:Name="GenerateBtn"
