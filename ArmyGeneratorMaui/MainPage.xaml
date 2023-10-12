@@ -4,13 +4,32 @@
              xmlns:customViews="clr-namespace:ArmyGeneratorMaui.Views"
              x:Class="ArmyGeneratorMaui.MainPage"
              xmlns:viewModel="clr-namespace:ArmyGeneratorMaui.ViewModels"
-             x:DataType="viewModel:UnitsViewModel">
+             xmlns:armyGeneratorMaui="clr-namespace:ArmyGeneratorMaui"
+             x:DataType="viewModel:UnitsViewModel"
+             >
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+            <CollectionView ItemsSource="{Binding Factions}"
+                            SelectionMode="Multiple"
+                            SelectionChangedCommand="{Binding SwitchSelectionCommand, FallbackValue=this}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label x:DataType="armyGeneratorMaui:Faction" Text="{Binding FactionName}" Grid.Column="1" Grid.Row="1"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
             <StackLayout>
                 <customViews:FactionView x:Name="FW"/>
             </StackLayout>

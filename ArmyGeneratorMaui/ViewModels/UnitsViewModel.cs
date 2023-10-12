@@ -15,6 +15,8 @@ namespace ArmyGeneratorMaui.ViewModels
         private ObservableCollection<Enchasment> enchasments;
         [ObservableProperty]
         private int maxSizeOfRoster;
+        [ObservableProperty]
+        private ObservableCollection<Faction> factions;
 
         /*public IAsyncRelayCommand UploadIndexFileCommand { get; }*/
 
@@ -23,6 +25,7 @@ namespace ArmyGeneratorMaui.ViewModels
             maxSizeOfRoster = 2000;
             Units = new ObservableCollection<Unit>();
             Enchasments = new ObservableCollection<Enchasment>();
+            Factions = new ObservableCollection<Faction>();
             PathToFile = Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt");
             uploadIndexFileCommand = new AsyncRelayCommand(UploadIndexFile);
 
@@ -50,15 +53,25 @@ namespace ArmyGeneratorMaui.ViewModels
         }
 
         [RelayCommand]
+        private void SwitchSelection(object sender)
+        { 
+            
+        }
+
+        [RelayCommand]
         private async Task<Faction> UploadIndexFile()
         {
             var result = await FileManagerHelper.GetFactionFromPdfAsync();
             
             if (result != null)
             {
-                foreach(var unit in result.units)
+                if (!Factions.Select(f => f.FactionName).Contains(result.FactionName))
                 {
-                    Units.Add(unit);
+                    Factions.Add(result);
+                    foreach (var unit in result.units)
+                    {
+                        Units.Add(unit);
+                    }
                 }
             }
 
