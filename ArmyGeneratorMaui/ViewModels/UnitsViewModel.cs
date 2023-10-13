@@ -10,15 +10,15 @@ namespace ArmyGeneratorMaui.ViewModels
         private readonly string PathToFile;
 
         [ObservableProperty]
-        private ObservableCollection<Unit> units;
-        [ObservableProperty]
         private ObservableCollection<Enchasment> enchasments;
+        [ObservableProperty]
+        private ObservableCollection<Faction> factions;
         [ObservableProperty]
         private int maxSizeOfRoster;
         [ObservableProperty]
-        private ObservableCollection<Faction> factions;
-
-        /*public IAsyncRelayCommand UploadIndexFileCommand { get; }*/
+        private ObservableCollection<Faction> selectedFactions;
+        [ObservableProperty]
+        private ObservableCollection<Unit> units;
 
         public UnitsViewModel()
         {
@@ -27,35 +27,51 @@ namespace ArmyGeneratorMaui.ViewModels
             Enchasments = new ObservableCollection<Enchasment>();
             Factions = new ObservableCollection<Faction>();
             PathToFile = Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt");
+            selectedFactions = new ObservableCollection<Faction>();
             uploadIndexFileCommand = new AsyncRelayCommand(UploadIndexFile);
+            factions.CollectionChanged += Factions_CollectionChanged;
 
             foreach (var un in ReadAlreadyParsedFiles())
             {
-                units.Add(un);
+                factions.Add(un);
             }
         }
 
-        private async void GenerateRoster()
-        { 
-            
+        private void SelectedFactions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            units.Clear();
+            //foreach(var unit in Factions.Select())
         }
 
-        private List<Unit> ReadAlreadyParsedFiles()
+        private void Factions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            File.WriteAllTextAsync(PathToFile, JsonConvert.SerializeObject(Factions));
+        }
+
+        [RelayCommand]
+        private async void GenerateRoster()
+        {
+
+        }
+
+        private List<Faction> ReadAlreadyParsedFiles()
         {
             if (!File.Exists(PathToFile))
-                return new List<Unit>();
+                return new List<Faction>();
             //File.WriteAllTextAsync(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"), Serialize(Core.mainFaction));
             using StreamReader r = new(PathToFile);
             string json = r.ReadToEnd();
-            List<Unit> items = JsonConvert.DeserializeObject<List<Unit>>(json);
+            List<Faction> items = JsonConvert.DeserializeObject<List<Faction>>(json);
             
             return items;
         }
 
         [RelayCommand]
         private void SwitchSelection(object sender)
-        { 
-            
+        {
+            // todo: looks like currently binding with selected items doesn't work in MAUI
+            // so currently I will ignore filter and just show all units from all fractions
+            // must be reworked https://github.com/starostin13/TwoFrom-asket/issues/11
         }
 
         [RelayCommand]

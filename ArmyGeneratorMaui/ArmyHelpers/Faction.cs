@@ -11,6 +11,8 @@ namespace ArmyGeneratorMaui
         public string factionSide;
         private string fullPath;
 
+        public Faction() { }
+
         public Faction(string fullPath)
         {
             factionSide = "Imperium";

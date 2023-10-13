@@ -15,7 +15,9 @@
             VerticalOptions="Center">
             <CollectionView ItemsSource="{Binding Factions}"
                             SelectionMode="Multiple"
-                            SelectionChangedCommand="{Binding SwitchSelectionCommand, FallbackValue=this}">
+                            SelectedItems="{Binding SelectedFactions}"
+                            SelectionChangedCommand="{Binding SwitchSelectionCommand}"
+                            >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="10">
