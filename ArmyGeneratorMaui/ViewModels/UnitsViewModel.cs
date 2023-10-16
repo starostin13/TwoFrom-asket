@@ -58,7 +58,7 @@ namespace ArmyGeneratorMaui.ViewModels
         {
             if (!File.Exists(PathToFile))
                 return new List<Faction>();
-            //File.WriteAllTextAsync(Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt"), Serialize(Core.mainFaction));
+            
             using StreamReader r = new(PathToFile);
             string json = r.ReadToEnd();
             List<Faction> items = JsonConvert.DeserializeObject<List<Faction>>(json);

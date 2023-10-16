@@ -1,5 +1,6 @@
 ﻿using UglyToad.PdfPig;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 
 namespace ArmyGeneratorMaui
 {
@@ -13,95 +14,111 @@ namespace ArmyGeneratorMaui
 
         public Faction() { }
 
-        public Faction(string fullPath)
+        public Faction(string fullPath, DataResourceType dataResourceType)
         {
-            factionSide = "Imperium";
-            this.fullPath = fullPath;
-            FactionName = "Grey Knights";
-            /*string path = "C:/Users/al-gerasimov/YandexDisk/WH40K/Tau/10ed.pdf";
-            var skipPages = 8;*/
-            //string path = "C:/Users/al-gerasimov/YandexDisk/WH40K/Grey Knights/Grey_knights.pdf";
-            var skipPages = 6;
-
-            var pricesResult = getPrices("GREY KNIGHTS");
-            Dictionary<string, int> prices = pricesResult.Item1;
-            foreach (var ench in pricesResult.Item2)
+            var fileName = Path.GetFileName(fullPath);
+            switch (dataResourceType)
             {
-                enchasments.Push((ench.Key, ench.Value));
-            }
+                case DataResourceType.CAT:
+                    {
+                        var splittedFileName = fileName.Split('-', StringSplitOptions.TrimEntries);
+                        factionSide = splittedFileName[0];
+                        FactionName = splittedFileName[1];
 
-            using (PdfDocument pdfDocument = PdfDocument.Open(fullPath))
-            {
-                var pages = pdfDocument.GetPages();
-                var sheet = pages.Skip(skipPages).Take(2);
-
-                for (var i = skipPages; i < pages.Count(); i += 2)
+                        XmlSerializer serializer = new XmlSerializer();
+                        var xml1 = XmlSerializer.Deserialize(r);
+                    }
+                    break;
+                case DataResourceType.PDF:
+                default:
                 {
-                    sheet = pages.Skip(i).Take(2);
-                    var sentences = new List<Sentence>();
-                    var sheetLetters = sheet.SelectMany(l => l.Letters);
+                    factionSide = "Imperium";
+                    this.fullPath = fullPath;
+                    FactionName = fileName;
 
-                    var lines = sheetLetters.GroupBy(line => line.StartBaseLine.Y).ToList();
-                    var currentFontName = lines.FirstOrDefault()?.FirstOrDefault()?.FontName;
-                    foreach (var letters in lines)
+                    var skipPages = 6;
+
+                    var pricesResult = getPrices("GREY KNIGHTS");
+                    Dictionary<string, int> prices = pricesResult.Item1;
+                    foreach (var ench in pricesResult.Item2)
                     {
-                        var sentence = new Sentence(string.Empty);
-                        foreach (var letters2 in letters)
+                        enchasments.Push((ench.Key, ench.Value));
+                    }
+
+                    using (PdfDocument pdfDocument = PdfDocument.Open(fullPath))
+                    {
+                        var pages = pdfDocument.GetPages();
+                        var sheet = pages.Skip(skipPages).Take(2);
+
+                        for (var i = skipPages; i < pages.Count(); i += 2)
                         {
-                            if (letters2.FontName != currentFontName && letters != lines.FirstOrDefault())
+                            sheet = pages.Skip(i).Take(2);
+                            var sentences = new List<Sentence>();
+                            var sheetLetters = sheet.SelectMany(l => l.Letters);
+
+                            var lines = sheetLetters.GroupBy(line => line.StartBaseLine.Y).ToList();
+                            var currentFontName = lines.FirstOrDefault()?.FirstOrDefault()?.FontName;
+                            foreach (var letters in lines)
                             {
+                                var sentence = new Sentence(string.Empty);
+                                foreach (var letters2 in letters)
+                                {
+                                    if (letters2.FontName != currentFontName && letters != lines.FirstOrDefault())
+                                    {
+                                        sentences.Add(sentence);
+                                        sentence = new Sentence(string.Empty);
+                                        currentFontName = letters2.FontName;
+                                    }
+
+                                    currentFontName = letters2.FontName;
+                                    sentence.Value += letters2.Value;
+                                    sentence.FontName = currentFontName;
+                                    sentence.TextSequence = letters2.TextSequence;
+                                }
+                                if (sentences?.LastOrDefault()?.FontName == sentence.FontName && sentences?.LastOrDefault()?.TextSequence - sentence.TextSequence < -1)
+                                {
+                                    var lastSentense = sentences.LastOrDefault();
+                                    var tempSentense = sentence;
+                                    sentences.Remove(sentences.LastOrDefault());
+                                    sentence.Value = lastSentense.Value + tempSentense.Value;
+                                }
                                 sentences.Add(sentence);
-                                sentence = new Sentence(string.Empty);
-                                currentFontName = letters2.FontName;
                             }
 
-                            currentFontName = letters2.FontName;
-                            sentence.Value += letters2.Value;
-                            sentence.FontName = currentFontName;
-                            sentence.TextSequence = letters2.TextSequence;
-                        }
-                        if (sentences?.LastOrDefault()?.FontName == sentence.FontName && sentences?.LastOrDefault()?.TextSequence - sentence.TextSequence < -1)
-                        {
-                            var lastSentense = sentences.LastOrDefault();
-                            var tempSentense = sentence;
-                            sentences.Remove(sentences.LastOrDefault());
-                            sentence.Value = lastSentense.Value + tempSentense.Value;
-                        }
-                        sentences.Add(sentence);
-                    }
+                            var unit = new Unit();
+                            unit.SetName(sentences.FirstOrDefault()?.Value);
 
-                    var unit = new Unit();
-                    unit.SetName(sentences.FirstOrDefault()?.Value);
-
-                    var leadingList = sentences.SkipWhile(s => !s.Value.Contains("This model can be attached to the following units:"));
-                    if (leadingList is not null)
-                    {
-                        var shouldBeNextLineBeAdded = false;
-                        foreach (var line in leadingList)
-                        {
-                            if (shouldBeNextLineBeAdded)
+                            var leadingList = sentences.SkipWhile(s => !s.Value.Contains("This model can be attached to the following units:"));
+                            if (leadingList is not null)
                             {
-                                unit.AddLeadedUnit(line.Value);
-                                shouldBeNextLineBeAdded = false;
+                                var shouldBeNextLineBeAdded = false;
+                                foreach (var line in leadingList)
+                                {
+                                    if (shouldBeNextLineBeAdded)
+                                    {
+                                        unit.AddLeadedUnit(line.Value);
+                                        shouldBeNextLineBeAdded = false;
+                                    }
+
+                                    if (line.Value == "■")
+                                        shouldBeNextLineBeAdded = true;
+                                }
                             }
 
-                            if (line.Value == "■")
-                                shouldBeNextLineBeAdded = true;
+                            var namepatter = @"\b" + unit.Name + @"\d+\smodel[s]*\b";
+
+                            foreach (var price in prices.Where(p => Regex.IsMatch(p.Key, namepatter, RegexOptions.IgnoreCase))) // p.Key.Contains(unit.Name, StringComparison.InvariantCultureIgnoreCase)))
+                            {
+                                var newUnit = (Unit)unit.Clone();
+                                newUnit.Price = price.Value;
+                                units.Add(newUnit);
+                            }
+
                         }
-                    }
-
-                    var namepatter = @"\b" + unit.Name + @"\d+\smodel[s]*\b";
-
-                    foreach (var price in prices.Where(p => Regex.IsMatch(p.Key, namepatter, RegexOptions.IgnoreCase))) // p.Key.Contains(unit.Name, StringComparison.InvariantCultureIgnoreCase)))
-                    {
-                        var newUnit = (Unit)unit.Clone();
-                        newUnit.Price = price.Value;
-                        units.Add(newUnit);
-                    }
-
+                    };
                 }
-            };
-
+                break;
+            }
         }
 
         private (Dictionary<string, int>, Dictionary<string, int>) getPrices(string factionName)
