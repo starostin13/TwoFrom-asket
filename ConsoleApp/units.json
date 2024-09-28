@@ -469,16 +469,89 @@
     ]
   },
   {
-    "Name": "Танк",
+    "Name": "Sherman Medium Tank",
     "MinModels": 1,
     "MaxModels": 1,
     "ExperienceLevels": [
       {
+        "Level": "Inexperienced",
+        "BaseCost": 168
+      },
+      {
         "Level": "Regular",
-        "BaseCost": 262,
-        "AdditionalModelCost": 0
+        "BaseCost": 210
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 262
       }
     ],
-    "Weapons": []
+    "Weapons": [
+      {
+        "Name": "M4A1",
+        "Cost": -5,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "M4",
+        "Cost": -15,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 15,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrades": [
+          {
+            "Name": "pintle-mounted HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Transport Half-Tracks",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "ExperienceLevels": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 56
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 70
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 84
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "M2A1",
+        "Cost": 5,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "M3",
+        "Cost": 7,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "Add up to 3 additional pintle-mounted MMGs",
+        "Cost": 15,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
   }
 ]
