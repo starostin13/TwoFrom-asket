@@ -20,16 +20,17 @@ namespace UnitRosterGenerator
         public ExperienceLevel Level { get; set; }
         public int BaseCost { get; set; }
         public int AdditionalModelCost { get; set; }
-        public Upgrade Upgrades { get; set; } // Новое поле для улучшений
+        public Upgrade Upgrades { get; set; } // Поле для улучшений
     }
 
-    // Класс дополнительного вооружения
+    // Класс, представляющий оружие
     class Weapon
     {
         public string Name { get; set; }
         public int Cost { get; set; }
         public int MinCount { get; set; }
         public int MaxCount { get; set; }
+        public List<Upgrade> Upgrades { get; set; } // Поле для улучшений
     }
 
     // Класс улучшения
@@ -57,10 +58,10 @@ namespace UnitRosterGenerator
         public List<ExperienceLevelData> ExperienceLevels { get; set; }
         public List<Weapon> Weapons { get; set; }
         public Upgrade Upgrades { get; set; }
-        public List<IncompatibleWeaponGroup> IncompatibleWeapons { get; set; } // Новое поле для несовместимого оружия
+        public List<IncompatibleWeaponGroup> IncompatibleWeapons { get; set; } // Поле для несовместимого оружия
 
         // Метод для расчета стоимости юнита с учетом количества моделей, уровня опыта, выбранного вооружения и улучшений
-        public int CalculateCost(int modelCount, Dictionary<string, int> selectedWeapons, ExperienceLevelData experienceLevel, bool upgradeSelected)
+        public int CalculateCost(int modelCount, Dictionary<string, int> selectedWeapons, ExperienceLevelData experienceLevel, bool upgradeSelected, bool weaponUpgradeSelected)
         {
             // Базовая стоимость за минимальное количество моделей
             int totalCost = experienceLevel.BaseCost;
@@ -78,10 +79,19 @@ namespace UnitRosterGenerator
                 {
                     int weaponCount = selectedWeapons[weapon.Name];
                     totalCost += weaponCount * weapon.Cost;
+
+                    // Добавляем стоимость за улучшения оружия, если они выбраны
+                    if (weaponUpgradeSelected)
+                    {
+                        foreach (var upgrade in weapon.Upgrades)
+                        {
+                            totalCost += weaponCount * upgrade.Cost; // Предполагаем, что улучшение применяется ко всему количеству оружия
+                        }
+                    }
                 }
             }
 
-            // Добавляем стоимость за улучшение
+            // Добавляем стоимость за улучшение юнита, если оно выбрано
             if (upgradeSelected)
             {
                 totalCost += modelCount * Upgrades.Cost;
@@ -126,12 +136,12 @@ namespace UnitRosterGenerator
         }
 
         // Метод для генерации всех возможных комбинаций юнитов
-        static void GenerateAllRosters(List<Unit> availableUnits, int maxPoints, List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)> currentRoster, int currentPoints, List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>> allRosters)
+        static void GenerateAllRosters(List<Unit> availableUnits, int maxPoints, List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)> currentRoster, int currentPoints, List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>> allRosters)
         {
             if (currentPoints > maxPoints)
                 return;
 
-            allRosters.Add(new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>(currentRoster));
+            allRosters.Add(new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>(currentRoster));
 
             foreach (var unit in availableUnits)
             {
@@ -142,77 +152,65 @@ namespace UnitRosterGenerator
                     {
                         // Перебираем все возможные комбинации дополнительного вооружения
                         var selectedWeapons = new Dictionary<string, int>();
-                        GenerateWeaponCombinations(unit.Weapons, unit.IncompatibleWeapons, selectedWeapons, 0, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters);
+                        bool upgradeSelected = unit.Upgrades != null && unit.Upgrades.MinCount > 0;
+
+                        // Генерация всех возможных комбинаций оружия
+                        GenerateWeaponCombinations(unit.Weapons, selectedWeapons, 0, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, upgradeSelected);
                     }
                 }
             }
         }
 
-        // Метод генерации всех возможных комбинаций дополнительного вооружения
-        static void GenerateWeaponCombinations(List<Weapon> weapons, List<IncompatibleWeaponGroup> incompatibleGroups, Dictionary<string, int> selectedWeapons, int weaponIndex, Unit unit, int modelCount, ExperienceLevelData experienceLevel, int currentPoints, int maxPoints, List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)> currentRoster, List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>> allRosters)
+        // Рекурсивный метод для генерации всех возможных комбинаций оружия
+        static void GenerateWeaponCombinations(List<Weapon> weapons, Dictionary<string, int> selectedWeapons, int weaponIndex, Unit unit, int modelCount, ExperienceLevelData experienceLevel, int currentPoints, int maxPoints, List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)> currentRoster, List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>> allRosters, bool upgradeSelected)
         {
-            if (weaponIndex == weapons.Count)
+            if (weaponIndex >= weapons.Count)
             {
-                // Генерация всех возможных вариантов выбора улучшения
-                for (bool upgradeSelected = false; upgradeSelected <= true; upgradeSelected = !upgradeSelected)
+                // Проверка всех вариантов с улучшениями оружия
+                bool weaponUpgradeSelected = false;
+
+                foreach (var weapon in weapons)
                 {
-                    int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, upgradeSelected);
+                    weaponUpgradeSelected = selectedWeapons.ContainsKey(weapon.Name) && weapon.Upgrades.Count > 0;
+                    int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, upgradeSelected, weaponUpgradeSelected);
+
                     if (cost <= maxPoints && currentPoints + cost <= maxPoints)
                     {
-                        currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, upgradeSelected));
+                        currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, upgradeSelected, weaponUpgradeSelected));
                     }
                 }
+
                 return;
             }
 
-            var weapon = weapons[weaponIndex];
+            var currentWeapon = weapons[weaponIndex]; // Изменено имя переменной
 
             // Генерация всех возможных количеств для текущего оружия
-            for (int weaponCount = weapon.MinCount; weaponCount <= weapon.MaxCount; weaponCount++)
+            for (int weaponCount = currentWeapon.MinCount; weaponCount <= currentWeapon.MaxCount; weaponCount++)
             {
-                selectedWeapons[weapon.Name] = weaponCount;
+                selectedWeapons[currentWeapon.Name] = weaponCount;
 
-                // Проверка на несовместимость
-                if (IsIncompatible(selectedWeapons, incompatibleGroups))
+                // Генерация всех возможных апгрейдов для текущего оружия
+                foreach (var upgrade in currentWeapon.Upgrades)
                 {
-                    // Если есть несовместимость, пропускаем эту комбинацию
-                    continue;
+                    // Проверка минимального количества
+                    if (upgrade.MinCount > 0)
+                    {
+                        selectedWeapons[upgrade.Name] = 1; // выбираем один апгрейд
+                    }
+
+                    // Рекурсивный вызов для следующего типа оружия
+                    GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, upgradeSelected);
                 }
 
-                GenerateWeaponCombinations(weapons, incompatibleGroups, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters);
-            }
-
-            // Удаляем текущее оружие из выбора
-            if (selectedWeapons.ContainsKey(weapon.Name))
-            {
-                selectedWeapons.Remove(weapon.Name);
+                // Удаляем текущее оружие из выбора
+                selectedWeapons.Remove(currentWeapon.Name);
             }
 
             // Продолжаем без выбора текущего оружия
-            GenerateWeaponCombinations(weapons, incompatibleGroups, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters);
+            GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, upgradeSelected);
         }
 
-        // Метод проверки на несовместимость
-        static bool IsIncompatible(Dictionary<string, int> selectedWeapons, List<IncompatibleWeaponGroup> incompatibleGroups)
-        {
-            foreach (var group in incompatibleGroups)
-            {
-                int count = 0;
-                foreach (var weapon in group.WeaponNames)
-                {
-                    if (selectedWeapons.ContainsKey(weapon))
-                    {
-                        count += selectedWeapons[weapon];
-                    }
-                }
-                // Если выбрано оружие из несовместимой группы, возвращаем true
-                if (count > 1)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
 
         static void Main(string[] args)
         {
@@ -223,15 +221,15 @@ namespace UnitRosterGenerator
             int maxPoints = 1000;
 
             // Генерация всех возможных списков юнитов
-            List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>> allRosters = new List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>>();
-            GenerateAllRosters(units, maxPoints, new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool)>(), 0, allRosters);
+            List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>> allRosters = new List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>>();
+            GenerateAllRosters(units, maxPoints, new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>(), 0, allRosters);
 
             // Вывод всех сгенерированных списков юнитов
             foreach (var roster in allRosters)
             {
-                foreach (var (unit, modelCount, selectedWeapons, experienceLevel, upgradeSelected) in roster)
+                foreach (var (unit, modelCount, selectedWeapons, experienceLevel, upgradeSelected, weaponUpgradeSelected) in roster)
                 {
-                    Console.WriteLine($"{unit.Name} (Опыт: {experienceLevel.Level}, Модели: {modelCount}, Оружие: {string.Join(", ", selectedWeapons.Select(w => $"{w.Key} x{w.Value}"))}, Улучшение: {upgradeSelected})");
+                    Console.WriteLine($"{unit.Name} (Опыт: {experienceLevel.Level}, Модели: {modelCount}, Оружие: {string.Join(", ", selectedWeapons.Select(w => $"{w.Key} x{w.Value}"))}, Улучшение юнита: {upgradeSelected}, Улучшение оружия: {weaponUpgradeSelected})");
                 }
                 Console.WriteLine("-----");
             }

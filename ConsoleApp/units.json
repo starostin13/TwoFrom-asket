@@ -211,7 +211,10 @@
     "IncompatibleWeapons": [
       {
         "Group": "Support Weapons",
-        "WeaponNames": ["BAR", "MG"]
+        "WeaponNames": [
+          "BAR",
+          "MG"
+        ]
       }
     ],
     "Upgrades": [
@@ -224,6 +227,242 @@
       {
         "Name": "Stubborn",
         "Cost": 1,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "Ranger Squad",
+    "MinModels": 6,
+    "MaxModels": 12,
+    "ExperienceLevels": [
+      {
+        "Level": "Veteran",
+        "BaseCost": 70,
+        "AdditionalModelCost": 14
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "SMG",
+        "Cost": 4,
+        "MinCount": 0,
+        "MaxCount": 3
+      },
+      {
+        "Name": "BAR",
+        "Cost": 6,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "MG",
+        "Cost": 15,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ],
+    "Upgrades": [
+      {
+        "Name": "Антитанковые гранаты",
+        "Cost": 2,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "Marine Squad",
+    "MinModels": 7,
+    "MaxModels": 13,
+    "ExperienceLevels": [
+      {
+        "Level": "Regular",
+        "BaseCost": 70,
+        "AdditionalModelCost": 10
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 91,
+        "AdditionalModelCost": 13
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "SMG",
+        "Cost": 4,
+        "MinCount": 0,
+        "MaxCount": 3
+      },
+      {
+        "Name": "BAR",
+        "Cost": 6,
+        "MinCount": 0,
+        "MaxCount": 3
+      },
+      {
+        "Name": "Pistol",
+        "Cost": 1,
+        "MinCount": 0,
+        "MaxCount": 3
+      },
+      {
+        "Name": "Shotgun",
+        "Cost": 3,
+        "MinCount": 0,
+        "MaxCount": 3
+      }
+    ],
+    "Upgrades": [
+      {
+        "Name": "Антитанковые гранаты",
+        "Cost": 2,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "Stubborn",
+        "Cost": 2,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "Medium Machine Gun Team",
+    "MinModels": 3,
+    "MaxModels": 3,
+    "ExperienceLevels": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 35
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 50
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 65
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "Heavy MG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "Bazooka Team",
+    "MinModels": 2,
+    "MaxModels": 2,
+    "ExperienceLevels": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 42
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 60
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 78
+      }
+    ]
+  },
+  {
+    "Name": "Sniper Team",
+    "MinModels": 2,
+    "MaxModels": 2,
+    "ExperienceLevels": [
+      {
+        "Level": "Regular",
+        "BaseCost": 52
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 67
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "SMG",
+        "Cost": 3,
+        "MinCount": 0,
+        "MaxCount": 2
+      }
+    ]
+  },
+  {
+    "Name": "Flamethrower Team",
+    "MinModels": 2,
+    "MaxModels": 2,
+    "ExperienceLevels": [
+      {
+        "Level": "Regular",
+        "BaseCost": 50
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 65
+      }
+    ]
+  },
+  {
+    "Name": "Mortar Team",
+    "MinModels": 3,
+    "MaxModels": 3,
+    "ExperienceLevels": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 25
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 36
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 46
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "Medium Mortar",
+        "Cost": 10,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrades": [
+          {
+            "Name": "spotter",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      },
+      {
+        "Name": "Heavy Mortar",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrades": [
+          {
+            "Name": "spotter",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      },
+      {
+        "Name": "Reduce crew to 2",
+        "Cost": -5,
         "MinCount": 0,
         "MaxCount": 1
       }
