@@ -99,7 +99,13 @@
       {
         "Level": "Veteran",
         "BaseCost": 78,
-        "AdditionalModelCost": 13
+        "AdditionalModelCost": 13,
+        "Upgrades": {
+          "Name": "ToughFighters",
+          "Cost": 1,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
       }
     ],
     "Weapons": [
@@ -115,7 +121,13 @@
         "MinCount": 0,
         "MaxCount": 2
       }
-    ]
+    ],
+    "Upgrades": {
+      "Name": "Антитанковые гранаты",
+      "Cost": 2,
+      "MinCount": 0,
+      "MaxCount": 1
+    }
   },
   {
     "Name": "Танк",
