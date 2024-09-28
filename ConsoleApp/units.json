@@ -1,0 +1,64 @@
+[
+  {
+    "Name": "Отряд пехоты",
+    "MinModels": 5,
+    "MaxModels": 10,
+    "ExperienceLevels": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 42,
+        "AdditionalModelCost": 7
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 60,
+        "AdditionalModelCost": 10
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 78,
+        "AdditionalModelCost": 13
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "SMG",
+        "Cost": 4,
+        "MinCount": 0,
+        "MaxCount": 3
+      },
+      {
+        "Name": "BAR",
+        "Cost": 6,
+        "MinCount": 0,
+        "MaxCount": 2
+      }
+    ]
+  },
+  {
+    "Name": "Командир",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "ExperienceLevels": [
+      {
+        "Level": "Veteran",
+        "BaseCost": 78,
+        "AdditionalModelCost": 0
+      }
+    ],
+    "Weapons": []
+  },
+  {
+    "Name": "Танк",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "ExperienceLevels": [
+      {
+        "Level": "Regular",
+        "BaseCost": 262,
+        "AdditionalModelCost": 0
+      }
+    ],
+    "Weapons": []
+  }
+]

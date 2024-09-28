@@ -25,8 +25,6 @@ namespace ArmyGeneratorMaui
                         factionSide = splittedFileName[0];
                         FactionName = splittedFileName[1];
 
-                        XmlSerializer serializer = new XmlSerializer(typeof);
-                        var xml1 = XmlSerializer.Deserialize(r);
                     }
                     break;
                 case DataResourceType.PDF:
