@@ -63,58 +63,6 @@ namespace UnitRosterGenerator
             return units;
         }
 
-        // Метод для генерации всех возможных комбинаций юнитов
-        static void GenerateAllRosters(
-    List<Unit> availableUnits,
-    int maxPoints,
-    List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)> currentRoster,
-    int currentPoints,
-    List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>> allRosters)
-        {
-            // Добавляем текущий ростер к списку возможных ростеров, если он подходит по очкам
-            if (currentPoints <= maxPoints)
-            {
-                allRosters.Add(new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>(currentRoster));
-            }
-
-            // Если текущий ростер уже превысил лимит по очкам, дальнейший перебор не нужен
-            if (currentPoints > maxPoints)
-                return;
-
-            // Проходим по всем доступным юнитам
-            foreach (var unit in availableUnits)
-            {
-                // Для каждого юнита перебираем уровни опыта
-                foreach (var experienceLevel in unit.Experience)
-                {
-                    // Перебираем все возможные варианты количества моделей для текущего юнита
-                    for (int modelCount = unit.MinModels; modelCount <= unit.MaxModels; modelCount++)
-                    {
-                        // Перебираем все возможные комбинации дополнительного вооружения
-                        var selectedWeapons = new Dictionary<string, int>();
-                        bool upgradeSelected = unit.Upgrades != null && unit.Upgrades.MinCount > 0;
-
-                        // Копия текущего ростера для добавления новых вариантов
-                        var currentRosterCopy = new List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>(currentRoster);
-
-                        // Генерация всех возможных комбинаций оружия и добавление в ростер
-                        GenerateWeaponCombinations(
-                            unit.Weapons,
-                            selectedWeapons,
-                            0,
-                            unit,
-                            modelCount,
-                            experienceLevel,
-                            currentPoints,
-                            maxPoints,
-                            currentRosterCopy,
-                            allRosters,
-                            upgradeSelected);
-                    }
-                }
-            }
-        }
-
 
         // Рекурсивный метод для генерации всех возможных комбинаций оружия
         static void GenerateWeaponCombinations(

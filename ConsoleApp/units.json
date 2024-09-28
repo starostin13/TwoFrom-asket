@@ -3,7 +3,7 @@
     "Name": "1st Lieutenant or 2nd Lieutenant",
     "MinModels": 1,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 21,
@@ -26,7 +26,7 @@
     "Name": "Company Commader",
     "MinModels": 1,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 42,
@@ -49,7 +49,7 @@
     "Name": "Medic",
     "MinModels": 1,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 23,
@@ -67,7 +67,7 @@
     "Name": "Forward observer",
     "MinModels": 1,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 75,
@@ -85,7 +85,7 @@
     "Name": "Regular Infantry Squad",
     "MinModels": 6,
     "MaxModels": 12,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 42,
@@ -100,7 +100,7 @@
         "Level": "Veteran",
         "BaseCost": 78,
         "AdditionalModelCost": 13,
-        "Upgrades": {
+        "Upgrade": {
           "Name": "ToughFighters",
           "Cost": 1,
           "MinCount": 0,
@@ -122,7 +122,7 @@
         "MaxCount": 2
       }
     ],
-    "Upgrades": {
+    "Upgrade": {
       "Name": "Антитанковые гранаты",
       "Cost": 2,
       "MinCount": 0,
@@ -133,7 +133,7 @@
     "Name": "Engineer Squad",
     "MinModels": 5,
     "MaxModels": 8,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 55,
@@ -157,15 +157,9 @@
         "Cost": 6,
         "MinCount": 0,
         "MaxCount": 2
-      },
-      {
-        "Name": "Flametower",
-        "Cost": 30,
-        "MinCount": 0,
-        "MaxCount": 1
       }
     ],
-    "Upgrades": {
+    "Upgrade": {
       "Name": "Антитанковые гранаты",
       "Cost": 2,
       "MinCount": 0,
@@ -176,7 +170,7 @@
     "Name": "Airborne Squad",
     "MinModels": 6,
     "MaxModels": 12,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 60,
@@ -217,7 +211,7 @@
         ]
       }
     ],
-    "Upgrades": [
+    "Upgrade": [
       {
         "Name": "Антитанковые гранаты",
         "Cost": 2,
@@ -236,7 +230,7 @@
     "Name": "Ranger Squad",
     "MinModels": 6,
     "MaxModels": 12,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Veteran",
         "BaseCost": 70,
@@ -263,7 +257,7 @@
         "MaxCount": 1
       }
     ],
-    "Upgrades": [
+    "Upgrade": [
       {
         "Name": "Антитанковые гранаты",
         "Cost": 2,
@@ -276,7 +270,7 @@
     "Name": "Marine Squad",
     "MinModels": 7,
     "MaxModels": 13,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 70,
@@ -314,7 +308,7 @@
         "MaxCount": 3
       }
     ],
-    "Upgrades": [
+    "Upgrade": [
       {
         "Name": "Антитанковые гранаты",
         "Cost": 2,
@@ -333,7 +327,7 @@
     "Name": "Medium Machine Gun Team",
     "MinModels": 3,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 35
@@ -360,7 +354,7 @@
     "Name": "Bazooka Team",
     "MinModels": 2,
     "MaxModels": 2,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 42
@@ -379,7 +373,7 @@
     "Name": "Sniper Team",
     "MinModels": 2,
     "MaxModels": 2,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Regular",
         "BaseCost": 52
@@ -399,25 +393,10 @@
     ]
   },
   {
-    "Name": "Flamethrower Team",
-    "MinModels": 2,
-    "MaxModels": 2,
-    "ExperienceLevels": [
-      {
-        "Level": "Regular",
-        "BaseCost": 50
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 65
-      }
-    ]
-  },
-  {
     "Name": "Mortar Team",
     "MinModels": 3,
     "MaxModels": 3,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 25
@@ -437,7 +416,7 @@
         "Cost": 10,
         "MinCount": 0,
         "MaxCount": 1,
-        "Upgrades": [
+        "Upgrade": [
           {
             "Name": "spotter",
             "Cost": 10,
@@ -451,7 +430,7 @@
         "Cost": 25,
         "MinCount": 0,
         "MaxCount": 1,
-        "Upgrades": [
+        "Upgrade": [
           {
             "Name": "spotter",
             "Cost": 10,
@@ -472,7 +451,7 @@
     "Name": "Sherman Medium Tank",
     "MinModels": 1,
     "MaxModels": 1,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 168
@@ -504,7 +483,7 @@
         "Cost": 15,
         "MinCount": 0,
         "MaxCount": 1,
-        "Upgrades": [
+        "Upgrade": [
           {
             "Name": "pintle-mounted HMG",
             "Cost": 10,
@@ -519,7 +498,7 @@
     "Name": "Transport Half-Tracks",
     "MinModels": 1,
     "MaxModels": 1,
-    "ExperienceLevels": [
+    "Experience": [
       {
         "Level": "Inexperienced",
         "BaseCost": 56
