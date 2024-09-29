@@ -37,7 +37,7 @@ namespace UnitRosterGenerator
 
 
     // Класс улучшения
-    class Upgrade
+    public class Upgrade
     {
         public required string Name { get; set; }
         public int Cost { get; set; }
@@ -74,34 +74,34 @@ namespace UnitRosterGenerator
     ExperienceLevelData experienceLevel,
     int currentPoints,
     int maxPoints,
-    List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)> currentRoster,
-    List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, bool, bool)>> allRosters,
-    bool upgradeSelected)
+    List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, Dictionary<string, int>, bool)> currentRoster, // Изменено
+    List<List<(Unit, int, Dictionary<string, int>, ExperienceLevelData, Dictionary<string, int>, bool)>> allRosters, // Изменено
+    Dictionary<string, int> selectedUnitUpgrades) // Добавлено для обработки апгрейдов юнита
         {
             // Проверяем, есть ли у юнита оружие
             if (weapons == null || weapons.Count == 0)
             {
                 // Если оружия нет, добавляем текущий состав (без оружия)
-                int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, upgradeSelected, false);
+                int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, selectedUnitUpgrades, false); // Изменено
                 if (cost <= maxPoints && currentPoints + cost <= maxPoints)
                 {
-                    currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, upgradeSelected, false));
+                    currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, new Dictionary<string, int>(selectedUnitUpgrades), false)); // Изменено
                 }
                 return;
             }
 
+            // Если индекс оружия превышает количество оружия, добавляем конфигурацию в текущий состав
             if (weaponIndex >= weapons.Count)
             {
-                // Проверка всех вариантов с выбранным оружием и без апгрейдов
-                int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, upgradeSelected, false);
+                int cost = unit.CalculateCost(modelCount, selectedWeapons, experienceLevel, selectedUnitUpgrades, false); // Изменено
                 if (cost <= maxPoints && currentPoints + cost <= maxPoints)
                 {
-                    currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, upgradeSelected, false));
+                    currentRoster.Add((unit, modelCount, new Dictionary<string, int>(selectedWeapons), experienceLevel, new Dictionary<string, int>(selectedUnitUpgrades), false)); // Изменено
                 }
                 return;
             }
 
-            var currentWeapon = weapons[weaponIndex]; // Изменено имя переменной
+            var currentWeapon = weapons[weaponIndex]; // Текущее оружие
 
             // Генерация всех возможных количеств для текущего оружия
             for (int weaponCount = currentWeapon.MinCount; weaponCount <= currentWeapon.MaxCount; weaponCount++)
@@ -109,25 +109,34 @@ namespace UnitRosterGenerator
                 selectedWeapons[currentWeapon.Name] = weaponCount;
 
                 // Генерация всех возможных апгрейдов для текущего оружия (если они есть)
-                if (currentWeapon.Upgrades != null)
+                if (currentWeapon.Upgrades != null && currentWeapon.Upgrades.Count > 0)
                 {
                     foreach (var upgrade in currentWeapon.Upgrades)
                     {
-                        // Проверка минимального количества
-                        if (upgrade.MinCount > 0)
+                        // Генерация всех возможных комбинаций с апгрейдом оружия
+                        for (int upgradeCount = upgrade.MinCount; upgradeCount <= upgrade.MaxCount; upgradeCount++)
                         {
-                            selectedWeapons[upgrade.Name] = 1; // выбираем один апгрейд
-                        }
+                            if (upgradeCount > 0)
+                            {
+                                selectedWeapons[upgrade.Name] = upgradeCount; // Устанавливаем количество апгрейдов
+                            }
 
-                        // Рекурсивный вызов для следующего типа оружия
-                        GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, upgradeSelected);
+                            // Рекурсивный вызов для следующего типа оружия с выбранными апгрейдами
+                            GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, selectedUnitUpgrades);
+
+                            // Удаляем апгрейд после использования, чтобы не оставался в других комбинациях
+                            if (selectedWeapons.ContainsKey(upgrade.Name))
+                            {
+                                selectedWeapons.Remove(upgrade.Name);
+                            }
+                        }
                     }
                 }
 
-                // Рекурсивный вызов без выбора улучшений для текущего оружия
-                GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, upgradeSelected);
+                // Рекурсивный вызов для следующего типа оружия без апгрейдов
+                GenerateWeaponCombinations(weapons, selectedWeapons, weaponIndex + 1, unit, modelCount, experienceLevel, currentPoints, maxPoints, currentRoster, allRosters, selectedUnitUpgrades);
 
-                // Удаляем текущее оружие из выбора
+                // Удаляем текущее оружие из выбора после обработки
                 selectedWeapons.Remove(currentWeapon.Name);
             }
         }
@@ -140,7 +149,7 @@ namespace UnitRosterGenerator
             List<Unit> units = LoadUnitsFromJson("units.json");
 
             // Максимальная стоимость для отрядов
-            int maxPoints = 1000;
+            int maxPoints = 382;
 
             List<List<UnitConfiguration>> allRosters = new List<List<UnitConfiguration>>();
             for(int i=0; i<100;i++)
@@ -172,9 +181,9 @@ namespace UnitRosterGenerator
                             Console.Write($"Улучшение оружия: {unitConfig.WeaponUpgradeSelected}, ");
                         }
                     }
-                    if (unitConfig.UnitUpgradeSelected)
+                    if (unitConfig.SelectedUnitUpgrades != null)
                     {
-                        Console.Write($"Улучшение юнита: {unitConfig.UnitUpgradeSelected}, ");
+                        Console.Write($"Улучшение юнита: {string.Join(", ", unitConfig.SelectedUnitUpgrades.Select(w => $"{w.Key} x{w.Value}"))}, ");
                     }
 
                     Console.Write($"Общая стоимость: {unitConfig.TotalCost}){Environment.NewLine}");

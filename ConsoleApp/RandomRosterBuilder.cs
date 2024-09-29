@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnitRosterGenerator;
+﻿using UnitRosterGenerator;
 
 class RandomRosterBuilder
 {
@@ -32,11 +30,11 @@ class RandomRosterBuilder
             // Случайное вооружение и апгрейды
             var selectedWeapons = GetRandomWeapons(unit.Weapons);
 
-            // Определяем, выбраны ли улучшения
-            bool upgradeSelected = unit.Upgrades != null && random.Next(0, 2) == 1;
+            // Получаем случайные апгрейды юнита
+            var selectedUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
             // Создаем конфигурацию юнита
-            var unitConfig = new UnitConfiguration(unit, modelCount, experienceLevel, selectedWeapons, upgradeSelected, false);
+            var unitConfig = new UnitConfiguration(unit, modelCount, experienceLevel, selectedWeapons, selectedUpgrades, false);
 
             // Если добавление этого юнита не превышает доступные очки
             if (currentPoints + unitConfig.TotalCost > maxPoints)
@@ -111,5 +109,25 @@ class RandomRosterBuilder
         }
 
         return selectedWeapons;
+    }
+
+    // Метод для получения случайных апгрейдов юнита
+    private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade> upgrades)
+    {
+        var selectedUpgrades = new Dictionary<string, int>();
+
+        if (upgrades != null && upgrades.Count > 0)
+        {
+            foreach (var upgrade in upgrades)
+            {
+                // Случайно решаем, будет ли выбран апгрейд
+                if (random.Next(0, 2) == 1)
+                {
+                    selectedUpgrades[upgrade.Name] = 1;
+                }
+            }
+        }
+
+        return selectedUpgrades;
     }
 }

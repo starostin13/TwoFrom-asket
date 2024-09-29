@@ -8,11 +8,16 @@
         public int MaxModels { get; set; }
         public List<ExperienceLevelData>? Experience { get; set; }
         public List<Weapon>? Weapons { get; set; }
-        public Upgrade? Upgrades { get; set; }
+        public List<Upgrade>? Upgrade { get; set; }
         public List<IncompatibleWeaponGroup>? IncompatibleWeapons { get; set; }
 
         // Метод для расчета стоимости юнита с учетом количества моделей, уровня опыта, выбранного вооружения и улучшений
-        public int CalculateCost(int modelCount, Dictionary<string, int> selectedWeapons, ExperienceLevelData experienceLevel, bool upgradeSelected, bool weaponUpgradeSelected)
+        public int CalculateCost(
+    int modelCount,
+    Dictionary<string, int> selectedWeapons,
+    ExperienceLevelData experienceLevel,
+    Dictionary<string, int> selectedUnitUpgrades,  // Изменено
+    bool weaponUpgradeSelected)
         {
             // Базовая стоимость за минимальное количество моделей
             int totalCost = experienceLevel.BaseCost;
@@ -48,10 +53,17 @@
                 }
             }
 
-            // Добавляем стоимость за улучшение юнита, если оно выбрано
-            if (upgradeSelected)
+            // Добавляем стоимость за улучшения юнита, если они выбраны
+            if (selectedUnitUpgrades.Count != 0)  // Проверяем на null
             {
-                totalCost += modelCount * Upgrades.Cost;
+                foreach (var upgrade in Upgrade)  // Проходим по апгрейдам юнита
+                {
+                    if (selectedUnitUpgrades.ContainsKey(upgrade.Name))
+                    {
+                        int upgradeCount = selectedUnitUpgrades[upgrade.Name];  // Количество выбранных апгрейдов
+                        totalCost += upgradeCount * upgrade.Cost;
+                    }
+                }
             }
 
             // Добавляем стоимость за правило Tough Fighters, если уровень опыта - Veteran и правило активно
@@ -62,6 +74,7 @@
 
             return totalCost;
         }
+
 
 
         public override string ToString()

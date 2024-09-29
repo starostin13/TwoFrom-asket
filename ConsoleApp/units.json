@@ -122,12 +122,12 @@
         "MaxCount": 2
       }
     ],
-    "Upgrade": {
+    "Upgrade": [{
       "Name": "Антитанковые гранаты",
       "Cost": 2,
       "MinCount": 0,
       "MaxCount": 1
-    }
+    }]
   },
   {
     "Name": "Engineer Squad",
@@ -159,12 +159,12 @@
         "MaxCount": 2
       }
     ],
-    "Upgrade": {
+    "Upgrade": [{
       "Name": "Антитанковые гранаты",
       "Cost": 2,
       "MinCount": 0,
       "MaxCount": 1
-    }
+    }]
   },
   {
     "Name": "Airborne Squad",
@@ -403,7 +403,7 @@
       },
       {
         "Level": "Regular",
-        "BaseCost": 36
+        "BaseCost": 35
       },
       {
         "Level": "Veteran",
@@ -444,53 +444,6 @@
         "Cost": -5,
         "MinCount": 0,
         "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Sherman Medium Tank",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 168
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 210
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 262
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "M4A1",
-        "Cost": -5,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "M4",
-        "Cost": -15,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "pintle-mounted HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
       }
     ]
   },
