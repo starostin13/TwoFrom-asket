@@ -143,17 +143,42 @@ namespace UnitRosterGenerator
             int maxPoints = 1000;
 
             List<List<UnitConfiguration>> allRosters = new List<List<UnitConfiguration>>();
-
-            // Вызываем метод для генерации случайного ростера
-            RandomRosterBuilder.BuildRandomRoster(units, maxPoints, new List<UnitConfiguration>(), allRosters);
+            for(int i=0; i<100;i++)
+            {
+                var list = new List<UnitConfiguration>();
+                // Вызываем метод для генерации случайного ростера
+                RandomRosterBuilder.BuildRandomRoster(units, maxPoints, list, allRosters);
+            }
 
             // Выводим результаты
-            foreach (var roster in allRosters)
+            foreach (var r in allRosters.Select(roster => new
+            {
+                Roster = roster,
+                TotalCost = roster.Sum(unitConfig => unitConfig.TotalCost) // Суммируем стоимость всех юнитов в ростере
+            })
+    .OrderByDescending(r => r.TotalCost) // Сортируем ростеры по общей стоимости, от большего к меньшему
+    .Take(5).ToList())
             {
                 int totalRosterCost = 0; // Переменная для хранения общей стоимости ростера
-                foreach (var unitConfig in roster)
+                foreach (var unitConfig in r.Roster)
                 {
-                    Console.WriteLine($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Select(w => $"{w.Key} x{w.Value}"))}, Улучшение юнита: {unitConfig.UnitUpgradeSelected}, Улучшение оружия: {unitConfig.WeaponUpgradeSelected}, Общая стоимость: {unitConfig.TotalCost})");
+                    Console.Write($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount},");
+                    if (unitConfig.SelectedWeapons.Count > 0)
+                    {
+                        Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Select(w => $"{w.Key} x{w.Value}"))},");
+
+                        if(unitConfig.WeaponUpgradeSelected)
+                        {
+                            Console.Write($"Улучшение оружия: {unitConfig.WeaponUpgradeSelected}, ");
+                        }
+                    }
+                    if (unitConfig.UnitUpgradeSelected)
+                    {
+                        Console.Write($"Улучшение юнита: {unitConfig.UnitUpgradeSelected}, ");
+                    }
+
+                    Console.Write($"Общая стоимость: {unitConfig.TotalCost}){Environment.NewLine}");
+                    
                     // Добавляем стоимость данного юнита к общей стоимости ростера
                     totalRosterCost += unitConfig.TotalCost;
                 }
