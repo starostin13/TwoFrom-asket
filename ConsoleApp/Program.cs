@@ -146,10 +146,10 @@ namespace UnitRosterGenerator
         static void Main(string[] args)
         {
             // Загрузка юнитов из JSON файла
-            List<Unit> units = LoadUnitsFromJson("units.json");
+            List<Unit> units = LoadUnitsFromJson("SlavesToTheDarkness-AOS.json");
 
             // Максимальная стоимость для отрядов
-            int maxPoints = 382;
+            int maxPoints = 330;
 
             List<List<UnitConfiguration>> allRosters = new List<List<UnitConfiguration>>();
             for(int i=0; i<100;i++)
