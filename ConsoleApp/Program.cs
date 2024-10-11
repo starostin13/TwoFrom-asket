@@ -174,16 +174,16 @@ namespace UnitRosterGenerator
                     Console.Write($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount},");
                     if (unitConfig.SelectedWeapons.Count > 0)
                     {
-                        Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Select(w => $"{w.Key} x{w.Value}"))},");
+                        Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(w => w.Value > 0).Select(w => $"{w.Key} x{w.Value}"))},");
 
-                        if(unitConfig.WeaponUpgradeSelected)
+                        if (unitConfig.WeaponUpgradeSelected)
                         {
                             Console.Write($"Улучшение оружия: {unitConfig.WeaponUpgradeSelected}, ");
                         }
                     }
-                    if (unitConfig.SelectedUnitUpgrades != null)
+                    if (unitConfig.SelectedUnitUpgrades.Count != 0)
                     {
-                        Console.Write($"Улучшение юнита: {string.Join(", ", unitConfig.SelectedUnitUpgrades.Select(w => $"{w.Key} x{w.Value}"))}, ");
+                        Console.Write($"Улучшение юнита: {string.Join(", ", unitConfig.SelectedUnitUpgrades.Select(w => $"{w.Key}"))}, ");
                     }
 
                     Console.Write($"Общая стоимость: {unitConfig.TotalCost}){Environment.NewLine}");
