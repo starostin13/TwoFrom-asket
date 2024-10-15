@@ -6,46 +6,39 @@ namespace UnitRosterGenerator
     {
         private static Random random = new Random();
 
-        // Метод для генерации случайного ростера
         public static void BuildRandomRoster(
-            List<Unit> availableUnits, // Доступные юниты
-            List<Detach> availableDetaches, // Доступные детачи
-            int maxPoints, // Максимальное количество очков
-            List<UnitConfiguration> currentRoster, // Текущий ростер (список конфигураций)
-            List<List<UnitConfiguration>> allRosters) // Все ростеры
+            List<Unit> availableUnits,
+            List<Detach> availableDetaches,
+            int maxPoints,
+            List<UnitConfiguration> currentRoster,
+            List<List<UnitConfiguration>> allRosters)
         {
             int currentPoints = 0;
 
-            // Выбираем случайный детач для всего ростера
             Detach selectedDetach = ChooseRandomDetach(availableDetaches);
 
             while (true)
             {
-                // Выбор случайного юнита
                 var unit = GetRandomUnit(availableUnits);
                 if (unit == null) break;
 
-                // Выбор случайного уровня опыта
                 var experienceLevel = GetRandomExperienceLevel(unit);
                 if (experienceLevel == null) continue;
 
-                // Случайное количество моделей
                 int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
-
-                // Случайное вооружение
                 var selectedWeapons = GetRandomWeapons(unit.Weapons);
-
-                // Случайные апгрейды юнита
                 var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
-                // Если детач выбран, добавляем случайные апгрейды из него
-                if (selectedDetach != null)
+                // Проверяем, может ли юнит получить улучшения детача
+                if (selectedDetach != null && unit.DetachUpgrade)
                 {
                     var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
 
-                    // Объединяем апгрейды юнита и детача
+                    int detachUpgradesAdded = 0;
                     foreach (var upgrade in selectedDetachUpgrades)
                     {
+                        if (detachUpgradesAdded >= selectedDetach.MaxDetachUpgrades) break;
+
                         if (selectedUnitUpgrades.ContainsKey(upgrade.Key))
                         {
                             selectedUnitUpgrades[upgrade.Key] += upgrade.Value;
@@ -54,41 +47,35 @@ namespace UnitRosterGenerator
                         {
                             selectedUnitUpgrades[upgrade.Key] = upgrade.Value;
                         }
+                        detachUpgradesAdded++;
                     }
                 }
 
-                // Создаем конфигурацию юнита, передавая детач в качестве аргумента
                 var unitConfig = new UnitConfiguration(
                     unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
 
-                // Проверка превышения максимальной стоимости
                 if (currentPoints + unitConfig.TotalCost > maxPoints)
                 {
                     break;
                 }
 
-                // Добавляем конфигурацию юнита в ростер
                 currentRoster.Add(unitConfig);
                 currentPoints += unitConfig.TotalCost;
             }
 
-            // Добавляем текущий ростер в список всех возможных ростеров
             allRosters.Add(new List<UnitConfiguration>(currentRoster));
         }
 
-        // Выбор случайного юнита
         private static Unit GetRandomUnit(List<Unit> availableUnits)
         {
             return availableUnits.Count > 0 ? availableUnits[random.Next(availableUnits.Count)] : null;
         }
 
-        // Выбор случайного уровня опыта
         private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
         {
             return unit.Experience?.Count > 0 ? unit.Experience[random.Next(unit.Experience.Count)] : null;
         }
 
-        // Выбор случайного набора оружия
         private static Dictionary<string, int> GetRandomWeapons(List<Weapon> weapons)
         {
             var selectedWeapons = new Dictionary<string, int>();
@@ -119,7 +106,6 @@ namespace UnitRosterGenerator
             return selectedWeapons;
         }
 
-        // Выбор случайных апгрейдов для юнита
         private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade> upgrades)
         {
             var selectedUpgrades = new Dictionary<string, int>();
@@ -139,19 +125,25 @@ namespace UnitRosterGenerator
             return selectedUpgrades;
         }
 
-        // Выбор случайных апгрейдов из детача
         private static Dictionary<string, int> GetRandomDetachUpgrades(Detach detach)
         {
             var selectedUpgrades = new Dictionary<string, int>();
+            int upgradesAdded = 0;
 
-            foreach (var upgrade in detach.Upgrades)
+            var shuffledUpgrades = new List<Upgrade>(detach.Upgrades);
+            shuffledUpgrades.Shuffle();
+
+            foreach (var upgrade in shuffledUpgrades)
             {
+                if (upgradesAdded >= detach.MaxDetachUpgrades) break;
+
                 if (random.Next(0, 2) == 1)
                 {
-                    int upgradeCount = random.Next(upgrade.MinCount, upgrade.MaxCount + 1);
+                    int upgradeCount = random.Next(1, upgrade.MaxCount + 1);
                     if (upgradeCount > 0)
                     {
                         selectedUpgrades[upgrade.Name] = upgradeCount;
+                        upgradesAdded++;
                     }
                 }
             }
@@ -159,10 +151,26 @@ namespace UnitRosterGenerator
             return selectedUpgrades;
         }
 
-        // Выбор случайного детача
         private static Detach ChooseRandomDetach(List<Detach> detaches)
         {
             return detaches.Count > 0 ? detaches[random.Next(detaches.Count)] : null;
+        }
+    }
+
+    static class Extensions
+    {
+        private static Random rng = new Random();
+
+        public static void Shuffle<T>(this List<T> list)
+        {
+            int n = list.Count;
+            while (n > 1)
+            {
+                int k = rng.Next(n--);
+                T temp = list[n];
+                list[n] = list[k];
+                list[k] = temp;
+            }
         }
     }
 }

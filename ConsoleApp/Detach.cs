@@ -1,17 +1,11 @@
-﻿using UnitRosterGenerator;
+﻿using System.Collections.Generic;
 
-public class Detach
+namespace UnitRosterGenerator
 {
-    // Название детача
-    public string Name { get; set; }
-
-    // Список улучшений в рамках данного детача
-    public List<Upgrade> Upgrades { get; set; }
-
-    // Конструктор класса Detach
-    public Detach(string name, List<Upgrade> upgrades)
+    public class Detach
     {
-        Name = name;
-        Upgrades = upgrades;
+        public required string Name { get; set; }
+        public int MaxDetachUpgrades { get; set; } // Максимальное количество улучшений, которые могут быть применены к одному юниту
+        public List<Upgrade> Upgrades { get; set; } // Список доступных улучшений для детача
     }
 }

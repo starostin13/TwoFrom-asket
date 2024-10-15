@@ -10,6 +10,7 @@ namespace UnitRosterGenerator
         public List<ExperienceLevelData>? Experience { get; set; } // Список уровней опыта для юнита
         public List<Weapon>? Weapons { get; set; } // Список доступного оружия
         public List<Upgrade>? Upgrade { get; set; } // Список улучшений юнита
+        public bool DetachUpgrade { get; set; } // Указывает, может ли юнит использовать апгрейды детачей
 
         // Метод для расчета общей стоимости юнита с учетом количества моделей, уровня опыта, выбранного оружия и улучшений
         public int CalculateCost(
@@ -30,7 +31,7 @@ namespace UnitRosterGenerator
             // Добавляем стоимость выбранного оружия
             if (Weapons != null)
             {
-                foreach (var weapon in Weapons)
+                foreach (var weapon in Weapons ?? Enumerable.Empty<Weapon>())
                 {
                     if (selectedWeapons.ContainsKey(weapon.Name))
                     {
@@ -49,16 +50,19 @@ namespace UnitRosterGenerator
                 }
             }
 
-            // Добавляем стоимость для каждого выбранного апгрейда из selectedUpgrades
-            if (selectedUpgrades != null && selectedUpgrades.Count > 0)
+            // Добавляем стоимость для каждого выбранного апгрейда из SelectedUpgrades
+            if (selectedUpgrades != null)
             {
-                foreach (var upgrade in selectedUpgrades)
+                foreach (var upgradeEntry in selectedUpgrades)
                 {
-                    // Ищем апгрейд по имени в списке Upgrade
-                    var unitUpgrade = Upgrade?.FirstOrDefault(u => u.Name == upgrade.Key);
+                    string upgradeName = upgradeEntry.Key;
+                    int upgradeCount = upgradeEntry.Value;
+
+                    // Ищем апгрейд по имени среди улучшений юнита
+                    var unitUpgrade = Upgrade?.FirstOrDefault(u => u.Name == upgradeName);
                     if (unitUpgrade != null)
                     {
-                        totalCost += upgrade.Value * unitUpgrade.Cost;
+                        totalCost += upgradeCount * unitUpgrade.Cost;
                     }
                 }
             }
