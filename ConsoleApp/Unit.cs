@@ -1,25 +1,24 @@
-﻿namespace UnitRosterGenerator
+﻿using System.Collections.Generic;
+
+namespace UnitRosterGenerator
 {
-    // Класс юнита
     class Unit
     {
         public required string Name { get; set; }
         public int MinModels { get; set; }
         public int MaxModels { get; set; }
-        public List<ExperienceLevelData>? Experience { get; set; }
-        public List<Weapon>? Weapons { get; set; }
-        public List<Upgrade>? Upgrade { get; set; }
-        public List<IncompatibleWeaponGroup>? IncompatibleWeapons { get; set; }
+        public List<ExperienceLevelData>? Experience { get; set; } // Список уровней опыта для юнита
+        public List<Weapon>? Weapons { get; set; } // Список доступного оружия
+        public List<Upgrade>? Upgrade { get; set; } // Список улучшений юнита
 
-        // Метод для расчета стоимости юнита с учетом количества моделей, уровня опыта, выбранного вооружения и улучшений
+        // Метод для расчета общей стоимости юнита с учетом количества моделей, уровня опыта, выбранного оружия и улучшений
         public int CalculateCost(
-    int modelCount,
-    Dictionary<string, int> selectedWeapons,
-    ExperienceLevelData experienceLevel,
-    Dictionary<string, int> selectedUnitUpgrades,  // Изменено
-    bool weaponUpgradeSelected)
+            int modelCount,
+            Dictionary<string, int> selectedWeapons,
+            ExperienceLevelData experienceLevel,
+            Dictionary<string, int> selectedUpgrades,
+            bool weaponUpgradeSelected)
         {
-            // Базовая стоимость за минимальное количество моделей
             int totalCost = experienceLevel.BaseCost;
 
             // Добавляем стоимость за дополнительные модели
@@ -28,8 +27,8 @@
                 totalCost += (modelCount - MinModels) * experienceLevel.AdditionalModelCost;
             }
 
-            // Добавляем стоимость за дополнительное вооружение, если оно есть
-            if (Weapons != null) // Проверяем на null перед циклом
+            // Добавляем стоимость выбранного оружия
+            if (Weapons != null)
             {
                 foreach (var weapon in Weapons)
                 {
@@ -38,48 +37,38 @@
                         int weaponCount = selectedWeapons[weapon.Name];
                         totalCost += weaponCount * weapon.Cost;
 
-                        // Добавляем стоимость за улучшения оружия, если они выбраны
-                        if (weaponUpgradeSelected)
+                        // Если выбрано улучшение оружия, добавляем его стоимость
+                        if (weaponUpgradeSelected && weapon.Upgrades != null)
                         {
-                            if (weapon.Upgrades != null) // Проверяем на null для Upgrades
+                            foreach (var upgrade in weapon.Upgrades)
                             {
-                                foreach (var upgrade in weapon.Upgrades)
-                                {
-                                    totalCost += weaponCount * upgrade.Cost; // Предполагаем, что улучшение применяется ко всему количеству оружия
-                                }
+                                totalCost += weaponCount * upgrade.Cost;
                             }
                         }
                     }
                 }
             }
 
-            // Добавляем стоимость за улучшения юнита, если они выбраны
-            if (selectedUnitUpgrades.Count != 0)  // Проверяем на null
+            // Добавляем стоимость для каждого выбранного апгрейда из selectedUpgrades
+            if (selectedUpgrades != null && selectedUpgrades.Count > 0)
             {
-                foreach (var upgrade in Upgrade)  // Проходим по апгрейдам юнита
+                foreach (var upgrade in selectedUpgrades)
                 {
-                    if (selectedUnitUpgrades.ContainsKey(upgrade.Name))
+                    // Ищем апгрейд по имени в списке Upgrade
+                    var unitUpgrade = Upgrade?.FirstOrDefault(u => u.Name == upgrade.Key);
+                    if (unitUpgrade != null)
                     {
-                        int upgradeCount = selectedUnitUpgrades[upgrade.Name];  // Количество выбранных апгрейдов
-                        totalCost += upgradeCount * upgrade.Cost;
+                        totalCost += upgrade.Value * unitUpgrade.Cost;
                     }
                 }
-            }
-
-            // Добавляем стоимость за правило Tough Fighters, если уровень опыта - Veteran и правило активно
-            if (experienceLevel.Level == "Veteran" && experienceLevel.Upgrades != null)
-            {
-                totalCost += modelCount; // Увеличение стоимости на 1 за каждую модель
             }
 
             return totalCost;
         }
 
-
-
         public override string ToString()
         {
-            return $"{Name}, Модели: {MinModels}-{MaxModels}, Опыт: {string.Join(", ", Experience.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})"))}";
+            return $"{Name}, Модели: {MinModels}-{MaxModels}, Опыт: {string.Join(", ", Experience?.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})"))}";
         }
     }
 }

@@ -1,0 +1,94 @@
+{
+  "Units": [
+    {
+      "Name": "1st Lieutenant or 2nd Lieutenant",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 21,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 30,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 39,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Regular Infantry Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13,
+          "Upgrade": {
+            "Name": "ToughFighters",
+            "Cost": 1,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 4
+        }
+      ]
+    }
+  ],
+  "Detaches": [
+    {
+      "Name": "Kauyon",
+      "Upgrades": [
+        {
+          "Name": "Exemplar of the Kauyon",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Precision of the Patient Hunter",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Solid-image Projection Unit",
+          "Cost": 30,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Through Unity, Devastation",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,133 +1,168 @@
-﻿using UnitRosterGenerator;
+﻿using System.Collections.Generic;
 
-class RandomRosterBuilder
+namespace UnitRosterGenerator
 {
-    private static Random random = new Random();
-
-    // Метод для генерации случайного ростера
-    public static void BuildRandomRoster(
-        List<Unit> availableUnits, // Доступные юниты
-        int maxPoints, // Максимальное количество очков
-        List<UnitConfiguration> currentRoster, // Текущий ростер (список конфигураций)
-        List<List<UnitConfiguration>> allRosters) // Все ростеры
+    class RandomRosterBuilder
     {
-        int currentPoints = 0;
+        private static Random random = new Random();
 
-        // Продолжаем заполнять ростер, пока есть достаточно очков для хотя бы одного юнита
-        while (true)
+        // Метод для генерации случайного ростера
+        public static void BuildRandomRoster(
+            List<Unit> availableUnits, // Доступные юниты
+            List<Detach> availableDetaches, // Доступные детачи
+            int maxPoints, // Максимальное количество очков
+            List<UnitConfiguration> currentRoster, // Текущий ростер (список конфигураций)
+            List<List<UnitConfiguration>> allRosters) // Все ростеры
         {
-            // Получаем случайного юнита
-            var unit = GetRandomUnit(availableUnits);
-            if (unit == null) break; // Если нет доступных юнитов
+            int currentPoints = 0;
 
-            // Выбираем случайный уровень опыта
-            var experienceLevel = GetRandomExperienceLevel(unit);
-            if (experienceLevel == null) continue;
+            // Выбираем случайный детач для всего ростера
+            Detach selectedDetach = ChooseRandomDetach(availableDetaches);
 
-            // Случайное количество моделей для этого юнита
-            int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
-
-            // Случайное вооружение и апгрейды
-            var selectedWeapons = GetRandomWeapons(unit.Weapons);
-
-            // Получаем случайные апгрейды юнита
-            var selectedUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
-
-            // Создаем конфигурацию юнита
-            var unitConfig = new UnitConfiguration(unit, modelCount, experienceLevel, selectedWeapons, selectedUpgrades, false);
-
-            // Если добавление этого юнита не превышает доступные очки
-            if (currentPoints + unitConfig.TotalCost > maxPoints)
+            while (true)
             {
-                // Если текущих очков уже недостаточно для добавления юнита, заканчиваем
-                break;
+                // Выбор случайного юнита
+                var unit = GetRandomUnit(availableUnits);
+                if (unit == null) break;
+
+                // Выбор случайного уровня опыта
+                var experienceLevel = GetRandomExperienceLevel(unit);
+                if (experienceLevel == null) continue;
+
+                // Случайное количество моделей
+                int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
+
+                // Случайное вооружение
+                var selectedWeapons = GetRandomWeapons(unit.Weapons);
+
+                // Случайные апгрейды юнита
+                var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
+
+                // Если детач выбран, добавляем случайные апгрейды из него
+                if (selectedDetach != null)
+                {
+                    var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
+
+                    // Объединяем апгрейды юнита и детача
+                    foreach (var upgrade in selectedDetachUpgrades)
+                    {
+                        if (selectedUnitUpgrades.ContainsKey(upgrade.Key))
+                        {
+                            selectedUnitUpgrades[upgrade.Key] += upgrade.Value;
+                        }
+                        else
+                        {
+                            selectedUnitUpgrades[upgrade.Key] = upgrade.Value;
+                        }
+                    }
+                }
+
+                // Создаем конфигурацию юнита, передавая детач в качестве аргумента
+                var unitConfig = new UnitConfiguration(
+                    unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
+
+                // Проверка превышения максимальной стоимости
+                if (currentPoints + unitConfig.TotalCost > maxPoints)
+                {
+                    break;
+                }
+
+                // Добавляем конфигурацию юнита в ростер
+                currentRoster.Add(unitConfig);
+                currentPoints += unitConfig.TotalCost;
             }
 
-            // Добавляем конфигурацию юнита в текущий ростер
-            currentRoster.Add(unitConfig);
-
-            // Увеличиваем текущие очки
-            currentPoints += unitConfig.TotalCost;
+            // Добавляем текущий ростер в список всех возможных ростеров
+            allRosters.Add(new List<UnitConfiguration>(currentRoster));
         }
 
-        // Добавляем текущий ростер в список всех возможных ростеров
-        allRosters.Add(new List<UnitConfiguration>(currentRoster));
-    }
-
-    // Метод для получения случайного юнита
-    private static Unit GetRandomUnit(List<Unit> availableUnits)
-    {
-        if (availableUnits == null || availableUnits.Count == 0)
+        // Выбор случайного юнита
+        private static Unit GetRandomUnit(List<Unit> availableUnits)
         {
-            return null;
+            return availableUnits.Count > 0 ? availableUnits[random.Next(availableUnits.Count)] : null;
         }
 
-        return availableUnits[random.Next(availableUnits.Count)];
-    }
-
-    // Метод для получения случайного уровня опыта для юнита
-    private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
-    {
-        if (unit.Experience == null || unit.Experience.Count == 0)
+        // Выбор случайного уровня опыта
+        private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
         {
-            return null;
+            return unit.Experience?.Count > 0 ? unit.Experience[random.Next(unit.Experience.Count)] : null;
         }
 
-        return unit.Experience[random.Next(unit.Experience.Count)];
-    }
-
-    // Метод для получения случайного набора оружия
-    private static Dictionary<string, int> GetRandomWeapons(List<Weapon> weapons)
-    {
-        var selectedWeapons = new Dictionary<string, int>();
-
-        if (weapons != null && weapons.Count > 0)
+        // Выбор случайного набора оружия
+        private static Dictionary<string, int> GetRandomWeapons(List<Weapon> weapons)
         {
-            foreach (var weapon in weapons)
+            var selectedWeapons = new Dictionary<string, int>();
+
+            if (weapons != null && weapons.Count > 0)
             {
-                // Случайно решаем, будет ли выбрано оружие
-                if (random.Next(0, 2) == 1)
+                foreach (var weapon in weapons)
                 {
-                    // Выбираем случайное количество оружия в допустимом диапазоне
-                    int weaponCount = random.Next(weapon.MinCount, weapon.MaxCount + 1);
-                    selectedWeapons[weapon.Name] = weaponCount;
-
-                    // Если у оружия есть апгрейды, случайно выбираем их
-                    if (weapon.Upgrades != null)
+                    if (random.Next(0, 2) == 1)
                     {
-                        foreach (var upgrade in weapon.Upgrades)
+                        int weaponCount = random.Next(weapon.MinCount, weapon.MaxCount + 1);
+                        selectedWeapons[weapon.Name] = weaponCount;
+
+                        if (weapon.Upgrades != null)
                         {
-                            // Случайно решаем, будет ли выбрано улучшение
-                            if (random.Next(0, 2) == 1)
+                            foreach (var upgrade in weapon.Upgrades)
                             {
-                                selectedWeapons[upgrade.Name] = 1;
+                                if (random.Next(0, 2) == 1)
+                                {
+                                    selectedWeapons[upgrade.Name] = 1;
+                                }
                             }
                         }
                     }
                 }
             }
+
+            return selectedWeapons;
         }
 
-        return selectedWeapons;
-    }
-
-    // Метод для получения случайных апгрейдов юнита
-    private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade> upgrades)
-    {
-        var selectedUpgrades = new Dictionary<string, int>();
-
-        if (upgrades != null && upgrades.Count > 0)
+        // Выбор случайных апгрейдов для юнита
+        private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade> upgrades)
         {
-            foreach (var upgrade in upgrades)
+            var selectedUpgrades = new Dictionary<string, int>();
+
+            if (upgrades != null)
             {
-                // Случайно решаем, будет ли выбран апгрейд
-                if (random.Next(0, 2) == 1)
+                foreach (var upgrade in upgrades)
                 {
-                    selectedUpgrades[upgrade.Name] = 1;
+                    int upgradeCount = random.Next(upgrade.MinCount, upgrade.MaxCount + 1);
+                    if (upgradeCount > 0)
+                    {
+                        selectedUpgrades[upgrade.Name] = upgradeCount;
+                    }
                 }
             }
+
+            return selectedUpgrades;
         }
 
-        return selectedUpgrades;
+        // Выбор случайных апгрейдов из детача
+        private static Dictionary<string, int> GetRandomDetachUpgrades(Detach detach)
+        {
+            var selectedUpgrades = new Dictionary<string, int>();
+
+            foreach (var upgrade in detach.Upgrades)
+            {
+                if (random.Next(0, 2) == 1)
+                {
+                    int upgradeCount = random.Next(upgrade.MinCount, upgrade.MaxCount + 1);
+                    if (upgradeCount > 0)
+                    {
+                        selectedUpgrades[upgrade.Name] = upgradeCount;
+                    }
+                }
+            }
+
+            return selectedUpgrades;
+        }
+
+        // Выбор случайного детача
+        private static Detach ChooseRandomDetach(List<Detach> detaches)
+        {
+            return detaches.Count > 0 ? detaches[random.Next(detaches.Count)] : null;
+        }
     }
 }
