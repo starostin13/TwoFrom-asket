@@ -6,14 +6,13 @@ namespace UnitRosterGenerator
     {
         private static Random random = new Random();
 
-        public static void BuildRandomRoster(
+        public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
             List<Detach> availableDetaches,
-            int maxPoints,
-            List<UnitConfiguration> currentRoster,
-            List<List<UnitConfiguration>> allRosters)
+            int maxPoints)
         {
             int currentPoints = 0;
+            List<UnitConfiguration> currentRoster = new List<UnitConfiguration>();
 
             Detach selectedDetach = ChooseRandomDetach(availableDetaches);
 
@@ -29,7 +28,6 @@ namespace UnitRosterGenerator
                 var selectedWeapons = GetRandomWeapons(unit.Weapons);
                 var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
-                // Проверяем, может ли юнит получить улучшения детача
                 if (selectedDetach != null && unit.DetachUpgrade)
                 {
                     var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
@@ -63,7 +61,7 @@ namespace UnitRosterGenerator
                 currentPoints += unitConfig.TotalCost;
             }
 
-            allRosters.Add(new List<UnitConfiguration>(currentRoster));
+            return new Roster(currentRoster, selectedDetach);
         }
 
         private static Unit GetRandomUnit(List<Unit> availableUnits)

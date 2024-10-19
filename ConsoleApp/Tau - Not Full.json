@@ -17,25 +17,12 @@
     {
       "Name": "Broadside Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 90,
           "AdditionalModelCost": 90
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "3x Broadside Battlesuits",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 300,
-          "AdditionalModelCost": 0
         }
       ],
       "DetachUpgrade": false
@@ -60,7 +47,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 105,
+          "BaseCost": 95,
           "AdditionalModelCost": 0
         }
       ],
@@ -237,21 +224,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 75
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Kroot Farstalkers",
-      "MinModels": 1,
-      "MaxModels": 0,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
+          "BaseCost": 65,
+          "AdditionalModelCost": 65
         }
       ],
       "DetachUpgrade": false
@@ -259,37 +233,11 @@
     {
       "Name": "Kroot Flesh Shaper",
       "MinModels": 1,
-      "MaxModels": 0,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 55,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": true
-    },
-    {
-      "Name": "Kroot Hounds",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 40,
-          "AdditionalModelCost": 80
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Kroot Lone-spear",
-      "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 90,
+          "BaseCost": 45,
           "AdditionalModelCost": 0
         }
       ],
@@ -302,7 +250,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 65,
+          "BaseCost": 55,
           "AdditionalModelCost": 0
         }
       ],
@@ -315,7 +263,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 60,
+          "BaseCost": 50,
           "AdditionalModelCost": 0
         }
       ],
@@ -324,12 +272,12 @@
     {
       "Name": "Krootox Rampagers",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 110,
-          "AdditionalModelCost": 220
+          "BaseCost": 95,
+          "AdditionalModelCost": 95
         }
       ],
       "DetachUpgrade": false
@@ -337,12 +285,12 @@
     {
       "Name": "Krootox Riders",
       "MinModels": 1,
-      "MaxModels": 3,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 35,
-          "AdditionalModelCost": 35
+          "BaseCost": 40,
+          "AdditionalModelCost": 20
         }
       ],
       "DetachUpgrade": false
@@ -363,25 +311,12 @@
     {
       "Name": "Piranhas",
       "MinModels": 1,
-      "MaxModels": 3,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 55,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Razorshark Strike Fighter",
-      "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 170,
-          "AdditionalModelCost": 0
+          "BaseCost": 60,
+          "AdditionalModelCost": 60
         }
       ],
       "DetachUpgrade": false
@@ -393,7 +328,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 180,
+          "BaseCost": 190,
           "AdditionalModelCost": 0
         }
       ],
@@ -426,19 +361,6 @@
       "DetachUpgrade": false
     },
     {
-      "Name": "Stormsurge",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 400,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
       "Name": "Strike Team",
       "MinModels": 1,
       "MaxModels": 1,
@@ -450,66 +372,6 @@
         }
       ],
       "DetachUpgrade": false
-    },
-    {
-      "Name": "Sun Shark Bomber",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 160,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Tidewall Droneport",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Tidewall Gunrig",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Tidewall Shieldline",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Upgrade": [
-        {
-          "Name": "Tidewall Defence Platform",
-          "Cost": 20,
-          "MinCount": 0,
-          "MaxCount": 1
-        }
-      ]
     },
     {
       "Name": "Vespid Stingwings",
