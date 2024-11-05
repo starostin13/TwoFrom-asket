@@ -151,6 +151,8 @@ namespace UnitRosterGenerator
 
         private static Detach ChooseRandomDetach(List<Detach> detaches)
         {
+            if (detaches == null) return null;
+
             return detaches.Count > 0 ? detaches[random.Next(detaches.Count)] : null;
         }
     }
