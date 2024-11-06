@@ -601,5 +601,38 @@
         "MaxCount": 1
       }
     ]
+  },
+  {
+    "Name": "M24 Chaffee Light Tank",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 128
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 160
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 220
+      }
+    ],
+    "Upgrade": [
+      {
+        "Name": "additional pintle-mounted HMG on top of the turret",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "Gain the Recce rule",
+        "Cost": 10,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
   }
 ]
