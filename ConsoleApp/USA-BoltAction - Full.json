@@ -634,5 +634,119 @@
         "MaxCount": 1
       }
     ]
+  },
+  {
+    "Name": "Turreted Tank Destroyers",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 128
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 160
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 192
+      }
+    ],
+    "Upgrade": [
+      {
+        "Name": "pintle-mounted HMG",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "M18 Hellcat",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 108
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 140
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 172
+      }
+    ],
+    "Upgrade": [
+      {
+        "Name": "pintle-mounted HMG",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "Gain the Recce rule",
+        "Cost": 10,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "M36 Jackson",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 168
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 200
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 232
+      }
+    ],
+    "Upgrade": [
+      {
+        "Name": "pintle-mounted HMG",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
+  },
+  {
+    "Name": "M36B1 Jackson",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 258
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 290
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 322
+      }
+    ],
+    "Upgrade": [
+      {
+        "Name": "pintle-mounted HMG",
+        "Cost": 25,
+        "MinCount": 0,
+        "MaxCount": 1
+      }
+    ]
   }
 ]
