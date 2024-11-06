@@ -748,5 +748,285 @@
         "MaxCount": 1
       }
     ]
+  },
+  {
+    "Name": "M8 Scott",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 108
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 135
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 162
+      }
+    ]
+  },
+  {
+    "Name": "M7 Priest",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 143
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 170
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 197
+      }
+    ]
+  },
+  {
+    "Name": "M12 GMC",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 168
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 195
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 222
+      }
+    ]
+  },
+  {
+    "Name": "Transport Half-Tracks",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 56
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 70
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 84
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted HMG with a 360-degree arc of fire",
+        "Cost": 5,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer",
+        "Cost": 7,
+        "MinCount": 0,
+        "MaxCount": 1
+      },
+      {
+        "Name": "Add additional pintle-mounted MMGs",
+        "Cost": 15,
+        "MinCount": 0,
+        "MaxCount": 3
+      }
+    ],
+    "IncompatibleWeapons": [
+      {
+        "Group": "Main HMG",
+        "WeaponNames": [
+          "pintle-mounted HMG with a 360-degree arc of fire",
+          "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer"
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Jeep",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 14
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 18
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 22
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrade": [
+          {
+            "Name": "HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Dodge ¾ Ton truck",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 18
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 23
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 28
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrade": [
+          {
+            "Name": "HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "1½ Ton truck",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 22
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 27
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 32
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrade": [
+          {
+            "Name": "HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "2½ Ton truck",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 28
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 33
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 38
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrade": [
+          {
+            "Name": "HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Mack heavy truck",
+    "MinModels": 1,
+    "MaxModels": 1,
+    "Experience": [
+      {
+        "Level": "Inexperienced",
+        "BaseCost": 34
+      },
+      {
+        "Level": "Regular",
+        "BaseCost": 39
+      },
+      {
+        "Level": "Veteran",
+        "BaseCost": 44
+      }
+    ],
+    "Weapons": [
+      {
+        "Name": "pintle-mounted MMG",
+        "Cost": 20,
+        "MinCount": 0,
+        "MaxCount": 1,
+        "Upgrade": [
+          {
+            "Name": "HMG",
+            "Cost": 10,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        ]
+      }
+    ]
   }
 ]
