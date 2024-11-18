@@ -1,489 +1,497 @@
-[
-  {
-    "Name": "1st Lieutenant or 2nd Lieutenant",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 21,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 30,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 39,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Company Commader",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Medic",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 23,
-        "AdditionalModelCost": 8
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 30,
-        "AdditionalModelCost": 11
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Forward observer",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 75,
-        "AdditionalModelCost": 11
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 90,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Regular Infantry Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13,
-        "Upgrade": {
-          "Name": "ToughFighters",
+{
+  "Units": [
+    {
+      "Name": "Platoon commander",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 21,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 30,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 39,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Company Commader",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Medic",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 23,
+          "AdditionalModelCost": 8
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 30,
+          "AdditionalModelCost": 11
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Forward observer",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 11
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 90,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Regular Infantry Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13,
+          "Upgrade": {
+            "Name": "ToughFighters",
+            "Cost": 1,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 4
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Engineer Squad",
+      "MinModels": 5,
+      "MaxModels": 8,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 11
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 70,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Airborne Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "MG",
+          "Cost": 16,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Support Weapons",
+          "WeaponNames": [
+            "BAR",
+            "MG"
+          ]
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stubborn",
           "Cost": 1,
           "MinCount": 0,
           "MaxCount": 1
         }
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 4
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ],
-    "Upgrade": [{
-      "Name": "Антитанковые гранаты",
-      "Cost": 2,
-      "MinCount": 0,
-      "MaxCount": 1
-    }]
-  },
-  {
-    "Name": "Engineer Squad",
-    "MinModels": 5,
-    "MaxModels": 8,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 55,
-        "AdditionalModelCost": 11
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 70,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 2
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ],
-    "Upgrade": [{
-      "Name": "Антитанковые гранаты",
-      "Cost": 2,
-      "MinCount": 0,
-      "MaxCount": 1
-    }]
-  },
-  {
-    "Name": "Airborne Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "MG",
-        "Cost": 16,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ],
-    "IncompatibleWeapons": [
-      {
-        "Group": "Support Weapons",
-        "WeaponNames": [
-          "BAR",
-          "MG"
-        ]
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Stubborn",
-        "Cost": 1,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Ranger Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Veteran",
-        "BaseCost": 70,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "MG",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Marine Squad",
-    "MinModels": 7,
-    "MaxModels": 13,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 70,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 91,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "Pistol",
-        "Cost": 1,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "Shotgun",
-        "Cost": 3,
-        "MinCount": 0,
-        "MaxCount": 3
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Stubborn",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Medium Machine Gun Team",
-    "MinModels": 3,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 35
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 50
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 65
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Heavy MG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Bazooka Team",
-    "MinModels": 2,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78
-      }
-    ]
-  },
-  {
-    "Name": "Sniper Team",
-    "MinModels": 2,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 52
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 67
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 3,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ]
-  },
-  {
-    "Name": "Mortar Team",
-    "MinModels": 3,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 25
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 35
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 46
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Medium Mortar",
-        "Cost": 10,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      },
-      {
-        "Name": "Heavy Mortar",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      },
-      {
-        "Name": "Reduce crew to 2",
-        "Cost": -5,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Transport Half-Tracks",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 56
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 70
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 84
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "M2A1",
-        "Cost": 5,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "M3",
-        "Cost": 7,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Add up to 3 additional pintle-mounted MMGs",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  }
-]
+      ]
+    },
+    {
+      "Name": "Ranger Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 70,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "MG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Marine Squad",
+      "MinModels": 7,
+      "MaxModels": 13,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 91,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "Pistol",
+          "Cost": 1,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "Shotgun",
+          "Cost": 3,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stubborn",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M4A4",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 210
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 262
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Platoon Commander",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Medium Machine Gun Team",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 50
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Heavy MG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Bazooka Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78
+        }
+      ]
+    },
+    {
+      "Name": "Sniper Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 52
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 67
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 3,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ]
+    },
+    {
+      "Name": "Mortar Team",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 25
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 46
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium Mortar",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Heavy Mortar",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Reduce crew to 2",
+          "Cost": -5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}

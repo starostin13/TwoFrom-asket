@@ -1,1032 +1,1040 @@
-[
-  {
-    "Name": "1st Lieutenant or 2nd Lieutenant",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 21,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 30,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 39,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Company Commader",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Medic",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 23,
-        "AdditionalModelCost": 8
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 30,
-        "AdditionalModelCost": 11
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Forward observer",
-    "MinModels": 1,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 75,
-        "AdditionalModelCost": 11
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 90,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Regular Infantry Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42,
-        "AdditionalModelCost": 7
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13,
-        "Upgrade": {
-          "Name": "ToughFighters",
+{
+  "Units": [
+    {
+      "Name": "1st Lieutenant or 2nd Lieutenant",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 21,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 30,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 39,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Company Commader",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Medic",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 23,
+          "AdditionalModelCost": 8
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 30,
+          "AdditionalModelCost": 11
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Forward observer",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 11
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 90,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Regular Infantry Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 7
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13,
+          "Upgrade": {
+            "Name": "ToughFighters",
+            "Cost": 1,
+            "MinCount": 0,
+            "MaxCount": 1
+          }
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 4
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Engineer Squad",
+      "MinModels": 5,
+      "MaxModels": 8,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 11
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 70,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Airborne Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "MG",
+          "Cost": 16,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Support Weapons",
+          "WeaponNames": [
+            "BAR",
+            "MG"
+          ]
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stubborn",
           "Cost": 1,
           "MinCount": 0,
           "MaxCount": 1
         }
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 4
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Engineer Squad",
-    "MinModels": 5,
-    "MaxModels": 8,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 55,
-        "AdditionalModelCost": 11
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 70,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 2
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Airborne Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "MG",
-        "Cost": 16,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ],
-    "IncompatibleWeapons": [
-      {
-        "Group": "Support Weapons",
-        "WeaponNames": [
-          "BAR",
-          "MG"
-        ]
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Stubborn",
-        "Cost": 1,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Ranger Squad",
-    "MinModels": 6,
-    "MaxModels": 12,
-    "Experience": [
-      {
-        "Level": "Veteran",
-        "BaseCost": 70,
-        "AdditionalModelCost": 14
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "MG",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Marine Squad",
-    "MinModels": 7,
-    "MaxModels": 13,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 70,
-        "AdditionalModelCost": 10
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 91,
-        "AdditionalModelCost": 13
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 4,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "BAR",
-        "Cost": 6,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "Pistol",
-        "Cost": 1,
-        "MinCount": 0,
-        "MaxCount": 3
-      },
-      {
-        "Name": "Shotgun",
-        "Cost": 3,
-        "MinCount": 0,
-        "MaxCount": 3
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "Антитанковые гранаты",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Stubborn",
-        "Cost": 2,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Medium Machine Gun Team",
-    "MinModels": 3,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 35
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 50
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 65
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Heavy MG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Bazooka Team",
-    "MinModels": 2,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 42
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 60
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 78
-      }
-    ]
-  },
-  {
-    "Name": "Sniper Team",
-    "MinModels": 2,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 52
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 67
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "SMG",
-        "Cost": 3,
-        "MinCount": 0,
-        "MaxCount": 2
-      }
-    ]
-  },
-  {
-    "Name": "Mortar Team",
-    "MinModels": 3,
-    "MaxModels": 3,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 25
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 35
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 46
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Medium Mortar",
-        "Cost": 10,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      },
-      {
-        "Name": "Heavy Mortar",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      },
-      {
-        "Name": "Reduce crew to 2",
-        "Cost": -5,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Howitzers",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 32
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 45
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 59
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Medium Howitzers",
-        "Cost": 40,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          },
-          {
-            "Name": "gun shield",
-            "Cost": 5,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      },
-      {
-        "Name": "Heavy Howitzers",
-        "Cost": 90,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "spotter",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          },
-          {
-            "Name": "gun shield",
-            "Cost": 5,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ],
-        "IncompatibleWeapons": [
-          {
-            "Group": "guns",
-            "WeaponNames": [
-              "Medium Howitzers",
-              "Heavy Howitzers"
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "Anti-Tank Gun",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 35
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 50
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 65
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "Medium anti-tank gun",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Heavy anti-tank gun",
-        "Cost": 50,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ],
-    "IncompatibleWeapons": [
-      {
-        "Group": "anti-tank guns",
-        "WeaponNames": [
-          "Heavy anti-tank gun",
-          "Medium anti-tank gun"
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "Transport Half-Tracks",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 56
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 70
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 84
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "M2A1",
-        "Cost": 5,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "M3",
-        "Cost": 7,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Add up to 3 additional pintle-mounted MMGs",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "M24 Chaffee Light Tank",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 128
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 160
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 220
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "additional pintle-mounted HMG on top of the turret",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Gain the Recce rule",
-        "Cost": 10,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "Turreted Tank Destroyers",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 128
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 160
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 192
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "pintle-mounted HMG",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "M18 Hellcat",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 108
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 140
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 172
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "pintle-mounted HMG",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Gain the Recce rule",
-        "Cost": 10,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "M36 Jackson",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 168
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 200
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 232
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "pintle-mounted HMG",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "M36B1 Jackson",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 258
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 290
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 322
-      }
-    ],
-    "Upgrade": [
-      {
-        "Name": "pintle-mounted HMG",
-        "Cost": 25,
-        "MinCount": 0,
-        "MaxCount": 1
-      }
-    ]
-  },
-  {
-    "Name": "M8 Scott",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 108
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 135
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 162
-      }
-    ]
-  },
-  {
-    "Name": "M7 Priest",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 143
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 170
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 197
-      }
-    ]
-  },
-  {
-    "Name": "M12 GMC",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 168
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 195
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 222
-      }
-    ]
-  },
-  {
-    "Name": "Transport Half-Tracks",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 56
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 70
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 84
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted HMG with a 360-degree arc of fire",
-        "Cost": 5,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer",
-        "Cost": 7,
-        "MinCount": 0,
-        "MaxCount": 1
-      },
-      {
-        "Name": "Add additional pintle-mounted MMGs",
-        "Cost": 15,
-        "MinCount": 0,
-        "MaxCount": 3
-      }
-    ],
-    "IncompatibleWeapons": [
-      {
-        "Group": "Main HMG",
-        "WeaponNames": [
-          "pintle-mounted HMG with a 360-degree arc of fire",
-          "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer"
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "Jeep",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 14
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 18
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 22
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "Dodge ¾ Ton truck",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 18
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 23
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 28
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "1½ Ton truck",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 22
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 27
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 32
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "2½ Ton truck",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 28
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 33
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 38
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "Name": "Mack heavy truck",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Inexperienced",
-        "BaseCost": 34
-      },
-      {
-        "Level": "Regular",
-        "BaseCost": 39
-      },
-      {
-        "Level": "Veteran",
-        "BaseCost": 44
-      }
-    ],
-    "Weapons": [
-      {
-        "Name": "pintle-mounted MMG",
-        "Cost": 20,
-        "MinCount": 0,
-        "MaxCount": 1,
-        "Upgrade": [
-          {
-            "Name": "HMG",
-            "Cost": 10,
-            "MinCount": 0,
-            "MaxCount": 1
-          }
-        ]
-      }
-    ]
-  }
-]
+      ]
+    },
+    {
+      "Name": "Ranger Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 70,
+          "AdditionalModelCost": 14
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "MG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Marine Squad",
+      "MinModels": 7,
+      "MaxModels": 13,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 10
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 91,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "Pistol",
+          "Cost": 1,
+          "MinCount": 0,
+          "MaxCount": 3
+        },
+        {
+          "Name": "Shotgun",
+          "Cost": 3,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Антитанковые гранаты",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stubborn",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Medium Machine Gun Team",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 50
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Heavy MG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Bazooka Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78
+        }
+      ]
+    },
+    {
+      "Name": "Sniper Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 52
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 67
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 3,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ]
+    },
+    {
+      "Name": "Mortar Team",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 25
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 46
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium Mortar",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Heavy Mortar",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Reduce crew to 2",
+          "Cost": -5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Howitzers",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 32
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 45
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 59
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium Howitzers",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "gun shield",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Heavy Howitzers",
+          "Cost": 90,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "gun shield",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ],
+          "IncompatibleWeapons": [
+            {
+              "Group": "guns",
+              "WeaponNames": [
+                "Medium Howitzers",
+                "Heavy Howitzers"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Anti-Tank Gun",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 50
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium anti-tank gun",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy anti-tank gun",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "anti-tank guns",
+          "WeaponNames": [
+            "Heavy anti-tank gun",
+            "Medium anti-tank gun"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Transport Half-Tracks",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 84
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "M2A1",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "M3",
+          "Cost": 7,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Add up to 3 additional pintle-mounted MMGs",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M24 Chaffee Light Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 220
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "additional pintle-mounted HMG on top of the turret",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Gain the Recce rule",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M4A4",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 210
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 262
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Platoon Commander",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Turreted Tank Destroyers",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 192
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M18 Hellcat",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 140
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 172
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Gain the Recce rule",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M36 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 200
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 232
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M36B1 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 258
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 290
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 322
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M8 Scott",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 135
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 162
+        }
+      ]
+    },
+    {
+      "Name": "M7 Priest",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 143
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 170
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 197
+        }
+      ]
+    },
+    {
+      "Name": "M12 GMC",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 195
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 222
+        }
+      ]
+    },
+    {
+      "Name": "Transport Half-Tracks",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 84
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted HMG with a 360-degree arc of fire",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer",
+          "Cost": 7,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Add additional pintle-mounted MMGs",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Main HMG",
+          "WeaponNames": [
+            "pintle-mounted HMG with a 360-degree arc of fire",
+            "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 14
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 18
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 22
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "1½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 22
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 27
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 32
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "2½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 28
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 33
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 38
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Mack heavy truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 34
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 39
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 44
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
