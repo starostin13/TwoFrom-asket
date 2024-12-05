@@ -51,7 +51,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Breacher Team", "Strike Team" ]
     },
     {
       "Name": "Commander Farsight",
@@ -64,7 +65,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": false
+      "DetachUpgrade": false,
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
       "Name": "Commander in Coldstar Battlesuit",
@@ -77,7 +79,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
       "Name": "Commander in Coldstar Battlesuit",
@@ -90,7 +93,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
       "Name": "Commander Shadowsun",
@@ -155,7 +159,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": false
+      "DetachUpgrade": false,
+      "Lead": [ "Pathfinder Team" ]
     },
     {
       "Name": "Devilfish",
@@ -189,7 +194,8 @@
           "MinCount": 0,
           "MaxCount": 1
         }
-      ]
+      ],
+      "Lead": [ "Breacher Team", "Strike Team" ]
     },
     {
       "Name": "Firesight Team",
@@ -267,7 +273,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
     },
     {
       "Name": "Kroot Hounds",
@@ -306,7 +313,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
     },
     {
       "Name": "Kroot War Shaper",
@@ -319,7 +327,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": true
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
     },
     {
       "Name": "Krootox Rampagers",
