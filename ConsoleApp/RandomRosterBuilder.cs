@@ -20,37 +20,19 @@ namespace UnitRosterGenerator
             {
                 var unit = GetRandomUnit(availableUnits);
                 if (unit == null) break;
-
-                var experienceLevel = GetRandomExperienceLevel(unit);
-                if (experienceLevel == null) continue;
-
-                int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
-                var selectedWeapons = GetRandomWeapons(unit.Weapons);
-                var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
-
-                if (selectedDetach != null && unit.DetachUpgrade)
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
+                UnitConfiguration attachedUnitconfig = null;
+                                
+                Unit thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
+                if (thisUnitLeadUnit != null)
                 {
-                    var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
+                    attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit);
 
-                    int detachUpgradesAdded = 0;
-                    foreach (var upgrade in selectedDetachUpgrades)
+                    if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
                     {
-                        if (detachUpgradesAdded >= selectedDetach.MaxDetachUpgrades) break;
-
-                        if (selectedUnitUpgrades.ContainsKey(upgrade.Key))
-                        {
-                            selectedUnitUpgrades[upgrade.Key] += upgrade.Value;
-                        }
-                        else
-                        {
-                            selectedUnitUpgrades[upgrade.Key] = upgrade.Value;
-                        }
-                        detachUpgradesAdded++;
+                        break;
                     }
                 }
-
-                var unitConfig = new UnitConfiguration(
-                    unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
 
                 if (currentPoints + unitConfig.TotalCost > maxPoints)
                 {
@@ -59,9 +41,60 @@ namespace UnitRosterGenerator
 
                 currentRoster.Add(unitConfig);
                 currentPoints += unitConfig.TotalCost;
+                if (attachedUnitconfig != null)
+                {
+                    currentRoster.Add(attachedUnitconfig);
+                    currentPoints += attachedUnitconfig.TotalCost;
+                }
+
             }
 
             return new Roster(currentRoster, selectedDetach);
+        }
+
+        private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)
+        {
+            var experienceLevel = GetRandomExperienceLevel(unit);
+            if (experienceLevel == null) continue;
+
+            int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
+            var selectedWeapons = GetRandomWeapons(unit.Weapons);
+            var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
+
+            if (selectedDetach != null && unit.DetachUpgrade)
+            {
+                var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
+
+                int detachUpgradesAdded = 0;
+                foreach (var upgrade in selectedDetachUpgrades)
+                {
+                    if (detachUpgradesAdded >= selectedDetach.MaxDetachUpgrades) break;
+
+                    if (selectedUnitUpgrades.ContainsKey(upgrade.Key))
+                    {
+                        selectedUnitUpgrades[upgrade.Key] += upgrade.Value;
+                    }
+                    else
+                    {
+                        selectedUnitUpgrades[upgrade.Key] = upgrade.Value;
+                    }
+                    detachUpgradesAdded++;
+                }
+            }
+
+            var unitConfig = new UnitConfiguration(
+                unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
+            return unitConfig;
+        }
+
+        private static Unit? GetLeadedUnits(Unit unit, List<Unit> availableUnits)
+        {
+            if (unit.Lead is not null)
+            {
+                return availableUnits.FirstOrDefault(u => u.Name == unit.Lead[random.Next(unit.Lead.Count)]);
+            }
+
+            return null;
         }
 
         private static Unit GetRandomUnit(List<Unit> availableUnits)

@@ -14,11 +14,11 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("War-Cry-Slaves.json");
+            GameData gameData = LoadGameDataFromJson("USA-BoltAction.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 1000;
+            int maxPoints = 371;
             List<Roster> allRosters = new List<Roster>();
 
             for (int i = 0; i < 100; i++)
