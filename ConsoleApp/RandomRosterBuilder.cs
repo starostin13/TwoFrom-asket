@@ -55,7 +55,6 @@ namespace UnitRosterGenerator
         private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)
         {
             var experienceLevel = GetRandomExperienceLevel(unit);
-            if (experienceLevel == null) continue;
 
             int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
             var selectedWeapons = GetRandomWeapons(unit.Weapons);
