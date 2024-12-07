@@ -1,0 +1,926 @@
+{
+  "Units": [
+    {
+      "Name": "Delaque Master of Shadow (Leader)",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Autogun",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Lasgun",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Shotgun with solid & scatter ammo",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Executioner ammo",
+              "Cost": 20,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Throwing knives",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Autopistol",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Flechette pistol with solid & fleshbane ammo",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Grav pistol",
+          "Cost": 90,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 20,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Laspistol",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Plasma pistol",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Stub gun",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Dumdum rounds",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            },
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Web pistol",
+          "Cost": 80,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Hand flamer",
+          "Cost": 75,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Gunshroud",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Flamer",
+          "Cost": 140,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Grav gun",
+          "Cost": 120,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 25,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Long rifle",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Meltagun",
+          "Cost": 135,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Plasma gun",
+          "Cost": 100,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Web gun",
+          "Cost": 115,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Heavy flamer*",
+          "Cost": 195,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Infra-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Mono-sight",
+              "Cost": 35,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Digi laser",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Shock stave",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Stiletto knife",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Web gauntlet",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Choke gas grenades",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Photon flash grenadess",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Scare gas grenades",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Smoke grenades",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stun grenades",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Carapace armour - Light",
+          "Cost": 80,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Flak armour",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Mesh armour",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Armoured undersuit",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Bio-scanner",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Cameleoline cloak",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Filter plugs",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Grapnel launcher",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Photo-goggles",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Respirator",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Skinblade",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Web solvent",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Psychoteric Mastery",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Psychoteric Mastery",
+          "Cost": 0,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Delaque Phantom (Champion)",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Autogun",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Lasgun",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Shotgun with solid & scatter ammo",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Executioner ammo",
+              "Cost": 20,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Throwing knives",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Autopistol",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Flechette pistol with solid & fleshbane ammo",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Grav pistol",
+          "Cost": 90,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Hand flamer",
+          "Cost": 75,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Laspistol",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Plasma pistol",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stub gun",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Dumdum rounds",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Web pistol",
+          "Cost": 80,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Flamer",
+          "Cost": 140,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Grav gun",
+          "Cost": 120,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Long rifle",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Meltagun",
+          "Cost": 135,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Plasma gun",
+          "Cost": 100,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Web gun",
+          "Cost": 115,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy flamer*",
+          "Cost": 195,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Digi laser",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Shock stave",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Stiletto knife",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 2,
+          "Upgrade": [
+            {
+              "Name": "Master-crafted",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 2
+            }
+          ]
+        },
+        {
+          "Name": "Web gauntlet",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Wargear": [
+        {
+          "Name": "Choke gas grenades",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Photon flash grenades",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Scare gas grenades",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Smoke grenades",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Stun grenades",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Flak armour",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Mesh armour",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Armoured undersuit",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Bio-scanner",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Cameleoline cloak",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Filter plugs",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Grapnel launcher",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Photo-goggles",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Respirator",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Skinblade",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Web solvent",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+
+  ]
+}
