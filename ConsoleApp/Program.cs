@@ -14,11 +14,11 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("Tau - Not Full.json");
+            GameData gameData = LoadGameDataFromJson("Delaque.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 1010;
+            int maxPoints = 160;
             List<Roster> allRosters = new List<Roster>();
 
             for (int i = 0; i < 100; i++)
@@ -51,11 +51,11 @@ namespace UnitRosterGenerator
                     Console.Write($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
                     if (unitConfig.SelectedWeapons.Count > 0)
                     {
-                        Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Select(w => $"{w.Key} x{w.Value}"))}, ");
+                        Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(weapon => weapon.Value > 0).Select(w => $"{w.Key} x{w.Value}"))}, ");
                     }
                     if (unitConfig.SelectedUpgrades.Count > 0)
                     {
-                        Console.Write($"Апгрейды: {string.Join(", ", unitConfig.SelectedUpgrades.Select(u => $"{u.Key} x{u.Value}"))}, ");
+                        Console.Write($"Апгрейды: {string.Join(", ", unitConfig.SelectedUpgrades.Where(upgrd => upgrd.Value > 0).Select(u => $"{u.Key} x{u.Value}"))}, ");
                     }
                     Console.WriteLine($"Стоимость: {unitConfig.TotalCost}");
                 }
