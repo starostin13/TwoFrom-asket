@@ -77,9 +77,9 @@ namespace UnitRosterGenerator
 
                     // Ищем апгрейд по имени среди улучшений юнита
                     var unitUpgrade = Unit.Upgrade?.FirstOrDefault(u => u.Name == upgradeName);
-                    if (unitUpgrade != null)
+                    if (unitUpgrade != null && upgradeCount > 0)
                     {
-                        TotalCost += upgradeCount * unitUpgrade.Cost;
+                        TotalCost += ModelCount * unitUpgrade.Cost;
                     }
 
                     // Ищем апгрейд по имени среди улучшений выбранного детача

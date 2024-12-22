@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace UnitRosterGenerator
+﻿namespace UnitRosterGenerator
 {
     class Roster
     {
