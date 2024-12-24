@@ -492,6 +492,94 @@
           "MaxCount": 1
         }
       ]
+    },
+    {
+      "Name": "Howitzers",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 32
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 45
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 59
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium and 1 extra man",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Heavy and 2 extra man",
+          "Cost": 90,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "spotter",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "gun shield",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Anti-Tank Guns",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 50
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Medium",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy + 1 extra man",
+          "Cost": 50,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
     }
   ]
 }
