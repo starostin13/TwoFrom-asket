@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="DAO.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Delaque.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

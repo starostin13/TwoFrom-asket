@@ -1,0 +1,92 @@
+﻿{
+    "Units": {
+        "Name": "Battle Suit Elite",
+        "MinModels": 1,
+        "MaxModels": 1,
+        "Experience": [
+            {
+                "Level": "Regular",
+                "BaseCost": 195,
+                "AdditionalModelCost": 0
+            }
+        ],
+        "Weapons": [
+            {
+                "Name": "Heavy Suit-Burst",
+                "Cost": 5,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Suit-Ion",
+                "Cost": 10,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Suit-Fuse",
+                "Cost": 15,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Suit-Frag",
+                "Cost": 20,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Heavy Suit-Missile",
+                "Cost": 35,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Heavy Suit-Plasma",
+                "Cost": 35,
+                "MinCount": 0,
+                "MaxCount": 2
+            },
+            {
+                "Name": "Plasma Sword",
+                "Cost": 35,
+                "MinCount": 0,
+                "MaxCount": 1
+            },
+            {
+                "Name": "Rapid Heavy Suit-Burst",
+                "Cost": 75,
+                "MinCount": 0,
+                "MaxCount": 1
+            },
+            {
+                "Name": "Gun Drone",
+                "Cost": 5,
+                "MinCount": 0,
+                "MaxCount": 1
+            },
+            {
+                "Name": "Mini-Shield Drone",
+                "Cost": 20,
+                "MinCount": 0,
+                "MaxCount": 1
+            },
+            {
+                "Name": "Spotter Drone",
+                "Cost": 25,
+                "MinCount": 0,
+                "MaxCount": 1
+            }
+        ],
+        "IncompatibleWeapons": [
+            {
+                "Group": "General weapon",
+                "WeaponNames": [
+                    "Rapid Heavy Suit-Burst",
+                    "Plasma Sword"
+                ]
+            }
+        ],
+        "DetachUpgrade": false
+    }
+}

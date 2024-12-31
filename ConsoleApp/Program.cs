@@ -12,7 +12,7 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("Delaque.json");
+            GameData gameData = LoadGameDataFromJson("USA-BoltAction - Full.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 

@@ -329,47 +329,6 @@
       ]
     },
     {
-      "Name": "M4A4",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Inexperienced",
-          "BaseCost": 168
-        },
-        {
-          "Level": "Regular",
-          "BaseCost": 210
-        },
-        {
-          "Level": "Veteran",
-          "BaseCost": 262
-        }
-      ],
-      "Upgrade": [
-        {
-          "Name": "pintle-mounted MMG",
-          "Cost": 15,
-          "MinCount": 0,
-          "MaxCount": 1,
-          "Upgrade": [
-            {
-              "Name": "HMG",
-              "Cost": 10,
-              "MinCount": 0,
-              "MaxCount": 1
-            }
-          ]
-        },
-        {
-          "Name": "Platoon Commander",
-          "Cost": 10,
-          "MinCount": 0,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
       "Name": "Medium Machine Gun Team",
       "MinModels": 3,
       "MaxModels": 3,
@@ -495,8 +454,8 @@
     },
     {
       "Name": "Howitzers",
-      "MinModels": 3,
-      "MaxModels": 3,
+      "MinModels": 1,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Inexperienced",
@@ -513,7 +472,7 @@
       ],
       "Weapons": [
         {
-          "Name": "Medium and 1 extra man",
+          "Name": "Medium Howitzers",
           "Cost": 40,
           "MinCount": 0,
           "MaxCount": 1,
@@ -523,11 +482,17 @@
               "Cost": 10,
               "MinCount": 0,
               "MaxCount": 1
+            },
+            {
+              "Name": "gun shield",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
             }
           ]
         },
         {
-          "Name": "Heavy and 2 extra man",
+          "Name": "Heavy Howitzers",
           "Cost": 90,
           "MinCount": 0,
           "MaxCount": 1,
@@ -537,21 +502,30 @@
               "Cost": 10,
               "MinCount": 0,
               "MaxCount": 1
+            },
+            {
+              "Name": "gun shield",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ],
+          "IncompatibleWeapons": [
+            {
+              "Group": "guns",
+              "WeaponNames": [
+                "Medium Howitzers",
+                "Heavy Howitzers"
+              ]
             }
           ]
-        },
-        {
-          "Name": "gun shield",
-          "Cost": 5,
-          "MinCount": 0,
-          "MaxCount": 1
         }
       ]
     },
     {
-      "Name": "Anti-Tank Guns",
-      "MinModels": 3,
-      "MaxModels": 3,
+      "Name": "Anti-Tank Gun",
+      "MinModels": 1,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Inexperienced",
@@ -568,16 +542,131 @@
       ],
       "Weapons": [
         {
-          "Name": "Medium",
+          "Name": "Medium anti-tank gun",
           "Cost": 20,
           "MinCount": 0,
           "MaxCount": 1
         },
         {
-          "Name": "Heavy + 1 extra man",
+          "Name": "Heavy anti-tank gun",
           "Cost": 50,
           "MinCount": 0,
           "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "anti-tank guns",
+          "WeaponNames": [
+            "Heavy anti-tank gun",
+            "Medium anti-tank gun"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A4",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 210
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 262
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Platoon Commander",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M36B1 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 258
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 290
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 322
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M7 Priest",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 143
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 170
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 197
+        }
+      ]
+    },
+    {
+      "Name": "M12 GMC",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 195
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 222
         }
       ]
     }
