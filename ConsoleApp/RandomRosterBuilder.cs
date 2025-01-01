@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml;
 
 namespace UnitRosterGenerator
 {
@@ -6,6 +7,7 @@ namespace UnitRosterGenerator
     {
         private static Random random = new Random();
         private static List<UnitConfiguration> currentRoster;
+        private static UnitsLimits unitsLimits = new UnitsLimits();
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -20,7 +22,7 @@ namespace UnitRosterGenerator
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
-                if (unit == null) break;
+                if (unit == null || IsUnitLimitExceed(unit.Name)) break;
                 UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
                 UnitConfiguration attachedUnitconfig = null;
                                 
@@ -47,10 +49,17 @@ namespace UnitRosterGenerator
                     currentRoster.Add(attachedUnitconfig);
                     currentPoints += attachedUnitconfig.TotalCost;
                 }
-
             }
 
             return new Roster(currentRoster, selectedDetach);
+        }
+
+        static bool IsUnitLimitExceed(string name)
+        {
+            int? limit = unitsLimits.GetLimit(name);
+            if (limit == null) return false;
+
+            return currentRoster.Count(unitConfig => unitConfig.Unit.Name == name) >= limit;
         }
 
         private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)

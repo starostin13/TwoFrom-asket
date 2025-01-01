@@ -46,7 +46,7 @@ namespace UnitRosterGenerator
 
                 foreach (var unitConfig in r.Roster.UnitConfigurations)
                 {
-                    Console.Write($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
+                    Console.Write($"{unitConfig.Unit.Name} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
                     if (unitConfig.SelectedWeapons.Count > 0)
                     {
                         Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(weapon => weapon.Value > 0).Select(w => $"{w.Key} x{w.Value}"))}, ");

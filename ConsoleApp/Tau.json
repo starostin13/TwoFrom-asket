@@ -243,8 +243,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 75
+          "BaseCost": 65,
+          "AdditionalModelCost": 65
         }
       ],
       "DetachUpgrade": false
@@ -523,12 +523,12 @@
     {
       "Name": "Vespid Stingwings",
       "MinModels": 1,
-      "MaxModels": 1,
+      "MaxModels": 2,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 65,
-          "AdditionalModelCost": 0
+          "AdditionalModelCost": 65
         }
       ],
       "DetachUpgrade": false
