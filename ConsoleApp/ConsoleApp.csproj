@@ -8,11 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="DAO.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Delaque.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Tau - Copy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="War-Cry-Slaves - Full.json">

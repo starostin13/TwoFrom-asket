@@ -654,6 +654,36 @@
           "MaxCount": 1
         }
       ]
+    },
+    {
+      "Name": "AUXILIARY CADRE",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "STUDENT OF KAUYON",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "ADMIRED LEADER",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "FANATICAL CONVERT",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "TRANSPONDER LOCK MODULE",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
     }
   ]
 }

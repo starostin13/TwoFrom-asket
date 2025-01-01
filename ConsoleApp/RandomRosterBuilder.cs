@@ -5,6 +5,7 @@ namespace UnitRosterGenerator
     class RandomRosterBuilder
     {
         private static Random random = new Random();
+        private static List<UnitConfiguration> currentRoster;
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -12,7 +13,7 @@ namespace UnitRosterGenerator
             int maxPoints)
         {
             int currentPoints = 0;
-            List<UnitConfiguration> currentRoster = new List<UnitConfiguration>();
+            currentRoster = new List<UnitConfiguration>();
 
             Detach selectedDetach = ChooseRandomDetach(availableDetaches);
 
@@ -160,10 +161,14 @@ namespace UnitRosterGenerator
             var selectedUpgrades = new Dictionary<string, int>();
             int upgradesAdded = 0;
 
-            var shuffledUpgrades = new List<Upgrade>(detach.Upgrades);
-            shuffledUpgrades.Shuffle();
+            // можно добавлять только те апгреды которые ещё не добавлены в ростер
+            var allSelectedUpgradeKeys = currentRoster.SelectMany(unitConfig => unitConfig.SelectedUpgrades.Keys).ToList();
 
-            foreach (var upgrade in shuffledUpgrades)
+            var filteredUpgrades = detach.Upgrades.Where(upgrade => !allSelectedUpgradeKeys.Contains(upgrade.Name)).ToList();
+            filteredUpgrades.Shuffle();
+
+
+            foreach (var upgrade in filteredUpgrades)
             {
                 if (upgradesAdded >= detach.MaxDetachUpgrades) break;
 
