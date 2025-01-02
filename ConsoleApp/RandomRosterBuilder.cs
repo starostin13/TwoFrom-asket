@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Xml;
-
-namespace UnitRosterGenerator
+﻿namespace UnitRosterGenerator
 {
     class RandomRosterBuilder
     {

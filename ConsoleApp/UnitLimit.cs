@@ -12,20 +12,28 @@ public class UnitLimit
 
 public class UnitsLimits
 {
-    private static string filePath = "UnitsLimits.json";
+    private static string filePath = "ModelLimits.json";
 
     public List<UnitLimit> Limits { get; set; } = new List<UnitLimit>();
 
     public UnitsLimits()
     {
-        if (File.Exists(filePath))
+        try
         {
-            var json = File.ReadAllText(filePath);
-            var unitsLimits = JsonSerializer.Deserialize<UnitsLimits>(json);
-            if (unitsLimits != null)
+            if (File.Exists(filePath))
             {
-                Limits = unitsLimits.Limits;
+                var json = File.ReadAllText(filePath);
+                var unitsLimits = JsonSerializer.Deserialize<List<UnitLimit>>(json);
+                if (unitsLimits != null)
+                {
+                    Limits = unitsLimits;
+                }
             }
+        }
+        catch (JsonException ex)
+        {
+            Console.WriteLine($"Error deserializing JSON: {ex.Message}");
+            // Handle the error or set default values
         }
     }
 
