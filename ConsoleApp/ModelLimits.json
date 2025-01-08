@@ -1,0 +1,42 @@
+[
+  {
+    "ModelName": "Piranhas",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Pathfinder Team",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Broadside Battlesuits",
+    "MaxQuantity": 2
+  },
+  {
+    "ModelName": "Commander Farsight",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Commander Shadowsun",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Kroot Hounds",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Darkstrider",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Riptide Battlesuit",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Kroot Carnivores",
+    "MaxQuantity": 6
+  },
+  {
+    "ModelName": "Kroot Trail Shaper",
+    "MaxQuantity": 1
+  }
+]

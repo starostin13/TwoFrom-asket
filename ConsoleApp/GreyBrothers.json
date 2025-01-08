@@ -1,0 +1,595 @@
+{
+  "Units": [
+    {
+      "Name": "Knight Champion",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 21,
+          "AdditionalModelCost": 7
+        }
+      ],
+      "Weapons": []
+    },
+    {
+      "Name": "Knight Master Destroyer ",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 39,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Dual Energy Falcion",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Dual Energy Claw",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Rapid Storm Rifle",
+          "Cost": 75,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Hammer",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Sword",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Staff",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Halberd",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Chain Fist",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Fist",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Slayer Hammer",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Replace Combat Shield and CCW",
+          "WeaponNames": [
+            "Dual Energy Falcion",
+            "Dual Energy Claw",
+            "Rapid Storm Rifle"
+          ]
+        },
+        {
+          "Group": "Replace CCW",
+          "WeaponNames": [
+            "Energy Hammer",
+            "Energy Sword",
+            "Energy Staff",
+            "Energy Halberd",
+            "Chain Fist",
+            "Energy Fist",
+            "Slayer Hammer"
+          ]
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Paladin",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Preacher",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Archivist",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Engineer",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Captain",
+          "Cost": 45,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Archvist",
+          "Cost": 60,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Veteran Knight Master Brother",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 150,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Dual Energy Falcion",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Dual Energy Claw",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy Chainsaw Sword",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Hammer",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Sword",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Staff",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Halberd",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Chain Fist",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Fist",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Slayer Hammer",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Heavy Pistol",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Fusion Pistol",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Gravity Pistol",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Plasma Pistol",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Heavy Rifle",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Flamer-Mod",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gravity-Mod",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Plasma-Mod",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Fusion-Mod",
+              "Cost": 15,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Master Storm Rifle",
+          "Cost": 85,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Replace Flamer Pistol and CCW",
+          "WeaponNames": [
+            "Dual Energy Falcion",
+            "Dual Energy Claw",
+            "Heavy Chainsaw Sword"
+          ]
+        },
+        {
+          "Group": "Replace CCW",
+          "WeaponNames": [
+            "Energy Hammer",
+            "Energy Sword",
+            "Energy Staff",
+            "Energy Halberd",
+            "Chain Fist",
+            "Energy Fist",
+            "Slayer Hammer"
+          ]
+        },
+        {
+          "Group": "Replace Flamer Pistol",
+          "WeaponNames": [
+            "Master Heavy Pistol",
+            "Fusion Pistol",
+            "Master Gravity Pistol",
+            "Master Plasma Pistol",
+            "Master Heavy Rifle",
+            "Master Storm Rifle"
+          ]
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Jetpack ",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Combat Bike",
+          "Cost": 115,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Preacher",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Archivist",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Engineer",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Captain",
+          "Cost": 45,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Archvist",
+          "Cost": 60,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Knight Master Brother",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 13
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Dual Energy Falcion",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Dual Energy Claw",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy Chainsaw Sword",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Hammer",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Sword",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Staff",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Halberd",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Chain Fist",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Energy Fist",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Slayer Hammer",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Heavy Pistol",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Fusion Pistol",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Gravity Pistol",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Plasma Pistol",
+          "Cost": 30,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Heavy Rifle",
+          "Cost": 35,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "Flamer-Mod",
+              "Cost": 5,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Gravity-Mod",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Plasma-Mod",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            },
+            {
+              "Name": "Fusion-Mod",
+              "Cost": 15,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Master Storm Rifle",
+          "Cost": 85,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Replace Flamer Pistol and CCW",
+          "WeaponNames": [
+            "Dual Energy Falcion",
+            "Dual Energy Claw",
+            "Heavy Chainsaw Sword"
+          ]
+        },
+        {
+          "Group": "Replace CCW",
+          "WeaponNames": [
+            "Energy Hammer",
+            "Energy Sword",
+            "Energy Staff",
+            "Energy Halberd",
+            "Chain Fist",
+            "Energy Fist",
+            "Slayer Hammer"
+          ]
+        },
+        {
+          "Group": "Replace Flamer Pistol",
+          "WeaponNames": [
+            "Master Heavy Pistol",
+            "Fusion Pistol",
+            "Master Gravity Pistol",
+            "Master Plasma Pistol",
+            "Master Heavy Rifle",
+            "Master Storm Rifle"
+          ]
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Jetpack ",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Inceptor",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Striker",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Purifier",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Combat Bike",
+          "Cost": 115,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Preacher",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Archivist",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Engineer",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Captain",
+          "Cost": 45,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Master Archvist",
+          "Cost": 60,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}

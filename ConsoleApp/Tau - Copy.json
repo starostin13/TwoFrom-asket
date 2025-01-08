@@ -1,0 +1,302 @@
+{
+  "Units": [
+    {
+      "Name": "Breacher Team",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Cadre Fireblade",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [ "Breacher Team", "Strike Team" ]
+    },
+    {
+      "Name": "Darkstrider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false,
+      "Lead": [ "Pathfinder Team" ]
+    },
+    {
+      "Name": "Devilfish",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Firesight Team",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Hammerhead Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 145,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Kroot Carnivores",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 75
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Kroot Flesh Shaper",
+      "MinModels": 1,
+      "MaxModels": 0,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
+    },
+    {
+      "Name": "Kroot Hounds",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 40,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Kroot Lone-spear",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true
+    },
+    {
+      "Name": "Kroot Trail Shaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
+    },
+    {
+      "Name": "Kroot War Shaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
+    },
+    {
+      "Name": "Krootox Rampagers",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 220
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Krootox Riders",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Pathfinder Team",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Piranhas",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Sky Ray Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 140,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormsurge",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 400,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Strike Team",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Vespid Stingwings",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
+    }
+  ],
+  "Detaches": [
+    {
+      "Name": "Retaliation Cadre",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Internal Grenade Racks",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Prototype Weapon System",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Puretide Engram Neurochip",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Starflare Ignition System",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}

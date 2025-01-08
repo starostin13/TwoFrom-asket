@@ -350,8 +350,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 35,
-          "AdditionalModelCost": 35
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
         }
       ],
       "DetachUpgrade": false
