@@ -7,7 +7,16 @@ public class UnitLimit
     public required string ModelName { get; set; }
 
     [JsonPropertyName("MaxQuantity")]
-    public int MaxQuantity { get; set; }
+    public int? MaxQuantity
+    {
+        get; set;
+    }
+
+    [JsonPropertyName("MinQuantity")]
+    public int? MinQuantity
+    {
+        get; set;
+    }
 }
 
 public class UnitsLimits
@@ -55,7 +64,7 @@ public class UnitsLimits
         }
     }
 
-    public int? GetLimit(string modelName)
+    public int? GetMaxLimit(string modelName)
     {
         var limit = Limits.Find(limit => limit.ModelName == modelName);
         

@@ -233,8 +233,8 @@
     },
     {
       "Name": "Ranger Squad",
-      "MinModels": 6,
-      "MaxModels": 12,
+      "MinModels": 5,
+      "MaxModels": 11,
       "Experience": [
         {
           "Level": "Veteran",
@@ -322,7 +322,7 @@
         },
         {
           "Name": "Stubborn",
-          "Cost": 2,
+          "Cost": 1,
           "MinCount": 0,
           "MaxCount": 1
         }
