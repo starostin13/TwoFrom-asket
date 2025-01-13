@@ -2,7 +2,7 @@
 
 namespace UnitRosterGenerator
 {
-    class Unit
+    public class Unit
     {
         public required string Name { get; set; }
         public int MinModels { get; set; }
@@ -14,7 +14,7 @@ namespace UnitRosterGenerator
         public List<string>? Lead {  get; set; } // Список юнитов которые могут сопровождать юнит
 
         // Метод для расчета общей стоимости юнита с учетом количества моделей, уровня опыта, выбранного оружия и улучшений
-        public int CalculateCost(
+        int CalculateCost(
             int modelCount,
             Dictionary<string, int> selectedWeapons,
             ExperienceLevelData experienceLevel,

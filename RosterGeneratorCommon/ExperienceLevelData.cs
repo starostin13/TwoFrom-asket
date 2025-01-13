@@ -10,7 +10,7 @@
 
 
     // Класс, представляющий уровень опыта юнита
-    class ExperienceLevelData
+    public class ExperienceLevelData
     {
         public string Level { get; set; }
         public int BaseCost { get; set; }

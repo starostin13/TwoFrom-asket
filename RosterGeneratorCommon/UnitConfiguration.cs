@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace UnitRosterGenerator
 {
-    class UnitConfiguration
+    public class UnitConfiguration
     {
         public Unit Unit { get; set; } // Базовый юнит
         public int ModelCount { get; set; } // Количество моделей

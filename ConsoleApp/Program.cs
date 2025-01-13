@@ -12,7 +12,7 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("Tau - Copy.json");
+            GameData gameData = LoadGameDataFromJson("Tau.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 

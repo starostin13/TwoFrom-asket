@@ -2,7 +2,7 @@
 
 namespace UnitRosterGenerator
 {
-    class RandomRosterBuilder
+    public class RandomRosterBuilder
     {
         private static Random random = new Random();
         private static List<UnitConfiguration> currentRoster;
