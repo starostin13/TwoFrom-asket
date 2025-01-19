@@ -16,7 +16,7 @@ namespace UnitRosterGenerator
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 2000;
+            int maxPoints = 470;
             List<Roster> allRosters = new List<Roster>();
 
             for (int i = 0; i < 100; i++)
