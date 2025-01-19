@@ -83,20 +83,6 @@
       "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
-      "Name": "Commander in Coldstar Battlesuit",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 80,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": true,
-      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
-    },
-    {
       "Name": "Commander Shadowsun",
       "MinModels": 1,
       "MaxModels": 1,
@@ -523,12 +509,12 @@
     {
       "Name": "Vespid Stingwings",
       "MinModels": 1,
-      "MaxModels": 1,
+      "MaxModels": 2,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 65,
-          "AdditionalModelCost": 0
+          "AdditionalModelCost": 65
         }
       ],
       "DetachUpgrade": false
