@@ -1,24 +1,55 @@
-﻿namespace MauiApp1
+﻿using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace MauiApp1
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
 
         public MainPage()
         {
             InitializeComponent();
+
+            if (File.Exists(_fileName))
+            {
+                UploadGrid.IsVisible = false;
+            }
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        public async Task<FileResult> PickFractionResourceFile(PickOptions options)
         {
-            count+=2;
+            try
+            {
+                var result = await FilePicker.Default.PickAsync(options);
+                if (result != null)
+                {
+                    if (result.FileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                    {
+                        using var stream = await result.OpenReadAsync();
+                    }
+                }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+                return result;
+            }
+            catch (Exception ex)
+            {
+                // The user canceled or something went wrong
+            }
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            return null;
+        }
+
+        private async void OnUploadClicked(object sender, EventArgs e)
+        {
+            PickOptions options = new()
+            {
+                PickerTitle = "Please select a json file with data about your fraction"
+            };
+
+            await PickFractionResourceFile(options);
         }
     }
 
