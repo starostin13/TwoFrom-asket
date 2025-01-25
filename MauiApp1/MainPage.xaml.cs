@@ -8,6 +8,7 @@ namespace MauiApp1
     public partial class MainPage : ContentPage
     {
         string _fileName = Path.Combine(FileSystem.AppDataDirectory, "notes.txt");
+        public const double MyFontSize = 28;
 
         public MainPage()
         {
