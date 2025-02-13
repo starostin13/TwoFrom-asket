@@ -7,7 +7,8 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
+            Spacing="25"
+            x:Name="MyStackLayout">
             <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
@@ -19,14 +20,21 @@
                 Style="{StaticResource SubHeadline}"
                 FontSize="{mycode:GlobalFontSize}"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                TextColor="{x:Static Member=mycode:SharedResources.FontColor}"/>
 
             <Editor x:Name="MaxPointsEditor"
                     Placeholder="2000"
-                    HeightRequest="1" />
+                    HeightRequest="1">
+                <Editor.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="UWP" Value="200" />
+                    </OnPlatform>
+                </Editor.WidthRequest>
+            </Editor>
 
             <Grid x:Name="UploadGrid"
-                ColumnDefinitions="Auto, Auto, Auto">
+                ColumnDefinitions="{OnPlatform WinUI='300, 25, Auto', Default='Auto, Auto, Auto'}">
                 <Label
                     Grid.Column="0"
                 Text="No data. Please upload some JSON data to your fist roster"
