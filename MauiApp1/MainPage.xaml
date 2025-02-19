@@ -22,7 +22,6 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 TextColor="{x:Static Member=mycode:SharedResources.FontColor}"/>
-
             <Editor x:Name="MaxPointsEditor"
                     Placeholder="2000"
                     HeightRequest="1">
@@ -32,25 +31,21 @@
                     </OnPlatform>
                 </Editor.WidthRequest>
             </Editor>
-
             <Grid x:Name="UploadGrid"
                 ColumnDefinitions="{OnPlatform WinUI='300, 25, Auto', Default='Auto, Auto, Auto'}">
                 <Label
                     Grid.Column="0"
-                Text="No data. Please upload some JSON data to your fist roster"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                    Text="No data. Please upload some JSON data to your fist roster"
+                    Style="{StaticResource Headline}"
+                    SemanticProperties.HeadingLevel="Level1" />
                 <Button
-    x:Name="UploadBtn"
+                    x:Name="UploadBtn"
                     Grid.Column="2"
-    Text="Upload" 
-    SemanticProperties.Hint="Upload file"
-    Clicked="OnUploadClicked"
-    HorizontalOptions="Fill" />
+                    Text="Upload" 
+                    SemanticProperties.Hint="Upload file"
+                    Clicked="OnUploadClicked"
+                    HorizontalOptions="Fill" />
             </Grid>
-
-            
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
