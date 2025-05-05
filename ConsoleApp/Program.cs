@@ -12,11 +12,11 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("USA-BoltAction - Copy.json");
+            GameData gameData = LoadGameDataFromJson("Tau - Copy.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 1250;
+            int maxPoints = 390;
             List<Roster> allRosters = new List<Roster>();
 
             for (int i = 0; i < 100; i++)

@@ -255,7 +255,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 55,
+          "BaseCost": 45,
           "AdditionalModelCost": 0
         }
       ],
@@ -309,7 +309,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 60,
+          "BaseCost": 50,
           "AdditionalModelCost": 0
         }
       ],
@@ -336,8 +336,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 35,
-          "AdditionalModelCost": 35
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
         }
       ],
       "DetachUpgrade": false
@@ -363,7 +363,7 @@
         {
           "Level": "Regular",
           "BaseCost": 60,
-          "AdditionalModelCost": 0
+          "AdditionalModelCost": 60
         }
       ],
       "DetachUpgrade": false
@@ -388,7 +388,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 180,
+          "BaseCost": 190,
           "AdditionalModelCost": 0
         }
       ],
@@ -665,6 +665,36 @@
         },
         {
           "Name": "TRANSPONDER LOCK MODULE",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "EXPERIMENTAL PROTOTYPE CADRE",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Supernova Launcher",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Thermoneutronic",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Plasma Accelerator Rifle",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Fusion Blade",
           "Cost": 25,
           "Unique": true,
           "MaxCount": 1
