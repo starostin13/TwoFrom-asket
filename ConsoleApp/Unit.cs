@@ -12,6 +12,7 @@ namespace UnitRosterGenerator
         public List<Upgrade>? Upgrade { get; set; } // Список улучшений юнита
         public bool DetachUpgrade { get; set; } // Указывает, может ли юнит использовать апгрейды детачей
         public List<string>? Lead {  get; set; } // Список юнитов которые могут сопровождать юнит
+        public List<string>? MutualExclude { get; set; } // Список юнитов которые не могут быть в одном ростере с этим юнитом
 
         // Метод для расчета общей стоимости юнита с учетом количества моделей, уровня опыта, выбранного оружия и улучшений
         public int CalculateCost(

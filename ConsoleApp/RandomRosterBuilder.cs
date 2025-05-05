@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-
-namespace UnitRosterGenerator
+﻿namespace UnitRosterGenerator
 {
     class RandomRosterBuilder
     {
         private static Random random = new Random();
         private static List<UnitConfiguration> currentRoster;
+        private static UnitsLimits unitsLimits = new UnitsLimits();
+        private static List<string> bannedUnits = new List<string>();
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -20,7 +20,9 @@ namespace UnitRosterGenerator
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
-                if (unit == null) break;
+
+                if (unit == null || IsUnitLimitExceed(unit.Name) || bannedUnits.Contains(unit.Name)) continue;
+
                 UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
                 UnitConfiguration attachedUnitconfig = null;
                                 
@@ -41,16 +43,30 @@ namespace UnitRosterGenerator
                 }
 
                 currentRoster.Add(unitConfig);
+                if(unit.MutualExclude != null)
+                {
+                    foreach (var unitName in unit.MutualExclude)
+                    {
+                        bannedUnits.Add(unitName);
+                    }
+                }
                 currentPoints += unitConfig.TotalCost;
                 if (attachedUnitconfig != null)
                 {
                     currentRoster.Add(attachedUnitconfig);
                     currentPoints += attachedUnitconfig.TotalCost;
                 }
-
             }
 
             return new Roster(currentRoster, selectedDetach);
+        }
+
+        static bool IsUnitLimitExceed(string name)
+        {
+            int? limit = unitsLimits.GetMaxLimit(name);
+            if (limit == null) return false;
+
+            return currentRoster.Count(unitConfig => unitConfig.Unit.Name == name) >= limit;
         }
 
         private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)
@@ -99,7 +115,25 @@ namespace UnitRosterGenerator
 
         private static Unit GetRandomUnit(List<Unit> availableUnits)
         {
-            return availableUnits.Count > 0 ? availableUnits[random.Next(availableUnits.Count)] : null;
+            if (availableUnits.Count == 0) return null;
+
+            var mandatoryUnits = unitsLimits.Limits
+        .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => unit.Name == limit.ModelName))
+        .Select(limit => new
+        {
+            Unit = availableUnits.First(unit => unit.Name == limit.ModelName),
+            Limit = limit
+        })
+        .Where(x => currentRoster.Count(unitConfig => unitConfig.Unit.Name == x.Unit.Name) < x.Limit.MinQuantity)
+        .Select(x => x.Unit)
+        .ToList();
+
+            if (mandatoryUnits.Count > 0)
+            {
+                return mandatoryUnits[random.Next(mandatoryUnits.Count)];
+            }
+
+            return availableUnits[random.Next(availableUnits.Count)];
         }
 
         private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)

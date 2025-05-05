@@ -233,8 +233,8 @@
     },
     {
       "Name": "Ranger Squad",
-      "MinModels": 6,
-      "MaxModels": 12,
+      "MinModels": 5,
+      "MaxModels": 11,
       "Experience": [
         {
           "Level": "Veteran",
@@ -322,7 +322,7 @@
         },
         {
           "Name": "Stubborn",
-          "Cost": 2,
+          "Cost": 1,
           "MinCount": 0,
           "MaxCount": 1
         }
@@ -565,6 +565,39 @@
       ]
     },
     {
+      "Name": "M24 Chaffee Light Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 220
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "additional pintle-mounted HMG on top of the turret",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Gain the Recce rule",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
       "Name": "M4A4",
       "MinModels": 1,
       "MaxModels": 1,
@@ -606,6 +639,93 @@
       ]
     },
     {
+      "Name": "Turreted Tank Destroyers",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 192
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M18 Hellcat",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 140
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 172
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Gain the Recce rule",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M36 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 200
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 232
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
       "Name": "M36B1 Jackson",
       "MinModels": 1,
       "MaxModels": 1,
@@ -629,6 +749,25 @@
           "Cost": 25,
           "MinCount": 0,
           "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "M8 Scott",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 135
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 162
         }
       ]
     },
@@ -667,6 +806,194 @@
         {
           "Level": "Veteran",
           "BaseCost": 222
+        }
+      ]
+    },
+    {
+      "Name": "Transport Half-Tracks",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 84
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted HMG with a 360-degree arc of fire",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer",
+          "Cost": 7,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Add additional pintle-mounted MMGs",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
+      "IncompatibleWeapons": [
+        {
+          "Group": "Main HMG",
+          "WeaponNames": [
+            "pintle-mounted HMG with a 360-degree arc of fire",
+            "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer"
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 14
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 18
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 22
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "1½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 22
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 27
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 32
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "2½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 28
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 33
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 38
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Mack heavy truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 34
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 39
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 44
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
         }
       ]
     }

@@ -1,6 +1,34 @@
 {
   "Units": [
     {
+      "Name": "Chaos Lord on Karkadrak",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 375,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Thorakon with Goroan Great Axe",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 275,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
       "Name": "Doom Knight",
       "MinModels": 1,
       "MaxModels": 1,
@@ -29,13 +57,13 @@
       "DetachUpgrade": false
     },
     {
-      "Name": "Aspiring Champion",
+      "Name": "Chaos Chosen Exalted Champion",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 155,
+          "BaseCost": 210,
           "AdditionalModelCost": 0
         }
       ],
@@ -43,13 +71,13 @@
       "DetachUpgrade": false
     },
     {
-      "Name": "Ogroid Theridon with Goroan Falchion and Shield",
+      "Name": "Exalted Hero of Chaos",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 195,
+          "BaseCost": 185,
           "AdditionalModelCost": 0
         }
       ],
@@ -64,6 +92,34 @@
         {
           "Level": "Regular",
           "BaseCost": 210,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Aspiring Champion",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 155,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Ogroid Theridon with Goroan Great Axe",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
           "AdditionalModelCost": 0
         }
       ],
@@ -86,6 +142,20 @@
     },
     {
       "Name": "Chaos Knight with Cursed Lance and Chaos Runeshield",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 195,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Ogroid Theridon with Goroan Falchion and Shield",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [

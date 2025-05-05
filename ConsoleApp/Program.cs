@@ -4,7 +4,7 @@ namespace UnitRosterGenerator
 {
     class Program
     {
-        static GameData LoadGameDataFromJson(string filePath)
+        static GameData? LoadGameDataFromJson(string filePath)
         {
             string json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<GameData>(json);
@@ -12,12 +12,17 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("Tau - Copy.json");
+            GameData? gameData = LoadGameDataFromJson("Tau - Copy.json");
+            if (gameData == null)
+            {
+                Console.WriteLine(args.Length > 0 ? args[0] : "Не удалось загрузить данные");
+                return;
+            }
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 470;
-            List<Roster> allRosters = new List<Roster>();
+            int maxPoints = 2000;
+            List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
             {
@@ -46,7 +51,7 @@ namespace UnitRosterGenerator
 
                 foreach (var unitConfig in r.Roster.UnitConfigurations)
                 {
-                    Console.Write($"{unitConfig.Unit.Name} (Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
+                    Console.Write($"{unitConfig.Unit.Name} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
                     if (unitConfig.SelectedWeapons.Count > 0)
                     {
                         Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(weapon => weapon.Value > 0).Select(w => $"{w.Key} x{w.Value}"))}, ");
