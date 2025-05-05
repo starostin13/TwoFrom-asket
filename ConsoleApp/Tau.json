@@ -66,7 +66,8 @@
         }
       ],
       "DetachUpgrade": false,
-      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ],
+      "MutualExclude": [ "Ethereal" ]
     },
     {
       "Name": "Commander in Coldstar Battlesuit",
@@ -181,7 +182,8 @@
           "MaxCount": 1
         }
       ],
-      "Lead": [ "Breacher Team", "Strike Team" ]
+      "Lead": [ "Breacher Team", "Strike Team" ],
+      "MutualExclude": [ "Commander Farsight" ]
     },
     {
       "Name": "Firesight Team",
