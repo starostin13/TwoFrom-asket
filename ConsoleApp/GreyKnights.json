@@ -172,7 +172,7 @@
         {
           "Level": "Regular",
           "BaseCost": 200,
-          "AdditionalModelCost": 220
+          "AdditionalModelCost": 200
         }
       ],
       "DetachUpgrade": false
@@ -301,8 +301,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 130,
-          "AdditionalModelCost": 130
+          "BaseCost": 125,
+          "AdditionalModelCost": 125
         }
       ],
       "DetachUpgrade": false
@@ -605,7 +605,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 55,
+          "BaseCost": 125,
           "AdditionalModelCost": 0
         }
       ],

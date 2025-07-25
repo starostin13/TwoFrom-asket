@@ -20,6 +20,9 @@
     <None Update="ModelLimits.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="SlavesToTheDarkness-AOS - Copy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Tau - Copy.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
