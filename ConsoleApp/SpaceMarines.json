@@ -1,0 +1,913 @@
+{
+  "Units": [
+    {
+      "Name": "Aggressor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 120
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Ancient",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Desolation Squad",
+        "Devastator Squad",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Ancient in Terminator Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Terminator Assault Squad",
+        "Terminator Squad"
+      ]
+    },
+    {
+      "Name": "Apothecary",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Desolation Squad",
+        "Devastator Squad",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Apothecary Biologis",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Aggressor Squad",
+        "Eradicator Squad",
+        "Heavy Intercessor Squad"
+      ]
+    },
+    {
+      "Name": "Assault Intercessor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 75
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Assault Intercessors with Jump Packs",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 70
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Ballistus Dreadnought",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 140,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Bladeguard Ancient",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 45,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Bladeguard Veteran Squad"
+      ]
+    },
+    {
+      "Name": "Bladeguard Veteran Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Brutalis Dreadnought",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Captain",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Company Heroes",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Captain in Gravis Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Aggressor Squad",
+        "Eradicator Squad",
+        "Heavy Intercessor Squad"
+      ]
+    },
+    {
+      "Name": "Captain in Phobos Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Eliminator Squad",
+        "Incursor Squad",
+        "Infiltrator Squad",
+        "Reiver Squad",
+        "Scout Squad"
+      ]
+    },
+    {
+      "Name": "Captain in Terminator Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 95,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Terminator Assault Squad",
+        "Terminator Squad"
+      ]
+    },
+    {
+      "Name": "Captain with Jump Pack",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessors with Jump Packs",
+        "Vanguard Veteran Squad with Jump Packs"
+      ]
+    },
+    {
+      "Name": "Centurion Assault Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 150,
+          "AdditionalModelCost": 150
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Centurion Devastator Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 165,
+          "AdditionalModelCost": 165
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaplain",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Chaplain in Terminator Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Terminator Assault Squad",
+        "Terminator Squad"
+      ]
+    },
+    {
+      "Name": "Chaplain with Jump Pack",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessors with Jump Packs",
+        "Vanguard Veteran Squad with Jump Packs"
+      ]
+    },
+    {
+      "Name": "Company Heroes",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 105,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Desolation Squad",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 200,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Devastator Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 120,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Dreadnought",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 135,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Drop Pod",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Eliminator Squad",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Eradicator Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 100
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Firestrike Servo-turrets",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 75
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Gladiator Lancer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Gladiator Reaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Gladiator Valiant",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Hammerfall Bunker",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 175,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Heavy Intercessor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 100
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Hellblaster Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 110
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Impulsor",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Inceptor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 120,
+          "AdditionalModelCost": 120
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Incursor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Infernus Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 90
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Infiltrator Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 100
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Intercessor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Invader ATV",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Invictor Tactical Warsuit",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 125,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Judiciar",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 240,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Crusader",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Redeemer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 285,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Librarian",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Desolation Squad",
+        "Devastator Squad",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Librarian in Phobos Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Eliminator Squad",
+        "Incursor Squad",
+        "Infiltrator Squad",
+        "Reiver Squad",
+        "Scout Squad"
+      ]
+    },
+    {
+      "Name": "Librarian in Terminator Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Terminator Assault Squad",
+        "Terminator Squad"
+      ]
+    },
+    {
+      "Name": "Lieutenant",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Company Heroes",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Lieutenant in Phobos Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Eliminator Squad",
+        "Incursor Squad",
+        "Infiltrator Squad",
+        "Reiver Squad",
+        "Scout Squad"
+      ]
+    },
+    {
+      "Name": "Lieutenant in Reiver Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Reiver Squad"
+      ]
+    },
+    {
+      "Name": "Lieutenant with Combi-weapon",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Company Heroes",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ]
+    },
+    {
+      "Name": "Outrider Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    }
+  ],
+  "NotesRaw": "Castellan\n1 model ..............................................................60 pts\nChaplain Grimaldus\n4 models .............................................(+10) 110 pts\nCrusade Ancient\n1 model ..............................................................65 pts\nCrusader Squad\n1 Sword Brother, 5 Initiates\nand 4 Neophytes ...........................................150 pts\n1 Sword Brother, 11 Initiates\nand 8 Neophytes ..............................(+10) 310 pts\nEmperor’s Champion\n1 model ..............................................................90 pts\nExecrator\n1 model ..............................................................70 pts\nGladiator Lancer\n1 model ............................................................160 pts\nGladiator Reaper\n1 model ............................................................160 pts\nGladiator Valiant\n1 model ............................................................160 pts\nHigh Marshal Helbrecht\n1 model ...............................................(+20) 120 pts\nImpulsor\n1 model .................................................... (+5) 85 pts\nLand Raider Crusader\n1 model ............................................................220 pts\nMarshal\n1 model ..............................................................80 pts\nSternguard Veteran Squad\n5 models ............................................................85 pts\n10 models .......................................................170 pts\nSword Brethren\n4 models ...............................................(-10) 105 pts\n5 models ...............................................(-10) 130 pts\n9 models .............................................. (-20) 235 pts\n10 models ........................................... (-20) 260 pts\nTerminator Squad\n5 models ..........................................................175 pts\n10 models .......................................................330 pts\nRepulsor\n1 model ............................................................180 pts\nRepulsor Executioner\n1 model ............................................................220 pts\nDETACHMENT ENHANCEMENTS\nCompanions of Vehemence\nIncendiary Animus .........................................25 pts\nMerciless Denunciation ................................25 pts\nOathbound Exemplar .....................................15 pts\nZealous Vanguard ...........................................20 pts\nGodhammer Assault Force\nAugury Servo-host ..........................................15 pts\nBattle-psalm Precentor..................................10 pts\nHerald of Sacred Slaughter ...........................15 pts\nParagon of Fury ................................................25 pts\nVindication Task Force\nConsecrating Aura ...........................................25 pts\nImperialis of the Eternal Crusade ...............15 pts\nOrb of the Emperor’s Aegis............................10 pts\nWarden of Honour ...........................................20 pts\nWrathful Procession\nBenediction of Fury ........................................10 pts\nPyrebrand ..........................................................25 pts\nSacred Rage ......................................................30 pts\nTaramond’s Censer ..........................................15 pts"
+}

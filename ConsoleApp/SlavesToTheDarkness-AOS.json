@@ -1,549 +1,499 @@
-[
-  {
-    "Name": "Abraxia",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 360,
-        "AdditionalModelCost": 0
-      }
+{
+    "Units": [
+        {
+            "Name": "Abraxia",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 300,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Archaon",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 840,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Be'lakor",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 460,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Centaurion Marshal",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 130,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord on Daemonic Mount",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 140,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord on Karkadrak",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 210,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Sorcerer Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Daemon Prince",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 260,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Chieftain",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 80,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Chieftain on Warsteed",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 110,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Warqueen",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Eternus, Blade of the First Prince",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 200,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Exalted Hero of Chaos",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 80,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Gaunt Summoner",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 190,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Gaunt Summoner on Disc of Tzeentch",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 210,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Gunnar Brand",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 210,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Singri Brand",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 0,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Ogroid Myrmidon",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chariot",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 70,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chosen",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 280,
+                    "AdditionalModelCost": 260
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Furies",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 110
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Knights",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 250,
+                    "AdditionalModelCost": 250
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Legionnaires",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 80,
+                    "AdditionalModelCost": 90
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Spawn",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 60,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Warriors",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 200,
+                    "AdditionalModelCost": 200
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Fellriders",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 150,
+                    "AdditionalModelCost": 150
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Marauders",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 80,
+                    "AdditionalModelCost": 80
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Savagers",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 90,
+                    "AdditionalModelCost": 130
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Wilderfiend",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 130,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Fomoroid Crusher",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Gorebeast Chariot",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Mindstealer Sphiranx",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 160,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Mutalith Vortex Beast",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 170,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Ogroid Theridons",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 180,
+                    "AdditionalModelCost": 180
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Raptoryx",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 90
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Slaughterbrute",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 200,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Varanguard",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 340,
+                    "AdditionalModelCost": 320
+                }
+            ],
+            "Weapons": []
+        }
     ],
-    "Weapons": []
-  },
-  {
-    "Name": "Archaon",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 890,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Be�lakor",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 440,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Centaurion Marshal",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 160,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Lord",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 120,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Lord on Daemonic Mount",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 180,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Lord on Karkadrak",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 240,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Lord on Manticore",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 260,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Sorcerer Lord",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 120,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Sorcerer Lord on Manticore",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 280,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Warshrine",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 250,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Daemon Prince",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 290,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Chieftain",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 120,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Chieftain on Warsteed",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 160,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Warqueen",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 140,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Eternus, Blade of the First Prince",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 210,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Exalted Hero of Chaos",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 120,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Gaunt Summoner",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 170,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Gaunt Summoner on Disc of Tzeentch",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 230,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Gunnar Brand",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 270,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Singri Brand",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 0,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Ogroid Myrmidon",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 170,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Chariot",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 100,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Chosen",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 260,
-        "AdditionalModelCost": 260
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Furies",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 110,
-        "AdditionalModelCost": 110
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Knights",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 250,
-        "AdditionalModelCost": 250
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Legionnaires",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 90,
-        "AdditionalModelCost": 90
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Spawn",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 60,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Chaos Warriors",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 200,
-        "AdditionalModelCost": 200
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Fellriders",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 150,
-        "AdditionalModelCost": 150
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Marauders",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 100,
-        "AdditionalModelCost": 100
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Savagers",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 130,
-        "AdditionalModelCost": 130
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Darkoath Wilderfiend",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 170,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Fomoroid Crusher",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 140,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Gorebeast Chariot",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 110,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Mindstealer Sphiranx",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 170,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Mutalith Vortex Beast",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 180,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Ogroid Theridons",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 180,
-        "AdditionalModelCost": 180
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Raptoryx",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 90,
-        "AdditionalModelCost": 90
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Slaughterbrute",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 220,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Soul Grinder",
-    "MinModels": 1,
-    "MaxModels": 1,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 330,
-        "AdditionalModelCost": 0
-      }
-    ],
-    "Weapons": []
-  },
-  {
-    "Name": "Varanguard",
-    "MinModels": 1,
-    "MaxModels": 2,
-    "Experience": [
-      {
-        "Level": "Regular",
-        "BaseCost": 320,
-        "AdditionalModelCost": 320
-      }
-    ],
-    "Weapons": []
-  }
-
-]
+    "Detaches": []
+}
