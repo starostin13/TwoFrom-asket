@@ -5,6 +5,7 @@
         private static Random random = new Random();
         private static List<UnitConfiguration> currentRoster;
         private static UnitsLimits unitsLimits = new UnitsLimits();
+        private static List<string> bannedUnits = new List<string>();
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -19,7 +20,9 @@
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
-                if (unit == null || IsUnitLimitExceed(unit.Name)) continue;
+
+                if (unit == null || IsUnitLimitExceed(unit.Name) || bannedUnits.Contains(unit.Name)) continue;
+
                 UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
                 UnitConfiguration attachedUnitconfig = null;
                                 
@@ -40,6 +43,13 @@
                 }
 
                 currentRoster.Add(unitConfig);
+                if(unit.MutualExclude != null)
+                {
+                    foreach (var unitName in unit.MutualExclude)
+                    {
+                        bannedUnits.Add(unitName);
+                    }
+                }
                 currentPoints += unitConfig.TotalCost;
                 if (attachedUnitconfig != null)
                 {
