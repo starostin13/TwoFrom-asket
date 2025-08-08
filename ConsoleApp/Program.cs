@@ -12,11 +12,11 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData gameData = LoadGameDataFromJson("SlavesToTheDarkness-AOS - Copy.json");
+            GameData gameData = LoadGameDataFromJson("BlackTemplars - Copy.json");
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 2000;
+            int maxPoints = 500;
             List<Roster> allRosters = new List<Roster>();
 
             for (int i = 0; i < 100; i++)
