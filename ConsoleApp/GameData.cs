@@ -2,7 +2,7 @@
 {
     class GameData
     {
-        public List<Unit> Units { get; set; }
-        public List<Detach> Detaches { get; set; }
+        public List<Unit> Units { get; set; } = new();
+        public List<Detach> Detaches { get; set; } = new();
     }
 }

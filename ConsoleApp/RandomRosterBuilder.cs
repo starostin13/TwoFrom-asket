@@ -2,10 +2,10 @@
 {
     class RandomRosterBuilder
     {
-        private static Random random = new Random();
-        private static List<UnitConfiguration> currentRoster;
-        private static UnitsLimits unitsLimits = new UnitsLimits();
-        private static List<string> bannedUnits = new List<string>();
+    private static readonly Random random = new();
+    private static List<UnitConfiguration> currentRoster = new();
+    private static readonly UnitsLimits unitsLimits = new();
+    private static readonly List<string> bannedUnits = new();
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -15,18 +15,21 @@
             int currentPoints = 0;
             currentRoster = new List<UnitConfiguration>();
 
-            Detach selectedDetach = ChooseRandomDetach(availableDetaches);
+            Detach? selectedDetach = ChooseRandomDetach(availableDetaches);
 
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
+                if (unit == null || bannedUnits.Contains(unit.Name)) continue;
 
-                if (unit == null || IsUnitLimitExceed(unit.Name) || bannedUnits.Contains(unit.Name)) continue;
+                // Pre-generate a prospective model count for limit checking
+                int prospectiveModels = unit.MinModels == unit.MaxModels ? unit.MinModels : random.Next(unit.MinModels, unit.MaxModels + 1);
+                if (IsUnitLimitExceed(unit.Name, prospectiveModels)) continue;
 
-                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
-                UnitConfiguration attachedUnitconfig = null;
-                                
-                Unit thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels);
+                UnitConfiguration? attachedUnitconfig = null;
+
+                Unit? thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
                 if (thisUnitLeadUnit != null)
                 {
                     attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit);
@@ -61,19 +64,22 @@
             return new Roster(currentRoster, selectedDetach);
         }
 
-        static bool IsUnitLimitExceed(string name)
+        static bool IsUnitLimitExceed(string name, int additionalModels = 0)
         {
             int? limit = unitsLimits.GetMaxLimit(name);
             if (limit == null) return false;
 
-            return currentRoster.Count(unitConfig => unitConfig.Unit.Name == name) >= limit;
+            int currentModels = currentRoster
+                .Where(unitConfig => unitConfig.Unit.Name == name)
+                .Sum(unitConfig => unitConfig.ModelCount);
+
+            return currentModels + additionalModels > limit;
         }
 
-        private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)
+    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, int? predefinedModelCount = null)
         {
             var experienceLevel = GetRandomExperienceLevel(unit);
-
-            int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
+            int modelCount = predefinedModelCount ?? random.Next(unit.MinModels, unit.MaxModels + 1);
             var selectedWeapons = GetRandomWeapons(unit.Weapons);
             var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
@@ -113,20 +119,22 @@
             return null;
         }
 
-        private static Unit GetRandomUnit(List<Unit> availableUnits)
+    private static Unit? GetRandomUnit(List<Unit> availableUnits)
         {
             if (availableUnits.Count == 0) return null;
 
             var mandatoryUnits = unitsLimits.Limits
-        .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => unit.Name == limit.ModelName))
-        .Select(limit => new
-        {
-            Unit = availableUnits.First(unit => unit.Name == limit.ModelName),
-            Limit = limit
-        })
-        .Where(x => currentRoster.Count(unitConfig => unitConfig.Unit.Name == x.Unit.Name) < x.Limit.MinQuantity)
-        .Select(x => x.Unit)
-        .ToList();
+                .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => unit.Name == limit.ModelName))
+                .Select(limit => new
+                {
+                    Unit = availableUnits.First(unit => unit.Name == limit.ModelName),
+                    Limit = limit
+                })
+                .Where(x => currentRoster
+                    .Where(cfg => cfg.Unit.Name == x.Unit.Name)
+                    .Sum(cfg => cfg.ModelCount) < x.Limit.MinQuantity)
+                .Select(x => x.Unit)
+                .ToList();
 
             if (mandatoryUnits.Count > 0)
             {
@@ -138,10 +146,14 @@
 
         private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
         {
-            return unit.Experience?.Count > 0 ? unit.Experience[random.Next(unit.Experience.Count)] : null;
+            if (unit.Experience.Count == 0)
+            {
+                return new ExperienceLevelData { Level = "Regular", BaseCost = 0, AdditionalModelCost = 0 };
+            }
+            return unit.Experience[random.Next(unit.Experience.Count)];
         }
 
-        private static Dictionary<string, int> GetRandomWeapons(List<Weapon> weapons)
+        private static Dictionary<string, int> GetRandomWeapons(List<Weapon>? weapons)
         {
             var selectedWeapons = new Dictionary<string, int>();
 
@@ -171,7 +183,7 @@
             return selectedWeapons;
         }
 
-        private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade> upgrades)
+    private static Dictionary<string, int> GetRandomUnitUpgrades(List<Upgrade>? upgrades)
         {
             var selectedUpgrades = new Dictionary<string, int>();
 
@@ -190,7 +202,7 @@
             return selectedUpgrades;
         }
 
-        private static Dictionary<string, int> GetRandomDetachUpgrades(Detach detach)
+    private static Dictionary<string, int> GetRandomDetachUpgrades(Detach detach)
         {
             var selectedUpgrades = new Dictionary<string, int>();
             int upgradesAdded = 0;
@@ -220,11 +232,10 @@
             return selectedUpgrades;
         }
 
-        private static Detach ChooseRandomDetach(List<Detach> detaches)
+    private static Detach? ChooseRandomDetach(List<Detach> detaches)
         {
-            if (detaches == null) return null;
-
-            return detaches.Count > 0 ? detaches[random.Next(detaches.Count)] : null;
+            if (detaches == null || detaches.Count == 0) return null;
+            return detaches[random.Next(detaches.Count)];
         }
     }
 

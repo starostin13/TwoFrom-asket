@@ -6,6 +6,6 @@ namespace UnitRosterGenerator
     {
         public required string Name { get; set; }
         public int MaxDetachUpgrades { get; set; } // Максимальное количество улучшений, которые могут быть применены к одному юниту
-        public List<Upgrade> Upgrades { get; set; } // Список доступных улучшений для детача
+        public List<Upgrade> Upgrades { get; set; } = new(); // Список доступных улучшений для детача
     }
 }

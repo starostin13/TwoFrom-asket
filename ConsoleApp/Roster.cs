@@ -1,8 +1,8 @@
 ﻿namespace UnitRosterGenerator
 {
-    class Roster
+    public class Roster
     {
-        public List<UnitConfiguration> UnitConfigurations { get; set; }
+        public List<UnitConfiguration> UnitConfigurations { get; set; } = new();
         public Detach? SelectedDetach { get; set; } // Выбранный детач, если он есть
 
         public Roster(List<UnitConfiguration> unitConfigurations, Detach? selectedDetach)

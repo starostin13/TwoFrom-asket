@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text;
 
 namespace UnitRosterGenerator
 {
@@ -12,12 +13,31 @@ namespace UnitRosterGenerator
 
         static void Main(string[] args)
         {
-            GameData? gameData = LoadGameDataFromJson("Tau - Copy.json");
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
+
+            string[] candidates = new[]
+            {
+                "SlavesToTheDarkness-AOS - Copy.json",
+                Path.Combine("ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"),
+                Path.Combine(AppContext.BaseDirectory, "SlavesToTheDarkness-AOS - Copy.json"),
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"))
+            };
+
+            string? selected = candidates.FirstOrDefault(File.Exists);
+            if (selected == null)
+            {
+                Console.Error.WriteLine("SlavesToTheDarkness-AOS - Copy.json not found. Checked:\n" + string.Join("\n", candidates));
+                return;
+            }
+
+            GameData? gameData = LoadGameDataFromJson(selected);
             if (gameData == null)
             {
                 Console.WriteLine(args.Length > 0 ? args[0] : "Не удалось загрузить данные");
                 return;
             }
+
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
@@ -66,7 +86,11 @@ namespace UnitRosterGenerator
                 Console.WriteLine("-----");
             }
 
-            Console.ReadKey();
+            // Не блокируем CI / пайпы если вывод перенаправлен
+            if (!Console.IsInputRedirected && Environment.GetEnvironmentVariable("CI") == null)
+            {
+                Console.ReadKey();
+            }
         }
     }
 }

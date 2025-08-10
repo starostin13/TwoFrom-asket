@@ -1,7 +1,7 @@
 ﻿namespace UnitRosterGenerator
 {
     // Класс, представляющий оружие
-    class Weapon
+    public class Weapon
     {
         public required string Name { get; set; }
         public int Cost { get; set; }

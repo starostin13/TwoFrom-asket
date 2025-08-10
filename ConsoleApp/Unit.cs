@@ -2,17 +2,17 @@
 
 namespace UnitRosterGenerator
 {
-    class Unit
+    public class Unit
     {
         public required string Name { get; set; }
         public int MinModels { get; set; }
         public int MaxModels { get; set; }
-        public List<ExperienceLevelData>? Experience { get; set; } // Список уровней опыта для юнита
-        public List<Weapon>? Weapons { get; set; } // Список доступного оружия
-        public List<Upgrade>? Upgrade { get; set; } // Список улучшений юнита
-        public bool DetachUpgrade { get; set; } // Указывает, может ли юнит использовать апгрейды детачей
-        public List<string>? Lead {  get; set; } // Список юнитов которые могут сопровождать юнит
-        public List<string>? MutualExclude { get; set; } // Список юнитов которые не могут быть в одном ростере с этим юнитом
+        public List<ExperienceLevelData> Experience { get; set; } = new();
+        public List<Weapon>? Weapons { get; set; }
+        public List<Upgrade>? Upgrade { get; set; }
+        public bool DetachUpgrade { get; set; }
+        public List<string>? Lead {  get; set; }
+        public List<string>? MutualExclude { get; set; }
 
         // Метод для расчета общей стоимости юнита с учетом количества моделей, уровня опыта, выбранного оружия и улучшений
         public int CalculateCost(
@@ -74,7 +74,8 @@ namespace UnitRosterGenerator
 
         public override string ToString()
         {
-            return $"{Name}, Модели: {MinModels}-{MaxModels}, Опыт: {string.Join(", ", Experience?.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})"))}";
+            var expList = Experience.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})");
+            return $"{Name}, Модели: {MinModels}-{MaxModels}, Опыт: {string.Join(", ", expList)}";
         }
     }
 }
