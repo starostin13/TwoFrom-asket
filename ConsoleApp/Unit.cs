@@ -1,13 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Text.Json;
 
 namespace UnitRosterGenerator
 {
     public class Unit
     {
         public required string Name { get; set; }
-        public int MinModels { get; set; }
-        public int MaxModels { get; set; }
-        public List<ExperienceLevelData> Experience { get; set; } = new();
+        // Top-level Min/Max/Experience kept for backward compatibility. If Corps present, they are ignored.
+        public int? MinModels { get; set; }
+        public int? MaxModels { get; set; }
+        public List<ExperienceLevelData>? Experience { get; set; } = new();
+    public List<CorpsOption>? Corps { get; set; }
+    // Arbitrary extra properties (e.g. TransportCapacity, DamageValue, Tow, etc.)
+    public Dictionary<string, JsonElement>? Properties { get; set; }
+    // Optional arbitrary tags (e.g. Period tags like E, M, L)
+    public List<string>? Tags { get; set; }
         public List<Weapon>? Weapons { get; set; }
         public List<Upgrade>? Upgrade { get; set; }
         public bool DetachUpgrade { get; set; }
@@ -25,9 +32,10 @@ namespace UnitRosterGenerator
             int totalCost = experienceLevel.BaseCost;
 
             // Добавляем стоимость за дополнительные модели
-            if (modelCount > MinModels)
+            int baseMin = Corps != null && Corps.Count > 0 ? Corps[0].MinModels : (MinModels ?? 0);
+            if (modelCount > baseMin)
             {
-                totalCost += (modelCount - MinModels) * experienceLevel.AdditionalModelCost;
+                totalCost += (modelCount - baseMin) * experienceLevel.AdditionalModelCost;
             }
 
             // Добавляем стоимость выбранного оружия
@@ -74,8 +82,12 @@ namespace UnitRosterGenerator
 
         public override string ToString()
         {
-            var expList = Experience.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})");
-            return $"{Name}, Модели: {MinModels}-{MaxModels}, Опыт: {string.Join(", ", expList)}";
+            var primaryCorps = Corps?.FirstOrDefault();
+            int min = primaryCorps?.MinModels ?? (MinModels ?? 0);
+            int max = primaryCorps?.MaxModels ?? (MaxModels ?? min);
+            var expSource = primaryCorps?.Experience ?? Experience ?? new List<ExperienceLevelData>();
+            var expList = expSource.Select(e => $"{e.Level} (Base: {e.BaseCost}, Extra: {e.AdditionalModelCost})");
+            return $"{Name}, Модели: {min}-{max}, Опыт: {string.Join(", ", expList)}";
         }
     }
 }

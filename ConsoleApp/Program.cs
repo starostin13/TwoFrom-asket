@@ -16,20 +16,56 @@ namespace UnitRosterGenerator
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
-            string[] candidates = new[]
-            {
-                "SlavesToTheDarkness-AOS - Copy.json",
-                Path.Combine("ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.Combine(AppContext.BaseDirectory, "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"))
-            };
 
-            string? selected = candidates.FirstOrDefault(File.Exists);
-            if (selected == null)
+            string? userFile = args.FirstOrDefault(a => !a.StartsWith("-"));
+            string targetFileName = string.IsNullOrWhiteSpace(userFile) ? "BlackTemplars.json" : userFile;
+
+            // Парсим аргумент очков: --points=2000 или -p=2000 (по умолчанию 2000)
+            int maxPoints = 2000;
+            var pointsArg = args.FirstOrDefault(a => a.StartsWith("--points=") || a.StartsWith("-p="));
+            if (pointsArg != null)
             {
-                Console.Error.WriteLine("SlavesToTheDarkness-AOS - Copy.json not found. Checked:\n" + string.Join("\n", candidates));
-                return;
+                var valuePart = pointsArg.Split('=', 2).Last();
+                if (int.TryParse(valuePart, out int parsed) && parsed > 0)
+                {
+                    maxPoints = parsed;
+                }
             }
+
+            // Фильтр по тегу: --tag=E или -t=E (один тег). Если указан, оставляем только юниты содержащие этот тег
+            string? tagFilter = null;
+            var tagArg = args.FirstOrDefault(a => a.StartsWith("--tag=") || a.StartsWith("-t="));
+            if (tagArg != null)
+            {
+                tagFilter = tagArg.Split('=', 2).Last().Trim();
+                if (string.IsNullOrWhiteSpace(tagFilter)) tagFilter = null;
+            }
+
+            // Если пользователь передал полный путь, используем его напрямую
+            string? selected = null;
+            if (userFile != null && File.Exists(userFile))
+            {
+                selected = userFile;
+            }
+            else
+            {
+                string[] candidates = new[]
+                {
+                    Path.Combine("Data", targetFileName),
+                    Path.Combine("ConsoleApp","Data", targetFileName),
+                    Path.Combine(AppContext.BaseDirectory, "Data", targetFileName),
+                    Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", targetFileName))
+                };
+
+                selected = candidates.FirstOrDefault(File.Exists);
+                if (selected == null)
+                {
+                    Console.Error.WriteLine($"Файл {targetFileName} не найден в папке Data. Проверьте расположение.");
+                    return;
+                }
+            }
+
+            Console.WriteLine($"Загружаю данные из: {selected}");
 
             GameData? gameData = LoadGameDataFromJson(selected);
             if (gameData == null)
@@ -38,10 +74,21 @@ namespace UnitRosterGenerator
                 return;
             }
 
+            // Предполагаем, что новые файлы данных уже используют Corps; legacy поля игнорируются если Corps присутствует.
+
             List<Unit> units = gameData.Units;
+            if (tagFilter != null)
+            {
+                units = units.Where(u => u.Tags != null && u.Tags.Contains(tagFilter, StringComparer.OrdinalIgnoreCase)).ToList();
+                if (units.Count == 0)
+                {
+                    Console.WriteLine($"Нет юнитов с тегом '{tagFilter}'.");
+                    return;
+                }
+            }
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 2000;
+            // maxPoints уже получен из аргументов
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
@@ -71,7 +118,8 @@ namespace UnitRosterGenerator
 
                 foreach (var unitConfig in r.Roster.UnitConfigurations)
                 {
-                    Console.Write($"{unitConfig.Unit.Name} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
+                    var corpsLabel = unitConfig.SelectedCorps?.Name != null ? $" ({unitConfig.SelectedCorps.Name})" : string.Empty;
+                    Console.Write($"{unitConfig.Unit.Name}{corpsLabel} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
                     if (unitConfig.SelectedWeapons.Count > 0)
                     {
                         Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(weapon => weapon.Value > 0).Select(w => $"{w.Key} x{w.Value}"))}, ");

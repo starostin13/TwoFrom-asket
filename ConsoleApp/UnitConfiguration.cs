@@ -6,6 +6,7 @@ namespace UnitRosterGenerator
     public class UnitConfiguration
     {
         public Unit Unit { get; set; } // Базовый юнит
+    public CorpsOption? SelectedCorps { get; set; } // Выбранный род войск
         public int ModelCount { get; set; } // Количество моделей
         public ExperienceLevelData ExperienceLevel { get; set; } // Уровень опыта
         public Dictionary<string, int> SelectedWeapons { get; set; } = new(); // Выбранное оружие и его количество
@@ -16,14 +17,16 @@ namespace UnitRosterGenerator
         // Конструктор для создания конфигурации юнита и подсчета его стоимости
         public UnitConfiguration(
             Unit unit,
+            CorpsOption? corpsOption,
             int modelCount,
             ExperienceLevelData experienceLevel,
             Dictionary<string, int> selectedWeapons,
             Dictionary<string, int> selectedUpgrades,
             bool weaponUpgradeSelected,
-            Detach? selectedDetach) // Добавлено selectedDetach
+            Detach? selectedDetach)
         {
             Unit = unit;
+            SelectedCorps = corpsOption;
             ModelCount = modelCount;
             ExperienceLevel = experienceLevel;
             SelectedWeapons = selectedWeapons;
@@ -40,9 +43,10 @@ namespace UnitRosterGenerator
             TotalCost = ExperienceLevel.BaseCost;
 
             // Добавляем стоимость за дополнительные модели
-            if (ModelCount > Unit.MinModels)
+            int baseMin = SelectedCorps?.MinModels ?? Unit.MinModels ?? 0;
+            if (ModelCount > baseMin)
             {
-                TotalCost += (ModelCount - Unit.MinModels) * ExperienceLevel.AdditionalModelCost;
+                TotalCost += (ModelCount - baseMin) * ExperienceLevel.AdditionalModelCost;
             }
 
             // Добавляем стоимость выбранного оружия

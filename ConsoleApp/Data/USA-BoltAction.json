@@ -1,0 +1,2494 @@
+{
+  "Units": [
+    {
+      "Name": "Platoon commander",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
+      ],
+      "Weapons": [],
+      "Corps": [
+    {
+      "Name": "M3 Stuart Light Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 100 },
+        { "Level": "Regular", "BaseCost": 125 }
+      ],
+      "Tags": ["E", "M"],
+      "Weapons": [
+        { "Name": "Turret-mounted light anti-tank gun with coaxial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Take the Recce rule", "Cost": 10, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Add a pintle-mounted MMG to the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Add two hull-mounted forward-facing LMGs", "Cost": 15, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": [
+          "Hull-mounted LMGs (if option is taken): these two weapons must be fired against the same target",
+          "Vulnerable: +1 additional penetration to side & rear hits (total +2 side, +3 rear)",
+          "Recce (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 100 },
+            { "Level": "Regular", "BaseCost": 125 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M26 Pershing Heavy Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 260 },
+        { "Level": "Regular", "BaseCost": 325 },
+        { "Level": "Veteran", "BaseCost": 390 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted super-heavy anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "10+ (heavy tank)",
+        "SpecialRules": [
+          "Gyro-Stabilisers (if Veteran)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 260 },
+            { "Level": "Regular", "BaseCost": 325 },
+            { "Level": "Veteran", "BaseCost": 390 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4 Sherman 105mm Howitzer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 160 },
+        { "Level": "Regular", "BaseCost": 200 },
+        { "Level": "Veteran", "BaseCost": 240 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium howitzer with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Cancel the Weak Sides rule", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test",
+          "Weak Sides"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 160 },
+            { "Level": "Regular", "BaseCost": 200 },
+            { "Level": "Veteran", "BaseCost": 240 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A3/A4 Sherman 105mm Howitzer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 172 },
+        { "Level": "Regular", "BaseCost": 215 },
+        { "Level": "Veteran", "BaseCost": 258 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium howitzer with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": []
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 172 },
+            { "Level": "Regular", "BaseCost": 215 },
+            { "Level": "Veteran", "BaseCost": 258 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4 Sherman T34 Calliope",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 190 },
+        { "Level": "Regular", "BaseCost": 238 },
+        { "Level": "Veteran", "BaseCost": 286 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Turret-mounted multiple launcher", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Busy Turret: may fire either main gun (or coaxial MMG) or multiple launcher, not both",
+          "Gyro-Stabilisers (if Veteran)",
+          "Stationary firing platform: may only fire the multiple launcher with a Fire order"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 190 },
+            { "Level": "Regular", "BaseCost": 238 },
+            { "Level": "Veteran", "BaseCost": 286 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Sherman Zippo (Early Version)",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 200 },
+        { "Level": "Regular", "BaseCost": 250 },
+        { "Level": "Veteran", "BaseCost": 300 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted flamethrower", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG on the turret", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Gyro-Stabilisers (if Veteran)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 200 },
+            { "Level": "Regular", "BaseCost": 250 },
+            { "Level": "Veteran", "BaseCost": 300 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Sherman Zippo (Late Version)",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 140 },
+        { "Level": "Regular", "BaseCost": 175 },
+        { "Level": "Veteran", "BaseCost": 210 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted flamethrower with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG on the turret", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": []
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 140 },
+            { "Level": "Regular", "BaseCost": 175 },
+            { "Level": "Veteran", "BaseCost": 210 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A3E2 Sherman 'Jumbo' Heavy Assault Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 208 },
+        { "Level": "Regular", "BaseCost": 260 },
+        { "Level": "Veteran", "BaseCost": 312 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG on the turret", "Cost": 25, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Replace the 75mm medium anti-tank gun with a 76mm heavy anti-tank gun (lose Improved HE)", "Cost": 15, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "10+ (heavy tank)",
+        "SpecialRules": [
+          "Slow",
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”) (75mm gun tanks)",
+            "Gyro-Stabilisers (if Veteran)",
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 208 },
+            { "Level": "Regular", "BaseCost": 260 },
+            { "Level": "Veteran", "BaseCost": 312 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Sherman Crocodile",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 208 },
+        { "Level": "Regular", "BaseCost": 260 },
+        { "Level": "Veteran", "BaseCost": 312 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted flamethrower", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG on the turret", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Gyro-Stabilisers (if Veteran)",
+          "Jettison Fuel Trailer: no extra bonus to damage applies",
+          "Slow"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 208 },
+            { "Level": "Regular", "BaseCost": 260 },
+            { "Level": "Veteran", "BaseCost": 312 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "DD Sherman",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 168 },
+        { "Level": "Regular", "BaseCost": 210 },
+        { "Level": "Veteran", "BaseCost": 252 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Gyro-Stabilisers (if Veteran)",
+          "Amphibious",
+          "Floatation Screen: if moving through deep water (any part of move) may not fire; if starting turn in shallow water may lower screens and fire normally"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 168 },
+            { "Level": "Regular", "BaseCost": 210 },
+            { "Level": "Veteran", "BaseCost": 252 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Sherman Dozer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 205 },
+        { "Level": "Veteran", "BaseCost": 246 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test",
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Gyro-Stabilisers (if Veteran)",
+          "Bulldozer Blades: Down order to clear adjacent obstacle (turns to rough ground) or fill AT ditch; may assault buildings; treat as super-heavy tank (front armour 11) when assaulting buildings"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 205 },
+            { "Level": "Veteran", "BaseCost": 246 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A1/A2/A3 Sherman 76mm",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 180 },
+        { "Level": "Regular", "BaseCost": 225 },
+        { "Level": "Veteran", "BaseCost": 270 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted heavy anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Add a Culin hedgerow cutter", "Cost": 5, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Gyro-Stabilisers (if Veteran)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 180 },
+            { "Level": "Regular", "BaseCost": 225 },
+            { "Level": "Veteran", "BaseCost": 270 }
+          ]
+        }
+      ]
+    },
+        {
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Company Commader",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 42, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+      ],
+      "Weapons": [],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 42, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Medic",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 23, "AdditionalModelCost": 8 },
+        { "Level": "Veteran", "BaseCost": 30, "AdditionalModelCost": 11 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Medic (see rulebook p113)",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "Name": "Standard",
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 23, "AdditionalModelCost": 8 },
+            { "Level": "Veteran", "BaseCost": 30, "AdditionalModelCost": 11 }
+          ]
+        },
+        {
+          "Name": "Rangers",
+          "MinModels": 1,
+          "MaxModels": 5,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 23, "AdditionalModelCost": 8 },
+            { "Level": "Veteran", "BaseCost": 30, "AdditionalModelCost": 11 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Chaplain",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 17, "AdditionalModelCost": 0 },
+        { "Level": "Regular", "BaseCost": 25, "AdditionalModelCost": 0 },
+        { "Level": "Veteran", "BaseCost": 33, "AdditionalModelCost": 0 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "HQ Choice: A force can include a single chaplain, who is not part of any of the platoon selectors, in the same manner as a company commander.",
+          "By Air, Land, and Sea (if taken)",
+          "Self-defence: see the Medic entry in the Bolt Action rulebook, page 113.",
+          "Inspiring Presence: Upon receiving his order die (except for Down), a chaplain may select 1 friendly unit within 6” and roll a D6, applying the following modifiers: Inexperienced -1, Veteran +1. On a 4+, the chaplain may remove 1 pin from the selected unit"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 17, "AdditionalModelCost": 0 },
+            { "Level": "Regular", "BaseCost": 25, "AdditionalModelCost": 0 },
+            { "Level": "Veteran", "BaseCost": 33, "AdditionalModelCost": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Forward observer",
+      "MinModels": 1,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 11 },
+        { "Level": "Veteran", "BaseCost": 90, "AdditionalModelCost": 14 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "Pistol", "Cost": -1, "MinCount": 0, "MaxCount": 3 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Infiltrators",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 11 },
+            { "Level": "Veteran", "BaseCost": 90, "AdditionalModelCost": 14 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "US Army Rifle Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 42, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Tank Hunters (if anti-tank grenades taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 42, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Armoured Infantry Rifle Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 48, "AdditionalModelCost": 8 },
+        { "Level": "Regular", "BaseCost": 66, "AdditionalModelCost": 11 },
+        { "Level": "Veteran", "BaseCost": 84, "AdditionalModelCost": 14 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Selection: For each of these squads included in the platoon, you are allowed to include one additional Bazooka team in the same platoon (only in platoons that allow Bazooka teams to begin with).",
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Mechanised Infantry: This unit can re-roll any failed order test that is required to mount or dismount a transport vehicle. In addition, if their transport vehicle is destroyed, this unit suffers D3 hits rather than D6 hits."
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 48, "AdditionalModelCost": 8 },
+            { "Level": "Regular", "BaseCost": 66, "AdditionalModelCost": 11 },
+            { "Level": "Veteran", "BaseCost": 84, "AdditionalModelCost": 14 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Armoured Infantry Mortar Squad",
+      "MinModels": 4,
+      "MaxModels": 7,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 45, "AdditionalModelCost": 8 },
+        { "Level": "Regular", "BaseCost": 64, "AdditionalModelCost": 11 },
+        { "Level": "Veteran", "BaseCost": 83, "AdditionalModelCost": 14 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Selection: A maximum of 1 Armoured Infantry Mortar Squad may be taken for each platoon. If this squad is included in the platoon, you are allowed to include one additional Bazooka team in the same platoon (only in platoons that allow Bazooka teams to begin with).",
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Mechanised Infantry: This unit can re-roll any failed order test that is required to mount or dismount a transport vehicle. In addition, if their transport vehicle is destroyed, this unit suffers D3 hits rather than D6 hits.",
+          "Light mortar (1 per squad in addition to rifle, with loader)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 7,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 45, "AdditionalModelCost": 8 },
+            { "Level": "Regular", "BaseCost": 64, "AdditionalModelCost": 11 },
+            { "Level": "Veteran", "BaseCost": 83, "AdditionalModelCost": 14 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A1/A2/A3/A4 Sherman 75mm",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 164 },
+        { "Level": "Regular", "BaseCost": 205 },
+        { "Level": "Veteran", "BaseCost": 246 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Cancel the 'Easily Catches Fire' rule", "Cost": 5, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test",
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Gyro-Stabilisers (if Veteran)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 164 },
+            { "Level": "Regular", "BaseCost": 205 },
+            { "Level": "Veteran", "BaseCost": 246 }
+          ]
+        }
+      ]
+  },
+  {
+      "Name": "Airborne Engineer Squad",
+      "MinModels": 5,
+      "MaxModels": 10,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 75, "AdditionalModelCost": 15 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "LMG", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Flamethrower", "Cost": 30, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Demolition charge", "Cost": 20, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Stubborn", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Engineers",
+          "Stubborn",
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Flamethrower requires an assistant (another man becomes the assistant)",
+          "LMG requires a loader (another man becomes the loader)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 5,
+          "MaxModels": 10,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 75, "AdditionalModelCost": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "US Paratrooper Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 66, "AdditionalModelCost": 11 },
+        { "Level": "Veteran", "BaseCost": 84, "AdditionalModelCost": 14 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "LMG", "Cost": 15, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Stubborn", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Stubborn",
+          "Tank Hunters (if anti-tank grenades taken)",
+          "LMG requires a loader (another man becomes the loader)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 66, "AdditionalModelCost": 11 },
+            { "Level": "Veteran", "BaseCost": 84, "AdditionalModelCost": 14 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Pathfinders Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 90, "AdditionalModelCost": 15 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 6 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Stubborn",
+          "LZ Signals: If at least one unit of Pathfinders is not in reserve (i.e. is deployed or in first wave), then any friendly paratroopers, pathfinders and glider units in reserve may re-roll failed order tests to come onto the table from reserve."
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 90, "AdditionalModelCost": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Glider Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Stubborn (Veteran only)", "Cost": 1, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Stubborn (if option is taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 78, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Glider Machine Gun Squad",
+      "MinModels": 4,
+      "MaxModels": 6,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 67, "AdditionalModelCost": 13 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "LMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Stubborn (Veteran only)", "Cost": 1, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Stubborn (if option is taken)",
+          "Includes one light machine gun and loader (counts within squad models)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 6,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 67, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Ranger Squad",
+      "MinModels": 5,
+      "MaxModels": 11,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 70, "AdditionalModelCost": 14 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "LMG (Late War only)", "Cost": 15, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Rangers Lead the Way!"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 5,
+          "MaxModels": 11,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 70, "AdditionalModelCost": 14 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "I&R Squad",
+      "MinModels": 4,
+      "MaxModels": 9,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 28, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 52, "AdditionalModelCost": 13 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Recon Troops: The unit will spot hidden enemy units at 18” rather than the normal 12°.",
+          "Regimental Units: A force can include a maximum of 2 I&R Squads."
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 9,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 28, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 52, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "US Marine Squad",
+      "MinModels": 7,
+      "MaxModels": 13,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 49, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 91, "AdditionalModelCost": 13 }
+      ],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "Shotgun", "Cost": 3, "MinCount": 0, "MaxCount": 3 }
+      ],
+      "Upgrade": [
+        { "Name": "Антитанковые гранаты", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Stubborn", "Cost": 1, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Properties": {
+        "SpecialRules": [
+          "Stubborn (if taken)",
+          "Tank Hunters (if anti-tank grenades taken)",
+          "Early War: only 1 BAR may be taken"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 7,
+          "MaxModels": 13,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 49, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 91, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "USMC Raiders Squad",
+      "MinModels": 4,
+      "MaxModels": 10,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 60, "AdditionalModelCost": 15 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 4 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 3 },
+        { "Name": "Shotgun", "Cost": 2, "MinCount": 0, "MaxCount": 3 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Tough Fighters", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Stubborn",
+          "Tough Fighters",
+          "Tank Hunters (if anti-tank grenades taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 10,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 60, "AdditionalModelCost": 15 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Merrill's Marauders Squad",
+      "MinModels": 5,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 85, "AdditionalModelCost": 17 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 4 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 2 }
+      ],
+      "Upgrade": [
+        { "Name": "Anti-tank grenades", "Cost": 2, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Tough Fighters", "Cost": 0, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Fieldcraft", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Stubborn",
+          "Tough Fighters",
+          "Fieldcraft",
+          "Long-range Penetration: When outflanking, as described in the Bolt Action rulebook (see page 172), Merrill’s Marauders may re-roll failed order tests for coming onto the table.",
+          "Tank Hunters (if anti-tank grenades taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 5,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 85, "AdditionalModelCost": 17 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Philippine Scouts Squad",
+      "MinModels": 6,
+      "MaxModels": 12,
+      "Experience": [
+        { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "BAR", "Cost": 6, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Horses", "Cost": 3, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Cavalry (if the horses option is taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 6,
+          "MaxModels": 12,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 10 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Medium Machine Gun Team",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 35
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 50
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65
+        }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "Medium machine gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon",
+          "Fixed",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 35 },
+            { "Level": "Regular", "BaseCost": 50 },
+            { "Level": "Veteran", "BaseCost": 65 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Heavy Machine Gun Team",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 49 },
+        { "Level": "Regular", "BaseCost": 70 },
+        { "Level": "Veteran", "BaseCost": 91 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "Heavy machine gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon",
+          "Fixed",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 4,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 49 },
+            { "Level": "Regular", "BaseCost": 70 },
+            { "Level": "Veteran", "BaseCost": 91 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Bazooka Anti-Tank Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 42 },
+        { "Level": "Regular", "BaseCost": 60 },
+        { "Level": "Veteran", "BaseCost": 78 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Bazooka", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon",
+          "Shaped Charge",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 2,
+          "MaxModels": 2,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 42 },
+            { "Level": "Regular", "BaseCost": 60 },
+            { "Level": "Veteran", "BaseCost": 78 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Heavy Weapons Rifle Team",
+      "MinModels": 3,
+      "MaxModels": 5,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
+        { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
+        { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "SMG", "Cost": 4, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Selection: You may take Heavy Weapons Rifle Teams instead of either Mortar or Machine Gun Teams in any Heavy Weapons Platoon.",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 5,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Sniper Team",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 52
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 67
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "By Air, Land, and Sea",
+          "Cost": 0,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon",
+          "Sniper",
+          "Infiltrators",
+          "By Air, Land, and Sea"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 2,
+          "MaxModels": 2,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 52 },
+            { "Level": "Veteran", "BaseCost": 67 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M24 Chaffee Light Tank",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 136 },
+        { "Level": "Regular", "BaseCost": 170 },
+        { "Level": "Veteran", "BaseCost": 204 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "additional pintle-mounted HMG on top of the turret", "Cost": 25, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Gain the Recce rule", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": [
+          "Fast",
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Vulnerable: +1 additional penetration to side & rear hits (total +2 side, +3 rear)",
+          "Gyro-Stabilisers (if Veteran)",
+          "Recce (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 136 },
+            { "Level": "Regular", "BaseCost": 170 },
+            { "Level": "Veteran", "BaseCost": 204 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3 Lee",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 188 },
+        { "Level": "Regular", "BaseCost": 235 }
+      ],
+      "Tags": ["E", "M"],
+      "Weapons": [
+        { "Name": "Hull-mounted medium anti-tank gun (front & right arcs)", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Turret-mounted light anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "MMG with 360-degree arc of fire", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test",
+          "Vulnerable: +1 additional penetration to side & rear hits (total +2 side, +3 rear)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 188 },
+            { "Level": "Regular", "BaseCost": 235 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3A1 Lee",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 200 },
+        { "Level": "Regular", "BaseCost": 250 }
+      ],
+      "Tags": ["M"],
+      "Weapons": [
+        { "Name": "Hull-mounted medium anti-tank gun (front & right arcs)", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Turret-mounted light anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "MMG with 360-degree arc of fire", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 200 },
+            { "Level": "Regular", "BaseCost": 250 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3A3 Lee",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 204 },
+        { "Level": "Regular", "BaseCost": 255 }
+      ],
+      "Tags": ["M"],
+      "Weapons": [
+        { "Name": "Hull-mounted medium anti-tank gun (front & right arcs)", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Turret-mounted light anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "MMG with 360-degree arc of fire", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 204 },
+            { "Level": "Regular", "BaseCost": 255 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3A5 Lee",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 192 },
+        { "Level": "Regular", "BaseCost": 240 },
+        { "Level": "Veteran", "BaseCost": 288 }
+      ],
+      "Tags": ["M"],
+      "Weapons": [
+        { "Name": "Hull-mounted medium anti-tank gun (front & right arcs)", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Turret-mounted light anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "MMG with 360-degree arc of fire", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Vulnerable: +1 additional penetration to side & rear hits (total +2 side, +3 rear)",
+          "Gyro-Stabilisers (if Veteran)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 192 },
+            { "Level": "Regular", "BaseCost": 240 },
+            { "Level": "Veteran", "BaseCost": 288 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4 Sherman 75mm",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 156 },
+        { "Level": "Regular", "BaseCost": 195 },
+        { "Level": "Veteran", "BaseCost": 234 }
+      ],
+      "Tags": ["M"],
+      "Weapons": [
+        { "Name": "Turret-mounted medium anti-tank gun with co-axial MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG on the turret", "Cost": 15, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Upgrade the pintle-mounted MMG to a pintle-mounted HMG", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Easily Catches Fire: if fire result, add D3 pins instead of 1 before morale test",
+          "Improved HE: Instead of HE (1”) the medium anti-tank gun has HE (2”)",
+          "Weak Sides"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 156 },
+            { "Level": "Regular", "BaseCost": 195 },
+            { "Level": "Veteran", "BaseCost": 234 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M4A4",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 210
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 262
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        },
+        {
+          "Name": "Platoon Commander",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 168 },
+            { "Level": "Regular", "BaseCost": 210 },
+            { "Level": "Veteran", "BaseCost": 262 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Turreted Tank Destroyers",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 192
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 128 },
+            { "Level": "Regular", "BaseCost": 160 },
+            { "Level": "Veteran", "BaseCost": 192 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M18 Hellcat",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 140
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 172
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Gain the Recce rule",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 108 },
+            { "Level": "Regular", "BaseCost": 140 },
+            { "Level": "Veteran", "BaseCost": 172 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M36 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 168
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 200
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 232
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 168 },
+            { "Level": "Regular", "BaseCost": 200 },
+            { "Level": "Veteran", "BaseCost": 232 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M36B1 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 200
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 250
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 300
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Turret-mounted super heavy anti-tank gun",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Hull-mounted MMG",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 25,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": ["Open-topped"]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 200 },
+            { "Level": "Regular", "BaseCost": 250 },
+            { "Level": "Veteran", "BaseCost": 300 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M8 Scott",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 108 },
+        { "Level": "Regular", "BaseCost": 135 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Turret-mounted light howitzer", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Pintle-mounted HMG (360° arc)", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": ["Open-topped"]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 108 },
+            { "Level": "Regular", "BaseCost": 135 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M7 Priest",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 136 },
+        { "Level": "Regular", "BaseCost": 170 },
+        { "Level": "Veteran", "BaseCost": 204 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Forward-facing hull-mounted medium howitzer", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Pintle-mounted HMG (360° arc)", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": ["Open-topped"]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 136 },
+            { "Level": "Regular", "BaseCost": 170 },
+            { "Level": "Veteran", "BaseCost": 204 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M12 Gun Motor Carriage",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 156 },
+        { "Level": "Regular", "BaseCost": 195 },
+        { "Level": "Veteran", "BaseCost": 234 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        {
+          "Name": "Casement-mounted forward-facing heavy howitzer",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Replace heavy howitzer with pintle-mounted HMG (360° arc) (M30 cargo carrier)",
+          "Cost": -110,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": ["Open-topped"]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 156 },
+            { "Level": "Regular", "BaseCost": 195 },
+            { "Level": "Veteran", "BaseCost": 234 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 14
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 18
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 22
+        }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)",
+        "TransportCapacity": 3,
+        "Tow": [
+          "Light Anti-Tank Gun",
+          "Light Howitzer",
+          "Light Anti-Aircraft Gun"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 14 },
+            { "Level": "Regular", "BaseCost": 18 },
+            { "Level": "Veteran", "BaseCost": 22 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Mortar Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 36 },
+        { "Level": "Regular", "BaseCost": 45 },
+        { "Level": "Veteran", "BaseCost": 54 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        {
+          "Name": "Hull-mounted rear-facing light mortar",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)"
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 36 },
+            { "Level": "Regular", "BaseCost": 45 },
+            { "Level": "Veteran", "BaseCost": 54 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Reconnaissance Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 36 },
+        { "Level": "Regular", "BaseCost": 45 },
+        { "Level": "Veteran", "BaseCost": 54 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG (360° arc)",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)",
+        "SpecialRules": [ "Recce" ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 36 },
+            { "Level": "Regular", "BaseCost": 45 },
+            { "Level": "Veteran", "BaseCost": 54 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "US Airborne Armoured Jeep",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Veteran", "BaseCost": 84 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted HMG (360° arc)",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)",
+        "SpecialRules": [
+          "Recce",
+          "Frontal Armour: This soft-skinned vehicle cannot be damaged by small arms hits against its frontal arc, but is still pinned as normal"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Veteran", "BaseCost": 84 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Armoured Jeep with Twin Bazookas",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 116 },
+        { "Level": "Regular", "BaseCost": 145 },
+        { "Level": "Veteran", "BaseCost": 174 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        {
+          "Name": "twin bazookas on single mount (360° arc)",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)",
+        "SpecialRules": [
+          "Recce",
+          "Frontal Armour: This soft-skinned vehicle cannot be damaged by small arms hits against its frontal arc, but will still be pinned as normal"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 116 },
+            { "Level": "Regular", "BaseCost": 145 },
+            { "Level": "Veteran", "BaseCost": 174 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3 White Scout Car",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 54 },
+        { "Level": "Regular", "BaseCost": 68 },
+        { "Level": "Veteran", "BaseCost": 82 }
+      ],
+  "Tags": ["E", "M", "L"],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted HMG",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        },
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "Replace transport with Recce (counts as armoured car)",
+          "Cost": 0,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "DamageValue": "7+ (armoured car)",
+        "TransportCapacity": 8,
+        "Tow": [
+          "Light Anti-Tank Gun",
+          "Medium Anti-Tank Gun",
+          "Light Howitzer",
+          "Light Anti-Aircraft Gun"
+        ],
+        "SpecialRules": [
+          "Open-topped",
+          "Recce (if upgrade taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 54 },
+            { "Level": "Regular", "BaseCost": 68 },
+            { "Level": "Veteran", "BaseCost": 82 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "1½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 22
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 27
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 32
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 22 },
+            { "Level": "Regular", "BaseCost": 27 },
+            { "Level": "Veteran", "BaseCost": 32 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "2½ Ton truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+      "BaseCost": 26
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 33
+        },
+        {
+          "Level": "Veteran",
+      "BaseCost": 40
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ],
+      "Properties": {
+        "TransportCapacity": 18,
+        "DamageValue": "6+ (soft-skin)",
+        "Tow": [
+          "Light Anti-Tank Gun",
+          "Medium Anti-Tank Gun",
+          "Heavy Anti-Tank Gun",
+          "Light Howitzer",
+          "Medium Howitzer",
+          "Light Anti-Aircraft Gun"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+      { "Level": "Inexperienced", "BaseCost": 26 },
+            { "Level": "Regular", "BaseCost": 33 },
+      { "Level": "Veteran", "BaseCost": 40 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Mack heavy truck",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 34
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 39
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 44
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "pintle-mounted MMG",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1,
+          "Upgrade": [
+            {
+              "Name": "HMG",
+              "Cost": 10,
+              "MinCount": 0,
+              "MaxCount": 1
+            }
+          ]
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 34 },
+            { "Level": "Regular", "BaseCost": 39 },
+            { "Level": "Veteran", "BaseCost": 44 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Light Mortar Team (M2)",
+      "MinModels": 2,
+      "MaxModels": 3,
+      "Experience": [],
+      "Weapons": [],
+      "Corps": [
+        {
+          "Name": "Airborne",
+          "MinModels": 2,
+          "MaxModels": 2,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 30 },
+            { "Level": "Veteran", "BaseCost": 39 }
+          ]
+        },
+        {
+          "Name": "Rangers",
+          "MinModels": 2,
+          "MaxModels": 2,
+          "Experience": [
+            { "Level": "Regular", "BaseCost": 30 },
+            { "Level": "Veteran", "BaseCost": 39 }
+          ]
+        },
+        {
+          "Name": "US Army",
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 25 },
+            { "Level": "Regular", "BaseCost": 35 },
+            { "Level": "Veteran", "BaseCost": 46 }
+          ]
+        },
+        {
+          "Name": "Marines",
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 25 },
+            { "Level": "Regular", "BaseCost": 35 },
+            { "Level": "Veteran", "BaseCost": 46 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Light Artillery (M1A1)",
+      "Upgrade": [
+        {
+          "Name": "gun shield",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 36 },
+            { "Level": "Regular", "BaseCost": 45 },
+            { "Level": "Veteran", "BaseCost": 54 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "3-inch Anti-Tank Gun M5",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 70 },
+        { "Level": "Regular", "BaseCost": 100 },
+        { "Level": "Veteran", "BaseCost": 130 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Gun Shield"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 4,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 70 },
+            { "Level": "Regular", "BaseCost": 100 },
+            { "Level": "Veteran", "BaseCost": 130 }
+          ]
+        }
+      ]
+    }
+    ,
+    {
+      "Name": "Medium Mortar Team (M1)",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 32 },
+        { "Level": "Regular", "BaseCost": 45 },
+        { "Level": "Veteran", "BaseCost": 59 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        {
+          "Name": "Medium Mortar",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "spotter",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "By Air, Land, and Sea",
+          "Cost": 0,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon",
+          "Fixed",
+          "By Air, Land, and Sea (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 32 },
+            { "Level": "Regular", "BaseCost": 45 },
+            { "Level": "Veteran", "BaseCost": 59 }
+          ]
+        }
+      ]
+    }
+    ,
+    {
+      "Name": "Heavy Mortar Team",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 42 },
+        { "Level": "Regular", "BaseCost": 60 },
+        { "Level": "Veteran", "BaseCost": 78 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        {
+          "Name": "Heavy Mortar",
+          "Cost": 0,
+          "MinCount": 1,
+          "MaxCount": 1
+        }
+      ],
+      "Upgrade": [
+        {
+          "Name": "spotter",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "Team Weapon"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 4,
+          "MaxModels": 4,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 42 },
+            { "Level": "Regular", "BaseCost": 60 },
+            { "Level": "Veteran", "BaseCost": 78 }
+          ]
+        }
+      ]
+    }
+    ,
+    {
+      "Name": "37mm Anti-Tank Gun M3",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 35 },
+        { "Level": "Regular", "BaseCost": 50 },
+        { "Level": "Veteran", "BaseCost": 65 }
+      ],
+      "Tags": ["E", "M", "L"],
+      "Weapons": [
+        { "Name": "Light anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "By Air, Land, and Sea (if taken)",
+          "Gun Shield"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 35 },
+            { "Level": "Regular", "BaseCost": 50 },
+            { "Level": "Veteran", "BaseCost": 65 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "57mm Anti-Tank Gun M1",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 49 },
+        { "Level": "Regular", "BaseCost": 70 },
+        { "Level": "Veteran", "BaseCost": 91 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Medium anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "By Air, Land, and Sea", "Cost": 0, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "SpecialRules": [
+          "By Air, Land, and Sea (if taken)",
+          "Gun Shield",
+          "Airborne Carriage: If Airborne option taken counts as light anti-tank gun for towing"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 3,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 49 },
+            { "Level": "Regular", "BaseCost": 70 },
+            { "Level": "Veteran", "BaseCost": 91 }
+          ]
+        }
+      ]
+    }
+  ]
+}
