@@ -84,6 +84,212 @@
       ]
     },
     {
+      "Name": "M6 Gun Motor Carriage",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 52 },
+        { "Level": "Regular", "BaseCost": 65 },
+        { "Level": "Veteran", "BaseCost": 78 }
+      ],
+      "Tags": ["E", "M"],
+      "Weapons": [
+        { "Name": "Rear-facing light anti-tank gun (covers rear arc)", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [],
+      "Properties": {
+        "DamageValue": "6+ (soft-skin)",
+        "SpecialRules": [
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 52 },
+            { "Level": "Regular", "BaseCost": 65 },
+            { "Level": "Veteran", "BaseCost": 78 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M3 75mm (T12) Gun Motor Carriage",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 96 },
+        { "Level": "Regular", "BaseCost": 120 },
+        { "Level": "Veteran", "BaseCost": 144 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Forward-facing hull-mounted medium anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted MMG covering the rear arc", "Cost": 15, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "7+ (armoured carrier)",
+        "SpecialRules": [
+          "Open-topped",
+          "Improved HE: Instead of HE (1\") the medium anti-tank gun has HE (2\")."
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 96 },
+            { "Level": "Regular", "BaseCost": 120 },
+            { "Level": "Veteran", "BaseCost": 144 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M10 Tank Destroyer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 128 },
+        { "Level": "Regular", "BaseCost": 160 },
+        { "Level": "Veteran", "BaseCost": 192 }
+      ],
+      "Tags": ["M", "L"],
+      "Weapons": [
+        { "Name": "Turret-mounted heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": [
+          "Open-topped"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 128 },
+            { "Level": "Regular", "BaseCost": 160 },
+            { "Level": "Veteran", "BaseCost": 192 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M18 Hellcat",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 120 },
+        { "Level": "Regular", "BaseCost": 150 },
+        { "Level": "Veteran", "BaseCost": 180 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 },
+        { "Name": "Take the Recce rule", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "7+ (armoured carrier)",
+        "SpecialRules": [
+          "Fast",
+          "Open-topped",
+          "Recce (if taken)"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 120 },
+            { "Level": "Regular", "BaseCost": 150 },
+            { "Level": "Veteran", "BaseCost": 180 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M36 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 160 },
+        { "Level": "Regular", "BaseCost": 200 },
+        { "Level": "Veteran", "BaseCost": 240 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted super-heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "8+ (light tank)",
+        "SpecialRules": [
+          "Open-topped"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 160 },
+            { "Level": "Regular", "BaseCost": 200 },
+            { "Level": "Veteran", "BaseCost": 240 }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "M36B1 Jackson",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        { "Level": "Inexperienced", "BaseCost": 200 },
+        { "Level": "Regular", "BaseCost": 250 },
+        { "Level": "Veteran", "BaseCost": 300 }
+      ],
+      "Tags": ["L"],
+      "Weapons": [
+        { "Name": "Turret-mounted super-heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 },
+        { "Name": "Forward-facing hull-mounted MMG", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
+      ],
+      "Upgrade": [
+        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 }
+      ],
+      "Properties": {
+        "DamageValue": "9+ (medium tank)",
+        "SpecialRules": [
+          "Open-topped"
+        ]
+      },
+      "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 1,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 200 },
+            { "Level": "Regular", "BaseCost": 250 },
+            { "Level": "Veteran", "BaseCost": 300 }
+          ]
+        }
+      ]
+    },
+    {
       "Name": "M4 Sherman 105mm Howitzer",
       "MinModels": 1,
       "MaxModels": 1,
