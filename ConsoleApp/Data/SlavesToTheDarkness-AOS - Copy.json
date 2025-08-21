@@ -1,0 +1,148 @@
+{
+    "Units": [
+        {
+            "Name": "Chaos Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord on Karkadrak",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 210,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Sorcerer Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Daemon Prince",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 260,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Exalted Hero of Chaos",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 80,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chariot",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 70,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chosen",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 280,
+                    "AdditionalModelCost": 280
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Knights",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 250,
+                    "AdditionalModelCost": 250
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Warriors",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 200,
+                    "AdditionalModelCost": 200
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Wilderfiend",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 130,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Ogroid Theridons",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 180,
+                    "AdditionalModelCost": 180
+                }
+            ],
+            "Weapons": []
+        }
+    ],
+    "Detaches": []
+}

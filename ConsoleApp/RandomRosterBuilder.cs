@@ -22,17 +22,21 @@
                 var unit = GetRandomUnit(availableUnits);
                 if (unit == null || bannedUnits.Contains(unit.Name)) continue;
 
+                var corpsOption = GetRandomCorpsOption(unit);
+                int localMin = corpsOption?.MinModels ?? unit.MinModels ?? 0;
+                int localMax = corpsOption?.MaxModels ?? unit.MaxModels ?? localMin;
+
                 // Pre-generate a prospective model count for limit checking
-                int prospectiveModels = unit.MinModels == unit.MaxModels ? unit.MinModels : random.Next(unit.MinModels, unit.MaxModels + 1);
+                int prospectiveModels = localMin == localMax ? localMin : random.Next(localMin, localMax + 1);
                 if (IsUnitLimitExceed(unit.Name, prospectiveModels)) continue;
 
-                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels);
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, corpsOption, prospectiveModels);
                 UnitConfiguration? attachedUnitconfig = null;
 
                 Unit? thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
                 if (thisUnitLeadUnit != null)
                 {
-                    attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit);
+                    attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit, GetRandomCorpsOption(thisUnitLeadUnit));
 
                     if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
                     {
@@ -76,10 +80,12 @@
             return currentModels + additionalModels > limit;
         }
 
-    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, int? predefinedModelCount = null)
+    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, CorpsOption? corpsOption = null, int? predefinedModelCount = null)
         {
-            var experienceLevel = GetRandomExperienceLevel(unit);
-            int modelCount = predefinedModelCount ?? random.Next(unit.MinModels, unit.MaxModels + 1);
+            var experienceLevel = GetRandomExperienceLevel(unit, corpsOption);
+            int minModels = corpsOption?.MinModels ?? unit.MinModels ?? 0;
+            int maxModels = corpsOption?.MaxModels ?? unit.MaxModels ?? minModels;
+            int modelCount = predefinedModelCount ?? random.Next(minModels, maxModels + 1);
             var selectedWeapons = GetRandomWeapons(unit.Weapons);
             var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
@@ -105,7 +111,7 @@
             }
 
             var unitConfig = new UnitConfiguration(
-                unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
+                unit, corpsOption, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
             return unitConfig;
         }
 
@@ -144,14 +150,21 @@
             return availableUnits[random.Next(availableUnits.Count)];
         }
 
-        private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
+        private static ExperienceLevelData GetRandomExperienceLevel(Unit unit, CorpsOption? corpsOption)
         {
-            if (unit.Experience.Count == 0)
+                var experiencePool = corpsOption?.Experience ?? unit.Experience ?? new List<ExperienceLevelData>();
+                if (experiencePool.Count == 0)
             {
                 return new ExperienceLevelData { Level = "Regular", BaseCost = 0, AdditionalModelCost = 0 };
             }
-            return unit.Experience[random.Next(unit.Experience.Count)];
+                return experiencePool[random.Next(experiencePool.Count)];
         }
+        private static CorpsOption? GetRandomCorpsOption(Unit unit)
+            {
+                if (unit.Corps == null || unit.Corps.Count == 0) return null;
+                if (unit.Corps.Count == 1) return unit.Corps[0];
+                return unit.Corps[random.Next(unit.Corps.Count)];
+            }
 
         private static Dictionary<string, int> GetRandomWeapons(List<Weapon>? weapons)
         {

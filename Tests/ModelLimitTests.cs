@@ -28,8 +28,8 @@ public class ModelLimitTests
         // Simulate adding two 1-model configs
         var rosterConfigs = new List<UnitConfiguration>
         {
-            new UnitConfiguration(unit, 1, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null),
-            new UnitConfiguration(unit, 1, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null)
+            new UnitConfiguration(unit, null, 1, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null),
+            new UnitConfiguration(unit, null, 1, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null)
         };
 
         int currentModels = rosterConfigs.Where(c => c.Unit.Name == unit.Name).Sum(c => c.ModelCount);
@@ -41,7 +41,7 @@ public class ModelLimitTests
 
         // Directly adding a 2-model block to empty roster should be allowed
         rosterConfigs.Clear();
-        var full = new UnitConfiguration(unit, 2, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null);
+    var full = new UnitConfiguration(unit, null, 2, unit.Experience.First(), new Dictionary<string,int>(), new Dictionary<string,int>(), false, null);
         rosterConfigs.Add(full);
         Assert.Equal(2, rosterConfigs.Sum(c => c.ModelCount));
     }
