@@ -11,6 +11,17 @@
       ],
       "Weapons": [],
       "Corps": [
+        {
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
+            { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
+            { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
+          ]
+        }
+      ]
+    },
     {
       "Name": "M3 Stuart Light Tank",
       "MinModels": 1,
@@ -656,19 +667,9 @@
         }
       ]
     },
-        {
-          "MinModels": 1,
-          "MaxModels": 3,
-          "Experience": [
-            { "Level": "Inexperienced", "BaseCost": 21, "AdditionalModelCost": 7 },
-            { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 10 },
-            { "Level": "Veteran", "BaseCost": 39, "AdditionalModelCost": 13 }
-          ]
-        }
-      ]
-    },
+    
     {
-      "Name": "Company Commader",
+  "Name": "Company Commander",
       "MinModels": 1,
       "MaxModels": 3,
       "Experience": [
