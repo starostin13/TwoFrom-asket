@@ -666,10 +666,9 @@
           ]
         }
       ]
-    },
-    
+    },    
     {
-  "Name": "Company Commander",
+      "Name": "Company Commander",
       "MinModels": 1,
       "MaxModels": 3,
       "Experience": [
