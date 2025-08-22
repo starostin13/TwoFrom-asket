@@ -18,16 +18,20 @@ namespace UnitRosterGenerator
 
             string[] candidates = new[]
             {
-                "SlavesToTheDarkness-AOS - Copy.json",
-                Path.Combine("ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.Combine(AppContext.BaseDirectory, "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"))
+                // Relative from repo root when running via solution
+                Path.Combine("ConsoleApp", "Data", "AELDARI.json"),
+                // Relative from project directory (working dir)
+                Path.Combine("Data", "AELDARI.json"),
+                // In output/bin folder after build copy
+                Path.Combine(AppContext.BaseDirectory, "Data", "AELDARI.json"),
+                // Fallback: navigate up from bin/Debug/netX to project Data
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", "AELDARI.json"))
             };
 
             string? selected = candidates.FirstOrDefault(File.Exists);
             if (selected == null)
             {
-                Console.Error.WriteLine("SlavesToTheDarkness-AOS - Copy.json not found. Checked:\n" + string.Join("\n", candidates));
+                Console.Error.WriteLine("\\Data\\AELDARI.json not found. Checked:\n" + string.Join("\n", candidates));
                 return;
             }
 
@@ -41,7 +45,7 @@ namespace UnitRosterGenerator
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 2000;
+            int maxPoints = 500;
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)

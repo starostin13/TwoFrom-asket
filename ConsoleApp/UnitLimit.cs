@@ -21,29 +21,46 @@ public class UnitLimit
 
 public class UnitsLimits
 {
-    private static string filePath = "ModelLimits.json";
+    // Primary file name inside output directory (copied via csproj)
+    private const string FileName = "ModelLimits.json";
+    private static readonly string[] CandidatePaths = new[]
+    {
+        // 1. Output/bin folder
+        Path.Combine(AppContext.BaseDirectory, FileName),
+        // 2. Working directory (if started inside project folder)
+        FileName,
+        // 3. Project relative when run from repo root
+        Path.Combine("ConsoleApp", FileName)
+    };
 
     public List<UnitLimit> Limits { get; set; } = new List<UnitLimit>();
 
     public UnitsLimits()
     {
-        try
+        foreach (var path in CandidatePaths)
         {
-            if (File.Exists(filePath))
+            try
             {
-                var json = File.ReadAllText(filePath);
+                if (!File.Exists(path)) continue;
+                var json = File.ReadAllText(path);
                 var unitsLimits = JsonSerializer.Deserialize<List<UnitLimit>>(json);
                 if (unitsLimits != null)
                 {
                     Limits = unitsLimits;
+                    return; // Loaded successfully
                 }
             }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"[UnitsLimits] JSON error in '{path}': {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[UnitsLimits] Error reading '{path}': {ex.Message}");
+            }
         }
-        catch (JsonException ex)
-        {
-            Console.WriteLine($"Error deserializing JSON: {ex.Message}");
-            // Handle the error or set default values
-        }
+
+        Console.WriteLine("[UnitsLimits] ModelLimits.json not found in any candidate path. Limits disabled.");
     }
 
     public string ToJson()
