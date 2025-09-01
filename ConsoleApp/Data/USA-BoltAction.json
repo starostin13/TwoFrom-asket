@@ -193,44 +193,7 @@
           ]
         }
       ]
-    },
-    {
-      "Name": "M18 Hellcat",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        { "Level": "Inexperienced", "BaseCost": 120 },
-        { "Level": "Regular", "BaseCost": 150 },
-        { "Level": "Veteran", "BaseCost": 180 }
-      ],
-      "Tags": ["L"],
-      "Weapons": [
-        { "Name": "Turret-mounted heavy anti-tank gun", "Cost": 0, "MinCount": 1, "MaxCount": 1 }
-      ],
-      "Upgrade": [
-        { "Name": "Add a pintle-mounted HMG (360° arc)", "Cost": 25, "MinCount": 0, "MaxCount": 1 },
-        { "Name": "Take the Recce rule", "Cost": 10, "MinCount": 0, "MaxCount": 1 }
-      ],
-      "Properties": {
-        "DamageValue": "7+ (armoured carrier)",
-        "SpecialRules": [
-          "Fast",
-          "Open-topped",
-          "Recce (if taken)"
-        ]
-      },
-      "Corps": [
-        {
-          "MinModels": 1,
-          "MaxModels": 1,
-          "Experience": [
-            { "Level": "Inexperienced", "BaseCost": 120 },
-            { "Level": "Regular", "BaseCost": 150 },
-            { "Level": "Veteran", "BaseCost": 180 }
-          ]
-        }
-      ]
-    },
+    },    
     {
       "Name": "M36 Jackson",
       "MinModels": 1,
