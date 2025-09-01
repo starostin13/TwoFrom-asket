@@ -17,6 +17,43 @@
 
             Detach? selectedDetach = ChooseRandomDetach(availableDetaches);
 
+            // 1. Сначала удовлетворяем обязательные (MinQuantity) требования чтобы позже рандом не "упёрся" в лимит очков раньше.
+            var minLimits = unitsLimits.Limits
+                .Where(l => l.MinQuantity.HasValue && l.MinQuantity > 0)
+                .ToList();
+
+            foreach (var limit in minLimits)
+            {
+                var unit = availableUnits.FirstOrDefault(u => u.Name == limit.ModelName);
+                if (unit == null) continue; // нет такого юнита в выбранной фракции
+
+                int need = limit.MinQuantity!.Value;
+                int have = currentRoster.Where(c => c.Unit.Name == unit.Name).Sum(c => c.ModelCount);
+                while (have < need)
+                {
+                    int remainingNeed = need - have;
+                    // Подбираем количество моделей в рамках Min/Max самого юнита, не превышая оставшуюся потребность
+                    int targetModels = Math.Min(unit.MaxModels, Math.Max(unit.MinModels, remainingNeed));
+
+                    // Создаём конфиг с фиксированным числом моделей
+                    var experienceLevel = GetRandomExperienceLevel(unit);
+                    var selectedWeapons = GetRandomWeapons(unit.Weapons);
+                    var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
+                    var mandatoryConfig = new UnitConfiguration(unit, targetModels, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
+
+                    if (currentPoints + mandatoryConfig.TotalCost > maxPoints)
+                    {
+                        // Не можем удовлетворить MinQuantity полностью — выходим (оставляем как есть)
+                        need = have; // прерываем цикл while
+                        break;
+                    }
+
+                    currentRoster.Add(mandatoryConfig);
+                    currentPoints += mandatoryConfig.TotalCost;
+                    have += targetModels;
+                }
+            }
+
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
@@ -36,13 +73,24 @@
 
                     if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
                     {
-                        break;
+                        // попробуем вместо этого выбрать другой юнит
+                        continue;
                     }
                 }
 
                 if (currentPoints + unitConfig.TotalCost > maxPoints)
                 {
-                    break;
+                    // Нет места по очкам для этого юнита — попробуем другой.
+                    // Чтобы не зациклиться: если ни один юнит не помещается, выходим.
+                    bool anyFits = availableUnits.Any(u =>
+                    {
+                        int mCount = u.MinModels;
+                        var exp = GetRandomExperienceLevel(u);
+                        int baseCost = exp.BaseCost + (mCount - 1) * exp.AdditionalModelCost;
+                        return currentPoints + baseCost <= maxPoints;
+                    });
+                    if (!anyFits) break;
+                    continue;
                 }
 
                 currentRoster.Add(unitConfig);

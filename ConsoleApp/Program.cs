@@ -16,32 +16,38 @@ namespace UnitRosterGenerator
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
+            // Allow passing faction file name via first argument, fallback chain if not provided.
+            string requestedFile = args.Length > 0 ? args[0] : "Orks-WH40K.json"; // default to new Orks file
+
             string[] candidates = new[]
             {
-                "SlavesToTheDarkness-AOS - Copy.json",
-                Path.Combine("ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.Combine(AppContext.BaseDirectory, "SlavesToTheDarkness-AOS - Copy.json"),
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "SlavesToTheDarkness-AOS - Copy.json"))
+                requestedFile,
+                Path.Combine("ConsoleApp", requestedFile),
+                Path.Combine("ConsoleApp","Data", requestedFile),
+                Path.Combine(AppContext.BaseDirectory, requestedFile),
+                Path.Combine(AppContext.BaseDirectory, "Data", requestedFile),
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", requestedFile)),
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", requestedFile))
             };
 
             string? selected = candidates.FirstOrDefault(File.Exists);
             if (selected == null)
             {
-                Console.Error.WriteLine("SlavesToTheDarkness-AOS - Copy.json not found. Checked:\n" + string.Join("\n", candidates));
+                Console.Error.WriteLine($"{requestedFile} not found. Checked:\n" + string.Join("\n", candidates));
                 return;
             }
 
             GameData? gameData = LoadGameDataFromJson(selected);
             if (gameData == null)
             {
-                Console.WriteLine(args.Length > 0 ? args[0] : "Не удалось загрузить данные");
+                Console.WriteLine("Не удалось загрузить данные");
                 return;
             }
 
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 2000;
+            int maxPoints = 500;
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)

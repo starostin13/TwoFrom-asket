@@ -21,28 +21,38 @@ public class UnitLimit
 
 public class UnitsLimits
 {
-    private static string filePath = "ModelLimits.json";
-
     public List<UnitLimit> Limits { get; set; } = new List<UnitLimit>();
 
     public UnitsLimits()
     {
+        var candidates = new[]
+        {
+            "ModelLimits.json",
+            Path.Combine("ConsoleApp", "ModelLimits.json"),
+            Path.Combine(AppContext.BaseDirectory, "ModelLimits.json"),
+            Path.Combine(AppContext.BaseDirectory, "ConsoleApp", "ModelLimits.json"),
+            Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "ModelLimits.json"))
+        };
+
+        string? selected = candidates.FirstOrDefault(File.Exists);
+        if (selected == null)
+        {
+            Console.Error.WriteLine("ModelLimits.json not found. Checked:\n" + string.Join("\n", candidates));
+            return;
+        }
+
         try
         {
-            if (File.Exists(filePath))
+            var json = File.ReadAllText(selected);
+            var unitsLimits = JsonSerializer.Deserialize<List<UnitLimit>>(json);
+            if (unitsLimits != null)
             {
-                var json = File.ReadAllText(filePath);
-                var unitsLimits = JsonSerializer.Deserialize<List<UnitLimit>>(json);
-                if (unitsLimits != null)
-                {
-                    Limits = unitsLimits;
-                }
+                Limits = unitsLimits;
             }
         }
         catch (JsonException ex)
         {
             Console.WriteLine($"Error deserializing JSON: {ex.Message}");
-            // Handle the error or set default values
         }
     }
 
