@@ -159,7 +159,7 @@
 
         private static Unit? GetLeadedUnits(Unit unit, List<Unit> availableUnits)
         {
-            if (unit.Lead is not null)
+            if (unit.Lead is not null && unit.Lead.Count > 0)
             {
                 return availableUnits.FirstOrDefault(u => u.Name == unit.Lead[random.Next(unit.Lead.Count)]);
             }

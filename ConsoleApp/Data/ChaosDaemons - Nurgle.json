@@ -1,0 +1,14 @@
+{
+  "Units": [
+    { "Name": "Beasts of Nurgle", "MinModels": 1, "MaxModels": 2, "PointsPerModel": 65, "Keywords": ["LEGIONES DAEMONICA", "NURGLE"], "Lead": [] },
+    { "Name": "Epidemius", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 80, "Keywords": ["LEGIONES DAEMONICA", "NURGLE", "CHARACTER"], "Lead": ["Plaguebearers"] },
+    { "Name": "Feculent Gnarlmaw", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 100, "Keywords": ["LEGIONES DAEMONICA", "NURGLE"], "Lead": [] },
+    { "Name": "Great Unclean One", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 250, "Keywords": ["LEGIONES DAEMONICA", "NURGLE", "MONSTER"], "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+    { "Name": "Horticulous Slimux", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 120, "Keywords": ["LEGIONES DAEMONICA", "NURGLE", "CHARACTER"], "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+    { "Name": "Nurglings", "MinModels": 3, "MaxModels": 6, "PointsPerModel": 13.33, "Keywords": ["LEGIONES DAEMONICA", "NURGLE"], "Lead": [] },
+    { "Name": "Plague Drones", "MinModels": 3, "MaxModels": 6, "PointsPerModel": 36.67, "Keywords": ["LEGIONES DAEMONICA", "NURGLE"], "Lead": [] },
+    { "Name": "Plaguebearers", "MinModels": 10, "MaxModels": 10, "PointsPerModel": 11, "Keywords": ["LEGIONES DAEMONICA", "NURGLE"], "Lead": [] },
+    { "Name": "Poxbringer", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 55, "Keywords": ["LEGIONES DAEMONICA", "NURGLE", "CHARACTER"], "Lead": ["Plaguebearers"] },
+    { "Name": "Rotigus", "MinModels": 1, "MaxModels": 1, "PointsPerModel": 250, "Keywords": ["LEGIONES DAEMONICA", "NURGLE", "MONSTER"], "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] }
+  ]
+}
