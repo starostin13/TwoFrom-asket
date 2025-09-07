@@ -16,36 +16,38 @@ namespace UnitRosterGenerator
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
+            // Allow passing faction file name via first argument, fallback chain if not provided.
+            string requestedFile = args.Length > 0 ? args[0] : "ChaosDaemons - Nurgle.json"; // default to new Chaos Daemons file
+
             string[] candidates = new[]
             {
-                // Relative from repo root when running via solution
-                Path.Combine("ConsoleApp", "Data", "AELDARI.json"),
-                // Relative from project directory (working dir)
-                Path.Combine("Data", "AELDARI.json"),
-                // In output/bin folder after build copy
-                Path.Combine(AppContext.BaseDirectory, "Data", "AELDARI.json"),
-                // Fallback: navigate up from bin/Debug/netX to project Data
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", "AELDARI.json"))
+                requestedFile,
+                Path.Combine("ConsoleApp", requestedFile),
+                Path.Combine("ConsoleApp","Data", requestedFile),
+                Path.Combine(AppContext.BaseDirectory, requestedFile),
+                Path.Combine(AppContext.BaseDirectory, "Data", requestedFile),
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", requestedFile)),
+                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", requestedFile))
             };
 
             string? selected = candidates.FirstOrDefault(File.Exists);
             if (selected == null)
             {
-                Console.Error.WriteLine("\\Data\\AELDARI.json not found. Checked:\n" + string.Join("\n", candidates));
+                Console.Error.WriteLine($"{requestedFile} not found. Checked:\n" + string.Join("\n", candidates));
                 return;
             }
 
             GameData? gameData = LoadGameDataFromJson(selected);
             if (gameData == null)
             {
-                Console.WriteLine(args.Length > 0 ? args[0] : "Не удалось загрузить данные");
+                Console.WriteLine("Не удалось загрузить данные");
                 return;
             }
 
             List<Unit> units = gameData.Units;
             List<Detach> detaches = gameData.Detaches;
 
-            int maxPoints = 500;
+            int maxPoints = 310;
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
