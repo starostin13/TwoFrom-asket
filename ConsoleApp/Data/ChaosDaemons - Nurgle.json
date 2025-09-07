@@ -1,0 +1,14 @@
+{
+  "Units": [
+    { "Name": "Beasts of Nurgle", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Epidemius", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers"] },
+    { "Name": "Feculent Gnarlmaw", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Great Unclean One", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Veteran", "BaseCost": 250, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+    { "Name": "Horticulous Slimux", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+    { "Name": "Nurglings", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 10 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Plague Drones", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 37 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Plaguebearers", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 11 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Poxbringer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers"] },
+    { "Name": "Rotigus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Veteran", "BaseCost": 250, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] }
+  ]
+}
