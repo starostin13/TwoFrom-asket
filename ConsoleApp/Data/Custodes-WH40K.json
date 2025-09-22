@@ -1,0 +1,84 @@
+{
+	"Units": [
+		{ "Name": "Aleya", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Prosecutors", "Vigilators", "Witchseekers" ] },
+		{ "Name": "Allarus Custodians", "MinModels": 2, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Anathema Psykana Rhino", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Blade Champion", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Vertus Praetors" ] },
+		{ "Name": "Custodian Guard", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 40 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Custodian Wardens", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 210, "AdditionalModelCost": 50 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Knight-Centura", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Prosecutors", "Vigilators", "Witchseekers" ] },
+		{ "Name": "Prosecutors", "MinModels": 4, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 10 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Shield-Captain", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },
+		{ "Name": "Shield-Captain in Allarus Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 130, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },
+		{ "Name": "Shield-Captain on Dawneagle Jetbike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },
+		{ "Name": "Trajann Valoris", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Aleya", "Allarus Custodians", "Anathema Psykana Rhino", "Blade Champion", "Custodian Guard", "Custodian Wardens", "Knight-Centura", "Prosecutors", "Shield-Captain", "Shield-Captain in Allarus Terminator Armour", "Shield-Captain on Dawneagle Jetbike", "Valerian", "Venerable Contemptor Dreadnought", "Venerable Land Raider", "Vertus Praetors", "Vigilators", "Witchseekers" ] },
+		{ "Name": "Valerian", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Vertus Praetors" ] },
+		{ "Name": "Venerable Contemptor Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Venerable Land Raider", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Vertus Praetors", "MinModels": 2, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Vigilators", "MinModels": 4, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 10 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Witchseekers", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 15 } ], "Weapons": [], "DetachUpgrade": false }
+	],
+	"Detachments": [
+		{
+			"Name": "Talons of the Emperor",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Aegis Projector", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Champion of the Imperium", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Gift of Terran Artifice", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Radiant Mantle", "Cost": 30, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Shield Host",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Auric Mantle", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Castellan’s Mark", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "From the Hall of Armouries", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Panoptispex", "Cost": 5, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Null Maiden Vigil",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Enhanced Voidsheen Cloak", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Huntress’ Eye", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Oblivion Knight", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Raptor Blade", "Cost": 5, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Auric Champions",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Blade Imperator", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Inspirational Exemplar", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Martial Philosopher", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Veiled Blade", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Solar Spearhead",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Adamantine Talisman", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Augury Uplink", "Cost": 35, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Honoured Fallen (Aura)", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Veteran of the Kataphraktoi", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Lions of the Emperor",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Superior Creation", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Praesidius", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Fierce Conqueror", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Admonimortis", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}

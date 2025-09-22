@@ -48,6 +48,10 @@ namespace UnitRosterGenerator
             List<Detach> detaches = gameData.Detaches;
 
             int maxPoints = 500;
+            if (args.Length > 1 && int.TryParse(args[1], out int parsedPoints))
+            {
+                maxPoints = parsedPoints;
+            }
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
