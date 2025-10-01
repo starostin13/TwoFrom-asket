@@ -9,13 +9,13 @@
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
-            List<Detach> availableDetaches,
+            List<Detach> availableDetachments,
             int maxPoints)
         {
             int currentPoints = 0;
             currentRoster = new List<UnitConfiguration>();
 
-            Detach? selectedDetach = ChooseRandomDetach(availableDetaches);
+            Detach? selectedDetach = ChooseRandomDetach(availableDetachments);
 
             while (true)
             {
@@ -232,10 +232,10 @@
             return selectedUpgrades;
         }
 
-    private static Detach? ChooseRandomDetach(List<Detach> detaches)
+    private static Detach? ChooseRandomDetach(List<Detach> detachments)
         {
-            if (detaches == null || detaches.Count == 0) return null;
-            return detaches[random.Next(detaches.Count)];
+            if (detachments == null || detachments.Count == 0) return null;
+            return detachments[random.Next(detachments.Count)];
         }
     }
 

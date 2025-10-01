@@ -937,7 +937,7 @@
       "DetachUpgrade": false
     }
   ],
-  "Detaches": [
+  "Detachments": [
     {
       "Name": "Teleport Strike Force",
       "MaxDetachUpgrades": 1,

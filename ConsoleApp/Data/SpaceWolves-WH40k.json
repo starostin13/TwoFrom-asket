@@ -3,23 +3,23 @@
         { "Name": "Arjac Rockfist", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Wolf Guard Terminators", "Wolf Guard Headtakers" ] },
         { "Name": "Bjorn the Fell-Handed", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters", "Wolf Guard Terminators" ] },
         { "Name": "Blood Claws", "MinModels": 10, "MaxModels": 20, "Experience": [ { "Level": "Regular", "BaseCost": 135, "AdditionalModelCost": 15 } ], "Weapons": [], "DetachUpgrade": false },
-        { "Name": "Fenrisian Wolves", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 8 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Fenrisian Wolves", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 40 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Grey Hunters", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Iron Priest", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Venerable Dreadnought", "Wulfen Dreadnought" ] },
         { "Name": "Logan Grimnar", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters", "Wolf Guard Terminators", "Wolf Guard Headtakers", "Thunderwolf Cavalry" ] },
         { "Name": "Murderfang", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Njal Stormcaller", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters" ] },
         { "Name": "Ragnar Blackmane", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters" ] },
-        { "Name": "Thunderwolf Cavalry", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 23 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Thunderwolf Cavalry", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 115 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Ulrik the Slayer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters", "Wulfen", "Wulfen with Storm Shields" ] },
         { "Name": "Venerable Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Wolf Guard Battle Leader", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters", "Wolf Guard Headtakers", "Thunderwolf Cavalry" ] },
         { "Name": "Wolf Guard Headtakers", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 28 } ], "Weapons": [], "DetachUpgrade": false },
-        { "Name": "Wolf Guard Terminators", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 34 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Wolf Guard Terminators", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 170 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Wolf Priest", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Blood Claws", "Grey Hunters", "Wulfen", "Wulfen with Storm Shields" ] },
         { "Name": "Wulfen", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 17 } ], "Weapons": [], "DetachUpgrade": false },
         { "Name": "Wulfen Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 145, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
-        { "Name": "Wulfen with Storm Shields", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 20 } ], "Weapons": [], "DetachUpgrade": false }
+        { "Name": "Wulfen with Storm Shields", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 100 } ], "Weapons": [], "DetachUpgrade": false }
     ],
     "Detachments": [
         {

@@ -37,5 +37,5 @@
     { "Name": "Plaguebearers", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 11 } ], "Weapons": [], "DetachUpgrade": false },
     { "Name": "Rotigus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Legendary", "BaseCost": 250, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Plaguebearers", "Nurglings", "Beasts of Nurgle" ] }
   ],
-  "Detaches": []
+  "Detachments": []
 }

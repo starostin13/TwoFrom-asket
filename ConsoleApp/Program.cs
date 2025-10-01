@@ -11,47 +11,95 @@ namespace UnitRosterGenerator
             return JsonSerializer.Deserialize<GameData>(json);
         }
 
+        static GameData? LoadMultipleGameData(string[] fileNames)
+        {
+            var gameDatas = new List<GameData>();
+            
+            foreach (string fileName in fileNames)
+            {
+                string[] candidates = new[]
+                {
+                    fileName,
+                    Path.Combine("ConsoleApp", fileName),
+                    Path.Combine("ConsoleApp","Data", fileName),
+                    Path.Combine(AppContext.BaseDirectory, fileName),
+                    Path.Combine(AppContext.BaseDirectory, "Data", fileName),
+                    Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", fileName)),
+                    Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", fileName))
+                };
+
+                string? selected = candidates.FirstOrDefault(File.Exists);
+                if (selected == null)
+                {
+                    Console.Error.WriteLine($"{fileName} not found. Checked:\n" + string.Join("\n", candidates));
+                    return null;
+                }
+
+                GameData? gameData = LoadGameDataFromJson(selected);
+                if (gameData == null)
+                {
+                    Console.Error.WriteLine($"Не удалось загрузить данные из {fileName}");
+                    return null;
+                }
+                
+                gameDatas.Add(gameData);
+                Console.WriteLine($"Загружен файл: {fileName} ({gameData.Units.Count} юнитов, {gameData.Detachments.Count} detachments)");
+            }
+            
+            return GameData.Merge(gameDatas.ToArray());
+        }
+
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
-            // Allow passing faction file name via first argument, fallback chain if not provided.
-            string requestedFile = args.Length > 0 ? args[0] : "ChaosDaemons - Nurgle.json"; // default to new Chaos Daemons file
-
-            string[] candidates = new[]
+            // Парсим аргументы командной строки
+            var factionFiles = new List<string>();
+            int maxPoints = 500;
+            
+            if (args.Length == 0)
             {
-                requestedFile,
-                Path.Combine("ConsoleApp", requestedFile),
-                Path.Combine("ConsoleApp","Data", requestedFile),
-                Path.Combine(AppContext.BaseDirectory, requestedFile),
-                Path.Combine(AppContext.BaseDirectory, "Data", requestedFile),
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", requestedFile)),
-                Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "ConsoleApp", "Data", requestedFile))
-            };
-
-            string? selected = candidates.FirstOrDefault(File.Exists);
-            if (selected == null)
+                // Значение по умолчанию
+                factionFiles.Add("ChaosDaemons - Nurgle.json");
+            }
+            else
             {
-                Console.Error.WriteLine($"{requestedFile} not found. Checked:\n" + string.Join("\n", candidates));
-                return;
+                // Ищем аргумент с очками
+                for (int i = 0; i < args.Length; i++)
+                {
+                    if (int.TryParse(args[i], out int parsedPoints))
+                    {
+                        maxPoints = parsedPoints;
+                    }
+                    else
+                    {
+                        // Это файл фракции
+                        factionFiles.Add(args[i]);
+                    }
+                }
             }
 
-            GameData? gameData = LoadGameDataFromJson(selected);
+            // Если файлы не указаны, используем значение по умолчанию
+            if (factionFiles.Count == 0)
+            {
+                factionFiles.Add("ChaosDaemons - Nurgle.json");
+            }
+
+            Console.WriteLine($"Загружаем фракции: {string.Join(", ", factionFiles)}");
+            Console.WriteLine($"Максимальные очки: {maxPoints}");
+
+            GameData? gameData = LoadMultipleGameData(factionFiles.ToArray());
             if (gameData == null)
             {
                 Console.WriteLine("Не удалось загрузить данные");
                 return;
             }
 
-            List<Unit> units = gameData.Units;
-            List<Detach> detaches = gameData.Detaches;
+            Console.WriteLine($"Всего загружено: {gameData.Units.Count} юнитов, {gameData.Detachments.Count} detachments");
 
-            int maxPoints = 500;
-            if (args.Length > 1 && int.TryParse(args[1], out int parsedPoints))
-            {
-                maxPoints = parsedPoints;
-            }
+            List<Unit> units = gameData.Units;
+            List<Detach> detaches = gameData.Detachments;
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
