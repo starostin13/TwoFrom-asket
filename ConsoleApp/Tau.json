@@ -522,7 +522,7 @@
       "DetachUpgrade": false
     }
   ],
-  "Detaches": [
+  "Detachments": [
     {
       "Name": "Kauyon",
       "MaxDetachUpgrades": 1,

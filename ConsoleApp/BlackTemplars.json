@@ -1106,7 +1106,7 @@
       "DetachUpgrade": false
     }
   ],
-  "Detaches": [
+  "Detachments": [
     {
       "Name": "Companions of Vehemence",
       "MaxDetachUpgrades": 1,

@@ -1,0 +1,119 @@
+{
+	"Units": [
+		{ "Name": "Beasts of Nurgle", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Be'lakor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 375, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Bloodcrushers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 110 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Bloodletters", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Bloodmaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Bloodletters"] },
+		{ "Name": "Bloodthirster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 305, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Blue Horrors", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Burning Chariot", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Changecaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+		{ "Name": "Contorted Epitome", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Daemonettes"] },
+		{ "Name": "Daemon Prince of Chaos", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 190, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Daemon Prince of Chaos with Wings", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Daemonettes", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Epidemius", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers"] },
+		{ "Name": "Exalted Flamer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Fateskimmer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Feculent Gnarlmaw", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Fiends", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 95 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Flamers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Flesh Hounds", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Fluxmaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+		{ "Name": "Great Unclean One", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 250, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+		{ "Name": "Hellflayers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Horticulous Slimux", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+		{ "Name": "Infernal Enrapturess", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Daemonettes"] },
+		{ "Name": "Kairos Fateweaver", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 270, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+		{ "Name": "Karanak", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Flesh Hounds"] },
+		{ "Name": "Keeper of Secrets", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 270, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Daemonettes", "Fiends"] },
+		{ "Name": "Lord of Change", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 260, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+		{ "Name": "Nurglings", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 30 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Pink Horrors", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Plague Drones", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 110 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Plaguebearers", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Poxbringer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers"] },
+		{ "Name": "Rendmaster on Blood Throne", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Bloodletters"] },
+		{ "Name": "Rotigus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 250, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Plaguebearers", "Nurglings", "Beasts of Nurgle", "Plague Drones"] },
+		{ "Name": "Screamers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Seekers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Shalaxi Helbane", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 380, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skarbrand", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 305, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skull Altar", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skull Cannon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skullmaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skulltaker", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Sloppity Bilepiper", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Soul Grinder", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Spoilpox Scrivener", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Syll'esske", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "The Blue Scribes", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "The Changeling", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "The Masque of Slaanesh", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Tormentbringer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Tranceweaver", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true }
+	],
+	"Detachments": [
+		{
+			"Name": "Blood Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Brazenmaw", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Fury's Cage", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Gateway Unto Damnation", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Slaughterthirst", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Daemonic Incursion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "A'rgath, the King of Blades", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Soulstealer", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "The Endless Gift", "Cost": 45, "Unique": true, "MaxCount": 1 },
+				{ "Name": "The Everstave", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Legion of Excess",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Avatar of Perfection", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Dreaming Crown", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "False Majesty", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Soul Glutton", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Plague Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Cankerblight", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Droning Shroud", "Cost": 35, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Font of Spores", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Maggot Maws", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Scintillating Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Improbable Shield", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Inescapable Eye", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Infernal Puppeteer", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Neverblade", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Shadow Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Fade to Darkness", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Leaping Shadows", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Malice Made Manifest", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Mantle of Gloom", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}

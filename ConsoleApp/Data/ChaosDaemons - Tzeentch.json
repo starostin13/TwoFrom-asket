@@ -1,0 +1,15 @@
+{
+  "Units": [
+    { "Name": "Blue Horrors", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Burning Chariot", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Changecaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+    { "Name": "Exalted Flamer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Fateskimmer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Flamers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Fluxmaster", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+    { "Name": "Kairos Fateweaver", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Veteran", "BaseCost": 270, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+    { "Name": "Lord of Change", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Veteran", "BaseCost": 260, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": ["Pink Horrors", "Blue Horrors"] },
+    { "Name": "Pink Horrors", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] },
+    { "Name": "Screamers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false, "Lead": [] }
+  ]
+}

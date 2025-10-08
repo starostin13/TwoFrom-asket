@@ -56,4 +56,11 @@
     </None>
   </ItemGroup>
 
+  <!-- Copy all faction data JSONs placed under Data/ (e.g., AELDARI.json, Orks-WH40K.json, etc.) -->
+  <ItemGroup>
+    <None Include="Data\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

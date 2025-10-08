@@ -1,0 +1,213 @@
+{
+    "Units": [
+        { "Name": "Adrax Agatone", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Infernus Squad", "Tactical Squad" ] },
+        { "Name": "Aethon Shaan", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad" ] },
+        { "Name": "Aggressor Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 100 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Ancient", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Ancient in Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Apothecary", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Apothecary Biologis", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad" ] },
+        { "Name": "Assault Intercessor Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 15 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Assault Intercessors with Jump Packs", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Ballistus Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Bladeguard Ancient", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 45, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Bladeguard Veteran Squad" ] },
+        { "Name": "Bladeguard Veteran Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Brutalis Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Captain", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Bladeguard Veteran Squad", "Sternguard Veteran Squad" ] },
+        { "Name": "Captain in Gravis Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Aggressor Squad", "Heavy Intercessor Squad", "Eradicator Squad" ] },
+        { "Name": "Captain in Phobos Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Infiltrator Squad", "Incursor Squad", "Eliminator Squad", "Reiver Squad" ] },
+        { "Name": "Captain in Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Captain Sicarius", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Captain with Jump Pack", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessors with Jump Packs", "Vanguard Veteran Squad with Jump Packs", "Inceptor Squad" ] },
+        { "Name": "Centurion Assault Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 150 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Centurion Devastator Squad", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 55 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Chaplain", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Chaplain in Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Chaplain on Bike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Outrider Squad" ] },
+        { "Name": "Chaplain with Jump Pack", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessors with Jump Packs", "Vanguard Veteran Squad with Jump Packs" ] },
+        { "Name": "Chief Librarian Tigurius", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Company Heroes", "MinModels": 4, "MaxModels": 4, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Darnath Lysander", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Desolation Squad", "MinModels": 5, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 200, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Devastator Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 16 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 135, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Drop Pod", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Eliminator Squad", "MinModels": 3, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Eradicator Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 100 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Firestrike Servo-turrets", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Gladiator Lancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Gladiator Reaper", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Gladiator Valiant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Hammerfall Bunker", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 175, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Heavy Intercessor Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 100 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Hellblaster Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 22 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Impulsor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Inceptor Squad", "MinModels": 3, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 40 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Incursor Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Infernus Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Infiltrator Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 20 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Intercessor Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Invader ATV", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Invictor Tactical Warsuit", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Iron Father Feirros", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Dreadnought", "Redemptor Dreadnought", "Brutalis Dreadnought", "Ballistus Dreadnought" ] },
+        { "Name": "Judiciar", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad" ] },
+        { "Name": "Kayvaan Shrike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessors with Jump Packs", "Vanguard Veteran Squad with Jump Packs", "Reiver Squad" ] },
+        { "Name": "Kor'sarro Khan", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Outrider Squad" ] },
+        { "Name": "Land Raider", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Land Raider Crusader", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Land Raider Redeemer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 270, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Librarian", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Librarian in Phobos Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Infiltrator Squad", "Incursor Squad", "Reiver Squad" ] },
+        { "Name": "Librarian in Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Lieutenant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Lieutenant in Phobos Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Infiltrator Squad", "Incursor Squad", "Reiver Squad" ] },
+        { "Name": "Lieutenant in Reiver Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Reiver Squad" ] },
+        { "Name": "Lieutenant with Combi-weapon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Lieutenant Titus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad" ] },
+        { "Name": "Marneus Calgar", "MinModels": 3, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 200, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Terminator Squad", "Terminator Assault Squad" ] },
+        { "Name": "Outrider Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [ { "Name": "Invader ATV", "Cost": 60, "MaxCount": 1 } ], "DetachUpgrade": false },
+        { "Name": "Pedro Kantor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Predator Annihilator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 135, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Predator Destructor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Razorback", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Redemptor Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 195, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Reiver Squad", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Repulsor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Repulsor Executioner", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Rhino", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Roboute Guilliman", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 340, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Sternguard Veteran Squad", "Bladeguard Veteran Squad" ] },
+        { "Name": "Scout Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 14 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Sternguard Veteran Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 20 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Storm Speeder Hailstrike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Storm Speeder Hammerstrike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Storm Speeder Thunderstrike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Stormhawk Interceptor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 155, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Stormraven Gunship", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 280, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Stormtalon Gunship", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Suppressor Squad", "MinModels": 3, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Tactical Squad", "MinModels": 10, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Techmarine", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Dreadnought", "Redemptor Dreadnought", "Brutalis Dreadnought", "Ballistus Dreadnought" ] },
+        { "Name": "Terminator Assault Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 36 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Terminator Squad", "MinModels": 5, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 34 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Tor Garadon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Centurion Devastator Squad", "Devastator Squad" ] },
+        { "Name": "Uriel Ventris", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Vanguard Veteran Squad with Jump Packs", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 95 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Vindicator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 185, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Vulkan He'stan", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Assault Intercessor Squad", "Tactical Squad" ] },
+        { "Name": "Whirlwind", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 190, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Astraeus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 525, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+        { "Name": "Thunderhawk Gunship", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 840, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false }
+    ],
+    "Detachments": [
+        {
+            "Name": "1st Company Task Force",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Fear Made Manifest", "Cost": 30, "Unique": true, "MaxCount": 1 },
+                { "Name": "Iron Resolve", "Cost": 15, "Unique": true, "MaxCount": 1 },
+                { "Name": "Rites of War", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "The Imperium's Sword", "Cost": 25, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Anvil Siege Force",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Architect of War", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Fleet Commander", "Cost": 15, "Unique": true, "MaxCount": 1 },
+                { "Name": "Indomitable Fury", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Stoic Defender", "Cost": 15, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Emperor's Shield",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Champion of the Feast", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Disciple of Rhetoricus", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "Indomitable Champion", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Malodraxian Standard", "Cost": 20, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Firestorm Assault Force",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Adamantine Mantle", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Champion of Humanity", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "Forged in Battle", "Cost": 15, "Unique": true, "MaxCount": 1 },
+                { "Name": "War-tempered Artifice", "Cost": 25, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Forgefather's Seekers",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Adamantine Mantle", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Forged in Battle", "Cost": 15, "Unique": true, "MaxCount": 1 },
+                { "Name": "Immolator", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "War-tempered Artifice", "Cost": 25, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Gladius Task Force",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Adept of the Codex", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Artificer Armour", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "Fire Discipline", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "The Honour Vehement", "Cost": 15, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Ironstorm Spearhead",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Adept of the Omnissiah", "Cost": 35, "Unique": true, "MaxCount": 1 },
+                { "Name": "Master of Machine War", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Target Augury Web", "Cost": 30, "Unique": true, "MaxCount": 1 },
+                { "Name": "The Flesh is Weak", "Cost": 10, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Librarius Conclave",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Celerity", "Cost": 30, "Unique": true, "MaxCount": 1 },
+                { "Name": "Fusillade", "Cost": 35, "Unique": true, "MaxCount": 1 },
+                { "Name": "Obfuscation", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Prescience", "Cost": 25, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Shadowmark Talon",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Blackwing Shroud", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Coronal Susurrant", "Cost": 30, "Unique": true, "MaxCount": 1 },
+                { "Name": "Hunter's Instincts", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Umbral Raptor", "Cost": 15, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Stormlance Task Force",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Feinting Withdrawal", "Cost": 10, "Unique": true, "MaxCount": 1 },
+                { "Name": "Fury of the Storm", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Hunter's Instincts", "Cost": 25, "Unique": true, "MaxCount": 1 },
+                { "Name": "Portents of Wisdom", "Cost": 15, "Unique": true, "MaxCount": 1 }
+            ]
+        },
+        {
+            "Name": "Vanguard Spearhead",
+            "MaxDetachUpgrades": 1,
+            "Upgrades": [
+                { "Name": "Execute and Redeploy", "Cost": 20, "Unique": true, "MaxCount": 1 },
+                { "Name": "Ghostweave Cloak", "Cost": 15, "Unique": true, "MaxCount": 1 },
+                { "Name": "Shadow War Veteran", "Cost": 30, "Unique": true, "MaxCount": 1 },
+                { "Name": "The Blade Driven Deep", "Cost": 25, "Unique": true, "MaxCount": 1 }
+            ]
+        }
+    ]
+}
