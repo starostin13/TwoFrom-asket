@@ -5,6 +5,7 @@ namespace UnitRosterGenerator
     class Unit
     {
         public required string Name { get; set; }
+        public string? Model { get; set; } // Опциональное поле для модели юнита (например, "Crisis", "Terminator")
         public int MinModels { get; set; }
         public int MaxModels { get; set; }
         public List<ExperienceLevelData>? Experience { get; set; } // Список уровней опыта для юнита

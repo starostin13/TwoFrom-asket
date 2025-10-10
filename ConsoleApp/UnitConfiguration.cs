@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace UnitRosterGenerator
@@ -23,6 +24,12 @@ namespace UnitRosterGenerator
             bool weaponUpgradeSelected,
             Detach selectedDetach) // Добавлено selectedDetach
         {
+            // Проверка что количество моделей не превышает максимум для юнита
+            if (modelCount < unit.MinModels || modelCount > unit.MaxModels)
+            {
+                throw new ArgumentException($"ModelCount {modelCount} is outside the valid range [{unit.MinModels}, {unit.MaxModels}] for unit {unit.Name}");
+            }
+
             Unit = unit;
             ModelCount = modelCount;
             ExperienceLevel = experienceLevel;

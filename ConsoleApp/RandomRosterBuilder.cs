@@ -19,18 +19,28 @@
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
-                if (unit == null || IsUnitLimitExceed(unit.Name)) continue;
-                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit);
+                if (unit == null) continue;
+
+                // Pre-generate a prospective model count for limit checking
+                int prospectiveModels = unit.MinModels == unit.MaxModels ? unit.MinModels : random.Next(unit.MinModels, unit.MaxModels + 1);
+                if (IsUnitLimitExceed(unit, prospectiveModels)) continue;
+
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels);
                 UnitConfiguration attachedUnitconfig = null;
                                 
                 Unit thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
                 if (thisUnitLeadUnit != null)
                 {
-                    attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit);
-
-                    if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
+                    // Check limit for leaded unit too
+                    int leadedModels = thisUnitLeadUnit.MinModels == thisUnitLeadUnit.MaxModels ? thisUnitLeadUnit.MinModels : random.Next(thisUnitLeadUnit.MinModels, thisUnitLeadUnit.MaxModels + 1);
+                    if (!IsUnitLimitExceed(thisUnitLeadUnit, leadedModels))
                     {
-                        break;
+                        attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit, leadedModels);
+
+                        if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
+                        {
+                            break;
+                        }
                     }
                 }
 
@@ -51,19 +61,42 @@
             return new Roster(currentRoster, selectedDetach);
         }
 
-        static bool IsUnitLimitExceed(string name)
+        static bool IsUnitLimitExceed(string name, int additionalModels = 0)
         {
             int? limit = unitsLimits.GetMaxLimit(name);
             if (limit == null) return false;
 
-            return currentRoster.Count(unitConfig => unitConfig.Unit.Name == name) >= limit;
+            int currentModels = currentRoster
+                .Where(unitConfig => unitConfig.Unit.Name == name)
+                .Sum(unitConfig => unitConfig.ModelCount);
+
+            return currentModels + additionalModels > limit;
         }
 
-        private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit)
+        static bool IsUnitLimitExceed(Unit unit, int additionalModels = 0)
+        {
+            // Используем Model если есть, иначе имя юнита
+            int? limit = unitsLimits.GetMaxLimit(unit.Name, unit.Model);
+            if (limit == null) return false;
+
+            // Для подсчета текущих моделей используем тот же ключ
+            string lookupKey = !string.IsNullOrEmpty(unit.Model) ? unit.Model : unit.Name;
+            int currentModels = currentRoster
+                .Where(unitConfig => 
+                {
+                    string configKey = !string.IsNullOrEmpty(unitConfig.Unit.Model) ? unitConfig.Unit.Model : unitConfig.Unit.Name;
+                    return configKey == lookupKey;
+                })
+                .Sum(unitConfig => unitConfig.ModelCount);
+
+            return currentModels + additionalModels > limit;
+        }
+
+        private static UnitConfiguration GetUnitconfig(Detach selectedDetach, Unit unit, int? predefinedModelCount = null)
         {
             var experienceLevel = GetRandomExperienceLevel(unit);
 
-            int modelCount = random.Next(unit.MinModels, unit.MaxModels + 1);
+            int modelCount = predefinedModelCount ?? random.Next(unit.MinModels, unit.MaxModels + 1);
             var selectedWeapons = GetRandomWeapons(unit.Weapons);
             var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
 
@@ -108,13 +141,32 @@
             if (availableUnits.Count == 0) return null;
 
             var mandatoryUnits = unitsLimits.Limits
-        .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => unit.Name == limit.ModelName))
+        .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => 
+        {
+            string key = !string.IsNullOrEmpty(unit.Model) ? unit.Model : unit.Name;
+            return key == limit.ModelName;
+        }))
         .Select(limit => new
         {
-            Unit = availableUnits.First(unit => unit.Name == limit.ModelName),
+            Unit = availableUnits.First(unit => 
+            {
+                string key = !string.IsNullOrEmpty(unit.Model) ? unit.Model : unit.Name;
+                return key == limit.ModelName;
+            }),
             Limit = limit
         })
-        .Where(x => currentRoster.Count(unitConfig => unitConfig.Unit.Name == x.Unit.Name) < x.Limit.MinQuantity)
+        .Where(x => 
+        {
+            string lookupKey = !string.IsNullOrEmpty(x.Unit.Model) ? x.Unit.Model : x.Unit.Name;
+            int currentModels = currentRoster
+                .Where(cfg => 
+                {
+                    string configKey = !string.IsNullOrEmpty(cfg.Unit.Model) ? cfg.Unit.Model : cfg.Unit.Name;
+                    return configKey == lookupKey;
+                })
+                .Sum(cfg => cfg.ModelCount);
+            return currentModels < x.Limit.MinQuantity;
+        })
         .Select(x => x.Unit)
         .ToList();
 
