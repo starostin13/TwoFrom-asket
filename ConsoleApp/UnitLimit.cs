@@ -71,6 +71,15 @@ public class UnitsLimits
         return limit != null ? limit.MaxQuantity : null;
     }
 
+    public int? GetMaxLimit(string modelName, string? model)
+    {
+        // Если задано поле Model, используем его для поиска лимита, иначе используем имя юнита
+        string lookupKey = !string.IsNullOrEmpty(model) ? model : modelName;
+        var limit = Limits.Find(limit => limit.ModelName == lookupKey);
+        
+        return limit != null ? limit.MaxQuantity : null;
+    }
+
     public static UnitsLimits? LoadFromFile(string filePath)
     {
         if (!File.Exists(filePath))
