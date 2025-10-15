@@ -82,7 +82,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 40,
+          "BaseCost": 160,
           "AdditionalModelCost": 40
         }
       ],
@@ -221,13 +221,13 @@
     },
     {
       "Name": "Paladin Squad",
-      "MinModels": 1,
-      "MaxModels": 2,
+      "MinModels": 4,
+      "MaxModels": 10,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 180,
-          "AdditionalModelCost": 180
+          "AdditionalModelCost": 45
         }
       ],
       "Weapons": [],
