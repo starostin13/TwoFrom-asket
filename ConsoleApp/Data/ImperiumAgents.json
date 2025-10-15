@@ -12,7 +12,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": []
     },
     {
@@ -27,7 +27,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": []
     },
     {
@@ -42,7 +42,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": []
     },
     {
@@ -57,7 +57,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": [ "Inquisitorial Agents" ]
     },
     {
@@ -72,7 +72,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": [ "Inquisitorial Agents" ]
     },
     {
@@ -87,7 +87,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": [ "Inquisitorial Agents" ]
     },
     {
@@ -102,7 +102,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
+      "DetachUpgrade": false,
       "Lead": [ "Inquisitorial Agents" ]
     },
     {
