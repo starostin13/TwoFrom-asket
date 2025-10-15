@@ -16,28 +16,13 @@
       "Lead": [ "Brotherhood Terminator Squad", "Paladin Squad" ]
     },
     {
-      "Name": "Brother-Captain Stern",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Paladin Squad" ]
-    },
-    {
       "Name": "Brotherhood Champion",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 80,
+          "BaseCost": 70,
           "AdditionalModelCost": 0
         }
       ],
@@ -52,7 +37,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 75,
+          "BaseCost": 65,
           "AdditionalModelCost": 0
         }
       ],
@@ -67,7 +52,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 120,
+          "BaseCost": 80,
           "AdditionalModelCost": 0
         }
       ],
@@ -88,7 +73,21 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": [ "Servitors", "Strike Squad" ]
+      "Lead": [ "Strike Squad" ]
+    },
+    {
+      "Name": "Brotherhood Terminator Squad",
+      "MinModels": 4,
+      "MaxModels": 10,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
     },
     {
       "Name": "Castellan Crowe",
@@ -127,27 +126,13 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 210,
+          "BaseCost": 225,
           "AdditionalModelCost": 0
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true
-    },
-    {
-      "Name": "Kaldor Draigo",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 125,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Paladin Squad" ]
+      "DetachUpgrade": true,
+      "Lead": [ "Nemesis Dreadknight" ]
     },
     {
       "Name": "Grand Master Voldus",
@@ -156,7 +141,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 95,
+          "BaseCost": 110,
           "AdditionalModelCost": 0
         }
       ],
@@ -165,146 +150,59 @@
       "Lead": [ "Brotherhood Terminator Squad", "Paladin Squad" ]
     },
     {
-      "Name": "Brotherhood Terminator Squad",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 200,
-          "AdditionalModelCost": 200
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Land Raider",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 240,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Land Raider Crusader",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 240,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Land Raider Redeemer",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 285,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Razorback",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Rhino",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Stormhawk Interceptor",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 160,
-          "AdditionalModelCost": 75
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Stormraven Gunship",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 280,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Stormtalon Gunship",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 170,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Grey Knights Venerable Dreadnought",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Veteran",
-          "BaseCost": 155,
-          "AdditionalModelCost": 80
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
       "Name": "Interceptor Squad",
       "MinModels": 1,
       "MaxModels": 2,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 125,
-          "AdditionalModelCost": 125
+          "BaseCost": 130,
+          "AdditionalModelCost": 130
         }
       ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Crusader",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Redeemer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 270,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
@@ -318,6 +216,7 @@
           "AdditionalModelCost": 0
         }
       ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
@@ -327,10 +226,11 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 215,
-          "AdditionalModelCost": 235
+          "BaseCost": 180,
+          "AdditionalModelCost": 180
         }
       ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
@@ -340,10 +240,11 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 120,
-          "AdditionalModelCost": 120
+          "BaseCost": 125,
+          "AdditionalModelCost": 125
         }
       ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
@@ -357,19 +258,77 @@
           "AdditionalModelCost": 125
         }
       ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
-      "Name": "Servitors",
+      "Name": "Razorback",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 50,
+          "BaseCost": 85,
           "AdditionalModelCost": 0
         }
       ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Rhino",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormhawk Interceptor",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormraven Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 280,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormtalon Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 170,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
@@ -383,301 +342,11 @@
           "AdditionalModelCost": 120
         }
       ],
+      "Weapons": [],
       "DetachUpgrade": false
     },
     {
-      "Name": "Land Raider Banisher",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 255,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Calidus Assassin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 100,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Corvus Blackstar",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 180,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Culexus Assassin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 100,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Deathwatch Kill Team",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 100,
-          "AdditionalModelCost": 100
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Eversor Assassin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 120,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Exacion Squad",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Imperial Navy Breachers",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Imperial Rhino",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Inquisitor",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 55,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Strike Squad" ]
-    },
-    {
-      "Name": "Inquisitor Coteaz",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 95,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Strike Squad" ]
-    },
-    {
-      "Name": "Inquisitor Greyfax",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 65,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Strike Squad" ]
-    },
-    {
-      "Name": "Inquisitorial Chimera",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 70,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Inquisitorial Agents",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 60,
-          "AdditionalModelCost": 60
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Inquisitor Draxus",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 65,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Strike Squad" ]
-    },
-    {
-      "Name": "Inquisitor",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 55,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false,
-      "Lead": [ "Brotherhood Terminator Squad", "Strike Squad" ]
-    },
-    {
-      "Name": "Vindicare Assassin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 125,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Voidsmen-At-Arms",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 70,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Acastus Knight Asterius",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 765,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Acastus Knight Porphyrion",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 710,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Armiger Helverin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 130,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Armiger Moirax",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 160,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Armiger Warglaive",
+      "Name": "Venerable Dreadnought",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
@@ -687,269 +356,143 @@
           "AdditionalModelCost": 0
         }
       ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Canis Rex",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 450,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Ceratus Knight Acheron",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 425,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Cerastus Knight Arapos",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 425,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Cerastus Knight Casigaor",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 465,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Cerastus Knight Lancer",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 430,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Casellan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 510,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Crusader",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 445,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Errant",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 390,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Gallant",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 380,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Paladin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 405,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Preceptor",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 405,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Valiant",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 510,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Knight Warden",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 450,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Questoris Knight Styrix",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 430,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Questoris Knight Magaera",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 425,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Reaver Titan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 2200,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Warbringer Nemesis titan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 2600,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Warhound Titan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 1100,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
-    },
-    {
-      "Name": "Warlord Titan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 3500,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "DetachUpgrade": false
+      "Weapons": [],
+      "DetachUpgrade": true
     }
   ],
   "Detachments": [
     {
-      "Name": "Teleport Strike Force",
+      "Name": "Augurium Task Force",
       "MaxDetachUpgrades": 1,
       "Upgrades": [
         {
-          "Name": "Domina Liber Daemonica",
+          "Name": "A Foot in the Future",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Doomseer's Amulet",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Grimoire of Conjunctions",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Shield of Prophecy",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Banishers",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Pyresoul",
           "Cost": 20,
           "Unique": true,
           "MaxCount": 1
         },
         {
-          "Name": "Inescapable Wrath",
+          "Name": "Sigil of the Hunt",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "The Ephemeral Tome",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "The Sixty-sixth Seal",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Brotherhood Strike",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Banishing Wave",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Blinding Aura",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Purity of Purpose",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Tome of Forbidden Ways",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Hallowed Conclave",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Eye of the Augurium",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Inescapable Judgement",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Nemesis Rounds",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Sanctic Reaper",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Sanctic Spearhead",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Driven by Duty",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Quickening Foci",
           "Cost": 15,
           "Unique": true,
           "MaxCount": 1
@@ -961,8 +504,8 @@
           "MaxCount": 1
         },
         {
-          "Name": "First to the Fray",
-          "Cost": 35,
+          "Name": "Spiritus Machina",
+          "Cost": 25,
           "Unique": true,
           "MaxCount": 1
         }

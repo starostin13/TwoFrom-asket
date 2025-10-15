@@ -1,0 +1,124 @@
+{
+  "Units": [
+    {
+      "Name": "Callidus Assassin",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": []
+    },
+    {
+      "Name": "Culexus Assassin",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": []
+    },
+    {
+      "Name": "Eversor Assassin",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": []
+    },
+    {
+      "Name": "Inquisitor",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Inquisitorial Agents" ]
+    },
+    {
+      "Name": "Inquisitor Coteaz",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Inquisitorial Agents" ]
+    },
+    {
+      "Name": "Inquisitor Draxus",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Inquisitorial Agents" ]
+    },
+    {
+      "Name": "Inquisitor Greyfax",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Inquisitorial Agents" ]
+    },
+    {
+      "Name": "Inquisitorial Agents",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 50
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    }
+  ]
+}
