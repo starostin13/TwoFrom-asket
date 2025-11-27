@@ -89,7 +89,8 @@
                     "AdditionalModelCost": 0
                 }
             ],
-            "Weapons": []
+            "Weapons": [],
+            "DetachUpgrade": false
         },
         {
             "Name": "Chaos Sorcerer Lord",
@@ -176,7 +177,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 80,
+                    "BaseCost": 90,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -254,7 +255,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 70,
+                    "BaseCost": 90,
                     "AdditionalModelCost": 0
                 }
             ],
