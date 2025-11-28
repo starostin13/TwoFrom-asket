@@ -42,7 +42,7 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": false,
+      "DetachUpgrade": true,
       "Lead": []
     },
     {

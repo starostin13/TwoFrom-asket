@@ -120,12 +120,29 @@
         /// </summary>
         private static int? GetAdaptedModelCount(Unit unit)
         {
-            // Check current models of this type in roster
-            int currentModelsOfThisType = currentRoster
-                .Where(unitConfig => unitConfig.Unit.Name == unit.Name)
-                .Sum(unitConfig => unitConfig.ModelCount);
+            int currentModelsOfThisType = 0;
+            int? maxLimit = null;
 
-            int? maxLimit = unitsLimits.GetMaxLimit(unit.Name);
+            // Check ModelType limit first (shared models)
+            if (!string.IsNullOrEmpty(unit.ModelType))
+            {
+                maxLimit = unitsLimits.GetMaxLimitByModelType(unit.ModelType);
+                if (maxLimit.HasValue)
+                {
+                    currentModelsOfThisType = currentRoster
+                        .Where(unitConfig => unitConfig.Unit.ModelType == unit.ModelType)
+                        .Sum(unitConfig => unitConfig.ModelCount);
+                }
+            }
+            
+            // If no ModelType limit, check unit-specific limit
+            if (!maxLimit.HasValue)
+            {
+                maxLimit = unitsLimits.GetMaxLimit(unit.Name);
+                currentModelsOfThisType = currentRoster
+                    .Where(unitConfig => unitConfig.Unit.Name == unit.Name)
+                    .Sum(unitConfig => unitConfig.ModelCount);
+            }
 
             if (maxLimit.HasValue)
             {
