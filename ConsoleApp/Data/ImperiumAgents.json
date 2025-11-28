@@ -112,8 +112,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 50,
-          "AdditionalModelCost": 50
+          "BaseCost": 60,
+          "AdditionalModelCost": 60
         }
       ],
       "Weapons": [],
