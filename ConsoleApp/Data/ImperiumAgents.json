@@ -119,6 +119,21 @@
       "Weapons": [],
       "DetachUpgrade": false,
       "Lead": []
+    },
+    {
+      "Name": "Voidsmen-at-Arms",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": [ "Inquisitorial Agents" ]
     }
   ]
 }
