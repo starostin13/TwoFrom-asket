@@ -22,19 +22,24 @@
                 var unit = GetRandomUnit(availableUnits);
                 if (unit == null || bannedUnits.Contains(unit.Name)) continue;
 
-                // Pre-generate a prospective model count for limit checking
-                int prospectiveModels = unit.MinModels == unit.MaxModels ? unit.MinModels : random.Next(unit.MinModels, unit.MaxModels + 1);
-                if (IsUnitLimitExceed(unit.Name, prospectiveModels)) continue;
+                // Check limits and get adapted model count
+                int? prospectiveModels = GetAdaptedModelCount(unit);
+                if (!prospectiveModels.HasValue) continue; // Limit exhausted, skip unit
 
-                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels);
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels.Value);
                 UnitConfiguration? attachedUnitconfig = null;
 
                 Unit? thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
                 if (thisUnitLeadUnit != null)
                 {
-                    attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit);
-
-                    if (currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
+                    // Check limits and get adapted model count for attached unit too
+                    int? attachedProspectiveModels = GetAdaptedModelCount(thisUnitLeadUnit);
+                    if (attachedProspectiveModels.HasValue)
+                    {
+                        attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit, attachedProspectiveModels.Value);
+                    }
+                
+                    if (attachedUnitconfig != null && currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
                     {
                         break;
                     }
@@ -107,6 +112,56 @@
             var unitConfig = new UnitConfiguration(
                 unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
             return unitConfig;
+        }
+
+        /// <summary>
+        /// Gets adapted model count for a unit based on current limits.
+        /// Returns null if limit is exhausted and unit should be skipped.
+        /// </summary>
+        private static int? GetAdaptedModelCount(Unit unit)
+        {
+            int currentModelsOfThisType = 0;
+            int? maxLimit = null;
+
+            // Check ModelType limit first (shared models)
+            if (!string.IsNullOrEmpty(unit.ModelType))
+            {
+                maxLimit = unitsLimits.GetMaxLimitByModelType(unit.ModelType);
+                if (maxLimit.HasValue)
+                {
+                    currentModelsOfThisType = currentRoster
+                        .Where(unitConfig => unitConfig.Unit.ModelType == unit.ModelType)
+                        .Sum(unitConfig => unitConfig.ModelCount);
+                }
+            }
+            
+            // If no ModelType limit, check unit-specific limit
+            if (!maxLimit.HasValue)
+            {
+                maxLimit = unitsLimits.GetMaxLimit(unit.Name);
+                currentModelsOfThisType = currentRoster
+                    .Where(unitConfig => unitConfig.Unit.Name == unit.Name)
+                    .Sum(unitConfig => unitConfig.ModelCount);
+            }
+
+            if (maxLimit.HasValue)
+            {
+                int remainingSlots = maxLimit.Value - currentModelsOfThisType;
+                if (remainingSlots <= 0) return null; // Limit exhausted, skip unit
+                
+                // Adapt maximum model count to remaining limit
+                int effectiveMaxModels = Math.Min(unit.MaxModels, remainingSlots);
+                return unit.MinModels == effectiveMaxModels ? 
+                    effectiveMaxModels : 
+                    random.Next(unit.MinModels, effectiveMaxModels + 1);
+            }
+            else
+            {
+                // No limit, use normal logic
+                return unit.MinModels == unit.MaxModels ? 
+                    unit.MinModels : 
+                    random.Next(unit.MinModels, unit.MaxModels + 1);
+            }
         }
 
         private static Unit? GetLeadedUnits(Unit unit, List<Unit> availableUnits)

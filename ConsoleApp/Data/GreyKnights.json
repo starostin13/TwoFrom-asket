@@ -165,6 +165,7 @@
     },
     {
       "Name": "Land Raider",
+      "ModelType": "Land Raider",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
@@ -179,6 +180,7 @@
     },
     {
       "Name": "Land Raider Crusader",
+      "ModelType": "Land Raider",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
@@ -193,6 +195,7 @@
     },
     {
       "Name": "Land Raider Redeemer",
+      "ModelType": "Land Raider",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [

@@ -4,7 +4,10 @@ using System.Text.Json.Serialization;
 public class UnitLimit
 {
     [JsonPropertyName("ModelName")]
-    public required string ModelName { get; set; }
+    public string? ModelName { get; set; }
+
+    [JsonPropertyName("ModelType")]
+    public string? ModelType { get; set; }
 
     [JsonPropertyName("MaxQuantity")]
     public int? MaxQuantity
@@ -77,6 +80,13 @@ public class UnitsLimits
     public int? GetMaxLimit(string modelName)
     {
         var limit = Limits.Find(limit => limit.ModelName == modelName);
+        
+        return limit != null ? limit.MaxQuantity : null;
+    }
+
+    public int? GetMaxLimitByModelType(string modelType)
+    {
+        var limit = Limits.Find(limit => limit.ModelType == modelType);
         
         return limit != null ? limit.MaxQuantity : null;
     }

@@ -5,6 +5,7 @@ namespace UnitRosterGenerator
     public class Unit
     {
         public required string Name { get; set; }
+        public string? ModelType { get; set; } // Optional: groups units that use same physical models
         public int MinModels { get; set; }
         public int MaxModels { get; set; }
         public List<ExperienceLevelData> Experience { get; set; } = new();
