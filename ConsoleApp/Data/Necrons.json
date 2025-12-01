@@ -1,0 +1,117 @@
+{
+	"Units": [
+		{ "Name": "Annihilation Barge", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "C’tan Shard of the Deceiver", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 265, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "C’tan Shard of the Nightbringer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 305, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "C’tan Shard of the Void Dragon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 300, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Doomstalker", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Macrocytes", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Reanimator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Scarab Swarms", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 40 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Spyders", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Tomb Crawlers", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canoptek Wraiths", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 110 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Catacomb Command Barge", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Chronomancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Convergence of Dominion", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Cryptothralls", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Deathmarks", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Doom Scythe", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 230, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Doomsday Ark", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 200, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Flayed Ones", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Geomancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Ghost Ark", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 115, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Hexmark Destroyer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Illuminor Szeras", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Immortals", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Imotekh the Stormlord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Lokhust Destroyers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Lokhust Heavy Destroyers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 55 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Lokhust Lord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Lychguard", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 85 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Monolith", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 400, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Necron Warriors", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 110 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Night Scythe", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 145, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Obelisk", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 300, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Ophydian Destroyers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Orikan the Diviner", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Overlord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Overlord with Translocation Shroud", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Plasmancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Psychomancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Royal Warden", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skorpekh Destroyers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skorpekh Lord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Technomancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Tesseract Vault", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 425, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "The Silent King", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 400, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tomb Blades", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Transcendent C’tan", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 295, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Trazyn the Infinite", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Triarch Praetorians", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Triarch Stalker", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Seraptek Heavy Construct", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 540, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false }
+	],
+	"Detachments": [
+		{
+			"Name": "Annihilation Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Eldritch Nightmare", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Eternal Madness", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Ingrained Superiority", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Soulless Reaper", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Awakened Dynasty",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Enaegic Dermal Bond", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Nether-realm Casket", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Phasal Subjugator", "Cost": 35, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Veil of Darkness", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Canoptek Court",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Autodivinator", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Dimensional Sanctum", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Hyperphasic Fulcrum", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Metalodermal Tesla Weave", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Hypercrypt Legion",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Arisen Tyrant", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Dimensional Overseer", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Hyperspatial Transfer Node", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Osteoclave Fulcrum", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Obeisance Phalanx",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Eternal Conqueror", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Honourable Combatant", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Unflinching Will", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Warrior Noble", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Starshatter Arsenal",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Chrono-impedance Fields", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Demanding Leader", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Dread Majesty", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Miniaturised Nebuloscope", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}

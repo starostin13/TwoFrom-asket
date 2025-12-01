@@ -426,11 +426,11 @@
     {
       "Name": "Stealth Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 80,
+          "BaseCost": 110,
           "AdditionalModelCost": 40
         }
       ],

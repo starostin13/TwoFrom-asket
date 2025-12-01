@@ -268,6 +268,7 @@
       "Name": "Razorback",
       "MinModels": 1,
       "MaxModels": 1,
+      "ModelType": "Rhino",
       "Experience": [
         {
           "Level": "Regular",
@@ -282,6 +283,7 @@
       "Name": "Rhino",
       "MinModels": 1,
       "MaxModels": 1,
+      "ModelType": "Rhino",
       "Experience": [
         {
           "Level": "Regular",
