@@ -1,0 +1,97 @@
+{
+	"Units": [
+		{ "Name": "Archaeopter Fusilave", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Archaeopter Stratoraptor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 185, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Archaeopter Transvector", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Belisarius Cawl", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 210, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Corpuscarii Electro-Priests", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Cybernetica Datasmith", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 35, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Fulgurite Electro-Priests", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 70 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Ironstrider Ballistarii", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 85 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Kastelan Robots", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 180, "AdditionalModelCost": 180 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Kataphron Breachers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 160 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Kataphron Destroyers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 105 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Onager Dunecrawler", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 155, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Pteraxii Skystalkers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Pteraxii Sterylizors", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Serberys Raiders", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Serberys Sulphurhounds", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 55 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Servitor Battleclade", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sicarian Infiltrators", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sicarian Ruststalkers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 85 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skitarii Marshal", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 35, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skitarii Rangers", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skitarii Vanguard", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 95, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skorpius Disintegrator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Skorpius Dunerider", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sydonian Dragoons with Radium Jezzails", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 45 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sydonian Dragoons with Taser Lances", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sydonian Skatros", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tech-Priest Dominus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Tech-Priest Enginseer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Tech-Priest Manipulus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Technoarcheologist", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 45, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true }
+	],
+	"Detachments": [
+		{
+			"Name": "Cohort Cybernetica",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Arch-negator", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Emotionless Clarity", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Lord of Machines", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Necromechanic", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Data-psalm Conclave",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Data-blessed Autosermon", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Mantle of the Gnosticarch", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Mechanicus Locum", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Temporcopia", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Explorator Maniple",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Artisan", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Genetor", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Logis", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Magos", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Haloscreed Battle Clade",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Cognitive Reinforcement", "Cost": 35, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Inloaded Lethality", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Sanctified Ordnance", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Transoracular Dyad Wafers", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Rad-zone Corps",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Autoclavic Denunciation", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Malphonic Susurrus", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Peerless Eradicator", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Radial Suffusion", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Skitarii Hunter Cohort",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Battle-sphere Uplink", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Cantic Thrallnet", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Clandestine Infiltrator", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Veiled Hunter", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}
