@@ -1,0 +1,672 @@
+{
+  "Units": [
+    {
+      "Name": "Ahriman",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators"]
+    },
+    {
+      "Name": "Blue Horrors",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Predator Annihilator",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 130,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Predator Destructor",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 130,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Rhino",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Spawn",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 65
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Chaos Vindicator",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 185,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Daemon Prince of Tzeentch",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 180,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators", "Tzaangors"]
+    },
+    {
+      "Name": "Daemon Prince of Tzeentch with Wings",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 170,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators", "Tzaangors"]
+    },
+    {
+      "Name": "Defiler",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 165,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Exalted Sorcerer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators"]
+    },
+    {
+      "Name": "Exalted Sorcerer on Disc of Tzeentch",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators"]
+    },
+    {
+      "Name": "Flamers",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 65
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Forgefiend",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 130,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Helbrute",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Heldrake",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 215,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Infernal Master",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 95,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Tzaangors"]
+    },
+    {
+      "Name": "Kairos Fateweaver",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 285,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Lord of Change",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 270,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Magnus the Red",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 435,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": ["Rubric Marines", "Scarab Occult Terminators"]
+    },
+    {
+      "Name": "Maulerfiend",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 120,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Mutalith Vortex Beast",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 170,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Pink Horrors",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 115,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Rubric Marines",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 90
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Scarab Occult Terminators",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 180,
+          "AdditionalModelCost": 180
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Screamers",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Sekhetar Robots",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 80
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Sorcerer",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Rubric Marines"]
+    },
+    {
+      "Name": "Sorcerer in Terminator Armour",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Scarab Occult Terminators"]
+    },
+    {
+      "Name": "Tzaangor Enlightened",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 45,
+          "AdditionalModelCost": 45
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Tzaangor Enlightened with Fatecaster Greatbows",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 55,
+          "AdditionalModelCost": 55
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Tzaangor Shaman",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": ["Tzaangors"]
+    },
+    {
+      "Name": "Tzaangors",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 90
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    }
+  ],
+  "Detachments": [
+    {
+      "Name": "Grand Coven",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Eldritch Vortex of E'taph",
+          "Cost": 35,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Incandaeum",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Lord of Forbidden Lore",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Umbralefic Crystal",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Changehost of Deceit",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Diabolic Savant",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Duplicitous Malediction",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Nethershriek Mind-eater",
+          "Cost": 10,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Tome of True Names",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Rubricae Phalanx",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Arcane Thralls",
+          "Cost": 5,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Lord of the Rubricae",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Risen Rubricae",
+          "Cost": 30,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "The Stave Abominus",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Warpforged Cabal",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Biomechanical Mutation",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "The Perplexing Cloak",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Warp Syphon",
+          "Cost": 5,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Warp-cursed Runemaster",
+          "Cost": 10,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Warpmeld Pact",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Bray Lord",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Diamond of Distortion",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Flowing Flesh",
+          "Cost": 10,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Warpmeld Dagger",
+          "Cost": 10,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Hexwarp Thrallband",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Arcane Might",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Empowered Manifestation",
+          "Cost": 20,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Empyric Onslaught",
+          "Cost": 25,
+          "Unique": false,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Noctilith Mantle",
+          "Cost": 15,
+          "Unique": false,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}
