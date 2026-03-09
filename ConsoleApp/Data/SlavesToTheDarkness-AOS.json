@@ -46,7 +46,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 130,
+                    "BaseCost": 120,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -85,7 +85,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 210,
+                    "BaseCost": 190,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -112,7 +112,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 260,
+                    "BaseCost": 250,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -333,8 +333,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 200,
-                    "AdditionalModelCost": 200
+                    "BaseCost": 190,
+                    "AdditionalModelCost": 190
                 }
             ],
             "Weapons": []
@@ -450,8 +450,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 180,
-                    "AdditionalModelCost": 180
+                    "BaseCost": 170,
+                    "AdditionalModelCost": 170
                 }
             ],
             "Weapons": []
