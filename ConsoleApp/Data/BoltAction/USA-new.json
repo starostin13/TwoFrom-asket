@@ -1,0 +1,49 @@
+{
+    "Units":  [
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  21,
+                                             "Level":  "Inexperienced",
+                                             "AdditionalModelCost":  7
+                                         },
+                                         {
+                                             "BaseCost":  30,
+                                             "Level":  "Regular",
+                                             "AdditionalModelCost":  10
+                                         },
+                                         {
+                                             "BaseCost":  39,
+                                             "Level":  "Veteran",
+                                             "AdditionalModelCost":  13
+                                         }
+                                     ],
+                      "Weapons":  [
+
+                                  ],
+                      "Name":  "Platoon Commander",
+                      "MinModels":  1,
+                      "MaxModels":  3
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  23,
+                                             "Level":  "Regular",
+                                             "AdditionalModelCost":  8
+                                         },
+                                         {
+                                             "BaseCost":  30,
+                                             "Level":  "Veteran",
+                                             "AdditionalModelCost":  11
+                                         }
+                                     ],
+                      "Weapons":  [
+
+                                  ],
+                      "Name":  "Medic",
+                      "MinModels":  1,
+                      "MaxModels":  3
+                  }
+              ]
+}

@@ -1,0 +1,1009 @@
+﻿{
+    "Units":  [
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  75,
+                                             "Level":  "Regular",
+                                             "AdditionalModelCost":  11
+                                         },
+                                         {
+                                             "BaseCost":  90,
+                                             "Level":  "Veteran",
+                                             "AdditionalModelCost":  14
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Forward Observer",
+                      "MinModels":  1,
+                      "MaxModels":  3
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  60,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  78,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Glider Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  90,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Pathfinders Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  60,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  78,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  60,
+                                             "Level":  "Regular"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Philippine Scouts Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  85,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Merrill\u0027s Marauders Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  30,
+                                             "Level":  "Inexperienced"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Rear Detachment Squad",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  49,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  70,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  91,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Heavy Machine Gun Team",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  50,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  65,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Flamethrower Team",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  21,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  30,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  39,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Heavy Weapons Rifle Team",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  42,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  60,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  78,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Heavy Mortar Team",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  32,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  45,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  59,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Medium Mortar Team (M1)",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  60,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  85,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  111,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Medium Artillery (M2a1)",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  56,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  80,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  104,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M Aa Gun Mk 4",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  77,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  110,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  143,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M51 Multiple Machine Gun Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  102,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  145,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  189,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "90mm M2 Dual-Purpose AA/AT Gun",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  56,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  80,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  104,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Twin 20Mm Aa Gun Mk 4",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  70,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  100,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  130,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "3-inch Anti-tank Gun M5",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  49,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  70,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  91,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "57mm Anti-tank Gun M1",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  100,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  125,
+                                             "Level":  "Regular"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M3 Stuart Light Tank",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  108,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  135,
+                                             "Level":  "Regular"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M3a1 With Satan Flamethrower",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  116,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  145,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  174,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M7-7 Mechanised Flamethrower",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  208,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  260,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  312,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M4A3E2 Jumbo",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  172,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  215,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  258,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M4a3/A4 Sherman 105Mm Howitzer",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  200,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  250,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  300,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Sherman Crocodile",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  260,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  325,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  390,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M26 Pershing Heavy Tank",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  84,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  105,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  126,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Lvt-4 Ronson Mk 1 Flamethrower",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  52,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  65,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  78,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M6 Gun Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  128,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  160,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  192,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M10 Tank Destroyer",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  156,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  195,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  234,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M12 Gun Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  144,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  180,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  216,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M40 Gun Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  68,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  85,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  102,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Army Listm3 75Mm (T30) Howitzer Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  100,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  125,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  150,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M3 105Mm Howitzer Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  84,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  105,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  126,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M4 Mortar Carrier",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  36,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  45,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  54,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Mortar Jeep",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  68,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  85,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  102,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M13 Multiple Gun Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  100,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  125,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  150,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M15 Multiple Gun Motor Carriage",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  84,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  105,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  126,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Quad 50 Gun Truck",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  36,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  45,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  54,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Reconnaissance Jeep",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  84,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Us Airborne Armoured Jeep",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  56,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  70,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  84,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M2 Half-Track",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  54,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  68,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  82,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M3 White Scout Car",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  62,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  77,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  92,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M3 Half-Track",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  18,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  23,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  28,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Ton Truck",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  22,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  27,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  32,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Ton Truck",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  12,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  15,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  18,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "M4/M5 Artillery Tractor",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  31,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  39,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  47,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+                                      "Name":  "pintle-mounted MMG",
+                                      "Cost":  20,
+                                      "MinCount":  0,
+                                      "MaxCount":  1,
+                                      "Upgrade":  [
+                                                      {
+                                                          "Name":  "HMG",
+                                                          "Cost":  10,
+                                                          "MinCount":  0,
+                                                          "MaxCount":  1
+                                                      }
+                                                  ]
+                                  },
+                      "Name":  "Mack Heavy Truck",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  },
+                  {
+                      "Experience":  [
+                                         {
+                                             "BaseCost":  26,
+                                             "Level":  "Inexperienced"
+                                         },
+                                         {
+                                             "BaseCost":  33,
+                                             "Level":  "Regular"
+                                         },
+                                         {
+                                             "BaseCost":  40,
+                                             "Level":  "Veteran"
+                                         }
+                                     ],
+                      "Weapons":  {
+
+                                  },
+                      "Name":  "Ton Truck",
+                      "MinModels":  1,
+                      "MaxModels":  1
+                  }
+              ]
+}

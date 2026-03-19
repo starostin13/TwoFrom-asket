@@ -1,0 +1,529 @@
+﻿{
+  "GeneratedAtUtc": "2026-03-09T08:26:34.8103214Z",
+  "SourcePdf": "C:\\Users\\staro\\Downloads\\3E United States.pdf",
+  "FromPage": 28,
+  "BaselineUnits": 29,
+  "CandidateUnits": 48,
+  "UnitMatches": [
+    {
+      "BaselineName": "Platoon commander",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 3,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Company Commader",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 3,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Medic",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 3,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Forward observer",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 3,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "FORWARD OBSERVER",
+      "CandidatePage": 30,
+      "Score": 1
+    },
+    {
+      "BaselineName": "Regular Infantry Squad",
+      "BaselineMinModels": 6,
+      "BaselineMaxModels": 12,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Engineer Squad",
+      "BaselineMinModels": 5,
+      "BaselineMaxModels": 8,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Airborne Squad",
+      "BaselineMinModels": 6,
+      "BaselineMaxModels": 12,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Ranger Squad",
+      "BaselineMinModels": 5,
+      "BaselineMaxModels": 11,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Marine Squad",
+      "BaselineMinModels": 7,
+      "BaselineMaxModels": 13,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Medium Machine Gun Team",
+      "BaselineMinModels": 3,
+      "BaselineMaxModels": 3,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "HEAVY MACHINE GUN TEAM",
+      "CandidatePage": 44,
+      "Score": 1
+    },
+    {
+      "BaselineName": "Bazooka Team",
+      "BaselineMinModels": 2,
+      "BaselineMaxModels": 2,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Sniper Team",
+      "BaselineMinModels": 2,
+      "BaselineMaxModels": 2,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Mortar Team",
+      "BaselineMinModels": 3,
+      "BaselineMaxModels": 3,
+      "SuggestedEra": "M/L",
+      "CandidateName": "HEAVY MORTAR TEAM",
+      "CandidatePage": 50,
+      "Score": 1
+    },
+    {
+      "BaselineName": "Howitzers",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Anti-Tank Gun",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "SuggestedEra": "M/L",
+      "CandidateName": "INCH ANTI-TANK GUN M5",
+      "CandidatePage": 54,
+      "Score": 0.8
+    },
+    {
+      "BaselineName": "M24 Chaffee Light Tank",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M4A4",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Turreted Tank Destroyers",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M18 Hellcat",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M36 Jackson",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M36B1 Jackson",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M8 Scott",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M7 Priest",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "M12 GMC",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Transport Half-Tracks",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "Score": 0
+    },
+    {
+      "BaselineName": "Jeep",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "MORTAR JEEP",
+      "CandidatePage": 75,
+      "Score": 0.7
+    },
+    {
+      "BaselineName": "1\u00BD Ton truck",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "TON TRUCK",
+      "CandidatePage": 84,
+      "Score": 1
+    },
+    {
+      "BaselineName": "2\u00BD Ton truck",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "TON TRUCK",
+      "CandidatePage": 84,
+      "Score": 1
+    },
+    {
+      "BaselineName": "Mack heavy truck",
+      "BaselineMinModels": 1,
+      "BaselineMaxModels": 1,
+      "SuggestedEra": "E/M/L",
+      "CandidateName": "MACK HEAVY TRUCK",
+      "CandidatePage": 85,
+      "Score": 1
+    }
+  ],
+  "UnmatchedCandidates": [
+    {
+      "Name": "GLIDER SQUAD",
+      "PageNumber": 37,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "60pts (Regular), 78pts (Veteran)"
+    },
+    {
+      "Name": "PATHFINDERS SQUAD",
+      "PageNumber": 37,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "90pts (Veteran)"
+    },
+    {
+      "Name": "SQUAD",
+      "PageNumber": 37,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "60pts (Regular), 78pts (Veteran)"
+    },
+    {
+      "Name": "PHILIPPINE SCOUTS SQUAD",
+      "PageNumber": 42,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "60pts (Regular)"
+    },
+    {
+      "Name": "S MARAUDERS SQUAD",
+      "PageNumber": 42,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "85pts (Veteran)"
+    },
+    {
+      "Name": "REAR DETACHMENT SQUAD",
+      "PageNumber": 43,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "30pts (Inexperienced)"
+    },
+    {
+      "Name": "FLAMETHROWER TEAM",
+      "PageNumber": 46,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "50pts (Regular), 65pts (Veteran)"
+    },
+    {
+      "Name": "HEAVY WEAPONS RIFLE TEAM A US",
+      "PageNumber": 49,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "21pts (Inexperienced), 30pts (Regular), 39pts (Veteran)"
+    },
+    {
+      "Name": "MEDIUM MORTAR TEAM (M1)",
+      "PageNumber": 50,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "32pts (Inexperienced), 45pts (Regular), 59pts (Veteran)"
+    },
+    {
+      "Name": "MEDIUM ARTILLERY (M2A1)",
+      "PageNumber": 51,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "60pts (Inexperienced), 85pts (Regular), 111pts (Veteran)"
+    },
+    {
+      "Name": "M AA GUN MK 4",
+      "PageNumber": 53,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "56pts (Inexperienced), 80pts (Regular), 104pts (Veteran)"
+    },
+    {
+      "Name": "M51 MULTIPLE MACHINE GUN CARRIAGE",
+      "PageNumber": 53,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "Inexperienced (77pts), Regular (110pts), Veteran (143pts)"
+    },
+    {
+      "Name": "MM M2 DUAL-PURPOSE AA/AT GUN",
+      "PageNumber": 53,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "102pts (Inexperienced), 145pts (Regular), 189pts (Veteran)"
+    },
+    {
+      "Name": "TWIN 20MM AA GUN MK 4",
+      "PageNumber": 53,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "56pts (Inexperienced), 80pts (Regular), 104pts (Veteran)"
+    },
+    {
+      "Name": "MM ANTI-TANK GUN M1",
+      "PageNumber": 54,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "49pts (Inexperienced), 70pts (Regular), 91pts (Veteran)"
+    },
+    {
+      "Name": "M3 STUART LIGHT TANK",
+      "PageNumber": 55,
+      "EraHints": [
+        "E/M"
+      ],
+      "ProfileLine": "100pts (Inexperienced), 125pts (Regular)"
+    },
+    {
+      "Name": "M3A1 WITH SATAN FLAMETHROWER",
+      "PageNumber": 56,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "108pts (Inexperienced), 135pts (Regular)"
+    },
+    {
+      "Name": "M7-7 MECHANISED FLAMETHROWER",
+      "PageNumber": 57,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "116pts (Inexperienced), 145pts (Regular), 174pts (Veteran)"
+    },
+    {
+      "Name": "HEAVY ASSAULT TANK",
+      "PageNumber": 62,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "208pts (Inexperienced), 260pts (Regular), 312pts (Veteran)"
+    },
+    {
+      "Name": "M4A3/A4 SHERMAN 105MM HOWITZER",
+      "PageNumber": 63,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "172pts (Inexperienced), 215pts (Regular), 258pts (Veteran)"
+    },
+    {
+      "Name": "AND SHERMAN CROCODILE FLAMETHROWER TANKS",
+      "PageNumber": 64,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "200pts (Inexperienced), 250pts (Regular), 300pts (Veteran)"
+    },
+    {
+      "Name": "M26 PERSHING HEAVY TANK",
+      "PageNumber": 66,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "260pts (Inexperienced), 325pts (Regular), 390pts (Veteran)"
+    },
+    {
+      "Name": "LVT-4 RONSON MK 1 FLAMETHROWER",
+      "PageNumber": 69,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "84pts (Inexperienced), 105pts (Regular), 126pts (Veteran)"
+    },
+    {
+      "Name": "M6 GUN MOTOR CARRIAGE",
+      "PageNumber": 69,
+      "EraHints": [
+        "E/M"
+      ],
+      "ProfileLine": "52pts (Inexperienced), 65pts (Regular), 78pts (Veteran)"
+    },
+    {
+      "Name": "M10 TANK DESTROYER",
+      "PageNumber": 70,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "128pts (Inexperienced), 160pts (Regular), 192pts (Veteran)"
+    },
+    {
+      "Name": "M12 GUN MOTOR CARRIAGE",
+      "PageNumber": 73,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "156pts (Inexperienced), 195pts (Regular), 234pts (Veteran)"
+    },
+    {
+      "Name": "M40 GUN MOTOR CARRIAGE",
+      "PageNumber": 73,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "144pts (Inexperienced), 180pts (Regular), 216pts (Veteran)"
+    },
+    {
+      "Name": "ARMY LISTM3 75MM (T30) HOWITZER MOTOR CARRIAGE",
+      "PageNumber": 74,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "68pts (Inexperienced), 85pts (Regular), 102pts (Veteran)"
+    },
+    {
+      "Name": "M3 105MM HOWITZER MOTOR CARRIAGE",
+      "PageNumber": 74,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "100pts (Inexperienced), 125pts (Regular), 150pts (Veteran)"
+    },
+    {
+      "Name": "M4 MORTAR CARRIER",
+      "PageNumber": 74,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "84pts (Inexperienced), 105pts (Regular), 126pts (Veteran)"
+    },
+    {
+      "Name": "M13 MULTIPLE GUN MOTOR CARRIAGE",
+      "PageNumber": 76,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "68pts (Inexperienced), 85pts (Regular), 102pts (Veteran)"
+    },
+    {
+      "Name": "M15 MULTIPLE GUN MOTOR CARRIAGE",
+      "PageNumber": 76,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "100pts (Inexperienced), 125pts (Regular), 150pts (Veteran)"
+    },
+    {
+      "Name": "QUAD 50 GUN TRUCK",
+      "PageNumber": 77,
+      "EraHints": [
+        "M/L"
+      ],
+      "ProfileLine": "84pts (Inexperienced), 105pts (Regular), 126pts (Veteran)"
+    },
+    {
+      "Name": "RECONNAISSANCE JEEP",
+      "PageNumber": 79,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "36pts (Inexperienced), 45pts (Regular), 54pts (Veteran)"
+    },
+    {
+      "Name": "US AIRBORNE ARMOURED JEEP",
+      "PageNumber": 79,
+      "EraHints": [
+        "L"
+      ],
+      "ProfileLine": "84pts (Veteran)"
+    },
+    {
+      "Name": "M2 HALF-TRACK",
+      "PageNumber": 81,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "56pts (Inexperienced), 70pts (Regular), 84pts (Veteran)"
+    },
+    {
+      "Name": "M3 WHITE SCOUT CAR",
+      "PageNumber": 81,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "54pts (Inexperienced), 68pts (Regular), 82pts (Veteran)"
+    },
+    {
+      "Name": "M3 HALF-TRACK",
+      "PageNumber": 82,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "62pts (Inexperienced), 77pts (Regular), 92pts (Veteran)"
+    },
+    {
+      "Name": "M4/M5 ARTILLERY TRACTOR",
+      "PageNumber": 85,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "12pts (Inexperienced), 15pts (Regular), 18pts (Veteran)"
+    },
+    {
+      "Name": "TON TRUCK",
+      "PageNumber": 85,
+      "EraHints": [
+        "E/M/L"
+      ],
+      "ProfileLine": "26pts (Inexperienced), 33pts (Regular), 40pts (Veteran)"
+    }
+  ]
+}

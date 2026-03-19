@@ -1,0 +1,1257 @@
+﻿{
+  "Units": [
+    {
+      "Name": "FORWARD OBSERVER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 75,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "GLIDER SQUAD",
+      "MinModels": 1,
+      "MaxModels": 7,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "PATHFINDERS SQUAD",
+      "MinModels": 1,
+      "MaxModels": 7,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "SQUAD",
+      "MinModels": 1,
+      "MaxModels": 7,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "PHILIPPINE SCOUTS SQUAD",
+      "MinModels": 1,
+      "MaxModels": 7,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "S MARAUDERS SQUAD",
+      "MinModels": 1,
+      "MaxModels": 8,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "REAR DETACHMENT SQUAD",
+      "MinModels": 5,
+      "MaxModels": 10,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 30,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "SMG",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "BAR",
+          "Cost": 6,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "LMG",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "Rifle",
+          "Cost": 4,
+          "MinCount": 0,
+          "MaxCount": 2
+        },
+        {
+          "Name": "AT Grenades",
+          "Cost": 2,
+          "MinCount": 0,
+          "MaxCount": 2
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "HEAVY MACHINE GUN TEAM",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 49,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 91,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "FLAMETHROWER TEAM",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "HEAVY MORTAR TEAM",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 42,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MEDIUM MORTAR TEAM (M1)",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 32,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 45,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 59,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MEDIUM ARTILLERY (M2A1)",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 111,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "MANUAL_REVIEW: Gun shield",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M AA GUN MK 4",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 104,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MM M2 DUAL-PURPOSE AA/AT GUN",
+      "MinModels": 5,
+      "MaxModels": 5,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 102,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 145,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 189,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "TWIN 20MM AA GUN MK 4",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 104,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "INCH ANTI-TANK GUN M5",
+      "MinModels": 4,
+      "MaxModels": 4,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 130,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MM ANTI-TANK GUN M1",
+      "MinModels": 3,
+      "MaxModels": 3,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 49,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 91,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M3 STUART LIGHT TANK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 125,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M3A1 WITH SATAN FLAMETHROWER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 108,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 135,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "hull-mounted forward-facing flamethrower",
+          "Cost": 40,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M7-7 MECHANISED FLAMETHROWER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 116,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 145,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 174,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "1 turret-mounted flamethrower with coaxial MMG for -10pts (making a E7-7 mechanised flamethrower",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "HEAVY ASSAULT TANK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 208,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 260,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 312,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "76mm heavy anti-tank gun",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M4A3/A4 SHERMAN 105MM HOWITZER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 172,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 215,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 258,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "AND SHERMAN CROCODILE FLAMETHROWER TANKS",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 200,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 250,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 300,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M26 PERSHING HEAVY TANK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 260,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 325,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 390,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "LVT-4 RONSON MK 1 FLAMETHROWER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 84,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 105,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 126,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "MANUAL_REVIEW: Flamethrower",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M6 GUN MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 52,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 78,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "MANUAL_REVIEW: Flamethrower",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M10 TANK DESTROYER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 128,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 192,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M12 GUN MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 156,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 195,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 234,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M40 GUN MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 144,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 180,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 216,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "ARMY LISTM3 75MM (T30) HOWITZER MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 68,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 102,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M3 105MM HOWITZER MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 125,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 150,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M4 MORTAR CARRIER",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 84,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 105,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 126,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MORTAR JEEP",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 36,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 45,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 54,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M13 MULTIPLE GUN MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 68,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 102,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M15 MULTIPLE GUN MOTOR CARRIAGE",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 125,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 150,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "QUAD 50 GUN TRUCK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 84,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 105,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 126,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "RECONNAISSANCE JEEP",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 36,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 45,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 54,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "US AIRBORNE ARMOURED JEEP",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Veteran",
+          "BaseCost": 84,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M2 HALF-TRACK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 56,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 84,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M3 WHITE SCOUT CAR",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 54,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 68,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 82,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M3 HALF-TRACK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 62,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 77,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 92,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "TON TRUCK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 18,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 23,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 28,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "TON TRUCK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 22,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 27,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 32,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "M4/M5 ARTILLERY TRACTOR",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 12,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 15,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 18,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "MACK HEAVY TRUCK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 31,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 39,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 47,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "TON TRUCK",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Inexperienced",
+          "BaseCost": 26,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Regular",
+          "BaseCost": 33,
+          "AdditionalModelCost": 0
+        },
+        {
+          "Level": "Veteran",
+          "BaseCost": 40,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    }
+  ],
+  "Detachments": []
+}
