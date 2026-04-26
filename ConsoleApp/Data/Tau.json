@@ -430,7 +430,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 110,
+          "BaseCost": 100,
           "AdditionalModelCost": 40
         }
       ],
