@@ -1,50 +1,98 @@
-{
+﻿{
   "Units": [
     {
-      "Name": "Platoon commander",
-      "MinModels": 1,
-      "MaxModels": 3,
-      "Experience": [
+      "Name": "Officer",
+      "Variants": [
         {
-          "Level": "Inexperienced",
-          "BaseCost": 21,
-          "AdditionalModelCost": 7
+          "Name": "Platoon commander",
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            {
+              "Level": "Inexperienced",
+              "BaseCost": 21,
+              "AdditionalModelCost": 7
+            },
+            {
+              "Level": "Regular",
+              "BaseCost": 30,
+              "AdditionalModelCost": 10
+            },
+            {
+              "Level": "Veteran",
+              "BaseCost": 39,
+              "AdditionalModelCost": 13,
+              "Upgrade": {
+                "Name": "ByAirLandSea",
+                "Cost": 1,
+                "MinCount": 0,
+                "MaxCount": 1
+              }
+            }
+          ],
+          "Weapons": [
+            {
+              "Name": "SMG",
+              "Cost": 4,
+              "MinCount": 0,
+              "MaxCount": -1
+            },
+            {
+              "Name": "Pistol",
+              "Cost": -1,
+              "MinCount": 0,
+              "MaxCount": -1
+            }
+          ]
         },
         {
-          "Level": "Regular",
-          "BaseCost": 30,
-          "AdditionalModelCost": 10
-        },
-        {
-          "Level": "Veteran",
-          "BaseCost": 39,
-          "AdditionalModelCost": 13
+          "Name": "Company Commader",
+          "MinModels": 1,
+          "MaxModels": 3,
+          "Experience": [
+            {
+              "Level": "Inexperienced",
+              "BaseCost": 42,
+              "AdditionalModelCost": 7
+            },
+            {
+              "Level": "Regular",
+              "BaseCost": 60,
+              "AdditionalModelCost": 10
+            },
+            {
+              "Level": "Veteran",
+              "BaseCost": 78,
+              "AdditionalModelCost": 13,
+              "Upgrade": {
+                "Name": "ByAirLandSea",
+                "Cost": 1,
+                "MinCount": 0,
+                "MaxCount": 1
+              }
+            }
+          ],
+          "Weapons": [
+            {
+              "Name": "SMG",
+              "Cost": 4,
+              "MinCount": 0,
+              "MaxCount": -1
+            },
+            {
+              "Name": "Pistol",
+              "Cost": -1,
+              "MinCount": 0,
+              "MaxCount": -1
+            }
+          ]
         }
       ],
-      "Weapons": []
-    },
-    {
-      "Name": "Company Commader",
-      "MinModels": 1,
-      "MaxModels": 3,
-      "Experience": [
-        {
-          "Level": "Inexperienced",
-          "BaseCost": 42,
-          "AdditionalModelCost": 7
-        },
-        {
-          "Level": "Regular",
-          "BaseCost": 60,
-          "AdditionalModelCost": 10
-        },
-        {
-          "Level": "Veteran",
-          "BaseCost": 78,
-          "AdditionalModelCost": 13
-        }
-      ],
-      "Weapons": []
+      "Tags": [
+        "E",
+        "M",
+        "L"
+      ]
     },
     {
       "Name": "Medic",
@@ -62,7 +110,12 @@
           "AdditionalModelCost": 11
         }
       ],
-      "Weapons": []
+      "Weapons": [],
+      "Tags": [
+        "E",
+        "M",
+        "L"
+      ]
     },
     {
       "Name": "Forward observer",
@@ -80,10 +133,15 @@
           "AdditionalModelCost": 14
         }
       ],
-      "Weapons": []
+      "Weapons": [],
+      "Tags": [
+        "E",
+        "M",
+        "L"
+      ]
     },
     {
-      "Name": "Regular Infantry Squad",
+      "Name": "US Army Riffle Squad",
       "MinModels": 6,
       "MaxModels": 12,
       "Experience": [
@@ -102,7 +160,7 @@
           "BaseCost": 78,
           "AdditionalModelCost": 13,
           "Upgrade": {
-            "Name": "ToughFighters",
+            "Name": "ByAirLandSea",
             "Cost": 1,
             "MinCount": 0,
             "MaxCount": 1
@@ -114,13 +172,13 @@
           "Name": "SMG",
           "Cost": 4,
           "MinCount": 0,
-          "MaxCount": 4
+          "MaxCount": 1
         },
         {
           "Name": "BAR",
           "Cost": 6,
           "MinCount": 0,
-          "MaxCount": 2
+          "MaxCount": 1
         }
       ],
       "Upgrade": [
@@ -130,6 +188,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -169,6 +232,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -229,6 +297,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -269,6 +342,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -326,6 +404,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -353,6 +436,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -372,6 +460,11 @@
           "Level": "Veteran",
           "BaseCost": 78
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -395,6 +488,11 @@
           "MinCount": 0,
           "MaxCount": 2
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -450,6 +548,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -520,6 +623,11 @@
             }
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -562,6 +670,11 @@
             "Medium anti-tank gun"
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -595,6 +708,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -636,6 +754,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -663,6 +786,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -696,6 +824,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -723,6 +856,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -750,6 +888,11 @@
           "MinCount": 0,
           "MaxCount": 1
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -769,6 +912,11 @@
           "Level": "Veteran",
           "BaseCost": 162
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -788,6 +936,11 @@
           "Level": "Veteran",
           "BaseCost": 197
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -807,6 +960,11 @@
           "Level": "Veteran",
           "BaseCost": 222
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -855,6 +1013,11 @@
             "pintle-mounted HMG with a 360-degree arc of fire, increase the transport capacity to 12 men, and, the towing capacity to any anti-tank gun or anti-aircraft gun light or medium howitzer"
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -890,6 +1053,11 @@
             }
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -925,6 +1093,11 @@
             }
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -960,6 +1133,11 @@
             }
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     },
     {
@@ -995,6 +1173,11 @@
             }
           ]
         }
+      ],
+      "Tags": [
+        "E",
+        "M",
+        "L"
       ]
     }
   ]

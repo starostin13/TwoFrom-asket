@@ -29,7 +29,7 @@
                 UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels.Value);
                 UnitConfiguration? attachedUnitconfig = null;
 
-                Unit? thisUnitLeadUnit = GetLeadedUnits(unit, availableUnits);
+                Unit? thisUnitLeadUnit = GetLeadedUnits(unitConfig, availableUnits);
                 if (thisUnitLeadUnit != null)
                 {
                     // Check limits and get adapted model count for attached unit too
@@ -51,9 +51,9 @@
                 }
 
                 currentRoster.Add(unitConfig);
-                if(unit.MutualExclude != null)
+                if (unitConfig.EffectiveMutualExclude.Count > 0)
                 {
-                    foreach (var unitName in unit.MutualExclude)
+                    foreach (var unitName in unitConfig.EffectiveMutualExclude)
                     {
                         bannedUnits.Add(unitName);
                     }
@@ -81,14 +81,24 @@
             return currentModels + additionalModels > limit;
         }
 
-    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, int? predefinedModelCount = null)
+    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, int? modelCountCap = null)
         {
-            var experienceLevel = GetRandomExperienceLevel(unit);
-            int modelCount = predefinedModelCount ?? random.Next(unit.MinModels, unit.MaxModels + 1);
-            var selectedWeapons = GetRandomWeapons(unit.Weapons);
-            var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.Upgrade);
+            var selectedVariant = GetRandomVariant(unit);
+            var minModels = unit.GetMinModels(selectedVariant);
+            var maxModels = unit.GetMaxModels(selectedVariant);
+            var experienceLevel = GetRandomExperienceLevel(unit, selectedVariant);
 
-            if (selectedDetach != null && unit.DetachUpgrade)
+            // Apply the cap from model limits
+            int effectiveMax = (modelCountCap.HasValue && modelCountCap.Value != int.MaxValue)
+                ? Math.Min(maxModels, modelCountCap.Value)
+                : maxModels;
+            effectiveMax = Math.Max(minModels, effectiveMax);
+            int modelCount = minModels == effectiveMax ? minModels : random.Next(minModels, effectiveMax + 1);
+
+            var selectedWeapons = GetRandomWeapons(unit.GetWeapons(selectedVariant), modelCount);
+            var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.GetUpgrades(selectedVariant));
+
+            if (selectedDetach != null && unit.GetDetachUpgrade(selectedVariant))
             {
                 var selectedDetachUpgrades = GetRandomDetachUpgrades(selectedDetach);
 
@@ -110,7 +120,7 @@
             }
 
             var unitConfig = new UnitConfiguration(
-                unit, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
+                unit, selectedVariant, modelCount, experienceLevel, selectedWeapons, selectedUnitUpgrades, false, selectedDetach);
             return unitConfig;
         }
 
@@ -148,27 +158,35 @@
             {
                 int remainingSlots = maxLimit.Value - currentModelsOfThisType;
                 if (remainingSlots <= 0) return null; // Limit exhausted, skip unit
-                
-                // Adapt maximum model count to remaining limit
-                int effectiveMaxModels = Math.Min(unit.MaxModels, remainingSlots);
-                return unit.MinModels == effectiveMaxModels ? 
-                    effectiveMaxModels : 
-                    random.Next(unit.MinModels, effectiveMaxModels + 1);
+
+                // Return remaining slots as a cap; actual random pick happens in GetUnitconfig after bonus is applied
+                int unitMin = unit.GetGlobalMinModels();
+                if (remainingSlots < unitMin) return null; // Can't fit even a min-size unit
+                return remainingSlots;
             }
             else
             {
-                // No limit, use normal logic
-                return unit.MinModels == unit.MaxModels ? 
-                    unit.MinModels : 
-                    random.Next(unit.MinModels, unit.MaxModels + 1);
+                // No limit — return int.MaxValue so GetUnitconfig does uncapped random pick
+                return int.MaxValue;
             }
         }
 
-        private static Unit? GetLeadedUnits(Unit unit, List<Unit> availableUnits)
+        private static Unit? GetLeadedUnits(UnitConfiguration unitConfig, List<Unit> availableUnits)
         {
-            if (unit.Lead is not null && unit.Lead.Count > 0)
+            var leadList = unitConfig.EffectiveLead;
+            if (leadList.Count > 0)
             {
-                return availableUnits.FirstOrDefault(u => u.Name == unit.Lead[random.Next(unit.Lead.Count)]);
+                string target = leadList[random.Next(leadList.Count)];
+                var candidates = availableUnits.Where(u =>
+                    u.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase) ||
+                    (u.Variants?.Any(v => v.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false) ||
+                    (u.Variants?.Any(v => $"{u.Name} ({v.Name})".Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false)
+                ).ToList();
+
+                if (candidates.Count > 0)
+                {
+                    return candidates[random.Next(candidates.Count)];
+                }
             }
 
             return null;
@@ -179,14 +197,17 @@
             if (availableUnits.Count == 0) return null;
 
             var mandatoryUnits = unitsLimits.Limits
-                .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => unit.Name == limit.ModelName))
+                .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => UnitMatchesLimitName(unit, limit.ModelName)))
                 .Select(limit => new
                 {
-                    Unit = availableUnits.First(unit => unit.Name == limit.ModelName),
+                    Unit = availableUnits.First(unit => UnitMatchesLimitName(unit, limit.ModelName)),
                     Limit = limit
                 })
                 .Where(x => currentRoster
-                    .Where(cfg => cfg.Unit.Name == x.Unit.Name)
+                    .Where(cfg =>
+                        cfg.Unit.Name == x.Unit.Name ||
+                        cfg.SelectedVariant.Name.Equals(x.Limit.ModelName, StringComparison.InvariantCultureIgnoreCase) ||
+                        cfg.DisplayName.Equals(x.Limit.ModelName, StringComparison.InvariantCultureIgnoreCase))
                     .Sum(cfg => cfg.ModelCount) < x.Limit.MinQuantity)
                 .Select(x => x.Unit)
                 .ToList();
@@ -199,16 +220,50 @@
             return availableUnits[random.Next(availableUnits.Count)];
         }
 
-        private static ExperienceLevelData GetRandomExperienceLevel(Unit unit)
+        private static ExperienceLevelData GetRandomExperienceLevel(Unit unit, UnitVariant variant)
         {
-            if (unit.Experience.Count == 0)
+            var levels = unit.GetExperience(variant);
+            if (levels.Count == 0)
             {
                 return new ExperienceLevelData { Level = "Regular", BaseCost = 0, AdditionalModelCost = 0 };
             }
-            return unit.Experience[random.Next(unit.Experience.Count)];
+
+            return levels[random.Next(levels.Count)];
         }
 
-        private static Dictionary<string, int> GetRandomWeapons(List<Weapon>? weapons)
+        private static UnitVariant GetRandomVariant(Unit unit)
+        {
+            if (unit.Variants == null || unit.Variants.Count == 0)
+            {
+                return unit.ResolveVariant(null);
+            }
+
+            return unit.Variants[random.Next(unit.Variants.Count)];
+        }
+
+        private static bool UnitMatchesLimitName(Unit unit, string? modelName)
+        {
+            if (string.IsNullOrWhiteSpace(modelName))
+            {
+                return false;
+            }
+
+            if (unit.Name.Equals(modelName, StringComparison.InvariantCultureIgnoreCase))
+            {
+                return true;
+            }
+
+            if (unit.Variants == null)
+            {
+                return false;
+            }
+
+            return unit.Variants.Any(v =>
+                v.Name.Equals(modelName, StringComparison.InvariantCultureIgnoreCase) ||
+                $"{unit.Name} ({v.Name})".Equals(modelName, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        private static Dictionary<string, int> GetRandomWeapons(List<Weapon>? weapons, int modelCount)
         {
             var selectedWeapons = new Dictionary<string, int>();
 
@@ -218,16 +273,20 @@
                 {
                     if (random.Next(0, 2) == 1)
                     {
-                        int weaponCount = random.Next(weapon.MinCount, weapon.MaxCount + 1);
-                        selectedWeapons[weapon.Name] = weaponCount;
-
-                        if (weapon.Upgrades != null)
+                        int resolvedMax = weapon.ResolveMaxCount(modelCount);
+                        int weaponCount = random.Next(weapon.MinCount, resolvedMax + 1);
+                        if (weaponCount > 0)
                         {
-                            foreach (var upgrade in weapon.Upgrades)
+                            selectedWeapons[weapon.Name] = weaponCount;
+
+                            if (weapon.Upgrades != null)
                             {
-                                if (random.Next(0, 2) == 1)
+                                foreach (var upgrade in weapon.Upgrades)
                                 {
-                                    selectedWeapons[upgrade.Name] = 1;
+                                    if (random.Next(0, 2) == 1)
+                                    {
+                                        selectedWeapons[upgrade.Name] = 1;
+                                    }
                                 }
                             }
                         }

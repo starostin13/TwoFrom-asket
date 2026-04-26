@@ -56,6 +56,7 @@ namespace UnitRosterGenerator
 
             // Парсим аргументы командной строки
             var factionFiles = new List<string>();
+            var requiredTags = new List<string>();
             int maxPoints = 500;
             
             if (args.Length == 0)
@@ -65,16 +66,20 @@ namespace UnitRosterGenerator
             }
             else
             {
-                // Ищем аргумент с очками
                 for (int i = 0; i < args.Length; i++)
                 {
-                    if (int.TryParse(args[i], out int parsedPoints))
+                    if (args[i] == "--tags" && i + 1 < args.Length)
+                    {
+                        // --tags E,M,L  или  --tags E  (можно повторять)
+                        i++;
+                        requiredTags.AddRange(args[i].Split(',', StringSplitOptions.RemoveEmptyEntries));
+                    }
+                    else if (int.TryParse(args[i], out int parsedPoints))
                     {
                         maxPoints = parsedPoints;
                     }
                     else
                     {
-                        // Это файл фракции
                         factionFiles.Add(args[i]);
                     }
                 }
@@ -98,7 +103,13 @@ namespace UnitRosterGenerator
 
             Console.WriteLine($"Всего загружено: {gameData.Units.Count} юнитов, {gameData.Detachments.Count} detachments");
 
-            List<Unit> units = gameData.Units;
+            // Фильтрация юнитов по тэгам
+            List<Unit> units = requiredTags.Count > 0
+                ? gameData.Units.Where(u => u.Tags != null && requiredTags.All(t => u.Tags.Contains(t))).ToList()
+                : gameData.Units;
+
+            if (requiredTags.Count > 0)
+                Console.WriteLine($"Фильтр тэгов [{string.Join(", ", requiredTags)}]: {units.Count} юнитов");
             List<Detach> detaches = gameData.Detachments;
             List<Roster> allRosters = [];
 
@@ -129,8 +140,8 @@ namespace UnitRosterGenerator
 
                 foreach (var unitConfig in r.Roster.UnitConfigurations)
                 {
-                    Console.Write($"{unitConfig.Unit.Name} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
-                    if (unitConfig.SelectedWeapons.Count > 0)
+                    Console.Write($"{unitConfig.DisplayName} Опыт: {unitConfig.ExperienceLevel.Level}, Модели: {unitConfig.ModelCount}, ");
+                    if (unitConfig.SelectedWeapons.Any(w => w.Value > 0))
                     {
                         Console.Write($"Оружие: {string.Join(", ", unitConfig.SelectedWeapons.Where(weapon => weapon.Value > 0).Select(w => $"{w.Key} x{w.Value}"))}, ");
                     }

@@ -6,24 +6,31 @@ namespace UnitRosterGenerator
     public class UnitConfiguration
     {
         public Unit Unit { get; set; } // Базовый юнит
+        public UnitVariant SelectedVariant { get; set; } // Выбранный вариант юнита
         public int ModelCount { get; set; } // Количество моделей
         public ExperienceLevelData ExperienceLevel { get; set; } // Уровень опыта
         public Dictionary<string, int> SelectedWeapons { get; set; } = new(); // Выбранное оружие и его количество
         public Dictionary<string, int> SelectedUpgrades { get; set; } = new(); // Выбранные апгрейды (как из юнита, так и из детача)
         public bool WeaponUpgradeSelected { get; set; } // Выбраны ли улучшения для оружия
         public int TotalCost { get; private set; } // Общая стоимость юнита
+        public string DisplayName => Unit.GetDisplayName(SelectedVariant);
+        public List<string> EffectiveLead => Unit.GetLead(SelectedVariant) ?? new List<string>();
+        public List<string> EffectiveMutualExclude => Unit.GetMutualExclude(SelectedVariant) ?? new List<string>();
+        public bool EffectiveDetachUpgrade => Unit.GetDetachUpgrade(SelectedVariant);
 
         // Конструктор для создания конфигурации юнита и подсчета его стоимости
         public UnitConfiguration(
             Unit unit,
+            UnitVariant selectedVariant,
             int modelCount,
             ExperienceLevelData experienceLevel,
             Dictionary<string, int> selectedWeapons,
             Dictionary<string, int> selectedUpgrades,
             bool weaponUpgradeSelected,
-            Detach? selectedDetach) // Добавлено selectedDetach
+            Detach? selectedDetach)
         {
             Unit = unit;
+            SelectedVariant = selectedVariant;
             ModelCount = modelCount;
             ExperienceLevel = experienceLevel;
             SelectedWeapons = selectedWeapons;
@@ -38,17 +45,20 @@ namespace UnitRosterGenerator
     private void CalculateTotalCost(Detach? selectedDetach)
         {
             TotalCost = ExperienceLevel.BaseCost;
+            int minModels = Unit.GetMinModels(SelectedVariant);
+            var weapons = Unit.GetWeapons(SelectedVariant) ?? Enumerable.Empty<Weapon>();
+            var unitUpgrades = Unit.GetUpgrades(SelectedVariant);
 
             // Добавляем стоимость за дополнительные модели
-            if (ModelCount > Unit.MinModels)
+            if (ModelCount > minModels)
             {
-                TotalCost += (ModelCount - Unit.MinModels) * ExperienceLevel.AdditionalModelCost;
+                TotalCost += (ModelCount - minModels) * ExperienceLevel.AdditionalModelCost;
             }
 
             // Добавляем стоимость выбранного оружия
             if (SelectedWeapons != null)
             {
-                foreach (var weapon in Unit.Weapons ?? Enumerable.Empty<Weapon>())
+                foreach (var weapon in weapons)
                 {
                     if (SelectedWeapons.ContainsKey(weapon.Name))
                     {
@@ -76,7 +86,7 @@ namespace UnitRosterGenerator
                     int upgradeCount = upgradeEntry.Value;
 
                     // Ищем апгрейд по имени среди улучшений юнита
-                    var unitUpgrade = Unit.Upgrade?.FirstOrDefault(u => u.Name == upgradeName);
+                    var unitUpgrade = unitUpgrades?.FirstOrDefault(u => u.Name == upgradeName);
                     if (unitUpgrade != null && upgradeCount > 0)
                     {
                         TotalCost += ModelCount * unitUpgrade.Cost;
