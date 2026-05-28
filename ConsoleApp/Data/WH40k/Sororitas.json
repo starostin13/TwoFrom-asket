@@ -1,21 +1,6 @@
 {
   "Units": [
     {
-      "Name": "Aestred Thurga and Agathae Dolan",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 70,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Battle Sisters Squad", "Celestian Insidiants", "Celestian Sacresants", "Dominion Squad", "Retributor Squad", "Sisters Novitiate Squad"]
-    },
-    {
       "Name": "Arco-flagellants",
       "MinModels": 1,
       "MaxModels": 2,
@@ -232,21 +217,6 @@
       "DetachUpgrade": false
     },
     {
-      "Name": "Junith Eruita",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 80,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Battle Sisters Squad", "Celestian Insidiants", "Celestian Sacresants", "Dominion Squad", "Retributor Squad", "Sisters Novitiate Squad"]
-    },
-    {
       "Name": "Ministorum Priest",
       "MinModels": 1,
       "MaxModels": 1,
@@ -322,7 +292,7 @@
     {
       "Name": "Penitent Engines",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
@@ -377,20 +347,6 @@
       "Lead": ["Seraphim Squad", "Zephyrim Squad"]
     },
     {
-      "Name": "Sanctifiers",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 110,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false
-    },
-    {
       "Name": "Seraphim Squad",
       "MinModels": 1,
       "MaxModels": 2,
@@ -433,20 +389,6 @@
       "DetachUpgrade": false
     },
     {
-      "Name": "Triumph of Saint Katherine",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 235,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false
-    },
-    {
       "Name": "Zephyrim Squad",
       "MinModels": 1,
       "MaxModels": 2,
@@ -459,158 +401,6 @@
       ],
       "Weapons": [],
       "DetachUpgrade": false
-    }
-  ],
-  "Detachments": [
-    {
-      "Name": "Army of Faith",
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Blade of Saint Ellynor",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Divine Aspect",
-          "Cost": 5,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Litanies of Faith",
-          "Cost": 10,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Triptych of the Macharian Crusade",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Bringers of Flame",
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Fire and Fury",
-          "Cost": 30,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Iron Surplice of Saint Istalela",
-          "Cost": 10,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Manual of Saint Griselda",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Righteous Rage",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Champions of Faith",
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Eyes of the Oracle",
-          "Cost": 10,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Mark of Devotion",
-          "Cost": 30,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Sanctified Amulet",
-          "Cost": 25,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Triptych of Judgement",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Hallowed Martyrs",
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Chaplet of Sacrifice",
-          "Cost": 25,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Mantle of Ophelia",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Saintly Example",
-          "Cost": 10,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Through Suffering, Strength",
-          "Cost": 25,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Penitent Host",
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Catechism of Divine Penitence",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Psalm of Righteous Judgement",
-          "Cost": 30,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Refrain of Enduring Faith",
-          "Cost": 25,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Verse of Holy Piety",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
     }
   ]
 }
