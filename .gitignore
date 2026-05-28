@@ -151,7 +151,7 @@ TwoFromCasket/.vs/ProjectEvaluation/
 /TwoFromCasket/.vs/Army Generator/CopilotIndices
 /TwoFromCasket/.vs/CopilotSnapshots
 /ConsoleApp/ModelLimits.json
-ConsoleApp/Data/* - Copy.json
-ConsoleApp/Data/* copy.json
+ConsoleApp/**/* - Copy.json
+ConsoleApp/**/* copy.json
 
 .fake
