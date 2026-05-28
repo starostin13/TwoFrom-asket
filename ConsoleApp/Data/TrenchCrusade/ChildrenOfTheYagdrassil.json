@@ -426,6 +426,18 @@
                     "MaxCount": 1
                 }
             ]
+        },
+        {
+            "Name": "Captive Giant",
+            "Cost": 140,
+            "MinCount": 0,
+            "MaxCount": 1
+        },
+        {
+            "Name": "Ecclesiastic Prisoner",
+            "Cost": 20,
+            "MinCount": 0,
+            "MaxCount": 1
         }
     ]
 }
