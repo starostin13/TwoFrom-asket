@@ -240,15 +240,190 @@
             ]
         },
         {
-            "Name": "Yagdrassil Sapling",
-            "Faction": "Children of the Yagdrassil",
-            "Type": "Infantry",
-            "Points": 50,
-            "PowerLevel": 2,
-            "Abilities": [
+            "Name": "Huscarl",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
                 {
-                    "Name": "Sprout",
-                    "Description": "When this unit is deployed, you may place a Yagdrassil Seed token on the battlefield."
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons":[
+                {
+                    "Name": "Pistol",
+                    "Cost": 6,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Automatic Pistol",
+                    "Cost": 20,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Musket",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Bolt Action Rifle",
+                    "Cost": 10,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Semiautomatic Rifle",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Punt Gun",
+                    "Cost": 20,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Flamethrower",
+                    "Cost": 30,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Blunderbuss",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Shotgun",
+                    "Cost": 10,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Trench Knife",
+                    "Cost": 1,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Trench club",
+                    "Cost": 3,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Sword/Axe",
+                    "Cost": 4,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Flail",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 2
+                },
+                {
+                    "Name": "Misericordia",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Great Hammer/Maul",
+                    "Cost": 10,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Great Sword/Axe",
+                    "Cost": 12,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Anti-Tank Hammer",
+                    "Cost": 35,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Geirr",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Polearm",
+                    "Cost": 7,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Trench Shield (Nordic)",
+                    "Cost": 10,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Stormbreaker Shield",
+                    "Cost": 35,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Blood Eagle Banner",
+                    "Cost": 30,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Musical Instrument",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Molotov Cocktail",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Incendiary Grenades",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Warcross",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Blessed Icon",
+                    "Cost": 15,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Medi-kit",
+                    "Cost": 5,
+                    "MinCount": 0,
+                    "MaxCount": 1
+                },
+                {
+                    "Name": "Mountaineer Kit",
+                    "Cost": 3,
+                    "MinCount": 0,
+                    "MaxCount": 1
                 }
             ]
         }
