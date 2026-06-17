@@ -5,10 +5,32 @@ namespace UnitRosterGenerator
 {
     class Program
     {
+        private const double MultiDetachChance = 0.4;
+
         static GameData? LoadGameDataFromJson(string filePath)
         {
             string json = File.ReadAllText(filePath);
             return JsonSerializer.Deserialize<GameData>(json);
+        }
+
+        static int GetDetachmentPointLimit(int maxPoints)
+        {
+            if (maxPoints <= 1000)
+            {
+                return 2;
+            }
+
+            return 3;
+        }
+
+        static bool CanUseMultiDetach(List<Detach> detachments)
+        {
+            if (detachments.Count == 0)
+            {
+                return false;
+            }
+
+            return detachments.All(d => d.GetDetachmentCost().HasValue);
         }
 
         static GameData? LoadMultipleGameData(string[] fileNames)
@@ -111,11 +133,33 @@ namespace UnitRosterGenerator
             if (requiredTags.Count > 0)
                 Console.WriteLine($"Фильтр тэгов [{string.Join(", ", requiredTags)}]: {units.Count} юнитов");
             List<Detach> detaches = gameData.Detachments;
+            int maxDetachmentPoints = GetDetachmentPointLimit(maxPoints);
+            bool allowMultiDetach = CanUseMultiDetach(detaches);
+
+            if (detaches.Count == 0)
+            {
+                Console.WriteLine("Detachment не найдены: генерация пойдет без detachment-стоимости и multi-detach логики.");
+            }
+            else if (!allowMultiDetach)
+            {
+                Console.WriteLine("Не у всех detachment указана стоимость (DP/Cost): включен fallback в single-detach режим.");
+            }
+            else
+            {
+                Console.WriteLine($"DP-лимит для ростера: {maxDetachmentPoints}. Multi-detach режим активен (шанс {MultiDetachChance:P0}).");
+            }
+
             List<Roster> allRosters = [];
 
             for (int i = 0; i < 100; i++)
             {
-                var roster = RandomRosterBuilder.BuildRandomRoster(units, detaches, maxPoints);
+                var roster = RandomRosterBuilder.BuildRandomRoster(
+                    units,
+                    detaches,
+                    maxPoints,
+                    allowMultiDetach,
+                    maxDetachmentPoints,
+                    MultiDetachChance);
                 allRosters.Add(roster);
             }
 
@@ -133,7 +177,12 @@ namespace UnitRosterGenerator
             {
                 Console.WriteLine($"Общая стоимость ростера: {r.TotalCost}");
 
-                if (r.Roster.SelectedDetach != null)
+                if (r.Roster.SelectedDetaches.Count > 1)
+                {
+                    Console.WriteLine($"Выбранные detachment: {string.Join(", ", r.Roster.SelectedDetaches.Select(d => d.Name))}");
+                    Console.WriteLine($"Суммарный DP detachment: {r.Roster.SelectedDetaches.Sum(d => d.GetDetachmentCost() ?? 0)}");
+                }
+                else if (r.Roster.SelectedDetach != null)
                 {
                     Console.WriteLine($"Выбранный детач: {r.Roster.SelectedDetach.Name}");
                 }

@@ -10,12 +10,21 @@
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
             List<Detach> availableDetachments,
-            int maxPoints)
+            int maxPoints,
+            bool allowMultiDetach = false,
+            int maxDetachmentPoints = 0,
+            double multiDetachChance = 0.4)
         {
             int currentPoints = 0;
             currentRoster = new List<UnitConfiguration>();
+            bannedUnits.Clear();
 
-            Detach? selectedDetach = ChooseRandomDetach(availableDetachments);
+            var selectedDetaches = SelectDetachmentsForRoster(
+                availableDetachments,
+                allowMultiDetach,
+                maxDetachmentPoints,
+                multiDetachChance);
+            Detach? selectedDetach = selectedDetaches.FirstOrDefault();
 
             while (true)
             {
@@ -26,7 +35,7 @@
                 int? prospectiveModels = GetAdaptedModelCount(unit);
                 if (!prospectiveModels.HasValue) continue; // Limit exhausted, skip unit
 
-                UnitConfiguration unitConfig = GetUnitconfig(selectedDetach, unit, prospectiveModels.Value);
+                UnitConfiguration unitConfig = GetUnitconfig(selectedDetaches, unit, prospectiveModels.Value);
                 UnitConfiguration? attachedUnitconfig = null;
 
                 Unit? thisUnitLeadUnit = GetLeadedUnits(unitConfig, availableUnits);
@@ -36,7 +45,7 @@
                     int? attachedProspectiveModels = GetAdaptedModelCount(thisUnitLeadUnit);
                     if (attachedProspectiveModels.HasValue)
                     {
-                        attachedUnitconfig = GetUnitconfig(selectedDetach, thisUnitLeadUnit, attachedProspectiveModels.Value);
+                        attachedUnitconfig = GetUnitconfig(selectedDetaches, thisUnitLeadUnit, attachedProspectiveModels.Value);
                     }
                 
                     if (attachedUnitconfig != null && currentPoints + unitConfig.TotalCost + attachedUnitconfig.TotalCost > maxPoints)
@@ -66,7 +75,7 @@
                 }
             }
 
-            return new Roster(currentRoster, selectedDetach);
+            return new Roster(currentRoster, selectedDetach, selectedDetaches);
         }
 
         static bool IsUnitLimitExceed(string name, int additionalModels = 0)
@@ -81,12 +90,13 @@
             return currentModels + additionalModels > limit;
         }
 
-    private static UnitConfiguration GetUnitconfig(Detach? selectedDetach, Unit unit, int? modelCountCap = null)
+    private static UnitConfiguration GetUnitconfig(List<Detach> selectedDetaches, Unit unit, int? modelCountCap = null)
         {
             var selectedVariant = GetRandomVariant(unit);
             var minModels = unit.GetMinModels(selectedVariant);
             var maxModels = unit.GetMaxModels(selectedVariant);
             var experienceLevel = GetRandomExperienceLevel(unit, selectedVariant);
+            var selectedDetach = ChooseDetachForUnit(selectedDetaches);
 
             // Apply the cap from model limits
             int effectiveMax = (modelCountCap.HasValue && modelCountCap.Value != int.MaxValue)
@@ -350,6 +360,83 @@
         {
             if (detachments == null || detachments.Count == 0) return null;
             return detachments[random.Next(detachments.Count)];
+        }
+
+        private static Detach? ChooseDetachForUnit(List<Detach> selectedDetaches)
+        {
+            if (selectedDetaches == null || selectedDetaches.Count == 0)
+            {
+                return null;
+            }
+
+            return selectedDetaches[random.Next(selectedDetaches.Count)];
+        }
+
+        private static List<Detach> SelectDetachmentsForRoster(
+            List<Detach> availableDetachments,
+            bool allowMultiDetach,
+            int maxDetachmentPoints,
+            double multiDetachChance)
+        {
+            if (availableDetachments == null || availableDetachments.Count == 0)
+            {
+                return new List<Detach>();
+            }
+
+            if (!allowMultiDetach || maxDetachmentPoints <= 0)
+            {
+                var singleDetach = ChooseRandomDetach(availableDetachments);
+                return singleDetach != null ? new List<Detach> { singleDetach } : new List<Detach>();
+            }
+
+            var pricedDetachments = availableDetachments
+                .Where(d => d.GetDetachmentCost().HasValue)
+                .Where(d => d.GetDetachmentCost()!.Value > 0)
+                .Where(d => d.GetDetachmentCost()!.Value <= maxDetachmentPoints)
+                .ToList();
+
+            if (pricedDetachments.Count == 0)
+            {
+                var singleDetach = ChooseRandomDetach(availableDetachments);
+                return singleDetach != null ? new List<Detach> { singleDetach } : new List<Detach>();
+            }
+
+            pricedDetachments.Shuffle();
+            var selected = new List<Detach> { pricedDetachments[0] };
+            int totalDetachmentPoints = pricedDetachments[0].GetDetachmentCost()!.Value;
+
+            bool wantsMultipleDetachments =
+                pricedDetachments.Count > 1 && random.NextDouble() < Math.Clamp(multiDetachChance, 0.0, 1.0);
+            if (!wantsMultipleDetachments)
+            {
+                return selected;
+            }
+
+            for (int i = 1; i < pricedDetachments.Count; i++)
+            {
+                var candidate = pricedDetachments[i];
+                int candidateCost = candidate.GetDetachmentCost()!.Value;
+
+                if (totalDetachmentPoints + candidateCost > maxDetachmentPoints)
+                {
+                    continue;
+                }
+
+                if (random.Next(0, 2) == 0)
+                {
+                    continue;
+                }
+
+                selected.Add(candidate);
+                totalDetachmentPoints += candidateCost;
+
+                if (totalDetachmentPoints == maxDetachmentPoints)
+                {
+                    break;
+                }
+            }
+
+            return selected;
         }
     }
 
