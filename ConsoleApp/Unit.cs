@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace UnitRosterGenerator
 {
@@ -14,6 +15,33 @@ namespace UnitRosterGenerator
         public bool? DetachUpgrade { get; set; }
         public List<string>? Lead { get; set; }
         public List<string>? MutualExclude { get; set; }
+
+        [JsonPropertyName("MinCount")]
+        public int? LegacyMinCount
+        {
+            set => MinModels = value ?? MinModels;
+        }
+
+        [JsonPropertyName("MaxCount")]
+        public int? LegacyMaxCount
+        {
+            set => MaxModels = value ?? MaxModels;
+        }
+
+        [JsonPropertyName("Cost")]
+        public int? LegacyCost
+        {
+            set
+            {
+                if (value.HasValue && (Experience == null || Experience.Count == 0))
+                {
+                    Experience = new List<ExperienceLevelData>
+                    {
+                        new() { Level = "Regular", BaseCost = value.Value, AdditionalModelCost = 0 }
+                    };
+                }
+            }
+        }
     }
 
     public class Unit
@@ -30,6 +58,33 @@ namespace UnitRosterGenerator
         public List<string>? MutualExclude { get; set; }
         public List<UnitVariant>? Variants { get; set; }
         public List<string>? Tags { get; set; }
+
+        [JsonPropertyName("MinCount")]
+        public int? LegacyMinCount
+        {
+            set => MinModels = value ?? MinModels;
+        }
+
+        [JsonPropertyName("MaxCount")]
+        public int? LegacyMaxCount
+        {
+            set => MaxModels = value ?? MaxModels;
+        }
+
+        [JsonPropertyName("Cost")]
+        public int? LegacyCost
+        {
+            set
+            {
+                if (value.HasValue && Experience.Count == 0)
+                {
+                    Experience = new List<ExperienceLevelData>
+                    {
+                        new() { Level = "Regular", BaseCost = value.Value, AdditionalModelCost = 0 }
+                    };
+                }
+            }
+        }
 
         public bool HasVariants => Variants != null && Variants.Count > 0;
 

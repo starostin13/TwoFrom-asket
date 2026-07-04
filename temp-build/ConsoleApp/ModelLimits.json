@@ -1,0 +1,98 @@
+[
+  {
+    "ModelName": "Technomancer",
+    "MinQuantity": 1,
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Plasmancer",
+    "MinQuantity": 1,
+    "MaxQuantity": 1
+  },
+    {
+    "ModelName": "Overlord",
+    "MinQuantity": 1,
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Skorpekh Lord",
+    "MinQuantity": 1,
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Sun Shark Bomber",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Kroot Carnivores",
+    "MaxQuantity": 2
+  },
+  {
+    "ModelName": "Crisis Starscythe",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Darkstrider",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Pathfinder Team",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Ghostkeel Battlesuit",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Krootox Riders",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Crisis Fireknife Battlesuits",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Piranhas",
+    "MaxQuantity": 2
+  },
+  {
+    "ModelName": "Kroot Hounds",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Kroot War Shaper",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Hammerhead Gunship",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Commander in Coldstar Battlesuit",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Krootox Rampagers",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Officer",
+    "MinQuantity": 1
+  },
+  {
+    "ModelName": "US Army Riffle Squad",
+    "MinQuantity": 1
+  },
+  {
+    "ModelName": "M7 Priest",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Ecclesiastic Prisoner",
+    "MaxQuantity": 1
+  },
+  {
+    "ModelName": "Captive Giant",
+    "MaxQuantity": 1
+  }
+]

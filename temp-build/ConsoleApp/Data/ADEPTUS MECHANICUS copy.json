@@ -1,0 +1,7 @@
+{
+	"Units": [
+		{ "Name": "Skitarii Marshal", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 35, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Skitarii Rangers", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tech-Priest Dominus", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true }
+	]
+}

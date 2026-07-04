@@ -1,0 +1,114 @@
+{
+	"Units": [
+		{ "Name": "Barbgaunts", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 55 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Biovores", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 50 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Broodlord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Genestealers" ] },
+		{ "Name": "Carnifexes", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Deathleaper", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Exocrine", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Gargoyles", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 85, "AdditionalModelCost": 85 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Genestealers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Harpy", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 215, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Haruspex", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Hive Crone", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 200, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Hive Guard", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 90, "AdditionalModelCost": 90 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Hive Tyrant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 195, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Tyrant Guard" ] },
+		{ "Name": "Hormagaunts", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Hyperadapted Raveners", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 165, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Lictor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Maleceptor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Mawloc", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 135, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Mucolid Spores", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 30, "AdditionalModelCost": 30 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Neurogaunts", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 45, "AdditionalModelCost": 45 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Neurolictor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Neurotyrant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Zoanthropes" ] },
+		{ "Name": "Norn Assimilator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 275, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Norn Emissary", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 260, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Old One Eye", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Parasite of Mortrex", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Psychophage", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 110, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Pyrovores", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 35 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Raveners", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Ripper Swarms", "MinModels": 1, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 25, "AdditionalModelCost": 15 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Screamer-Killer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 125, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Spore Mines", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 55 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Sporocyst", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 145, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Termagants", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 60, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tervigon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "The Swarmlord", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Toxicrene", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Trygon", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Raveners" ] },
+		{ "Name": "Tyranid Warriors with Melee Bio-weapons", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 75, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tyranid Warriors with Ranged Bio-weapons", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 65 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tyrannocyte", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 105, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tyrannofex", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 200, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Tyrant Guard", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 80, "AdditionalModelCost": 80 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Venomthropes", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 70 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Von Ryan's Leapers", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 70, "AdditionalModelCost": 70 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Winged Hive Tyrant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Winged Tyranid Prime", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 65, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Zoanthropes", "MinModels": 1, "MaxModels": 2, "Experience": [ { "Level": "Regular", "BaseCost": 100, "AdditionalModelCost": 100 } ], "Weapons": [], "DetachUpgrade": false }
+	],
+	"Detachments": [
+		{
+			"Name": "Assimilation Swarm",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Biophagic Flow", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Instinctive Defence", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Parasitic Biomorphology", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Regenerating Monstrosity", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Crusher Stampede",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Enraged Reserves", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Monstrous Nemesis", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Null Nodules", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Ominous Presence", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Invasion Fleet",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Adaptive Biology", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Alien Cunning", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Perfectly Adapted", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Synaptic Linchpin", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Subterranean Assault",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Synaptic Strategy", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Tremor Senses", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Trygon Prime", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Vanguard Intellect", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Synaptic Nexus",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Power of the Hive Mind", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Psychostatic Disruption", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Synaptic Control", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "The Dirgeheart of Kharis", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Unending Swarm",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Adrenalised Onslaught", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Naturalised Camouflage", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Piercing Talons", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Relentless Hunger", "Cost": 20, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}

@@ -1,20 +1,66 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace ArmyGeneratorMaui.ViewModels
 {
-    internal class RosterViewModel : INotifyPropertyChanged
+    internal partial class RosterViewModel : ObservableObject
     {
-        public ObservableCollection<ExemplarUnit> Units { get => units; private set => units = value; }
+        [ObservableProperty]
+        private ObservableCollection<ExemplarUnit> units;
+
+        [ObservableProperty]
+        private ObservableCollection<SavedRosterInfo> savedRosters;
+
+        [ObservableProperty]
+        private SavedRosterInfo selectedRoster;
+
         public RosterViewModel()
         {
-            foreach (var unit in Core.Roster.ArmyList)
+            units = new ObservableCollection<ExemplarUnit>();
+            savedRosters = new ObservableCollection<SavedRosterInfo>();
+            
+            LoadSavedRosters();
+            LoadCurrentRoster();
+        }
+
+        private void LoadSavedRosters()
+        {
+            SavedRosters.Clear();
+            var saved = StorageHelper.LoadSavedRosters();
+            foreach (var roster in saved)
             {
-                Units.Add(unit);
+                SavedRosters.Add(roster);
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private ObservableCollection<ExemplarUnit> units = new ObservableCollection<ExemplarUnit>();
+        private void LoadCurrentRoster()
+        {
+            Units.Clear();
+            if (Core.Roster?.ArmyList != null)
+            {
+                foreach (var unit in Core.Roster.ArmyList)
+                {
+                    Units.Add(unit);
+                }
+            }
+        }
+
+        [RelayCommand]
+        private void RosterSelected(SavedRosterInfo roster)
+        {
+            if (roster != null)
+            {
+                SelectedRoster = roster;
+                var loadedRoster = StorageHelper.LoadRoster(roster.FilePath);
+                if (loadedRoster != null)
+                {
+                    Core.Roster = loadedRoster;
+                    LoadCurrentRoster();
+                }
+            }
+        }
     }
 }
+

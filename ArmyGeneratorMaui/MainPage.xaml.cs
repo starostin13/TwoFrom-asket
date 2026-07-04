@@ -9,6 +9,7 @@ namespace ArmyGeneratorMaui
             InitializeComponent();
 
             BindingContext = new UnitsViewModel();
+            RosterView.BindingContext = new RosterViewModel();
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -26,10 +27,20 @@ namespace ArmyGeneratorMaui
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-        private void OnGenerateClick(object sender, EventArgs e)
+        private async void OnGenerateClick(object sender, EventArgs e)
         {
-            Core.GenerateRoster();
-            RosterView.BindingContext = new RosterViewModel();
+            BusyIndicator.IsRunning = true;
+            GenerateBtn.IsEnabled = false;
+            
+            await Task.Run(() =>
+            {
+                Core.GenerateRosters(3);
+            });
+            
+            GenerateBtn.IsEnabled = true;
+            BusyIndicator.IsRunning = false;
+            
+            await Shell.Current.GoToAsync("roster-selection");
         }
     }
 }

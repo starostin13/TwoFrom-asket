@@ -1,0 +1,701 @@
+{
+  "Units": [
+    {
+      "Name": "Brother-Captain",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 95,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Brotherhood Terminator Squad",
+        "Paladin Squad"
+      ]
+    },
+    {
+      "Name": "Brotherhood Champion",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Purgation Squad",
+        "Strike Squad"
+      ]
+    },
+    {
+      "Name": "Brotherhood Chaplain",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 65,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Brotherhood Terminator Squad",
+        "Paladin Squad"
+      ]
+    },
+    {
+      "Name": "Brotherhood Librarian",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 90,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Brotherhood Terminator Squad",
+        "Paladin Squad"
+      ]
+    },
+    {
+      "Name": "Brotherhood Techmarine",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Purgation Squad",
+        "Purifier Squad",
+        "Strike Squad"
+      ]
+    },
+    {
+      "Name": "Brotherhood Terminator Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 140,
+          "AdditionalModelCost": 235
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Psycannon",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Castellan Crowe",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": [
+        "Purifier Squad"
+      ]
+    },
+    {
+      "Name": "Grand Master",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 95,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Brotherhood Terminator Squad",
+        "Paladin Squad"
+      ]
+    },
+    {
+      "Name": "Grand Master in Nemesis Dreadknight",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 200,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Sublimator",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Heavy psycannon",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Nemesis Dreadknight"
+      ]
+    },
+    {
+      "Name": "Grand Master Voldus",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 140,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": [
+        "Brotherhood Terminator Squad",
+        "Paladin Squad"
+      ]
+    },
+    {
+      "Name": "Grey Knights Thunderhawk Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 805,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Interceptor Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 125,
+          "AdditionalModelCost": 125
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider",
+      "ModelType": "Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Crusader",
+      "ModelType": "Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 220,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Land Raider Redeemer",
+      "ModelType": "Land Raider",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 250,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Nemesis Dreadknight",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 195,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Heavy psycannon",
+          "Cost": 15,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Paladin Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 170,
+          "AdditionalModelCost": 280
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Psycannon",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Purgation Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 110
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Psycannon",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Purifier Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 130,
+          "AdditionalModelCost": 130
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Psycannon",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Razorback",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "ModelType": "Rhino",
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Rhino",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "ModelType": "Rhino",
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormhawk Interceptor",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormraven Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 280,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Stormtalon Gunship",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 170,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Strike Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 120,
+          "AdditionalModelCost": 120
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "Venerable Dreadnought",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 130,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true
+    }
+  ],
+  "Detachments": [
+    {
+      "Name": "Argent Assault",
+      "DP": 1,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Psychic Celerity",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Vigilance of Titan",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Augurium Task Force",
+      "DP": 2,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Doomseer's Amulet",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Grimoire of Conjunctions",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "One Foot in the Future",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Shield of Prophecy",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Banishers",
+      "DP": 2,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Ephemeral Tome",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Pyresoul",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Sigil of the Hunt",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Sixty-sixth Seal",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Brotherhood Strike",
+      "DP": 2,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Banishing Wave",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Blinding Aura",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Purity of Purpose",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Tome of Forbidden Ways",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Fires of Purgation",
+      "DP": 1,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Boons of Deimos (Upgrade)",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Precognicient Volleys (Upgrade)",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Hallowed Conclave",
+      "DP": 2,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Eye of the Augurium",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Inescapable Judgement",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Nemesis Rounds",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Sanctic Reaper",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Immaterial Interdiction",
+      "DP": 1,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Astral Overlap (Upgrade)",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Predestined Coordinates (Upgrade)",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Sanctic Spearhead",
+      "DP": 2,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Driven by Duty",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Quickening Foci",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Sigil of Exigence",
+          "Cost": 30,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Spiritus Machina",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "Warpbane Task Force",
+      "DP": 3,
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Mandulian Reliquary",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Paragon of Sanctity",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Phial of the Abyss",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Radiant Champion",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    }
+  ]
+}

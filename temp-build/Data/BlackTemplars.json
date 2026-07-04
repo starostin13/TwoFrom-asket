@@ -1,0 +1,181 @@
+{
+  "Units": [
+    {
+      "Name": "Castellan",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Crusader Squad" ]
+    },
+    {
+      "Name": "Chaplain Grimaldus",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 110,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Crusader Squad" ]
+    },
+    {
+      "Name": "Crusade Ancient",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Crusader Squad" ]
+    },
+    {
+      "Name": "Crusader Squad",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 120,
+          "AdditionalModelCost": 120
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
+      "Name": "Emperor's Champion",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 70,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Sword Brethren" ]
+    },
+    {
+      "Name": "Execrator",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 180,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
+      "Name": "High Marshal Helbrecht",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 115,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Crusader Squad", "Sword Brethren" ]
+    },
+    {
+      "Name": "Marshal",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [ "Assault Intercessor Squad", "Intercessor Squad", "Heavy Intercessor Squad", "Tactical Squad", "Crusader Squad", "Sword Brethren" ]
+    },
+    {
+      "Name": "Sword Brethren",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 100,
+          "AdditionalModelCost": 100
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    }
+  ],
+  "Detachments": [
+    {
+      "Name": "Companions of Vehemence",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        { "Name": "Incendiary Animus", "Cost": 25, "Unique": true, "MaxCount": 1 },
+        { "Name": "Merciless Denunciation", "Cost": 25, "Unique": true, "MaxCount": 1 },
+        { "Name": "Oathbound Exemplar", "Cost": 15, "Unique": true, "MaxCount": 1 },
+        { "Name": "Zealous Vanguard", "Cost": 20, "Unique": true, "MaxCount": 1 }
+      ]
+    },
+    {
+      "Name": "Godhammer Assault Force",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        { "Name": "Augury Servo-host", "Cost": 15, "Unique": true, "MaxCount": 1 },
+        { "Name": "Battle-psalm Precentor", "Cost": 10, "Unique": true, "MaxCount": 1 },
+        { "Name": "Herald of Sacred Slaughter", "Cost": 15, "Unique": true, "MaxCount": 1 },
+        { "Name": "Paragon of Fury", "Cost": 25, "Unique": true, "MaxCount": 1 }
+      ]
+    },
+    {
+      "Name": "Vindication Task Force",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        { "Name": "Consecrating Aura", "Cost": 25, "Unique": true, "MaxCount": 1 },
+        { "Name": "Imperialis of the Eternal Crusade", "Cost": 15, "Unique": true, "MaxCount": 1 },
+        { "Name": "Orb of the Emperor's Aegis", "Cost": 10, "Unique": true, "MaxCount": 1 },
+        { "Name": "Warden of Honour", "Cost": 20, "Unique": true, "MaxCount": 1 }
+      ]
+    },
+    {
+      "Name": "Wrathful Procession",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        { "Name": "Benediction of Fury", "Cost": 10, "Unique": true, "MaxCount": 1 },
+        { "Name": "Pyrebrand", "Cost": 25, "Unique": true, "MaxCount": 1 },
+        { "Name": "Sacred Rage", "Cost": 30, "Unique": true, "MaxCount": 1 },
+        { "Name": "Taramond's Censer", "Cost": 15, "Unique": true, "MaxCount": 1 }
+      ]
+    }
+  ]
+}

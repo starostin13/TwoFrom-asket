@@ -1,0 +1,162 @@
+{
+    "Units": [
+        {
+            "Name": "Centaurion Marshal",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Lord on Karkadrak",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 190,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": [],
+            "DetachUpgrade": true
+        },
+        {
+            "Name": "Chaos Sorcerer Lord",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 120,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Daemon Prince",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 250,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Exalted Hero of Chaos",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 90,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chariot",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 90,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Chosen",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 280,
+                    "AdditionalModelCost": 280
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Knights",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 250,
+                    "AdditionalModelCost": 250
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Chaos Warriors",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 190,
+                    "AdditionalModelCost": 190
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Darkoath Wilderfiend",
+            "MinModels": 1,
+            "MaxModels": 1,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 130,
+                    "AdditionalModelCost": 0
+                }
+            ],
+            "Weapons": []
+        },
+        {
+            "Name": "Ogroid Theridons",
+            "MinModels": 1,
+            "MaxModels": 2,
+            "Experience": [
+                {
+                    "Level": "Regular",
+                    "BaseCost": 170,
+                    "AdditionalModelCost": 170
+                }
+            ],
+            "Weapons": []
+        }
+    ],
+    "Detachments": []
+}

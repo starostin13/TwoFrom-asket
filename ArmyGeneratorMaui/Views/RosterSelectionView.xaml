@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArmyGeneratorMaui.Views.RosterSelectionView"
+             Title="Select Roster">
+    
+    <VerticalStackLayout Padding="20" Spacing="20">
+        
+        <Label Text="Generated Rosters" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"/>
+        
+        <CarouselView ItemsSource="{Binding Rosters}"
+                      CurrentItemChangedCommand="{Binding RosterSelectedCommand}"
+                      CurrentItemChangedCommandParameter="{Binding CurrentItem, Source={RelativeSource Self}}"
+                      Loop="False"
+                      HorizontalScrollBarVisibility="Always">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="10" Spacing="10" BackgroundColor="#F0F0F0">
+                        <Label Text="{Binding ., StringFormat='Roster - {0:N0} pts'}" 
+                               FontSize="18" 
+                               FontAttributes="Bold"/>
+                        <CollectionView ItemsSource="{Binding ArmyList}" SelectionMode="None">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="10" ColumnSpacing="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <Label Grid.Column="0"
+                                               Text="{Binding Price}" 
+                                               FontAttributes="Bold"
+                                               VerticalTextAlignment="Center"
+                                               FontSize="14"/>
+                                        
+                                        <Label Grid.Column="1"
+                                               Text="{Binding Name}" 
+                                               FontSize="12"
+                                               VerticalTextAlignment="Center"/>
+                                        
+                                        <Label Grid.Column="2"
+                                               Text="{Binding Enchasment}" 
+                                               FontSize="10"
+                                               FontAttributes="Italic"
+                                               VerticalTextAlignment="Center"
+                                               TextColor="#666666"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        
+        <VerticalStackLayout Spacing="10">
+            <Label x:Name="RosterStats" 
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"/>
+            
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="Save Selected" 
+                        Command="{Binding SaveAndNameRosterCommand}"
+                        Padding="20,10"/>
+                <Button Text="Cancel" 
+                        Command="{Binding CancelCommand}"
+                        Padding="20,10"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>

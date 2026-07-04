@@ -1,0 +1,18 @@
+{
+	"Units": [
+		{ "Name": "Allarus Custodians", "MinModels": 2, "MaxModels": 6, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 60 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Blade Champion", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Vertus Praetors" ] },
+		{ "Name": "Custodian Guard", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 160, "AdditionalModelCost": 40 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Custodian Wardens", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 210, "AdditionalModelCost": 50 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Knight-Centura", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 55, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Prosecutors", "Vigilators", "Witchseekers" ] },
+		{ "Name": "Prosecutors", "MinModels": 4, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 40, "AdditionalModelCost": 10 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Shield-Captain", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 120, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },
+		{ "Name": "Shield-Captain in Allarus Terminator Armour", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 130, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },
+		{ "Name": "Shield-Captain on Dawneagle Jetbike", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true, "Lead": [ "Allarus Custodians", "Custodian Guard", "Custodian Wardens", "Vertus Praetors" ] },		
+		{ "Name": "Venerable Contemptor Dreadnought", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 170, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Venerable Land Raider", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 220, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Vertus Praetors", "MinModels": 2, "MaxModels": 3, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 75 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Vigilators", "MinModels": 4, "MaxModels": 10, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 10 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Witchseekers", "MinModels": 4, "MaxModels": 5, "Experience": [ { "Level": "Regular", "BaseCost": 50, "AdditionalModelCost": 15 } ], "Weapons": [], "DetachUpgrade": false }
+	]
+}

@@ -3,17 +3,16 @@
     {
       "Name": "Breacher Team",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 90
+          "BaseCost": 100,
+          "AdditionalModelCost": 0
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Broadside Battlesuits",
@@ -22,13 +21,24 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 75
+          "BaseCost": 80,
+          "AdditionalModelCost": 90
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
+    },
+    {
+      "Name": "3x Broadside Battlesuits",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 270,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false
     },
     {
       "Name": "Cadre Fireblade",
@@ -41,9 +51,23 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Breacher Team", "Strike Team"]
+      "Lead": [ "Breacher Team", "Strike Team" ]
+    },
+    {
+      "Name": "Commander Farsight",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 85,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": false,
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ],
+      "MutualExclude": [ "Ethereal" ]
     },
     {
       "Name": "Commander in Coldstar Battlesuit",
@@ -56,9 +80,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
       "Name": "Commander in Enforcer Battlesuit",
@@ -71,9 +94,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "Lead": [ "Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits" ]
     },
     {
       "Name": "Commander Shadowsun",
@@ -86,54 +108,46 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "DetachUpgrade": false
     },
     {
       "Name": "Crisis Fireknife Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 100,
-          "AdditionalModelCost": 110
+          "BaseCost": 120,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Crisis Starscythe Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 100
+          "BaseCost": 110,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Crisis Sunforge Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 125,
-          "AdditionalModelCost": 135
+          "BaseCost": 140,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Darkstrider",
@@ -146,9 +160,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Pathfinder Team"]
+      "DetachUpgrade": false,
+      "Lead": [ "Pathfinder Team" ]
     },
     {
       "Name": "Devilfish",
@@ -161,9 +174,7 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Ethereal",
@@ -176,9 +187,17 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Breacher Team", "Strike Team"]
+      "Upgrade": [
+        {
+          "Name": "Левитирующий дрон",
+          "Cost": 0,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "Lead": [ "Breacher Team", "Strike Team" ],
+      "MutualExclude": [ "Commander Farsight" ]
     },
     {
       "Name": "Firesight Team",
@@ -187,43 +206,37 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 55,
+          "BaseCost": 60,
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Pathfinder Team"]
+      "DetachUpgrade": false
     },
     {
       "Name": "Ghostkeel Battlesuit",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 150,
-          "AdditionalModelCost": 160
+          "BaseCost": 160,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Hammerhead Gunship",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 140,
-          "AdditionalModelCost": 150
+          "BaseCost": 145,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Kroot Carnivores",
@@ -236,29 +249,12 @@
           "AdditionalModelCost": 65
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
-    },
-    {
-      "Name": "Kroot Farstalkers",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 75,
-          "AdditionalModelCost": 85
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Kroot Flesh Shaper",
       "MinModels": 1,
-      "MaxModels": 1,
+      "MaxModels": 0,
       "Experience": [
         {
           "Level": "Regular",
@@ -266,9 +262,8 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Kroot Carnivores", "Kroot Farstalkers"]
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
     },
     {
       "Name": "Kroot Hounds",
@@ -277,28 +272,39 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 45,
-          "AdditionalModelCost": 65
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
-      "Name": "Kroot Lone-Spear",
+      "Name": "Kroot Trail Shaper",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 80,
+          "BaseCost": 55,
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
+    },
+    {
+      "Name": "Kroot War Shaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "DetachUpgrade": true,
+      "Lead": [ "Kroot Carnivores", "Kroot Farstalkers" ]
     },
     {
       "Name": "Krootox Rampagers",
@@ -308,42 +314,23 @@
         {
           "Level": "Regular",
           "BaseCost": 85,
-          "AdditionalModelCost": 170
+          "AdditionalModelCost": 85
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Krootox Riders",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 3,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 45,
-          "AdditionalModelCost": 60
+          "BaseCost": 40,
+          "AdditionalModelCost": 40
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
-    },
-    {
-      "Name": "Kroot War Shaper",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 60,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": ["Kroot Carnivores", "Kroot Farstalkers"]
+      "DetachUpgrade": false
     },
     {
       "Name": "Pathfinder Team",
@@ -352,28 +339,24 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 80,
+          "BaseCost": 90,
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Piranhas",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 3,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 65,
-          "AdditionalModelCost": 110
+          "BaseCost": 60,
+          "AdditionalModelCost": 60
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Razorshark Strike Fighter",
@@ -382,28 +365,24 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 160,
+          "BaseCost": 170,
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Riptide Battlesuit",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 180,
-          "AdditionalModelCost": 210
+          "BaseCost": 190,
+          "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Sky Ray Gunship",
@@ -416,39 +395,20 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Stealth Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 100,
-          "AdditionalModelCost": 110
+          "AdditionalModelCost": 40
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
-    },
-    {
-      "Name": "Stormsurge",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 360,
-          "AdditionalModelCost": 385
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Strike Team",
@@ -461,9 +421,7 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Sun Shark Bomber",
@@ -472,58 +430,11 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 150,
+          "BaseCost": 160,
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
-    },
-    {
-      "Name": "Tidewall Droneport",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
-    },
-    {
-      "Name": "Tidewall Gunrig",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 90,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
-    },
-    {
-      "Name": "Tidewall Shieldline",
-      "MinModels": 1,
-      "MaxModels": 2,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 105
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     },
     {
       "Name": "Vespid Stingwings",
@@ -532,82 +443,16 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 70,
-          "AdditionalModelCost": 115
+          "BaseCost": 65,
+          "AdditionalModelCost": 65
         }
       ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
+      "DetachUpgrade": false
     }
   ],
   "Detachments": [
     {
-      "Name": "Advanced Acquisition Cadre",
-      "DP": 1,
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Negation Emitters",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Unmasking Suite",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Auxiliary Cadre",
-      "DP": 1,
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Admired Leader",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Student of Kauyon",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
-      "Name": "Experimental Prototype Cadre",
-      "DP": 1,
-      "MaxDetachUpgrades": 1,
-      "Upgrades": [
-        {
-          "Name": "Plasma Accelerator Rifle",
-          "Cost": 20,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Supernova Launcher",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        },
-        {
-          "Name": "Thermoneutronic Projector",
-          "Cost": 15,
-          "Unique": true,
-          "MaxCount": 1
-        }
-      ]
-    },
-    {
       "Name": "Kauyon",
-      "DP": 2,
       "MaxDetachUpgrades": 1,
       "Upgrades": [
         {
@@ -624,13 +469,13 @@
         },
         {
           "Name": "Solid-image Projection Unit",
-          "Cost": 20,
+          "Cost": 30,
           "Unique": true,
           "MaxCount": 1
         },
         {
           "Name": "Through Unity, Devastation",
-          "Cost": 30,
+          "Cost": 25,
           "Unique": true,
           "MaxCount": 1
         }
@@ -638,7 +483,6 @@
     },
     {
       "Name": "Kroot Hunting Pack",
-      "DP": 2,
       "MaxDetachUpgrades": 1,
       "Upgrades": [
         {
@@ -648,7 +492,7 @@
           "MaxCount": 1
         },
         {
-          "Name": "Kroothawk Flock",
+          "Name": "Kroothawk Floc",
           "Cost": 10,
           "Unique": true,
           "MaxCount": 1
@@ -668,18 +512,17 @@
       ]
     },
     {
-      "Name": "Mont'ka",
-      "DP": 3,
+      "Name": "Mont’ka",
       "MaxDetachUpgrades": 1,
       "Upgrades": [
         {
           "Name": "Coordinated Exploitation",
-          "Cost": 30,
+          "Cost": 20,
           "Unique": true,
           "MaxCount": 1
         },
         {
-          "Name": "Exemplar of the Mont'ka",
+          "Name": "Exemplar of the Mont’ka",
           "Cost": 10,
           "Unique": true,
           "MaxCount": 1
@@ -692,7 +535,7 @@
         },
         {
           "Name": "Strike Swiftly",
-          "Cost": 35,
+          "Cost": 25,
           "Unique": true,
           "MaxCount": 1
         }
@@ -700,7 +543,6 @@
     },
     {
       "Name": "Retaliation Cadre",
-      "DP": 2,
       "MaxDetachUpgrades": 1,
       "Upgrades": [
         {
@@ -717,13 +559,73 @@
         },
         {
           "Name": "Puretide Engram Neurochip",
-          "Cost": 15,
+          "Cost": 25,
           "Unique": true,
           "MaxCount": 1
         },
         {
           "Name": "Starflare Ignition System",
           "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "AUXILIARY CADRE",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "STUDENT OF KAUYON",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "ADMIRED LEADER",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "FANATICAL CONVERT",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "TRANSPONDER LOCK MODULE",
+          "Cost": 25,
+          "Unique": true,
+          "MaxCount": 1
+        }
+      ]
+    },
+    {
+      "Name": "EXPERIMENTAL PROTOTYPE CADRE",
+      "MaxDetachUpgrades": 1,
+      "Upgrades": [
+        {
+          "Name": "Supernova Launcher",
+          "Cost": 15,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Thermoneutronic",
+          "Cost": 20,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Plasma Accelerator Rifle",
+          "Cost": 10,
+          "Unique": true,
+          "MaxCount": 1
+        },
+        {
+          "Name": "Fusion Blade",
+          "Cost": 25,
           "Unique": true,
           "MaxCount": 1
         }

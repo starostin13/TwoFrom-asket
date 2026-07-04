@@ -1,0 +1,77 @@
+{
+	"Units": [
+		{ "Name": "Armiger Helverin", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Armiger Warglaive", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 140, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Canis Rex", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 415, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Castellan", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 410, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Crusader", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 385, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Defender", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 415, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Errant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 365, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Gallant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 365, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Paladin", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 375, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Preceptor", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 365, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Valiant", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 410, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Knight Warden", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 375, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Acastus Knight Asterius", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 765, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Acastus Knight Porphyrion", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 700, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Armiger Moirax", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 150, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": false },
+		{ "Name": "Cerastus Knight Acheron", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 395, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Cerastus Knight Atrapos", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 405, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Cerastus Knight Castigator", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 395, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Cerastus Knight Lancer", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 395, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Questoris Knight Magaera", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 385, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true },
+		{ "Name": "Questoris Knight Styrix", "MinModels": 1, "MaxModels": 1, "Experience": [ { "Level": "Regular", "BaseCost": 385, "AdditionalModelCost": 0 } ], "Weapons": [], "DetachUpgrade": true }
+	],
+	"Detachments": [
+		{
+			"Name": "Gate Warden Lance",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Acquisitor-at-Arms", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Augury Halo", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Purgation's Hand", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Vengeful Tread", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Questor Forgepact",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Knight of the Opus Machina", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Magos Questoris", "Cost": 35, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Omnissian Champion", "Cost": 30, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Vocifer Magnificat", "Cost": 15, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Questoris Companions",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Crushing Condemnation", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Herald of Triumph", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Pennant of Silvered Fury", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Wyrmslayer Divination", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Spearhead-At-Arms",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Fables of Nightmare", "Cost": 10, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Martial Tuition", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Mentor's Pride", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Tales of Heroism", "Cost": 10, "Unique": true, "MaxCount": 1 }
+			]
+		},
+		{
+			"Name": "Valourstrike Lance",
+			"MaxDetachUpgrades": 1,
+			"Upgrades": [
+				{ "Name": "Bearer of the Evanescent Ion", "Cost": 15, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Bearer of the Iron Chalice", "Cost": 20, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Bearer of the Judicant's Helm", "Cost": 25, "Unique": true, "MaxCount": 1 },
+				{ "Name": "Bearer of the Lancer's Sigil", "Cost": 25, "Unique": true, "MaxCount": 1 }
+			]
+		}
+	]
+}

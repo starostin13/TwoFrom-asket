@@ -56,9 +56,9 @@
     </None>
   </ItemGroup>
 
-  <!-- Copy all faction data JSONs placed under Data/ (e.g., AELDARI.json, Orks-WH40K.json, etc.) -->
+  <!-- Copy all faction data JSONs under Data/, including nested folders such as Data\TrenchCrusade. -->
   <ItemGroup>
-    <None Include="Data\*.json">
+    <None Include="Data\**\*.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
