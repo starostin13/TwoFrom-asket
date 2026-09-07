@@ -1,6 +1,21 @@
 {
   "Units": [
     {
+      "Name": "AX-1-0 Tiger Shark",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 315,
+          "AdditionalModelCost": 375
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
       "Name": "Breacher Team",
       "MinModels": 1,
       "MaxModels": 2,
@@ -26,7 +41,14 @@
           "AdditionalModelCost": 75
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "High-yield missile pods",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": -1
+        }
+      ],
       "DetachUpgrade": true,
       "Lead": []
     },
@@ -43,7 +65,32 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Breacher Team", "Strike Team"]
+      "Lead": [
+        "Breacher Team",
+        "Strike Team"
+      ]
+    },
+    {
+      "Name": "Commander Farsight",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 80,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": [
+        "Crisis Fireknife Battlesuits",
+        "Crisis Starscythe Battlesuits",
+        "Crisis Sunforge Battlesuits"
+      ],
+      "MutualExclude": [
+        "Ethereal"
+      ]
     },
     {
       "Name": "Commander in Coldstar Battlesuit",
@@ -58,7 +105,11 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "Lead": [
+        "Crisis Fireknife Battlesuits",
+        "Crisis Starscythe Battlesuits",
+        "Crisis Sunforge Battlesuits"
+      ]
     },
     {
       "Name": "Commander in Enforcer Battlesuit",
@@ -73,7 +124,11 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "Lead": [
+        "Crisis Fireknife Battlesuits",
+        "Crisis Starscythe Battlesuits",
+        "Crisis Sunforge Battlesuits"
+      ]
     },
     {
       "Name": "Commander Shadowsun",
@@ -87,13 +142,17 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Crisis Fireknife Battlesuits", "Crisis Starscythe Battlesuits", "Crisis Sunforge Battlesuits"]
+      "DetachUpgrade": false,
+      "Lead": [
+        "Crisis Fireknife Battlesuits",
+        "Crisis Starscythe Battlesuits",
+        "Crisis Sunforge Battlesuits"
+      ]
     },
     {
       "Name": "Crisis Fireknife Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
@@ -101,14 +160,21 @@
           "AdditionalModelCost": 110
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "Missile pod",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
       "DetachUpgrade": true,
       "Lead": []
     },
     {
       "Name": "Crisis Starscythe Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
@@ -116,14 +182,21 @@
           "AdditionalModelCost": 100
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "T'au flamer",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
       "DetachUpgrade": true,
       "Lead": []
     },
     {
       "Name": "Crisis Sunforge Battlesuits",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
@@ -147,8 +220,10 @@
         }
       ],
       "Weapons": [],
-      "DetachUpgrade": true,
-      "Lead": ["Pathfinder Team"]
+      "DetachUpgrade": false,
+      "Lead": [
+        "Pathfinder Team"
+      ]
     },
     {
       "Name": "Devilfish",
@@ -178,7 +253,13 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Breacher Team", "Strike Team"]
+      "Lead": [
+        "Breacher Team",
+        "Strike Team"
+      ],
+      "MutualExclude": [
+        "Commander Farsight"
+      ]
     },
     {
       "Name": "Firesight Team",
@@ -193,7 +274,7 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Pathfinder Team"]
+      "Lead": []
     },
     {
       "Name": "Ghostkeel Battlesuit",
@@ -206,7 +287,14 @@
           "AdditionalModelCost": 160
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "Cyclic Ion Raker",
+          "Cost": 10,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
       "DetachUpgrade": false,
       "Lead": []
     },
@@ -268,7 +356,10 @@
       ],
       "Weapons": [],
       "DetachUpgrade": true,
-      "Lead": ["Kroot Carnivores", "Kroot Farstalkers"]
+      "Lead": [
+        "Kroot Carnivores",
+        "Kroot Farstalkers"
+      ]
     },
     {
       "Name": "Kroot Hounds",
@@ -301,6 +392,42 @@
       "Lead": []
     },
     {
+      "Name": "Kroot Trail Shaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 50,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Kroot Carnivores",
+        "Kroot Farstalkers"
+      ]
+    },
+    {
+      "Name": "Kroot War Shaper",
+      "MinModels": 1,
+      "MaxModels": 1,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 60,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": true,
+      "Lead": [
+        "Kroot Carnivores",
+        "Kroot Farstalkers"
+      ]
+    },
+    {
       "Name": "Krootox Rampagers",
       "MinModels": 1,
       "MaxModels": 2,
@@ -331,19 +458,19 @@
       "Lead": []
     },
     {
-      "Name": "Kroot War Shaper",
+      "Name": "Manta",
       "MinModels": 1,
       "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 60,
+          "BaseCost": 2100,
           "AdditionalModelCost": 0
         }
       ],
       "Weapons": [],
       "DetachUpgrade": false,
-      "Lead": ["Kroot Carnivores", "Kroot Farstalkers"]
+      "Lead": []
     },
     {
       "Name": "Pathfinder Team",
@@ -356,7 +483,14 @@
           "AdditionalModelCost": 0
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "Ion rifle",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 3
+        }
+      ],
       "DetachUpgrade": true,
       "Lead": []
     },
@@ -401,7 +535,14 @@
           "AdditionalModelCost": 210
         }
       ],
-      "Weapons": [],
+      "Weapons": [
+        {
+          "Name": "Ion accelerator",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
       "DetachUpgrade": true,
       "Lead": []
     },
@@ -481,6 +622,36 @@
       "Lead": []
     },
     {
+      "Name": "Ta'unar Supremacy Armour",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 790,
+          "AdditionalModelCost": 890
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
+      "Name": "The Twin Lance",
+      "MinModels": 2,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 205,
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
       "Name": "Tidewall Droneport",
       "MinModels": 1,
       "MaxModels": 1,
@@ -513,12 +684,34 @@
     {
       "Name": "Tidewall Shieldline",
       "MinModels": 1,
-      "MaxModels": 2,
+      "MaxModels": 1,
       "Experience": [
         {
           "Level": "Regular",
           "BaseCost": 85,
-          "AdditionalModelCost": 105
+          "AdditionalModelCost": 0
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Tidewall Defence Platform",
+          "Cost": 20,
+          "MinCount": 0,
+          "MaxCount": 1
+        }
+      ],
+      "DetachUpgrade": false,
+      "Lead": []
+    },
+    {
+      "Name": "Tiger Shark",
+      "MinModels": 1,
+      "MaxModels": 2,
+      "Experience": [
+        {
+          "Level": "Regular",
+          "BaseCost": 325,
+          "AdditionalModelCost": 375
         }
       ],
       "Weapons": [],
