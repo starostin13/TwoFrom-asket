@@ -9,6 +9,7 @@ namespace UnitRosterGenerator
         public required string Name { get; set; }
         public int? MinModels { get; set; }
         public int? MaxModels { get; set; }
+        public Dictionary<int, int>? ModelCosts { get; set; }
         public List<ExperienceLevelData>? Experience { get; set; }
         public List<Weapon>? Weapons { get; set; }
         public List<Upgrade>? Upgrade { get; set; }
@@ -50,6 +51,7 @@ namespace UnitRosterGenerator
         public string? ModelType { get; set; } // Optional: groups units that use same physical models
         public int MinModels { get; set; }
         public int MaxModels { get; set; }
+        public Dictionary<int, int>? ModelCosts { get; set; }
         public List<ExperienceLevelData> Experience { get; set; } = new();
         public List<Weapon>? Weapons { get; set; }
         public List<Upgrade>? Upgrade { get; set; }
@@ -110,6 +112,7 @@ namespace UnitRosterGenerator
                 Name = Name,
                 MinModels = MinModels,
                 MaxModels = MaxModels,
+                ModelCosts = ModelCosts,
                 Experience = Experience,
                 Weapons = Weapons,
                 Upgrade = Upgrade,
@@ -120,10 +123,13 @@ namespace UnitRosterGenerator
         }
 
         public int GetMinModels(UnitVariant variant)
-            => variant.MinModels ?? MinModels;
+            => GetModelCosts(variant)?.Keys.Min() ?? variant.MinModels ?? MinModels;
 
         public int GetMaxModels(UnitVariant variant)
-            => variant.MaxModels ?? MaxModels;
+            => GetModelCosts(variant)?.Keys.Max() ?? variant.MaxModels ?? MaxModels;
+
+        public Dictionary<int, int>? GetModelCosts(UnitVariant variant)
+            => variant.ModelCosts ?? ModelCosts;
 
         public List<ExperienceLevelData> GetExperience(UnitVariant variant)
             => variant.Experience ?? Experience;
@@ -157,12 +163,12 @@ namespace UnitRosterGenerator
         {
             if (!HasVariants)
             {
-                return MinModels;
+                return ModelCosts?.Keys.Min() ?? MinModels;
             }
 
             return Variants!
-                .Select(v => v.MinModels ?? MinModels)
-                .DefaultIfEmpty(MinModels)
+                .Select(v => (v.ModelCosts ?? ModelCosts)?.Keys.Min() ?? v.MinModels ?? MinModels)
+                .DefaultIfEmpty(ModelCosts?.Keys.Min() ?? MinModels)
                 .Min();
         }
 
@@ -170,12 +176,12 @@ namespace UnitRosterGenerator
         {
             if (!HasVariants)
             {
-                return MaxModels;
+                return ModelCosts?.Keys.Max() ?? MaxModels;
             }
 
             return Variants!
-                .Select(v => v.MaxModels ?? MaxModels)
-                .DefaultIfEmpty(MaxModels)
+                .Select(v => (v.ModelCosts ?? ModelCosts)?.Keys.Max() ?? v.MaxModels ?? MaxModels)
+                .DefaultIfEmpty(ModelCosts?.Keys.Max() ?? MaxModels)
                 .Max();
         }
 
@@ -188,13 +194,14 @@ namespace UnitRosterGenerator
             bool weaponUpgradeSelected)
         {
             var variant = ResolveVariant(null);
-            int totalCost = experienceLevel.BaseCost;
+            var modelCosts = GetModelCosts(variant);
+            int totalCost = modelCosts?.GetValueOrDefault(modelCount) ?? experienceLevel.BaseCost;
             var minModels = GetMinModels(variant);
             var weapons = GetWeapons(variant);
             var upgrades = GetUpgrades(variant);
 
             // Добавляем стоимость за дополнительные модели
-            if (modelCount > minModels)
+            if (modelCosts == null && modelCount > minModels)
             {
                 totalCost += (modelCount - minModels) * experienceLevel.AdditionalModelCost;
             }

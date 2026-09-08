@@ -44,13 +44,14 @@ namespace UnitRosterGenerator
         // Метод для расчета полной стоимости юнита, включая все выбранные апгрейды и модели
     private void CalculateTotalCost(Detach? selectedDetach)
         {
-            TotalCost = ExperienceLevel.BaseCost;
+            var modelCosts = Unit.GetModelCosts(SelectedVariant);
+            TotalCost = modelCosts?.GetValueOrDefault(ModelCount) ?? ExperienceLevel.BaseCost;
             int minModels = Unit.GetMinModels(SelectedVariant);
             var weapons = Unit.GetWeapons(SelectedVariant) ?? Enumerable.Empty<Weapon>();
             var unitUpgrades = Unit.GetUpgrades(SelectedVariant);
 
             // Добавляем стоимость за дополнительные модели
-            if (ModelCount > minModels)
+            if (modelCosts == null && ModelCount > minModels)
             {
                 TotalCost += (ModelCount - minModels) * ExperienceLevel.AdditionalModelCost;
             }

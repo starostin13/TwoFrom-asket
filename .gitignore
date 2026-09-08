@@ -155,3 +155,4 @@ ConsoleApp/**/* - Copy.json
 ConsoleApp/**/* copy.json
 
 .fake
+temp-build

@@ -8,6 +8,30 @@ namespace UnitRosterGenerator.Tests;
 public class ModelLimitTests
 {
     [Fact]
+    public void ModelCosts_UseConfiguredPriceForSelectedModelCount()
+    {
+        var unit = new Unit
+        {
+            Name = "VariableSizeUnit",
+            ModelCosts = new Dictionary<int, int> { [4] = 140, [5] = 175, [8] = 300, [10] = 360 },
+            Experience = new List<ExperienceLevelData>
+            {
+                new ExperienceLevelData { Level = "Regular", BaseCost = 1, AdditionalModelCost = 1 }
+            }
+        };
+
+        var configuration = new UnitConfiguration(
+            unit, unit.ResolveVariant(null), 8, unit.Experience.First(),
+            new Dictionary<string, int>(), new Dictionary<string, int>(), false, null);
+
+        Assert.Equal(300, configuration.TotalCost);
+        Assert.Equal(4, unit.GetMinModels(unit.ResolveVariant(null)));
+        Assert.Equal(10, unit.GetMaxModels(unit.ResolveVariant(null)));
+        Assert.Equal(4, unit.GetGlobalMinModels());
+        Assert.Equal(10, unit.GetGlobalMaxModels());
+    }
+
+    [Fact]
     public void MaxQuantity_AppliesToTotalModels_NotUnitInstances()
     {
         var unit = new Unit

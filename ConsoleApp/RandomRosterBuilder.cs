@@ -103,7 +103,19 @@
                 ? Math.Min(maxModels, modelCountCap.Value)
                 : maxModels;
             effectiveMax = Math.Max(minModels, effectiveMax);
-            int modelCount = minModels == effectiveMax ? minModels : random.Next(minModels, effectiveMax + 1);
+            var modelCosts = unit.GetModelCosts(selectedVariant);
+            var availableModelCounts = modelCosts?
+                .Keys
+                .Where(count => count <= effectiveMax)
+                .ToList();
+            if (availableModelCounts != null && availableModelCounts.Count == 0)
+            {
+                throw new InvalidOperationException($"No model count for {unit.GetDisplayName(selectedVariant)} fits the model limit.");
+            }
+
+            int modelCount = availableModelCounts != null
+                ? availableModelCounts[random.Next(availableModelCounts.Count)]
+                : minModels == effectiveMax ? minModels : random.Next(minModels, effectiveMax + 1);
 
             var selectedWeapons = GetRandomWeapons(unit.GetWeapons(selectedVariant), modelCount);
             var selectedUnitUpgrades = GetRandomUnitUpgrades(unit.GetUpgrades(selectedVariant));

@@ -93,8 +93,12 @@
     },
     {
       "Name": "Brotherhood Terminator Squad",
-      "MinModels": 1,
-      "MaxModels": 2,
+      "ModelCosts": {
+        "4": 140,
+        "5": 175,
+        "8": 300,
+        "10": 360
+      },
       "Experience": [
         {
           "Level": "Regular",
@@ -291,8 +295,12 @@
     },
     {
       "Name": "Paladin Squad",
-      "MinModels": 1,
-      "MaxModels": 2,
+      "ModelCosts": {
+        "4": 170,
+        "5": 215,
+        "8": 360,
+        "10": 500
+      },
       "Experience": [
         {
           "Level": "Regular",
@@ -317,16 +325,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 110,
-          "AdditionalModelCost": 110
-        }
-      ],
-      "Weapons": [
-        {
-          "Name": "Psycannon",
-          "Cost": 5,
-          "MinCount": 0,
-          "MaxCount": 1
+          "BaseCost": 105,
+          "AdditionalModelCost": 105
         }
       ],
       "DetachUpgrade": false
