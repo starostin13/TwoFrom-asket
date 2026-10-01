@@ -7,7 +7,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 95,
+          "BaseCost": 100,
           "AdditionalModelCost": 0
         }
       ],
@@ -25,7 +25,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 70,
+          "BaseCost": 75,
           "AdditionalModelCost": 0
         }
       ],
@@ -43,7 +43,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 65,
+          "BaseCost": 70,
           "AdditionalModelCost": 0
         }
       ],
@@ -61,7 +61,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 90,
+          "BaseCost": 95,
           "AdditionalModelCost": 0
         }
       ],
@@ -79,7 +79,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 70,
+          "BaseCost": 75,
           "AdditionalModelCost": 0
         }
       ],
@@ -94,10 +94,10 @@
     {
       "Name": "Brotherhood Terminator Squad",
       "ModelCosts": {
-        "4": 140,
-        "5": 175,
-        "8": 300,
-        "10": 360
+        "4": 150,
+        "5": 185,
+        "8": 315,
+        "10": 380
       },
       "Experience": [
         {
@@ -123,7 +123,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 100,
+          "BaseCost": 105,
           "AdditionalModelCost": 0
         }
       ],
@@ -140,7 +140,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 95,
+          "BaseCost": 100,
           "AdditionalModelCost": 0
         }
       ],
@@ -158,7 +158,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 200,
+          "BaseCost": 210,
           "AdditionalModelCost": 0
         }
       ],
@@ -188,7 +188,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 140,
+          "BaseCost": 130,
           "AdditionalModelCost": 0
         }
       ],
@@ -220,8 +220,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 125,
-          "AdditionalModelCost": 125
+          "BaseCost": 135,
+          "AdditionalModelCost": 135
         }
       ],
       "Weapons": [],
@@ -279,7 +279,7 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 195,
+          "BaseCost": 205,
           "AdditionalModelCost": 0
         }
       ],
@@ -296,10 +296,10 @@
     {
       "Name": "Paladin Squad",
       "ModelCosts": {
-        "4": 170,
-        "5": 215,
-        "8": 360,
-        "10": 500
+        "4": 185,
+        "5": 230,
+        "8": 385,
+        "10": 490
       },
       "Experience": [
         {
@@ -325,8 +325,16 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 105,
-          "AdditionalModelCost": 105
+          "BaseCost": 115,
+          "AdditionalModelCost": 115
+        }
+      ],
+      "Weapons": [
+        {
+          "Name": "Psycannon",
+          "Cost": 5,
+          "MinCount": 0,
+          "MaxCount": 1
         }
       ],
       "DetachUpgrade": false
@@ -338,8 +346,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 130,
-          "AdditionalModelCost": 130
+          "BaseCost": 145,
+          "AdditionalModelCost": 145
         }
       ],
       "Weapons": [
@@ -431,8 +439,8 @@
       "Experience": [
         {
           "Level": "Regular",
-          "BaseCost": 120,
-          "AdditionalModelCost": 120
+          "BaseCost": 125,
+          "AdditionalModelCost": 125
         }
       ],
       "Weapons": [],
