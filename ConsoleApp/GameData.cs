@@ -1,6 +1,6 @@
 ﻿namespace UnitRosterGenerator
 {
-    class GameData
+    public class GameData
     {
         public List<Unit> Units { get; set; } = new();
         
