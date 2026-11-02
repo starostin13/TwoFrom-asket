@@ -97,4 +97,33 @@ public class ModelLimitTests
         Assert.Single(rosters);
         Assert.Equal(2, rosters[0].UnitConfigurations.Count(config => config.Unit.Name == "TestUnit"));
     }
+
+    [Fact]
+    public void RosterGeneration_RespectsQuantityLimitForAttachedUnits()
+    {
+        var gameData = new GameData
+        {
+            Units =
+            [
+                new Unit
+                {
+                    Name = "Leader",
+                    MinModels = 1,
+                    MaxModels = 1,
+                    Experience = [new ExperienceLevelData { Level = "Regular", BaseCost = 1 }],
+                    DetachUpgrade = false,
+                    Lead = ["Leader"]
+                }
+            ]
+        };
+
+        var rosters = RosterGenerationService.GenerateTopRosters(
+            gameData,
+            maxPoints: 10,
+            maxUnitQuantities: new Dictionary<string, int> { ["Leader"] = 1 },
+            candidateCount: 1);
+
+        Assert.Single(rosters);
+        Assert.Single(rosters[0].UnitConfigurations);
+    }
 }

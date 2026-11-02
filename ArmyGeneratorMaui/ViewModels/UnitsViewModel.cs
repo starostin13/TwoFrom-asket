@@ -1,97 +1,334 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Text.Json;
+using UnitRosterGenerator;
 
 namespace ArmyGeneratorMaui.ViewModels
 {
-    partial class UnitsViewModel : ObservableObject
+    public partial class UnitsViewModel : ObservableObject
     {
-        private readonly string PathToFile;
+        private const int CandidateRosterCount = 100;
+        private readonly string importedArmiesDirectory =
+            Path.Combine(FileSystem.Current.AppDataDirectory, "ImportedArmies");
 
         [ObservableProperty]
-        private ObservableCollection<Enchasment> enchasments;
+        private ObservableCollection<ImportedArmyViewModel> importedArmies = new();
+
         [ObservableProperty]
-        private ObservableCollection<Faction> factions;
+        private ImportedArmyViewModel? selectedArmy;
+
         [ObservableProperty]
-        private int maxSizeOfRoster;
+        private ObservableCollection<UnitQuantityViewModel> unitLimits = new();
+
         [ObservableProperty]
-        private ObservableCollection<Faction> selectedFactions;
+        private ObservableCollection<GeneratedRosterViewModel> generatedRosters = new();
+
         [ObservableProperty]
-        private ObservableCollection<Unit> units;
+        private int maxSizeOfRoster = 2000;
+
+        [ObservableProperty]
+        private bool isGenerating;
+
+        [ObservableProperty]
+        private string generationProgress = string.Empty;
 
         public UnitsViewModel()
         {
-            maxSizeOfRoster = 2000;
-            Units = new ObservableCollection<Unit>();
-            Enchasments = new ObservableCollection<Enchasment>();
-            Factions = new ObservableCollection<Faction>();
-            PathToFile = Path.Combine(FileSystem.Current.AppDataDirectory, "AllFactions.txt");
-            selectedFactions = new ObservableCollection<Faction>();
-            uploadIndexFileCommand = new AsyncRelayCommand(UploadIndexFile);
-            factions.CollectionChanged += Factions_CollectionChanged;
+            Directory.CreateDirectory(importedArmiesDirectory);
+            LoadImportedArmies();
+            SelectedArmy = ImportedArmies.FirstOrDefault();
+        }
 
-            foreach (var un in ReadAlreadyParsedFiles())
+        partial void OnSelectedArmyChanged(ImportedArmyViewModel? value)
+        {
+            UnitLimits.Clear();
+            GeneratedRosters.Clear();
+
+            if (value == null)
             {
-                factions.Add(un);
+                return;
+            }
+
+            foreach (var unitName in value.Data.Units
+                         .Select(unit => unit.Name)
+                         .Where(name => !string.IsNullOrWhiteSpace(name))
+                         .Distinct(StringComparer.OrdinalIgnoreCase))
+            {
+                var maxQuantity = value.MaxUnitQuantities.GetValueOrDefault(unitName, 1);
+                var unitLimit = new UnitQuantityViewModel(unitName, maxQuantity);
+                unitLimit.PropertyChanged += UnitLimit_PropertyChanged;
+                UnitLimits.Add(unitLimit);
             }
         }
 
-        private void SelectedFactions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            units.Clear();
-            //foreach(var unit in Factions.Select())
-        }
-
-        private void Factions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            File.WriteAllTextAsync(PathToFile, JsonConvert.SerializeObject(Factions));
-        }
-
         [RelayCommand]
-        private async void GenerateRoster()
+        private async Task ImportArmy()
         {
-
-        }
-
-        private List<Faction> ReadAlreadyParsedFiles()
-        {
-            if (!File.Exists(PathToFile))
-                return new List<Faction>();
-            
-            using StreamReader r = new(PathToFile);
-            string json = r.ReadToEnd();
-            List<Faction> items = JsonConvert.DeserializeObject<List<Faction>>(json);
-            
-            return items;
-        }
-
-        [RelayCommand]
-        private void SwitchSelection(object sender)
-        {
-            // todo: looks like currently binding with selected items doesn't work in MAUI
-            // so currently I will ignore filter and just show all units from all fractions
-            // must be reworked https://github.com/starostin13/TwoFrom-asket/issues/11
-        }
-
-        [RelayCommand]
-        private async Task<Faction> UploadIndexFile()
-        {
-            var result = await FileManagerHelper.GetFactionFromPdfAsync();
-            
-            if (result != null)
+            var file = await FilePicker.Default.PickAsync(new PickOptions
             {
-                if (!Factions.Select(f => f.FactionName).Contains(result.FactionName))
+                PickerTitle = "Import army JSON"
+            });
+
+            if (file == null)
+            {
+                return;
+            }
+
+            if (!Path.GetExtension(file.FileName).Equals(".json", StringComparison.OrdinalIgnoreCase))
+            {
+                GenerationProgress = "Please select a JSON file.";
+                return;
+            }
+
+            try
+            {
+                await using var stream = await file.OpenReadAsync();
+                using var reader = new StreamReader(stream);
+                var json = await reader.ReadToEndAsync();
+                var data = JsonSerializer.Deserialize<GameData>(json);
+
+                if (data?.Units == null || data.Units.Count == 0)
                 {
-                    Factions.Add(result);
-                    foreach (var unit in result.units)
+                    GenerationProgress = "The JSON file does not contain any units.";
+                    return;
+                }
+
+                var record = new ImportedArmyRecord
+                {
+                    Name = Path.GetFileNameWithoutExtension(file.FileName),
+                    ImportedAt = DateTime.Now,
+                    Json = json,
+                    MaxUnitQuantities = data.Units
+                        .Where(unit => !string.IsNullOrWhiteSpace(unit.Name))
+                        .Select(unit => unit.Name)
+                        .Distinct(StringComparer.OrdinalIgnoreCase)
+                        .ToDictionary(name => name, _ => 1, StringComparer.OrdinalIgnoreCase)
+                };
+                var storagePath = Path.Combine(importedArmiesDirectory, $"{Guid.NewGuid():N}.json");
+                SaveRecord(storagePath, record);
+
+                var importedArmy = CreateArmyViewModel(record, data, storagePath);
+                ImportedArmies.Insert(0, importedArmy);
+                SelectedArmy = importedArmy;
+                GenerationProgress = $"Imported {record.Name}.";
+            }
+            catch (JsonException)
+            {
+                GenerationProgress = "The selected file is not a valid army JSON file.";
+            }
+            catch (IOException)
+            {
+                GenerationProgress = "The selected file could not be read.";
+            }
+        }
+
+        [RelayCommand]
+        private async Task GenerateRosters()
+        {
+            var selectedArmy = SelectedArmy;
+            if (selectedArmy == null)
+            {
+                GenerationProgress = "Import or select an army first.";
+                return;
+            }
+
+            IsGenerating = true;
+            GeneratedRosters.Clear();
+            GenerationProgress = $"Generating rosters: 0/{CandidateRosterCount}";
+            var unitQuantities = UnitLimits.ToDictionary(
+                limit => limit.Name,
+                limit => limit.MaxQuantity,
+                StringComparer.OrdinalIgnoreCase);
+            var maxPoints = MaxSizeOfRoster;
+            var progress = new Progress<int>(count =>
+                GenerationProgress = $"Generating rosters: {count}/{CandidateRosterCount}");
+
+            try
+            {
+                var rosters = await Task.Run(() => RosterGenerationService.GenerateTopRosters(
+                    selectedArmy.Data,
+                    maxPoints,
+                    unitQuantities,
+                    CandidateRosterCount,
+                    progress));
+
+                for (var index = 0; index < rosters.Count; index++)
+                {
+                    GeneratedRosters.Add(new GeneratedRosterViewModel(index + 1, rosters[index]));
+                }
+
+                GenerationProgress = $"Generated {rosters.Count} rosters.";
+            }
+            catch (Exception exception)
+            {
+                GenerationProgress = $"Generation failed: {exception.Message}";
+            }
+            finally
+            {
+                IsGenerating = false;
+            }
+        }
+
+        private void LoadImportedArmies()
+        {
+            foreach (var storagePath in Directory.EnumerateFiles(importedArmiesDirectory, "*.json"))
+            {
+                try
+                {
+                    var record = JsonSerializer.Deserialize<ImportedArmyRecord>(File.ReadAllText(storagePath));
+                    if (record == null || string.IsNullOrWhiteSpace(record.Json))
                     {
-                        Units.Add(unit);
+                        continue;
                     }
+
+                    var data = JsonSerializer.Deserialize<GameData>(record.Json);
+                    if (data?.Units?.Count > 0)
+                    {
+                        ImportedArmies.Add(CreateArmyViewModel(record, data, storagePath));
+                    }
+                }
+                catch (JsonException)
+                {
+                }
+                catch (IOException)
+                {
                 }
             }
 
-            return result;
+            foreach (var army in ImportedArmies.OrderBy(army => army.ImportedAt).ToList())
+            {
+                ImportedArmies.Move(ImportedArmies.IndexOf(army), 0);
+            }
         }
+
+        private ImportedArmyViewModel CreateArmyViewModel(
+            ImportedArmyRecord record,
+            GameData data,
+            string storagePath)
+        {
+            return new ImportedArmyViewModel(
+                record.Name,
+                record.ImportedAt,
+                record.Json,
+                data,
+                record.MaxUnitQuantities ?? new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase),
+                storagePath);
+        }
+
+        private void UnitLimit_PropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName != nameof(UnitQuantityViewModel.MaxQuantity) ||
+                sender is not UnitQuantityViewModel changedLimit ||
+                SelectedArmy == null)
+            {
+                return;
+            }
+
+            SelectedArmy.MaxUnitQuantities[changedLimit.Name] = changedLimit.MaxQuantity;
+            SaveRecord(SelectedArmy.StoragePath, new ImportedArmyRecord
+            {
+                Name = SelectedArmy.Name,
+                ImportedAt = SelectedArmy.ImportedAt,
+                Json = SelectedArmy.SourceJson,
+                MaxUnitQuantities = SelectedArmy.MaxUnitQuantities
+            });
+        }
+
+        private static void SaveRecord(string path, ImportedArmyRecord record)
+        {
+            File.WriteAllText(path, JsonSerializer.Serialize(record));
+        }
+    }
+
+    public sealed class ImportedArmyViewModel
+    {
+        public string Name { get; }
+        public DateTime ImportedAt { get; }
+        public string SourceJson { get; }
+        public GameData Data { get; }
+        public Dictionary<string, int> MaxUnitQuantities { get; }
+        public string StoragePath { get; }
+        public string DisplayName => $"{Name} — {ImportedAt:dd.MM.yyyy HH:mm}";
+
+        public ImportedArmyViewModel(
+            string name,
+            DateTime importedAt,
+            string sourceJson,
+            GameData data,
+            Dictionary<string, int> maxUnitQuantities,
+            string storagePath)
+        {
+            Name = name;
+            ImportedAt = importedAt;
+            SourceJson = sourceJson;
+            Data = data;
+            MaxUnitQuantities = maxUnitQuantities;
+            StoragePath = storagePath;
+        }
+    }
+
+    public partial class UnitQuantityViewModel : ObservableObject
+    {
+        public string Name { get; }
+
+        [ObservableProperty]
+        private int maxQuantity;
+
+        public UnitQuantityViewModel(string name, int maxQuantity)
+        {
+            Name = name;
+            this.maxQuantity = Math.Max(0, maxQuantity);
+        }
+
+        [RelayCommand]
+        private void DecreaseQuantity()
+        {
+            if (MaxQuantity > 0)
+            {
+                MaxQuantity--;
+            }
+        }
+
+        [RelayCommand]
+        private void IncreaseQuantity()
+        {
+            MaxQuantity++;
+        }
+    }
+
+    public sealed class GeneratedRosterViewModel
+    {
+        public string Title { get; }
+        public string CopyText { get; }
+
+        public GeneratedRosterViewModel(int index, Roster roster)
+        {
+            Title = $"Roster {index} — {roster.CalculateTotalCost():N0} pts";
+            var lines = roster.UnitConfigurations
+                .Select(unit => $"{unit.DisplayName} ×{unit.ModelCount} — {unit.TotalCost} pts")
+                .ToList();
+
+            if (roster.SelectedDetaches.Count > 0)
+            {
+                lines.Insert(0, $"Detachments: {string.Join(", ", roster.SelectedDetaches.Select(detach => detach.Name))}");
+            }
+
+            lines.Insert(0, Title);
+            CopyText = string.Join(Environment.NewLine, lines);
+        }
+    }
+
+    internal sealed class ImportedArmyRecord
+    {
+        public ImportedArmyRecord()
+        {
+        }
+
+        public string Name { get; set; } = string.Empty;
+        public DateTime ImportedAt { get; set; }
+        public string Json { get; set; } = string.Empty;
+        public Dictionary<string, int> MaxUnitQuantities { get; set; } = new(StringComparer.OrdinalIgnoreCase);
     }
 }

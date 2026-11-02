@@ -1,65 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:customViews="clr-namespace:ArmyGeneratorMaui.Views"
              x:Class="ArmyGeneratorMaui.MainPage"
              xmlns:viewModel="clr-namespace:ArmyGeneratorMaui.ViewModels"
-             xmlns:armyGeneratorMaui="clr-namespace:ArmyGeneratorMaui"
              x:DataType="viewModel:UnitsViewModel"
-             >
+             Title="Army Generator">
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-            <CollectionView ItemsSource="{Binding Factions}"
-                            SelectionMode="Multiple"
-                            SelectedItems="{Binding SelectedFactions}"
-                            SelectionChangedCommand="{Binding SwitchSelectionCommand}"
-                            >
+            Padding="20"
+            Spacing="12">
+            <Label Text="Imported armies" FontSize="24" FontAttributes="Bold" />
+
+            <Button Text="Import JSON army" Command="{Binding ImportArmyCommand}" />
+
+            <CollectionView ItemsSource="{Binding ImportedArmies}"
+                           SelectedItem="{Binding SelectedArmy, Mode=TwoWay}"
+                           SelectionMode="Single"
+                           HeightRequest="150">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Label x:DataType="armyGeneratorMaui:Faction" Text="{Binding FactionName}" Grid.Column="1" Grid.Row="1"/>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
+                   <DataTemplate x:DataType="viewModel:ImportedArmyViewModel">
+                       <Label Text="{Binding DisplayName}" Padding="10" />
+                   </DataTemplate>
+               </CollectionView.ItemTemplate>
             </CollectionView>
-            <StackLayout>
-                <customViews:FactionView x:Name="FW"/>
-            </StackLayout>
-            <ActivityIndicator IsRunning="False" x:Name="BusyIndicator"/>
-            <Label
-                Text="Pick the file"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Upload the file"
-                SemanticProperties.Hint="Show the Open File Dialog"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" 
-                Command="{Binding UploadIndexFileCommand}"/>
+            <Label Text="Unit quantity limits" FontSize="20" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding UnitLimits}"
+                           SelectionMode="None"
+                           HeightRequest="300">
+               <CollectionView.ItemTemplate>
+                   <DataTemplate x:DataType="viewModel:UnitQuantityViewModel">
+                       <Grid Padding="6" ColumnSpacing="10">
+                           <Grid.ColumnDefinitions>
+                               <ColumnDefinition Width="*" />
+                               <ColumnDefinition Width="Auto" />
+                               <ColumnDefinition Width="40" />
+                               <ColumnDefinition Width="Auto" />
+                           </Grid.ColumnDefinitions>
+                           <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+                           <Button Grid.Column="1" Text="−" Command="{Binding DecreaseQuantityCommand}" />
+                           <Label Grid.Column="2" Text="{Binding MaxQuantity}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                           <Button Grid.Column="3" Text="+" Command="{Binding IncreaseQuantityCommand}" />
+                       </Grid>
+                   </DataTemplate>
+               </CollectionView.ItemTemplate>
+            </CollectionView>
 
-            <Entry Placeholder="2000 pts" Text="{Binding MaxSizeOfRoster}"/>
+            <Entry Placeholder="Maximum points"
+                  Keyboard="Numeric"
+                  Text="{Binding MaxSizeOfRoster}" />
+            <Button Text="Generate rosters" Command="{Binding GenerateRostersCommand}" />
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+               <ActivityIndicator IsRunning="{Binding IsGenerating}"
+                                 IsVisible="{Binding IsGenerating}" />
+               <Label Text="{Binding GenerationProgress}" VerticalTextAlignment="Center" />
+            </HorizontalStackLayout>
 
-            <Button
-                x:Name="GenerateBtn"
-                Text="Generate"
-                Clicked="OnGenerateClick" 
-                HorizontalOptions="Center" />
-            <customViews:RosterCommonView x:Name="RosterView" />
-
+            <Label Text="Generated rosters (tap to copy)" FontSize="20" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding GeneratedRosters}"
+                           SelectionMode="None"
+                           HeightRequest="350">
+               <CollectionView.ItemTemplate>
+                   <DataTemplate x:DataType="viewModel:GeneratedRosterViewModel">
+                       <Button Text="{Binding Title}"
+                               Clicked="OnRosterTapped"
+                               HorizontalOptions="Fill" />
+                   </DataTemplate>
+               </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

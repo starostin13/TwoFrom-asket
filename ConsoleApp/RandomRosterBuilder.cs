@@ -1,6 +1,6 @@
 ﻿namespace UnitRosterGenerator
 {
-    public class RandomRosterBuilder
+    internal class RandomRosterBuilder
     {
     private static readonly Random random = new();
     private static List<UnitConfiguration> currentRoster = new();
@@ -204,7 +204,7 @@
             {
                 string target = leadList[random.Next(leadList.Count)];
                 var candidates = availableUnits.Where(u =>
-                    CanAddUnit(u) &&
+                    CanAddUnit(u, unitConfig.Unit) &&
                     (u.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase) ||
                      (u.Variants?.Any(v => v.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false) ||
                      (u.Variants?.Any(v => $"{u.Name} ({v.Name})".Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false))
@@ -221,7 +221,7 @@
 
     private static Unit? GetRandomUnit(List<Unit> availableUnits)
         {
-        availableUnits = availableUnits.Where(CanAddUnit).ToList();
+        availableUnits = availableUnits.Where(unit => CanAddUnit(unit)).ToList();
         if (availableUnits.Count == 0) return null;
 
             var mandatoryUnits = unitsLimits.Limits
@@ -248,7 +248,7 @@
             return availableUnits[random.Next(availableUnits.Count)];
         }
 
-        private static bool CanAddUnit(Unit unit)
+        private static bool CanAddUnit(Unit unit, Unit? pendingUnit = null)
         {
             if (unitQuantityLimits == null)
             {
@@ -264,6 +264,11 @@
 
             int currentQuantity = currentRoster.Count(config =>
                 config.Unit.Name.Equals(unit.Name, StringComparison.InvariantCultureIgnoreCase));
+            if (pendingUnit?.Name.Equals(unit.Name, StringComparison.InvariantCultureIgnoreCase) == true)
+            {
+                currentQuantity++;
+            }
+
             return currentQuantity < limit.Value;
         }
 
