@@ -1,11 +1,12 @@
 ﻿namespace UnitRosterGenerator
 {
-    class RandomRosterBuilder
+    public class RandomRosterBuilder
     {
     private static readonly Random random = new();
     private static List<UnitConfiguration> currentRoster = new();
     private static readonly UnitsLimits unitsLimits = new();
     private static readonly List<string> bannedUnits = new();
+    private static IReadOnlyDictionary<string, int>? unitQuantityLimits;
 
         public static Roster BuildRandomRoster(
             List<Unit> availableUnits,
@@ -13,11 +14,13 @@
             int maxPoints,
             bool allowMultiDetach = false,
             int maxDetachmentPoints = 0,
-            double multiDetachChance = 0.4)
+            double multiDetachChance = 0.4,
+            IReadOnlyDictionary<string, int>? maxUnitQuantities = null)
         {
             int currentPoints = 0;
             currentRoster = new List<UnitConfiguration>();
             bannedUnits.Clear();
+            unitQuantityLimits = maxUnitQuantities;
 
             var selectedDetaches = SelectDetachmentsForRoster(
                 availableDetachments,
@@ -29,7 +32,8 @@
             while (true)
             {
                 var unit = GetRandomUnit(availableUnits);
-                if (unit == null || bannedUnits.Contains(unit.Name)) continue;
+                if (unit == null) break;
+                if (bannedUnits.Contains(unit.Name)) continue;
 
                 // Check limits and get adapted model count
                 int? prospectiveModels = GetAdaptedModelCount(unit);
@@ -200,9 +204,10 @@
             {
                 string target = leadList[random.Next(leadList.Count)];
                 var candidates = availableUnits.Where(u =>
-                    u.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase) ||
-                    (u.Variants?.Any(v => v.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false) ||
-                    (u.Variants?.Any(v => $"{u.Name} ({v.Name})".Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false)
+                    CanAddUnit(u) &&
+                    (u.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase) ||
+                     (u.Variants?.Any(v => v.Name.Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false) ||
+                     (u.Variants?.Any(v => $"{u.Name} ({v.Name})".Equals(target, StringComparison.InvariantCultureIgnoreCase)) ?? false))
                 ).ToList();
 
                 if (candidates.Count > 0)
@@ -216,7 +221,8 @@
 
     private static Unit? GetRandomUnit(List<Unit> availableUnits)
         {
-            if (availableUnits.Count == 0) return null;
+        availableUnits = availableUnits.Where(CanAddUnit).ToList();
+        if (availableUnits.Count == 0) return null;
 
             var mandatoryUnits = unitsLimits.Limits
                 .Where(limit => limit.MinQuantity > 0 && availableUnits.Any(unit => UnitMatchesLimitName(unit, limit.ModelName)))
@@ -240,6 +246,25 @@
             }
 
             return availableUnits[random.Next(availableUnits.Count)];
+        }
+
+        private static bool CanAddUnit(Unit unit)
+        {
+            if (unitQuantityLimits == null)
+            {
+                return true;
+            }
+
+            var limit = unitQuantityLimits.FirstOrDefault(entry =>
+                entry.Key.Equals(unit.Name, StringComparison.InvariantCultureIgnoreCase));
+            if (limit.Key == null)
+            {
+                return true;
+            }
+
+            int currentQuantity = currentRoster.Count(config =>
+                config.Unit.Name.Equals(unit.Name, StringComparison.InvariantCultureIgnoreCase));
+            return currentQuantity < limit.Value;
         }
 
         private static ExperienceLevelData GetRandomExperienceLevel(Unit unit, UnitVariant variant)

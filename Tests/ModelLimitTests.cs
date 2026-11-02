@@ -69,4 +69,32 @@ public class ModelLimitTests
         rosterConfigs.Add(full);
         Assert.Equal(2, rosterConfigs.Sum(c => c.ModelCount));
     }
+
+    [Fact]
+    public void RosterGeneration_RespectsConfiguredUnitQuantity()
+    {
+        var gameData = new GameData
+        {
+            Units =
+            [
+                new Unit
+                {
+                    Name = "TestUnit",
+                    MinModels = 1,
+                    MaxModels = 1,
+                    Experience = [new ExperienceLevelData { Level = "Regular", BaseCost = 1 }],
+                    DetachUpgrade = false
+                }
+            ]
+        };
+
+        var rosters = RosterGenerationService.GenerateTopRosters(
+            gameData,
+            maxPoints: 10,
+            maxUnitQuantities: new Dictionary<string, int> { ["TestUnit"] = 2 },
+            candidateCount: 1);
+
+        Assert.Single(rosters);
+        Assert.Equal(2, rosters[0].UnitConfigurations.Count(config => config.Unit.Name == "TestUnit"));
+    }
 }
