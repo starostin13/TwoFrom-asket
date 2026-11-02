@@ -16,21 +16,6 @@
       "Lead": []
     },
     {
-      "Name": "Culexus Assassin",
-      "MinModels": 1,
-      "MaxModels": 1,
-      "Experience": [
-        {
-          "Level": "Regular",
-          "BaseCost": 85,
-          "AdditionalModelCost": 0
-        }
-      ],
-      "Weapons": [],
-      "DetachUpgrade": false,
-      "Lead": []
-    },
-    {
       "Name": "Eversor Assassin",
       "MinModels": 1,
       "MaxModels": 1,
