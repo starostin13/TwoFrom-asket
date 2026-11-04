@@ -7,7 +7,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 300,
+                    "BaseCost": 230,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -20,7 +20,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 840,
+                    "BaseCost": 780,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -33,7 +33,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 460,
+                    "BaseCost": 450,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -72,7 +72,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 140,
+                    "BaseCost": 130,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -138,7 +138,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 110,
+                    "BaseCost": 90,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -151,7 +151,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 100,
+                    "BaseCost": 80,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -164,7 +164,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 200,
+                    "BaseCost": 160,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -190,7 +190,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 190,
+                    "BaseCost": 160,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -203,7 +203,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 210,
+                    "BaseCost": 190,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -216,7 +216,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 210,
+                    "BaseCost": 180,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -281,8 +281,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 120,
-                    "AdditionalModelCost": 110
+                    "BaseCost": 100,
+                    "AdditionalModelCost": 100
                 }
             ],
             "Weapons": []
@@ -308,7 +308,7 @@
                 {
                     "Level": "Regular",
                     "BaseCost": 80,
-                    "AdditionalModelCost": 90
+                    "AdditionalModelCost": 80
                 }
             ],
             "Weapons": []
@@ -346,8 +346,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 150,
-                    "AdditionalModelCost": 150
+                    "BaseCost": 130,
+                    "AdditionalModelCost": 130
                 }
             ],
             "Weapons": []
@@ -373,7 +373,7 @@
                 {
                     "Level": "Regular",
                     "BaseCost": 90,
-                    "AdditionalModelCost": 130
+                    "AdditionalModelCost": 90
                 }
             ],
             "Weapons": []
@@ -385,7 +385,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 130,
+                    "BaseCost": 120,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -398,7 +398,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 120,
+                    "BaseCost": 100,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -424,7 +424,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 160,
+                    "BaseCost": 140,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -437,7 +437,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 170,
+                    "BaseCost": 150,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -450,8 +450,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 170,
-                    "AdditionalModelCost": 170
+                    "BaseCost": 150,
+                    "AdditionalModelCost": 150
                 }
             ],
             "Weapons": []
@@ -464,7 +464,7 @@
                 {
                     "Level": "Regular",
                     "BaseCost": 100,
-                    "AdditionalModelCost": 90
+                    "AdditionalModelCost": 100
                 }
             ],
             "Weapons": []
@@ -476,7 +476,7 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 200,
+                    "BaseCost": 170,
                     "AdditionalModelCost": 0
                 }
             ],
@@ -489,8 +489,8 @@
             "Experience": [
                 {
                     "Level": "Regular",
-                    "BaseCost": 340,
-                    "AdditionalModelCost": 320
+                    "BaseCost": 290,
+                    "AdditionalModelCost": 290
                 }
             ],
             "Weapons": []
